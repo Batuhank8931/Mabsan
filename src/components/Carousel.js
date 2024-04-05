@@ -81,7 +81,7 @@ const Carousel = () => {
                   backgroundSize: "cover",
                 }}
               >
-                {index + 1} Button
+                {index + 1} e ticaret
               </div>
             </div>
           ))}
