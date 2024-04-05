@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
 
-function App() {
+import React from "react";
+import Video_1 from "./components/video_1";
+import Carousel from './components/Carousel';
+
+
+import backgroundSVG from "./assets/HeaderBackground.svg";
+import "./App.css"; // Import the CSS file
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="App-container"
+      style={{
+        position: "relative",
+        backgroundImage: `url(${backgroundSVG})`,
+        width: "100%",
+      }}
+    >
+      {" "}
+      {/* Wrap everything with the container */}
+      <div className="App">
+
+        <Video_1 />
+        <Carousel/>
+
+
+      </div>
     </div>
   );
-}
+};
 
 export default App;
