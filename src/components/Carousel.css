@@ -59,7 +59,13 @@
   background-color: white;
 }
 
-
+.redline {
+  padding: 10px;
+  border: 2px solid transparent; /* To make sure the outline doesn't push the content */
+  outline: 2px solid rgba(255, 0, 0, 0.42); /* Red outline */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.486); /* Glowing effect */
+  border-radius: 10px; /* Adjust the value as needed for the desired roundness */
+}
 
 .bar {
 width: 100%;

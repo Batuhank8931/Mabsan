@@ -58,33 +58,36 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-      <div
-        className="carousel bar "
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        onTouchCancel={handleTouchEnd}
-        ref={containerRef}
-      >
-        <div className="container">
-          {[...Array(14)].map((_, index) => (
-            <div className="blocks" key={index}>
-              <div
-                className="deneme"
-                style={{
-                  backgroundImage: `url(${window.innerWidth <= 600 ? rectangleYatik : rectangle
-                  })`,
-                  backgroundSize: "cover",
-                }}
-              >
-                {index + 1} e ticaret
+      <div className="redline">
+        <div
+          className="carousel bar "
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          onTouchCancel={handleTouchEnd}
+          ref={containerRef}
+        >
+          <div className="container">
+            {[...Array(14)].map((_, index) => (
+              <div className="blocks" key={index}>
+                <div
+                  className="deneme"
+                  style={{
+                    backgroundImage: `url(${
+                      window.innerWidth <= 600 ? rectangleYatik : rectangle
+                    })`,
+                    backgroundSize: "cover",
+                  }}
+                >
+                  {index + 1} e ticaret
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
