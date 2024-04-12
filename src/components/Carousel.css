@@ -16,12 +16,6 @@
   
 }
 
-.deneme{
-  opacity: 1;
-  width: 100% ;
-  height: 140px;
-}
-
 
 .blocks{
   background-color:grey;
@@ -73,6 +67,29 @@ background-color: black;
 border-radius: 10px; /* Adjust the value as needed for the desired roundness */
 }
 
+
+
+.sektor_button {
+  opacity: 1;
+  width: 100% ;
+  height: 140px;
+  background-size: cover;
+  opacity: 1;
+  transition: width 0.3s ease; /* Add transition property */
+  
+
+  /* Add any other styles you need for your button */
+}
+
+.vertical-text label {
+  text-align: left;
+}
+
+.sektor_label {
+  color: black;
+}
+
+
 /* Apply row layout for larger screens */
 @media (min-width: 601px) {
   .container {
@@ -83,11 +100,71 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
     font-size: 40px; /* Adjust font size as needed */
   }
 
-  .deneme{
+  .sektor_button{
     opacity: 1;
     width: 200px;
     height: 550px;
   }
+
+  .sektor_button:hover {
+    background-image: none;
+    background-color: black; /* Change to any color you desire */
+    width: 500px;
+  }
+  
+  .vertical-text {
+    transform: rotate(270deg) translateY(-250%) translateX(60%); /* Rotate the text 270 degrees clockwise and lift it up */
+    transform-origin: bottom; /* Set the origin to the center */
+  }
+  
+  .sektor_button:hover .vertical-text {
+    transform: none; /* Reset the rotation and lift on hover */
+  }
+  
+  .sektor_button:hover .sector_card_2 {
+    display: block; /* Display the "sector_card" div on hover */
+  }
+
+}
+
+
+@media (max-width: 601px) {
+
+  .sektor_button {
+    transition: height 0.3s ease; /* Add transition property */
+  }
+
+  .sektor_button:hover {
+    background-image: none;
+    background-color: black; /* Change to any color you desire */
+    height: 400px;
+  }
+
+  .vertical-text {
+    transform: none; /* Reset the rotation and lift on hover */
+
+  }
+  
+  .sektor_button:hover .vertical-text {
+    transform: rotate(270deg) translateY(-240%) translateX(80%); /* Rotate the text 270 degrees clockwise and lift it up */
+    transform-origin: center; /* Set the origin to the center */
+  }
+
+  .sektor_button:hover .sector_card_1 {
+    display: block; /* Display the "sector_card" div on hover */
+  }
   
 
+}
+
+.sektor_button:hover .sektor_label {
+  color: white;
+}
+
+.sector_card_1 {
+  display: none; /* Hide the "sector_card" div by default */
+}
+
+.sector_card_2 {
+  display: none; /* Hide the "sector_card" div by default */
 }
