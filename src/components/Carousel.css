@@ -30,28 +30,6 @@
   display: none; /* Hide scroll buttons */
 }
 
-.baslik {
-  font-size: 25px;
-  outline: none;
-  transition: 0.3s;
-  padding-bottom: 0px;
-  font-family: "Power Grotesk", sans-serif;
-  color: white;
-  text-align: left;
-  background-color: black;
-}
-
-
-.line-container {
-  display: flex;
-  align-items: center; /* Vertical center alignment */
-}
-
-.line {
-  width: 100%;
-  height: 1px;
-  background-color: white;
-}
 
 .redline {
   padding: 10px;
@@ -73,7 +51,6 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
   opacity: 1;
   width: 100% ;
   height: 140px;
-  background-size: cover;
   opacity: 1;
   transition: width 0.3s ease; /* Add transition property */
   
@@ -85,8 +62,18 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
   text-align: left;
 }
 
+.card_headers {
+  width: 400px; /* Without quotes */
+}
+
 .sektor_label {
   color: black;
+
+}
+
+.button_header{
+  height: 100%;
+  width: 100%; /* Display the "sector_card" div on hover */
 }
 
 
@@ -95,9 +82,6 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
   .container {
     flex-direction: row;
 
-  }
-  .baslik {
-    font-size: 40px; /* Adjust font size as needed */
   }
 
   .sektor_button{
@@ -125,6 +109,15 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
     display: block; /* Display the "sector_card" div on hover */
   }
 
+
+ 
+
+
+  .card_headers{
+    width: "400px"; 
+  }
+
+
 }
 
 
@@ -146,14 +139,24 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
   }
   
   .sektor_button:hover .vertical-text {
-    transform: rotate(270deg) translateY(-240%) translateX(80%); /* Rotate the text 270 degrees clockwise and lift it up */
+    transform: rotate(270deg) translateY(-280%) translateX(-80%); /* Rotate the text 270 degrees clockwise and lift it up */
     transform-origin: center; /* Set the origin to the center */
   }
+
+
+  .sektor_button:hover .button_header{
+    height: 20%; /* Display the "sector_card" div on hover */
+  }
+
 
   .sektor_button:hover .sector_card_1 {
     display: block; /* Display the "sector_card" div on hover */
   }
-  
+
+
+  .card_headers {
+    width: 250px; /* Without quotes */
+  }
 
 }
 
