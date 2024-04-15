@@ -5,6 +5,7 @@ import Video_1 from "./components/video_1";
 import Left_Header from "./components/Left_Header";
 import Right_Header from "./components/Right_Header";
 import Carousel from "./components/Carousel";
+import Pager from "./components/Pager";
 
 
 
@@ -30,7 +31,8 @@ const App = () => {
         <Video_1 />
         <Left_Header sectorLabel={sectorLabel} /> {/* Pass the label text as prop */}
         <Carousel />
-        <Right_Header sectorLabel={"Sektörler"} /> {/* Pass the label text as prop */}
+        <Right_Header sectorLabel={"Üretim"} /> {/* Pass the label text as prop */}
+        <Pager />
         
 
 

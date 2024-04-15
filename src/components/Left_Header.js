@@ -4,8 +4,8 @@ import polygon from "../assets/polygon.svg";
 
 const Left_Header = ({ sectorLabel }) => {
   return (
-    <div className="baslik p-md-5 p-3 pt-5 pb-5">
-      <div className="d-flex align-items-left pb-5 ">
+    <div className="baslik p-md-5 p-3">
+      <div className="d-flex align-items-left ">
         <div className="col-4 col-md-2 d-flex align-items-center justify-content-start p-2">
           <label>{sectorLabel}</label> {/* Use the prop value here */}
         </div>
