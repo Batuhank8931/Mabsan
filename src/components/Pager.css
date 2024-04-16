@@ -104,9 +104,10 @@
   .slide_card {
     background-color: rgba(204, 204, 204, 0.1); /* Light grey background with transparency */
     border: 2px solid transparent; 
-    border-radius: 50px; /* Adjust the value as needed */
+    border-radius: 50px 0 50px 0 ; /* Top left and bottom right corners have border radius */
     transition: width 0.5s ease; 
   }
+  
   
 
   .card_front{

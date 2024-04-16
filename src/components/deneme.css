@@ -1,0 +1,56 @@
+.zigzag-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Align items to the left and right */
+  }
+  
+  .item {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 10px;
+
+    border-bottom: 20px solid #fff;
+    text-align: left; /* Align regular items to the left */
+  }
+  
+  .item_reverse {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 10px;
+    border-bottom: 20px solid #fff;
+    text-align: center; /* Align reversed items to the right */
+  }
+  
+  
+  .empty-item-1 {
+    width: 200px;
+    border-bottom: 20px solid #fff;
+    border-right: 20px solid #fff;
+    border-radius: 0 0  100% 0; 
+
+}
+
+.empty-item-2 {
+    width: 200px;
+    border-bottom: 20px solid #fff;
+    border-left: 20px solid #fff;
+    border-radius: 0 0  0 100%; 
+
+}
+
+  
+  /* For smaller screens, adjust the layout */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+  
+
+  
