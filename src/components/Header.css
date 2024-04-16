@@ -10,11 +10,10 @@
     background-color: black;
   }
   
-  
-  .line-container {
-    display: flex;
-    align-items: center; /* Vertical center alignment */
+  .middle-div {
+    flex-grow: 1; /* Allow the div to grow to fill the remaining space */
   }
+
   
   .line {
     width: 100%;

@@ -21,29 +21,22 @@
 }
 
 
-@keyframes moveRight {
-  from {
-    background-position: left;
-  }
-  to {
-    background-position: right;
-  }
-}
-
-.pager_back.shifted {
-  animation: moveRight 0.4s forwards;
-}
 
 .label_1 {
     background-color: transparent;
     font-size: 40px;
     outline: none;
-    transition: 0.3s;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
     padding-bottom: 0px;
     font-family: "Power Grotesk", sans-serif;
     color: white;
     text-align: left;
 
+}
+
+.label_1.fade-out {
+  opacity: 0;
 }
 
 
@@ -51,12 +44,16 @@
     background-color: transparent;
     font-size: 20px;
     outline: none;
-    transition: 0.3s;
+    transition: opacity 0.2s ease-in-out;
     padding-bottom: 0px;
     font-family: "Power Grotesk", sans-serif;
     color: white;
     text-align: left;
 
+}
+
+.label_2.fade-out {
+  opacity: 0;
 }
 
 .previous_button, .next_button {

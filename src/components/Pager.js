@@ -84,12 +84,34 @@ const Pager = () => {
       setCurrentIndex(currentIndex + 1);
       shrinkAndEnlarge();
     }
+    if (currentIndex < pagerData.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      const label1 = document.querySelector(".label_1");
+      const label2 = document.querySelector(".label_2");
+      label1.classList.add("fade-out");
+      label2.classList.add("fade-out");
+      setTimeout(() => {
+        label1.classList.remove("fade-out");
+        label2.classList.remove("fade-out");
+      }, 300);
+    }
   };
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
       shrinkAndEnlarge();
+    }
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      const label1 = document.querySelector(".label_1");
+      const label2 = document.querySelector(".label_2");
+      label1.classList.add("fade-out");
+      label2.classList.add("fade-out");
+      setTimeout(() => {
+        label1.classList.remove("fade-out");
+        label2.classList.remove("fade-out");
+      }, 300);
     }
   };
 
