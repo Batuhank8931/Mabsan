@@ -33,17 +33,37 @@ const time_line = (events, maxSlice) => {
                   <div className="empty-item-2"></div>
                   {row.map((event, index) => (
                     <div className="item" key={index}>
-                      <div>{event.year}</div>
+                      <div>
+                        <button className="date_window">
+
+                      <div className="d-flex justify-center">
+                        <div className="date_header">{event.year}</div>
+                      </div>
+
                       <div>{event.title}</div>
+                      <div className="bottom_line"></div>
+
+                      </button>
+                      </div>
                     </div>
+
                   ))}
                 </>
               ) : (
                 <>
                   {row.reverse().map((event, index) => (
                     <div className="item_reverse" key={index}>
-                      <div>{event.year}</div>
+                      <div >
+                      <button className="date_window">
+
+                      <div className="d-flex justify-center">
+                        <div className="date_header">{event.year}</div>
+                      </div>
+
                       <div>{event.title}</div>
+                      <div className="bottom_line"></div>
+                      </button>
+                      </div>
                     </div>
                   ))}
                   <div className="empty-item-1"></div>
@@ -74,7 +94,7 @@ const Deneme = () => {
   }, []);
 
   if (screenWidth >= 1200) {
-    return time_line(events, 4);
+    return time_line(events, 3);
   } else if (screenWidth >= 1000) {
     return time_line(events, 3);
   } else if (screenWidth >= 700) {

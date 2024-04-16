@@ -14,32 +14,83 @@
   flex: 1;
   box-sizing: border-box;
   padding: 10px;
+  border-bottom: 10px solid red;
+  text-align: center; /* Align regular items to the left */
+}
 
-  border-bottom: 20px solid #fff;
-  text-align: left; /* Align regular items to the left */
+.item::after {
+  content: '';
+  width: 100%;
+  border-bottom: 20px solid red; /* Color of the bottom border line */
+  border-left: 2px solid red; /* Color of the diagonal line */
+  transform-origin: bottom left;
 }
 
 .item_reverse {
   flex: 1;
   box-sizing: border-box;
   padding: 10px;
-  border-bottom: 20px solid #fff;
+  border-bottom: 10px solid red;
   text-align: center; /* Align reversed items to the right */
+}
+
+.item_reverse::after {
+  content: '';
+  width: 100%;
+  border-bottom: 20px solid red; /* Color of the bottom border line */
+  border-left: 2px solid red; /* Color of the diagonal line */
+  transform: rotate(45deg); /* Rotate the line to make it diagonal */
+  transform-origin: bottom left;
+}
+
+.date_window{
+  transition: box-shadow 0.3s ease;
+}
+
+.date_header{
+  width: 200px;
+  font-size: 45px;
+}
+
+.date_window:hover {
+  box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.2); /* Apply a blur effect around the border on hover */
+  background: rgba(255, 255, 255, 0.1); /* Red background color with specified opacity */
+  border-radius: 5%;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.bottom_line {
+  position: relative;
+  color: rgba(255, 255, 255, 0); /* Transparent white color */
+
+}
+
+.bottom_line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Position the circle in the middle of the container */
+  transform: translate(-50%, 70%); /* Center the circle horizontally */
+  width: 20px; /* Adjust the size of the circle */
+  height: 20px; /* Adjust the size of the circle */
+  background-color: white; /* Color of the circle */
+  border-radius: 50%; /* Shape the circle */
 }
 
 
 .empty-item-1 {
   width: 200px;
-  border-bottom: 20px solid #fff;
-  border-right: 20px solid #fff;
+  border-bottom: 10px solid red;
+  border-right: 10px solid red;
   border-radius: 0 0  100% 0; 
 
 }
 
 .empty-item-2 {
   width: 200px;
-  border-bottom: 20px solid #fff;
-  border-left: 20px solid #fff;
+  border-bottom: 10px solid red;
+  border-left: 10px solid red;
   border-radius: 0 0  0 100%; 
 
 }
