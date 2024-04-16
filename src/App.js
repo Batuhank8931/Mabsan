@@ -7,7 +7,7 @@ import Right_Header from "./components/Right_Header";
 import Carousel from "./components/Carousel";
 import Pager from "./components/Pager";
 import Timeline from "./components/Timeline";
-import Deneme from "./components/deneme";
+
 
 
 
@@ -34,11 +34,10 @@ const App = () => {
         <Video_1 />
         <Left_Header sectorLabel={"Sektörler"} /> {/* Pass the label text as prop */}
         <Carousel />
-        <Deneme />
         <Right_Header sectorLabel={"Üretim"} /> {/* Pass the label text as prop */}
         <Pager />
         <Left_Header sectorLabel={"Yolculuğumuz"} /> {/* Pass the label text as prop */}
-
+        <Timeline />
 
 
       </div>

@@ -1,47 +1,55 @@
-.timeline {
-    display: flex;
-    flex-direction: row; /* Initially display events in a horizontal line */
-    flex-wrap: wrap; /* Allow events to wrap to the next line */
-    position: relative; /* Relative position for positioning the dots */
+.zigzag-container {
+  display: flex;
+  flex-direction: column;
+}
 
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Align items to the left and right */
+}
+
+.item {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px;
+
+  border-bottom: 20px solid #fff;
+  text-align: left; /* Align regular items to the left */
+}
+
+.item_reverse {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px;
+  border-bottom: 20px solid #fff;
+  text-align: center; /* Align reversed items to the right */
+}
+
+
+.empty-item-1 {
+  width: 200px;
+  border-bottom: 20px solid #fff;
+  border-right: 20px solid #fff;
+  border-radius: 0 0  100% 0; 
+
+}
+
+.empty-item-2 {
+  width: 200px;
+  border-bottom: 20px solid #fff;
+  border-left: 20px solid #fff;
+  border-radius: 0 0  0 100%; 
+
+}
+
+
+/* For smaller screens, adjust the layout */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
   }
-  
-  .event {
-    display: flex;
-    align-items: center;
-    position: relative; /* Relative position for positioning the dots */
-    border-bottom: 20px solid #fff; /* Solid white line under the timeline */
-  }
-  
-  .event-year {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .event-title {
-    font-size: 16px;
-  }
-  
-  .dot {
-    position: absolute;
-    bottom: -4px; /* Adjust the position of the dot */
-    left: 50%; /* Place the dot in the center of the event */
-    transform: translateX(-50%);
-    width: 8px;
-    height: 8px;
-    background-color: #333; /* Color of the dot */
-    border-radius: 50%; /* Make the dot round */
-  }
-  
-  @media (max-width: 600px) {
-    .timeline {
-      flex-direction: column; /* Switch to vertical layout */
-      align-items: flex-start; /* Align items to the start of the container */
-    }
-  
-    .event {
-      margin-right: 0; /* Remove right margin for vertical layout */
-      margin-bottom: 20px; /* Add bottom margin for spacing between events */
-    }
-  }
-  
+}
+
+
