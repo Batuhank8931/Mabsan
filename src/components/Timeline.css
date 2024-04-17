@@ -1,106 +1,137 @@
-.zigzag-container {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* Align items to the left and right */
-}
-
-.item {
-  flex: 1;
-  box-sizing: border-box;
-  padding: 10px;
-  border-bottom: 10px solid red;
-  text-align: center; /* Align regular items to the left */
-}
-
-.item::after {
-  content: '';
-  width: 100%;
-  border-bottom: 20px solid red; /* Color of the bottom border line */
-  border-left: 2px solid red; /* Color of the diagonal line */
-  transform-origin: bottom left;
-}
-
-.item_reverse {
-  flex: 1;
-  box-sizing: border-box;
-  padding: 10px;
-  border-bottom: 10px solid red;
-  text-align: center; /* Align reversed items to the right */
-}
-
-.item_reverse::after {
-  content: '';
-  width: 100%;
-  border-bottom: 20px solid red; /* Color of the bottom border line */
-  border-left: 2px solid red; /* Color of the diagonal line */
-  transform: rotate(45deg); /* Rotate the line to make it diagonal */
-  transform-origin: bottom left;
-}
-
-.date_window{
-  transition: box-shadow 0.3s ease;
-}
-
-.date_header{
-  width: 200px;
-  font-size: 45px;
-}
-
-.date_window:hover {
-  box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.2); /* Apply a blur effect around the border on hover */
-  background: rgba(255, 255, 255, 0.1); /* Red background color with specified opacity */
-  border-radius: 5%;
-  transition: box-shadow 0.3s ease;
-}
-
-
-.bottom_line {
-  position: relative;
-  color: rgba(255, 255, 255, 0); /* Transparent white color */
-
-}
-
-.bottom_line::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%; /* Position the circle in the middle of the container */
-  transform: translate(-50%, 70%); /* Center the circle horizontally */
-  width: 20px; /* Adjust the size of the circle */
-  height: 20px; /* Adjust the size of the circle */
-  background-color: white; /* Color of the circle */
-  border-radius: 50%; /* Shape the circle */
-}
-
-
-.empty-item-1 {
-  width: 200px;
-  border-bottom: 10px solid red;
-  border-right: 10px solid red;
-  border-radius: 0 0  100% 0; 
-
-}
-
-.empty-item-2 {
-  width: 200px;
-  border-bottom: 10px solid red;
-  border-left: 10px solid red;
-  border-radius: 0 0  0 100%; 
-
-}
-
-
-/* For smaller screens, adjust the layout */
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
+/* timeline.css */
+.timeline {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: hidden; /* Hide vertical overflow */
+    
   }
-}
+  
+  .container_timer {
+    display: flex;
+    flex-direction: row; /* Adjusted to column layout by default */
+    padding: 0%;
+    margin: 0%;
+    
+  }
+  
+  
+  .times{
+    background-color:black;
+  }
+  
+  /* Hide scrollbar */
+  .timeline::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scroll-button {
+    display: none; /* Hide scroll buttons */
+  }
+  
 
+  .timer_button {
+    opacity: 1;
+    width: 400px;
+    height: 600px;
+    opacity: 1;
+    border-radius: 50px 0 50px 0 ;
+    transition: width 0.3s ease; /* Add transition property */
+    background-color: rgba(146, 43, 43, 0.263);
+    /* Add any other styles you need for your button */
+  }
+
+  
+  .timer_headers {
+    width: 400px; /* Without quotes */
+  }
+  
+  .timeline_year {
+    color: red;
+    font-size: 150px;
+ 
+  }
+
+  .timeline_header {
+    color: white;
+    font-size: 40px;
+ 
+  }
+
+  .timeline_text {
+    color: white;
+    font-size: 20px;
+    display: none;
+ 
+  }
+
+  
+  .container_timer {
+    flex-direction: row;
+
+  }
+
+  .timer_button:hover {
+    background-image: none;
+    background-color: grey; /* Change to any color you desire */
+    width: 500px;
+  }
+
+  .timer_button:hover .timeline_year {
+    color: white;
+  }
+  
+  .timer_button:hover .timeline_text {
+    display: block;
+  }
+
+
+  @media (max-width: 601px) {
+
+    .container_timer {
+      flex-direction: column; /* Adjusted to column layout by default */
+    }
+
+    .timer_button {
+      opacity: 1;
+      width: 80%;
+      height: 100px;
+      opacity: 1;
+      border-radius: 50px 0 50px 0 ;
+      transition: width 0.3s ease, height 0.3s ease;
+      background-color: rgba(146, 43, 43, 0.263);
+      /* Add any other styles you need for your button */
+    }
+
+    .timeline_year {
+      color: red;
+      font-size: 60px;
+   
+    }
+
+    .timeline_header {
+      color: white;
+      font-size: 20px;;
+   
+    }
+  
+    .timeline_text {
+      color: white;
+      font-size: 13px;
+   
+    }
+
+    .timer_button:hover {
+      background-image: none;
+      width: 90%;
+      background-color: grey; /* Change to any color you desire */
+      height: 300px;
+    }
+
+
+
+    .timer_headers {
+      width: 100%; /* Without quotes */
+    }
+  }
 

@@ -7,6 +7,7 @@ import Right_Header from "./components/Right_Header";
 import Carousel from "./components/Carousel";
 import Pager from "./components/Pager";
 import Timeline from "./components/Timeline";
+import Footer from "./components/Footer";
 
 
 
@@ -38,7 +39,7 @@ const App = () => {
         <Pager />
         <Left_Header sectorLabel={"Yolculuğumuz"} /> {/* Pass the label text as prop */}
         <Timeline />
-
+        <Footer />
 
       </div>
     </div>

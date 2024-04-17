@@ -166,11 +166,12 @@ const Pager = () => {
                     {currentItem.header2}
                   </label>
                 </div>
-                <div className="d-flex justify-content-center p-4 m-4">
+                <div className="d-flex justify-content-center p-4 m-4" >
                   <img
                     src={currentItem.photoLink}
                     alt="bayrak"
                     className="image_container"
+                    style={{ height:"100%"}}
                   />
                 </div>
               </div>

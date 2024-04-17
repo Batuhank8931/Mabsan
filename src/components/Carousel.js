@@ -54,7 +54,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="baslik p-md-5 p-3 pt-5 pb-5">
+    <div className="baslik p-md-5 p-3 pt-5 pb-5 ">
       <div className="redline">
         <div
           className="carousel bar "

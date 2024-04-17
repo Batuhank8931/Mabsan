@@ -1,0 +1,135 @@
+.altlogo{
+    height: 150px;
+}
+
+.kart_1 {
+    height: 450px;
+  }
+
+.kart_2 {
+    height: 100%;
+    border-radius: 20px;
+
+    }
+
+.kart_3 {
+    height: 450px;
+    }
+
+
+.footer_title{
+    font-size: 20px;
+}
+
+.detay_title{
+    font-size: 30px;
+}
+
+.redline_footer {
+    padding: 10px;
+    border: 2px solid transparent; /* To make sure the outline doesn't push the content */
+    outline: 2px solid rgba(255, 0, 0, 0.42); /* Red outline */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.486); /* Glowing effect */
+    border-radius: 20px; /* Adjust the value as needed for the desired roundness */
+
+  }
+
+  .detay_button{
+    width: 100%;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.78;
+    margin-bottom: 5px;
+    height: 60px;
+    font-size: 25px;
+  }
+
+
+  .footer_h1{
+    font-size: 35px;
+    height: 60px;
+  }
+
+  .footer_h2{
+    font-size: 35px;
+    height: 60px;
+    display: block;
+  }
+
+  .footer_list{
+    display: block;
+  }
+
+  ul {
+    font-size: 25px;
+    list-style-type: circle; /* or 'circle' or 'square' */
+    margin-left: 30px;
+  }
+
+
+  p {
+    text-align: left;
+  }
+
+  @media (max-width: 601px) {
+
+    .altlogo{
+        height: 75px;
+    }
+
+    .kart_1 {
+        height: 250px;
+      }
+    
+    .kart_2 {
+        height: 70%;
+        border-radius: 20px;
+    
+        }
+    
+    .kart_3 {
+        height: 250px;
+        }
+
+    .footer_title{
+        font-size: 15px;
+    }
+
+    .detay_title{
+        font-size: 20px;
+    }
+
+    .yaprak{
+        height: 50px;
+    }
+
+    .adres, .iletisim {
+        width: 50px;
+      }
+
+      .detay_button{
+        height: 40px;
+      }
+
+      .redline_footer {
+        border-radius: 40px; /* Adjust the value as needed for the desired roundness */
+    
+      }
+
+      .footer_h2{
+        font-size: 35px;
+        height: 60px;
+        display: none;
+      }
+
+      .footer_list{
+        display: none;
+      }
+
+      p {
+        text-align: center;
+      }
+
+
+  }
+
