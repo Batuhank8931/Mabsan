@@ -5,6 +5,7 @@ import MenuButton from "../assets/MenuButton.svg";
 import bayrak from "../assets/bayrak.svg";
 import Navbar from "./NavBar.js"; // Importing the NavBar component
 import "./video_1.css"; // Importing the CSS file
+import Carousel from "./Carousel";
 
 const Video_1 = () => {
   const videoId = "l1cBhOqSV4M"; // YouTube video ID
@@ -55,7 +56,15 @@ const Video_1 = () => {
 
   return (
     <div
-      className="bg-cover "
+      className={`bg-cover video-1-container ${
+        initialRender
+          ? ""
+          : showNavbar === true
+          ? "slideDown"
+          : showNavbar === false
+          ? "slideUp"
+          : ""
+      }`}
       style={{
         position: "relative",
         backgroundColor: "black",
@@ -63,16 +72,7 @@ const Video_1 = () => {
       }}
     >
       {window.innerWidth <= 600 && ( 
-        <div  // 1. BLANK AREA
-          className={`video-1-container ${
-            initialRender
-              ? ""
-              : showNavbar === true
-              ? "slideDown"
-              : showNavbar === false
-              ? "slideUp"
-              : ""
-          }`}
+        <div  // 1. BLANK AREA BİLGİSAYARDA YOK TELEFONDA VAR
         >
           {showNavbar && <Navbar showButtonsAgain={showButtonsAgain} />}
           <div
@@ -142,18 +142,13 @@ const Video_1 = () => {
             </div>
           </div>
         </div>
+        
       )}
+      
       <div // 2. MIDDLE AREA
-        className={`video-1-container ${
-          initialRender
-            ? ""
-            : showNavbar === true
-            ? "slideDown"
-            : showNavbar === false
-            ? "slideUp"
-            : ""
-        }`}
+
       >
+        
         {showButtons == false && window.innerWidth > 600 && (
           <Navbar showButtonsAgain={showButtonsAgain} />
         )}
@@ -269,8 +264,10 @@ const Video_1 = () => {
           </div>
         </div>
       </div>
+      
       {window.innerWidth <= 600 && ( // Check if window width is less than or equal to 600px (adjust as needed)
-        <div // 3. BLANK AREA
+        <div // 3. BLANK AREA BİLGİSAYARDA YOK TELEFONDA VAR
+        
         > 
           <div
             className="bg-cover bg-fixed d-flex justify-content-center"
@@ -322,6 +319,7 @@ const Video_1 = () => {
           </div>
         </div>
       )}
+      
     </div>
   );
 };

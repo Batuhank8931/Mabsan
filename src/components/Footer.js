@@ -89,7 +89,7 @@ const Footer = () => {
       </div>
       <div className="d-flex align-items-center justify-content-center row mt-2 mr-md-5 ml-md-5">
         <div className="col-md-3 col-12">
-          <div className="d-flex justify-content-between mr-md-5 mb-5 mr-3 ml-md-0">
+          <div className="d-flex justify-content-between mr-md-5 mb-3 mr-3 ml-md-0 mt-3">
             <button>
               <img src={faceSVG} alt="Face Icon" />
             </button>
