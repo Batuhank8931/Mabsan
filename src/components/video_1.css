@@ -3,26 +3,45 @@
     outline: none;
     transition: 0.3s;
     padding-bottom: 0px;
-    font-family: "Power Grotesk", sans-serif;
     color: white;
     text-align: left;
 }
 
- 
+
   
 
-  .button {
-    background: transparent;
-    border: none;
-    margin: 0 auto 0;
-    display: block;
-    font-size: 30px;
-    outline: none;
-    position: relative;
-    transition: 0.3s;
-    padding-bottom: 0px;
-    font-family: "Power Grotesk", sans-serif;
-    color: #C9C6C6;
+.buttontr {
+  background: transparent;
+  border: none;
+  margin: 0 auto 0;
+  display: block;
+  font-size: 50%;
+  outline: none;
+  position: relative;
+  transition: 0.3s;
+  padding-bottom: 0px;
+  color: white;
+}
+
+.buttontr:hover {
+  background: black;
+  padding: 0;
+}
+
+.buttontr:active {
+  background: black;
+  color: white;
+  transition: none;
+}
+
+
+.video_frame {
+  border: 70px solid black;
+  border-radius: 5px;
+}
+
+.bayrak{
+  width: 50%;
 }
 
 
@@ -35,8 +54,9 @@
   .button {
     font-size: 30px;
   }
-}
 
+
+}
 
 
 .button:before {

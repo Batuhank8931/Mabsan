@@ -12,7 +12,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 90%;
+  width: 80%;
   height: 30%;
   background-image: url('https://s3-alpha-sig.figma.com/img/7a90/1978/448a99d76beaa5f4efdc89665c9014ae?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bBXl4GfzMvHi-CIPKoLcWdiS5INoWiC9VJW05qPjnmvWQS~X~XWNkaDzw663ncTWIllI5WkACP6Uz1WIb8bQ-DpAmA9YnvzgSrn4U9cFdYMnoqHs7YTnC7jXaGnktPIb7T00K3JtmCZHuQST90xt4k0vToQMeY1MDm5OXmUXqwoJB2yIPRvsqXE-QlHoxA8mtXVPtZuD8MRDX9rTv3FZJEK71AgS-huXQpsZrUcl~PVFijxzHIZRJoXQm4CpwtbG~5MFgjValimObqwzHLNF0R8WVf-cypfjpYrI82vDQqfc1su~VV7RWhcvmdBZXQT1pAvpSRtG6FExBQreYopsXQ__');
   background-size: cover;
@@ -22,43 +22,41 @@
 
 
 
-.label_1 {
+.pager_label_1 {
     background-color: transparent;
-    font-size: 40px;
+    font-size: 95%;
     outline: none;
     transition: opacity 0.2s ease-in-out;
     opacity: 1;
     padding-bottom: 0px;
-    font-family: "Power Grotesk", sans-serif;
     color: white;
     text-align: left;
 
 }
 
-.label_1.fade-out {
+.pager_label_1.fade-out {
   opacity: 0;
 }
 
 
-.label_2 {
+.pager_label_2 {
     background-color: transparent;
-    font-size: 20px;
+    font-size: 50%;
     outline: none;
     transition: opacity 0.2s ease-in-out;
     padding-bottom: 0px;
-    font-family: "Power Grotesk", sans-serif;
     color: white;
     text-align: left;
 
 }
 
-.label_2.fade-out {
+.pager_label_2.fade-out {
   opacity: 0;
 }
 
 .previous_button, .next_button {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: #cccccc63;
     border: none;
     border-radius: 50%;
@@ -83,8 +81,8 @@
   /* Additional styles */
   .previous_button:hover, .next_button:hover {
     background-color: #999999de;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   
 
@@ -92,42 +90,49 @@
   /* Reset hover styles when button is clicked */
   .previous_button:active:hover, .next_button:active:hover {
     background-color: #cccccc63; /* Reset background color */
-    width: 100px; /* Reset width */
-    height: 100px; /* Reset height */
+    width: 80px;
+    height: 80px;
   }
   
-  .slide_card_wrapper{
-    height: 600px;
+
+  .slider-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
   }
 
 
   .slide_card {
-    background-color: rgba(204, 204, 204, 0.1); /* Light grey background with transparency */
-    border: 2px solid transparent; 
-    border-radius: 50px 0 50px 0 ; /* Top left and bottom right corners have border radius */
-    transition: width 0.5s ease; 
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
     height: 100%;
+    
   }
-  
-  
+    
 
   .card_front{
     background-color: transparent; /* Transparent background */
+    background-color: rgba(204, 204, 204, 0.1); /* Light grey background with transparency */
+    border: 2px solid transparent; 
+    border-radius: 30px 0 30px 0 ; /* Top left and bottom right corners have border radius */
+    padding: 10%;
+    margin: 8%;
   }
 
-  .card_header_1{
+  .pager_card_header_1{
     background-color: transparent; /* Transparent background */
     color: white;
-    font-size: 50px;
+    font-size: 100%;
     display: flex;
     justify-content: center; /* Align horizontally center */
     align-items: center; /* Align vertically center */
   }
 
-  .card_header_2 {
+  .pager_card_header_2 {
     background-color: transparent; /* Transparent background */
     color: white;
-    font-size: 30px;
+    font-size: 95%;
     display: flex;
     justify-content: center; /* Align horizontally center */
     align-items: center; /* Align vertically center */
@@ -135,12 +140,14 @@
   
 
   .image_container {
-    border-radius: 50px; /* Adjust the value as needed */
+    border-radius: 20px; /* Adjust the value as needed */
   }
+  
 
   @media (min-width: 601px) {
     .slide_card_wrapper{
-      height: 800px;
+      height: 100%;
+      width: 100%;
     }
 
     .label_1{

@@ -1,22 +1,22 @@
-/* Main_Header.css */
-
   
 
-.button {
+
+
+.buttons {
     background: transparent;
     border: none;
     margin: 0 auto 0;
     display: block;
-    font-size: 35px;
+    font-size: 130%;
     outline: none;
     position: relative;
     transition: 0.3s;
     padding-bottom: 0px;
-    font-family: "Power Grotesk", sans-serif;
-    color: #C9C6C6;
+    color: white;
 }
 
-.button:before {
+
+.buttons:before {
     content: '';
     border-bottom: 3px solid #ED1C24;
     padding: 0 25px;
@@ -29,36 +29,78 @@
     transition: 0.3s;
 }
 
-.button:hover:before {
+
+.buttons:hover:before {
     width: 100%;
     padding: 0;
 }
 
-.button:active {
+.buttons:active {
     background: black;
     color: white;
     transition: none;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth transition */
-  }
-  
-  .btn:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
-  }
-  
-  .menu {
-    width: "150px"
-  }
 
+.buttontrs {
+  background: transparent;
+  border: none;
+  margin: 0 auto 0;
+  display: block;
+  font-size: 130%;
+  outline: none;
+  position: relative;
+  transition: 0.3s;
+  padding-bottom: 0px;
+  color: white;
+}
+
+.buttontrs:hover {
+  background: black;
+  padding: 0;
+}
+
+.buttontrs:active {
+  background: black;
+  color: white;
+  transition: none;
+}
+
+
+.menu_button{
+  width: 100%;
+}
+
+
+.underline_0 {
+  display: block;
+  /* Add the additional classes here */
+  display: flex;
+  align-items: stretch;
+  justify-content: between;
+  width: 100%;
+  padding: 0;
+  padding-top: 5px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  height: 100%;
+}
+
+.underline_1 {
+  display: block;
+  display: flex;
+  align-items: center;
+  
+}
+
+.underline_2 {
+  display: none;
+}
+
+.bayrak{
+  width: 50%;
+}
   
 
 /* Define animation classes for sliding up and down */
@@ -90,3 +132,19 @@
     }
   }
   
+
+  
+@media (max-width: 601px) {
+  .underline_0{
+    display: none;
+  }
+  .underline_1{
+    display: none;
+  }
+  .underline_2{
+    display: block;
+  }
+
+
+}
+

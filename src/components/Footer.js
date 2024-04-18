@@ -16,7 +16,7 @@ const Footer = () => {
     <div className="baslik p-md-5 p-3 pt-0 pb-5 ">
       <div className="d-flex align-items-center justify-content-center mb-0 mb-md-5 mt-md-5 mt-0">
         <div>
-          <img src={altlogoSVG} alt="altlogo" className="altlogo" />
+          <img src={altlogoSVG} alt="altlogo" className="altlogo rotating" />
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-center row mr-md-5 ml-md-5 ">
@@ -43,10 +43,10 @@ const Footer = () => {
             backgroundSize: "cover",
           }}
         >
-          <div className="bd-highlight p-md-5 pt-4">
+          <div className="bd-highlight p-md-3 pt-4">
             <img src={yaprakSVG} alt="yaprak" className="yaprak" />
           </div>
-          <div className="bd-highlight  p-md-5 p-1">
+          <div className="bd-highlight  p-md-3 p-1">
             <label className="detay_title">Sürdürülebilirlik Politikası</label>
           </div>
           <div className="mt-auto bd-highlight w-100">

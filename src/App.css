@@ -2,11 +2,13 @@ body {
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
   background-color: black; /* Set background color */
+  font-family: 'Power Grotesk', sans-serif;
 }
 
 
 .App-container {
-  max-width: 1800px; /* Set the maximum width for the container */
+  max-width: 1000px; /* Set the maximum width for the container */
+  width: "70%";
   margin: 0 auto; /* Center the container horizontally */
   text-align: center; /* Center the content inside the container */
 }
@@ -18,4 +20,18 @@ body {
 
 
 
+@media (max-width: 601px) {
+  .App-container {
+    width: "100%";
+  }
+}
+
+
+@font-face {
+  font-family: 'Power Grotesk';
+  src: url('./fonts/PowerGrotesk-Regular.ttf') format('truetype');
+  /* You might need to adjust the path based on your directory structure */
+  font-weight: normal;
+  font-style: normal;
+}
 

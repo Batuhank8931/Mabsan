@@ -20,8 +20,8 @@ const NavBar = ({ showButtonsAgain }) => {
           className="bg-cover bg-fixed p-md-5 p-3 pt-5 pb-5"
           style={{ backgroundImage: `url(${backgroundSVG})` }}
         >
-          <div className="d-flex align-items-stretch justify-content-between">
-            <div className="col-2">
+          <div className="d-flex">
+            <div className="col-2 col-md-1">
               <img
                 src={MabsanLogo}
                 alt="Mabsan Logo"
@@ -29,60 +29,72 @@ const NavBar = ({ showButtonsAgain }) => {
               />
             </div>
 
-            <div class="d-flex flex-column col-8">
-              <div className="d-flex flex-md-row flex-column align-items-start justify-content-between w-100 h-50 p-md-5 p-3 pt-0 m-5 m-md-0 ">
-                <button className="text-white mx-2 button mt-2 mb-4">
-                  Kurumsal
-                </button>
-                <button className="text-white mx-2 button mt-2 mb-4">
-                  Üretim
-                </button>
-                <button className="text-white mx-2 button mt-2 mb-4">
-                  Ürünler
-                </button>
-                <button className="text-white mx-2 button mt-2 mb-4">
-                  Kariyer
-                </button>
-                <button className="text-white mx-2 button mt-2 mb-4">
+            <div class="d-flex flex-column col-8 col-md-10">
+              <div className="d-flex flex-md-row flex-column align-items-start justify-content-around w-100 h-50 p-md-2 p-3 pt-0 m-5 m-md-0 ">
+                <button className="buttons mx-2 mt-2 mb-4">Kurumsal</button>
+                <button className="mx-2 buttons mt-2 mb-4">Üretim</button>
+                <button className="mx-2 buttons mt-2 mb-4">Ürünler</button>
+                <button className=" mx-2 buttons mt-2 mb-4">Kariyer</button>
+                <button className=" mx-2 buttons mt-2 mb-4">
                   Kariyer Blog
                 </button>
-                <button className="text-white mx-2 button mt-2">
-                  İletişim
-                </button>
+                <button className=" mx-2 buttons mt-2">İletişim</button>
               </div>
-              <div className="d-flex align-items-stretch justify-content-between w-100 p-md-5 p-1 pt-5 pb-0 pb-md-0 h-100 ">
-                <div className="d-flex align-items-end w-50">
+              <div className="underline_0">
+                <div
+                  className="d-flex align-items-end "
+                  style={{ width: "20%" }}
+                >
                   <img src={politika} alt="politika" className="politika" />
                 </div>
               </div>
             </div>
 
-            <div className="menu d-flex flex-column align-items-end justify-content-end col-2">
-              <button
-                className="btn p-0 position-relative"
-                onClick={() => {
-                  hideNavbar();
-                  showButtonsAgain();
-                }}
-              >
-                <img
-                  src={MenuButton}
-                  alt="Menu Button"
-                  className="menu-button"
-                />
-                <div className="overlay"></div> {/* Semi-transparent overlay */}
-              </button>
+            <div className="d-flex flex-column col-2 col-md-1">
+              <div className="d-flex flex-column align-items-end">
+                {" "}
+                <button
+                  className="p-0"
+                  onClick={() => {
+                    hideNavbar();
+                    showButtonsAgain();
+                  }}
+                >
+                  <img
+                    src={MenuButton}
+                    alt="Menu Button"
+                    className="menu-button"
+                  />
+                </button>
+              </div>
+
               <div
                 className="d-flex align-items-end"
                 style={{ height: "100%" }}
               >
-                <div className="d-flex align-items-center">
-                  <div className="d-flex align-items-center justify-content-center  col-4">
+                <div className="underline_1">
+                  <button className="mx-2 buttontrs d-flex align-items-center justify-content-center">
                     <img src={bayrak} alt="bayrak" className="bayrak" />
-                  </div>
-
-                  <button className="text-white mx-2 button col-4">TR</button>
+                    TR
+                  </button>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className="underline_2">
+            {" "}
+            {
+              // SADECE TELEFONDA GÖZÜKEN ALT SATIR
+            }
+            <div class="d-flex justify-content-between">
+              <div className="d-flex align-items-end" style={{ width: "30%" }}>
+                <img src={politika} alt="politika" className="politika" />
+              </div>
+              <div className="d-flex align-items-center">
+                <button className="mx-2 buttontrs d-flex align-items-center justify-content-center">
+                  <img src={bayrak} alt="bayrak" className="bayrak" />
+                  TR
+                </button>
               </div>
             </div>
           </div>

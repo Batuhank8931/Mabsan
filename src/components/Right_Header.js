@@ -9,10 +9,10 @@ const Right_Header = ({ sectorLabel }) => {
         <div class="left-div d-flex align-items-center w-8">
           <img src={polygon} alt="Polygon" />
         </div>
-        <div class="middle-div d-flex align-items-center m-2">
+        <div class="middle-div d-flex align-items-center mr-5">
           <div className="line"></div>
         </div>
-        <div class="right-div d-flex align-items-center">
+        <div class="right-div d-flex align-items-center ml-5">
           <label>{sectorLabel}</label> {/* Use the prop value here */}
         </div>
       </div>

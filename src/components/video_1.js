@@ -1,11 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
-import backgroundSVG from "../assets/HeaderBackground.svg";
 import Mabsan from "../assets/mabsan.svg";
 import MenuButton from "../assets/MenuButton.svg";
 import bayrak from "../assets/bayrak.svg";
 import Navbar from "./NavBar.js"; // Importing the NavBar component
 import "./video_1.css"; // Importing the CSS file
-import Carousel from "./Carousel";
+import Apples from "../assets/apples.mp4";
 
 const Video_1 = () => {
   const videoId = "l1cBhOqSV4M"; // YouTube video ID
@@ -71,8 +70,8 @@ const Video_1 = () => {
         width: "100%",
       }}
     >
-      {window.innerWidth <= 600 && ( 
-        <div  // 1. BLANK AREA BİLGİSAYARDA YOK TELEFONDA VAR
+      {window.innerWidth <= 600 && (
+        <div // 1. BLANK AREA BİLGİSAYARDA YOK TELEFONDA VAR
         >
           {showNavbar && <Navbar showButtonsAgain={showButtonsAgain} />}
           <div
@@ -110,12 +109,7 @@ const Video_1 = () => {
                             className="mabsan h-10"
                           />
                         </div>
-                        <div className="d-flex align-items-top">
-                          <div className="d-none d-sm-flex d-none d-sm-flex">
-                            <img src={bayrak} alt="bayrak" className="bayrak" />
-                            <button className="text-white button">TR</button>
-                          </div>
-                        </div>
+
                       </div>
                     </div>
                   )}
@@ -142,13 +136,10 @@ const Video_1 = () => {
             </div>
           </div>
         </div>
-        
       )}
-      
-      <div // 2. MIDDLE AREA
 
+      <div // 2. MIDDLE AREA
       >
-        
         {showButtons == false && window.innerWidth > 600 && (
           <Navbar showButtonsAgain={showButtonsAgain} />
         )}
@@ -171,43 +162,47 @@ const Video_1 = () => {
               backgroundColor: "transparent",
             }}
           >
-            <iframe
-              title="YouTube video player"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1&playlist=${videoId}&modestbranding=1&showinfo=0&mute=1&disablekb=1&iv_load_policy=3&fs=0&controls=0&disableControls=1&cc_load_policy=1&color=white&enablejsapi=1&end=0&hl=en&listType=playlist&rel=0&start=0&playsinline=1`}
-              allowFullScreen
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                pointerEvents: "none",
-                opacity: 1,
-              }}
-            ></iframe>
+            <div id="video-container">
+              <video
+                autoPlay
+                loop
+                muted
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  pointerEvents: "none",
+                  opacity: 1,
+                }}
+              >
+                <source src={Apples} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
             {/* Conditionally render the buttons based on showButtons state */}
 
             <div
-              className="label d-flex flex-row justify-content-center align-content-between p-md-5 p-3 col-10"
+              className="label d-flex flex-row justify-content-center align-content-between p-md-5 p-3 col-11"
               style={{ position: "absolute", width: "100%", height: "100%" }}
             >
               <div className="d-flex flex-column" style={{ width: "100%" }}>
                 {showButtons && window.innerWidth > 600 && (
                   <div style={{ width: "100%" }}>
                     <div className="d-flex justify-content-between">
-                      <div>
+                      <div className="col-10">
                         <img
                           src={Mabsan}
                           alt="Mabsan"
                           className="mabsan h-10"
                         />
                       </div>
-                      <div className="d-flex align-items-top">
-                        <div className="d-none d-sm-flex d-none d-sm-flex">
+                      <div className="col-2">
+                        <button className="mx-2 buttontr d-flex align-items-center justify-content-center">
                           <img src={bayrak} alt="bayrak" className="bayrak" />
-                          <button className="text-white mx-2 button">TR</button>
-                        </div>
+                          TR
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -224,20 +219,15 @@ const Video_1 = () => {
                 <div></div>
               </div>
 
-              <div className="d-flex flex-column align-items-end col-2">
+              <div className="d-flex flex-column align-items-end col-1">
                 {showButtons && window.innerWidth > 600 && (
                   <button
                     className="btn p-0 position-relative"
                     onClick={toggleButtons} // Add onClick handler to toggle the visibility of buttons
                   >
                     <div>
-                      <img
-                        src={MenuButton}
-                        alt="Menu Button"
-                        className="menu-button"
-                      />
+                      <img src={MenuButton} alt="Menu Button" />
                     </div>
-                    <div className="overlay"></div>
 
                     {/* Semi-transparent overlay */}
                   </button>
@@ -264,11 +254,10 @@ const Video_1 = () => {
           </div>
         </div>
       </div>
-      
+
       {window.innerWidth <= 600 && ( // Check if window width is less than or equal to 600px (adjust as needed)
         <div // 3. BLANK AREA BİLGİSAYARDA YOK TELEFONDA VAR
-        
-        > 
+        >
           <div
             className="bg-cover bg-fixed d-flex justify-content-center"
             style={{
@@ -319,7 +308,6 @@ const Video_1 = () => {
           </div>
         </div>
       )}
-      
     </div>
   );
 };

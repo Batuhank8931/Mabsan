@@ -25,7 +25,6 @@ const App = () => {
       style={{
         position: "relative",
         backgroundImage: `url(${backgroundSVG})`,
-        width: "100%",
       }}
     >
       {" "}

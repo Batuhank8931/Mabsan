@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Pager.css";
 
 const Pager = () => {
@@ -77,17 +77,16 @@ const Pager = () => {
     },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [translateXValue, setTranslateXValue] = useState(0);
 
   const handleNext = () => {
-    // Check if there is a next item
     if (currentIndex < pagerData.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-      shrinkAndEnlarge();
+      setCurrentIndex((prevIndex) => prevIndex + 1);
     }
     if (currentIndex < pagerData.length - 1) {
       setCurrentIndex(currentIndex + 1);
-      const label1 = document.querySelector(".label_1");
-      const label2 = document.querySelector(".label_2");
+      const label1 = document.querySelector(".pager_label_1");
+      const label2 = document.querySelector(".pager_label_2");
       label1.classList.add("fade-out");
       label2.classList.add("fade-out");
       setTimeout(() => {
@@ -99,13 +98,13 @@ const Pager = () => {
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-      shrinkAndEnlarge();
+      setCurrentIndex((prevIndex) => prevIndex - 1);
     }
+
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
-      const label1 = document.querySelector(".label_1");
-      const label2 = document.querySelector(".label_2");
+      const label1 = document.querySelector(".pager_label_1");
+      const label2 = document.querySelector(".pager_label_2");
       label1.classList.add("fade-out");
       label2.classList.add("fade-out");
       setTimeout(() => {
@@ -115,65 +114,76 @@ const Pager = () => {
     }
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      setTranslateXValue(screenWidth < 600 ? -85 : -95);
+    };
+
+    handleResize(); // Initial call to set initial translateX value
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Run effect only once after component mount
+
   const currentItem = pagerData[currentIndex];
-
-  const shrinkAndEnlarge = () => {
-    const slideCard = document.querySelector(".slide_card");
-    const parentWidth = slideCard.parentElement.offsetWidth; // Get the width of the parent element
-
-    // Shrink the slide card to zero width
-    slideCard.style.width = "0";
-
-    // Set a timeout to enlarge the slide card after a short delay
-    setTimeout(() => {
-      // Enlarge the slide card back to its original width
-      slideCard.style.width = parentWidth + "px"; // Use the parent's width for enlargement
-    }, 400); // Adjust the delay as needed (400 milliseconds in this case)
-  };
 
   return (
     <div className="baslik  p-md-5 p-3 pt-5 pb-5">
       <div className="pager_back d-flex row">
-        <div className="header_card pager_front col-12 col-md-8 d-flex row p-4 pb-0">
-          <div>
-            <label className="label_1 p-4">{currentItem.header1}</label>
+        <div className="header_card pager_front col-12 col-md-6 d-flex row p-4 pb-0 ">
+          <div className="d-flex align-items-center justify-content-start">
+            <label className="pager_label_1 p-4">{currentItem.header1}</label>
           </div>
           <div>
-            <label className="label_2 p-4">{currentItem.detail}</label>
+            <label className="pager_label_2 p-4">{currentItem.detail}</label>
           </div>
-          <div className="p-4 d-flex align-items-center justify-content-center">
-            <div className="d-flex column p-3">
+          <div className="d-flex align-items-center justify-content-start pl-0">
+            <div className="d-flex column p-3 pl-0">
               <button
                 className="previous_button m-3"
                 onClick={handlePrevious}
                 disabled={currentIndex === 0}
               >
-                {/* Handle previous button */}
+
               </button>
               <button className="next_button m-3" onClick={handleNext}>
-                {/* Handle next button */}
+
               </button>
             </div>
           </div>
         </div>
-        <div className="pager_front col-12 col-md-4 p-4 pt-0">
+        <div className="pager_front col-12 col-md-6 p-4 pt-0">
           <div className="slide_card_wrapper">
-            <div className="slide_card">
-              <div className="card_front">
-                <div className="d-flex justify-content-evenly m-5">
-                  <label className="card_header_1 p-4">{currentItem.id}</label>
-                  <label className="card_header_2 p-4">
-                    {currentItem.header2}
-                  </label>
-                </div>
-                <div className="d-flex justify-content-center p-4 m-4" >
-                  <img
-                    src={currentItem.photoLink}
-                    alt="bayrak"
-                    className="image_container"
-                    style={{ height:"100%"}}
-                  />
-                </div>
+            <div className="slider-container">
+              <div
+                className="slide_card"
+                style={{
+                  transform: `translateX(${translateXValue * currentIndex}%)`,
+                }}
+              >
+                {pagerData.map((pagerItem, index) => (
+                  <div className="card_front" key={index}>
+                    <div className="d-flex justify-content-evenly m-4">
+                      <label className="pager_card_header_1 pr-4">
+                        {pagerItem.id}
+                      </label>
+                      <label className="pager_card_header_2">
+                        {pagerItem.header2}
+                      </label>
+                    </div>
+                    <div className="d-flex justify-content-center ">
+                      <img
+                        src={pagerItem.photoLink}
+                        alt="bayrak"
+                        className="image_container"
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

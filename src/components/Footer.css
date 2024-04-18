@@ -3,7 +3,7 @@
 }
 
 .kart_1 {
-    height: 450px;
+    height: 100%;
   }
 
 .kart_2 {
@@ -13,20 +13,20 @@
     }
 
 .kart_3 {
-    height: 450px;
+  height: 100%;
     }
 
 
 .footer_title{
-    font-size: 20px;
+    font-size: 40%;
 }
 
 .detay_title{
-    font-size: 30px;
+  font-size: 60%;
 }
 
 .redline_footer {
-    padding: 10px;
+    padding: 4%;
     border: 2px solid transparent; /* To make sure the outline doesn't push the content */
     outline: 2px solid rgba(255, 0, 0, 0.42); /* Red outline */
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.486); /* Glowing effect */
@@ -46,13 +46,12 @@
 
 
   .footer_h1{
-    font-size: 35px;
-    height: 60px;
+    font-size: 70%;
+
   }
 
   .footer_h2{
-    font-size: 35px;
-    height: 60px;
+    font-size: 70%;
     display: block;
   }
 
@@ -61,15 +60,38 @@
   }
 
   ul {
-    font-size: 25px;
+    font-size: 40%;
     list-style-type: circle; /* or 'circle' or 'square' */
-    margin-left: 30px;
+    margin-left: 10%;
   }
 
 
   p {
     text-align: left;
   }
+
+  .yaprak{
+    margin-top: 50%;
+    height: 130px;
+}
+
+  .adres, .iletisim {
+    width: 40%;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  .rotating {
+    animation: rotate 2s linear infinite; /* Adjust duration and timing function as needed */
+  }
+  
 
   @media (max-width: 601px) {
 
@@ -92,7 +114,7 @@
         }
 
     .footer_title{
-        font-size: 15px;
+      font-size: 50%;
     }
 
     .detay_title{
@@ -104,7 +126,7 @@
     }
 
     .adres, .iletisim {
-        width: 50px;
+        width: 50%;
       }
 
       .detay_button{

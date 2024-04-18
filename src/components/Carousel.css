@@ -16,9 +16,10 @@
   
 }
 
-
 .blocks{
-  background-color:grey;
+  background-color:white;
+  border: 10px;
+  border-color: black;
 }
 
 /* Hide scrollbar */
@@ -35,14 +36,15 @@
   padding: 10px;
   border: 2px solid transparent; /* To make sure the outline doesn't push the content */
   outline: 2px solid rgba(255, 0, 0, 0.42); /* Red outline */
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.486); /* Glowing effect */
-  border-radius: 10px; /* Adjust the value as needed for the desired roundness */
+  box-shadow: 0 0 50px rgba(255, 0, 0, 0.486); /* Glowing effect */
+  border-radius: 20px; /* Adjust the value as needed for the desired roundness */
 }
 
 .bar {
 width: 100%;
 background-color: black;
-border-radius: 10px; /* Adjust the value as needed for the desired roundness */
+box-shadow: 0 0 50px rgba(255, 0, 0, 0.486); /* Glowing effect */
+border-radius: 20px; /* Adjust the value as needed for the desired roundness */
 }
 
 
@@ -64,18 +66,30 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
 
 .card_headers {
   width: 400px; /* Without quotes */
+  display: flex;
+  flex-direction: column;
 }
 
 .sektor_label {
   color: black;
-
+  text-align: left;
+  font-size: 80%;
 }
+
 
 .button_header{
   height: 100%;
   width: 100%; /* Display the "sector_card" div on hover */
 }
 
+.sektor_button:hover .card_headers{
+  flex-direction: row;
+}
+
+
+.picture_1{
+  height: 100%;
+}
 
 /* Apply row layout for larger screens */
 @media (min-width: 601px) {
@@ -86,18 +100,18 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
 
   .sektor_button{
     opacity: 1;
-    width: 200px;
-    height: 550px;
+    width: 140px;
+    height: 400px;
   }
 
   .sektor_button:hover {
     background-image: none;
     background-color: black; /* Change to any color you desire */
-    width: 500px;
+    width: 300px;
   }
   
   .vertical-text {
-    transform: rotate(270deg) translateY(-250%) translateX(60%); /* Rotate the text 270 degrees clockwise and lift it up */
+    transform: rotate(270deg) translateY(-170%) translateX(50%); /* Rotate the text 270 degrees clockwise and lift it up */
     transform-origin: bottom; /* Set the origin to the center */
   }
   
@@ -106,12 +120,22 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
   }
   
   .sektor_button:hover .sector_card_2 {
-    display: block; /* Display the "sector_card" div on hover */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
   }
 
+  .number_label{
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+  }
 
-  .card_headers{
-    width: "400px"; 
+  .sektor_button:hover .number_label {
+    justify-content: start; /* Horizontally center the content */
+    margin-left: 5%;
+
   }
 
 
@@ -119,6 +143,13 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
 
 
 @media (max-width: 601px) {
+
+  .sektor_label {
+    color: black;
+    text-align: left;
+    font-size: 90%;
+  }
+  
 
   .sektor_button {
     transition: height 0.3s ease; /* Add transition property */
@@ -136,8 +167,8 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
   }
   
   .sektor_button:hover .vertical-text {
-    transform: rotate(270deg) translateY(-280%) translateX(-80%); /* Rotate the text 270 degrees clockwise and lift it up */
-    transform-origin: center; /* Set the origin to the center */
+    transform: rotate(90deg) translateY(-60%) translateX(10%); /* Rotate the text 270 degrees clockwise and lift it up */
+    transform-origin: left; /* Set the origin to the center */
   }
 
 
@@ -147,7 +178,11 @@ border-radius: 10px; /* Adjust the value as needed for the desired roundness */
 
 
   .sektor_button:hover .sector_card_1 {
-    display: block; /* Display the "sector_card" div on hover */
+    display: flex;
+    justify-content: end; /* Horizontally center the content */
+    align-items: end; /* Vertically center the content */
+    width: 100%;
+    height: 90%;
   }
 
 
