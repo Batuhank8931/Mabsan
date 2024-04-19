@@ -14,13 +14,13 @@ import youtubeSVG from "../assets/youtube.svg";
 const Footer = () => {
   return (
     <div className="baslik p-md-5 p-3 pt-0 pb-5 ">
-      <div className="d-flex align-items-center justify-content-center mb-0 mb-md-5 mt-md-5 mt-0">
+      <div className="d-flex align-items-center justify-content-center mb-0 mb-md-5 mt-0">
         <div>
           <img src={altlogoSVG} alt="altlogo" className="altlogo rotating" />
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-center row mr-md-5 ml-md-5 ">
-        <div className="kart_1 redline_footer d-flex align-items-center justify-content-center col-md-3 col-5 order-md-0 order-1">
+        <div className="kart_1 redline_footer_left d-flex align-items-center justify-content-center col-md-4 col-5 order-md-0 order-1">
           <div>
             <div className="d-flex align-items-center justify-content-center">
               <img src={iletisimSVG} alt="iletisim" className="iletisim" />
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         <div
-          className="kart_2 d-flex align-items-center flex-column col-md-6 col-10 m-md-0 m-5 mb-0 "
+          className="kart_2 d-flex align-items-center flex-column col-md-4 col-10 m-md-0 m-5 mb-0 "
           style={{
             backgroundImage: `url(${red_hoverSVG})`,
             backgroundSize: "cover",
@@ -53,7 +53,7 @@ const Footer = () => {
             <button className="detay_button">Detay</button>
           </div>
         </div>
-        <div className="kart_3 redline_footer d-flex align-items-center justify-content-center col-md-3 col-5 order-md-2 order-1">
+        <div className="kart_3 redline_footer_right d-flex align-items-center justify-content-center col-md-4 col-5 order-md-2 order-1">
           <div>
             <div className="d-flex align-items-center justify-content-center">
               <img src={adresSVG} alt="adres" className="adres" />

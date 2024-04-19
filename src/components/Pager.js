@@ -134,7 +134,7 @@ const Pager = () => {
   return (
     <div className="baslik  p-md-5 p-3 pt-5 pb-5">
       <div className="pager_back d-flex row">
-        <div className="header_card pager_front col-12 col-md-6 d-flex row p-4 pb-0 ">
+        <div className="header_card col-12 col-md-6 d-flex row p-4 pb-0 ">
           <div className="d-flex align-items-center justify-content-start">
             <label className="pager_label_1 p-4">{currentItem.header1}</label>
           </div>
