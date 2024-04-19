@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import "./Timeline.css";
+import "./css/Timeline.css";
 
 function isPhoneScreen() {
   return window.matchMedia("(max-width: 768px)").matches; // Adjust the max-width as needed

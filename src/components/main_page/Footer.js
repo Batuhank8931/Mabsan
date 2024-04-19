@@ -1,15 +1,15 @@
 import React from "react";
-import "./Footer.css";
-import altlogoSVG from "../assets/alt-logo.svg";
-import iletisimSVG from "../assets/iletisim.svg";
-import yaprakSVG from "../assets/yaprak.svg";
-import adresSVG from "../assets/adres.svg";
-import red_hoverSVG from "../assets/red_hover.svg";
-import faceSVG from "../assets/face.svg";
-import instaSVG from "../assets/insta.svg";
-import twitterSVG from "../assets/twitter.svg";
-import linkedinSVG from "../assets/linkedin.svg";
-import youtubeSVG from "../assets/youtube.svg";
+import "./css/Footer.css";
+import altlogoSVG from "../../assets/alt-logo.svg";
+import iletisimSVG from "../../assets/iletisim.svg";
+import yaprakSVG from "../../assets/yaprak.svg";
+import adresSVG from "../../assets/adres.svg";
+import red_hoverSVG from "../../assets/red_hover.svg";
+import faceSVG from "../../assets/face.svg";
+import instaSVG from "../../assets/insta.svg";
+import twitterSVG from "../../assets/twitter.svg";
+import linkedinSVG from "../../assets/linkedin.svg";
+import youtubeSVG from "../../assets/youtube.svg";
 
 const Footer = () => {
   return (

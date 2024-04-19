@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import backgroundSVG from "../assets/HeaderBackground.svg";
-import MabsanLogo from "../assets/mabsan-logo-menu.svg";
-import MenuButton from "../assets/MenuButton.svg";
-import bayrak from "../assets/bayrak.svg";
-import politika from "../assets/politika.svg";
-import "./NavBar.css"; // Importing the CSS file
+import backgroundSVG from "../../assets/HeaderBackground.svg";
+import MabsanLogo from "../../assets/mabsan-logo-menu.svg";
+import MenuButton from "../../assets/MenuButton.svg";
+import bayrak from "../../assets/bayrak.svg";
+import politika from "../../assets/politika.svg";
+import "./css/NavBar.css"; // Importing the CSS file
 
 const NavBar = ({ showButtonsAgain }) => {
   const [showNavbar, setShowNavbar] = useState(true); // State to control the visibility of the navbar

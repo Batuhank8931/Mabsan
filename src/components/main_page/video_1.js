@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
-import Mabsan from "../assets/mabsan.svg";
-import MenuButton from "../assets/MenuButton.svg";
-import bayrak from "../assets/bayrak.svg";
+import Mabsan from "../../assets/mabsan.svg";
+import MenuButton from "../../assets/MenuButton.svg";
+import bayrak from "../../assets/bayrak.svg";
 import Navbar from "./NavBar.js"; // Importing the NavBar component
-import "./video_1.css"; // Importing the CSS file
-import Apples from "../assets/apples.mp4";
+import "./css/video_1.css"; // Importing the CSS file
+import Apples from "../../assets/apples.mp4";
 
 const Video_1 = () => {
   const videoId = "l1cBhOqSV4M"; // YouTube video ID

@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
-import "./Carousel.css";
-import polygon from "../assets/polygon.svg";
-import rectangle from "../assets/Rectangle.svg";
-import rectangleYatik from "../assets/Rectangle_yatik.svg";
+import "./css/Carousel.css";
+import polygon from "../../assets/polygon.svg";
+import rectangle from "../../assets/Rectangle.svg";
+import rectangleYatik from "../../assets/Rectangle_yatik.svg";
 
 const Carousel = () => {
   const carouselItems = [

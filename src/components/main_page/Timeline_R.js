@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Timeline.css";
+import "./css/Timeline.css";
 
 const events = [
   { year: 1980, title: "Event 1" },

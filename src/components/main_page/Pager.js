@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Pager.css";
+import "./css/Pager.css";
 
 const Pager = () => {
   const pagerData = [

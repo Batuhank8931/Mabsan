@@ -1,6 +1,6 @@
 import React from "react";
-import "./Header.css";
-import polygon from "../assets/polygon.svg";
+import "./css/Header.css";
+import polygon from "../../assets/polygon.svg";
 
 const Right_Header = ({ sectorLabel }) => {
   return (
