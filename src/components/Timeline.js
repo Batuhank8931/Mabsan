@@ -1,254 +1,250 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./css/Timeline.css";
 
 function isPhoneScreen() {
   return window.matchMedia("(max-width: 768px)").matches; // Adjust the max-width as needed
 }
 
-const Timeline = () => {
+const Timeline_new = () => {
   const events = [
     {
       year1: "19",
       year2: "82",
       title: "Event 1",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut imperdiet odio. Fusce vehicula euismod.",
+      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
     },
     {
       year1: "19",
       year2: "88",
       title: "Event 2",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut imperdiet odio. Fusce vehicula euismod.",
+      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
     },
     {
       year1: "20",
       year2: "00",
       title: "Event 3",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut imperdiet odio. Fusce vehicula euismod.",
+      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
     },
     {
       year1: "20",
       year2: "01",
       title: "Event 4",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut imperdiet odio. Fusce vehicula euismod.",
+      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
     },
     {
       year1: "20",
       year2: "02",
       title: "Event 5",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut imperdiet odio. Fusce vehicula euismod.",
+      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
     },
     {
       year1: "20",
       year2: "10",
       title: "Event 6",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut imperdiet odio. Fusce vehicula euismod.",
+      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
     },
     {
       year1: "20",
       year2: "12",
       title: "Event 7",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut imperdiet odio. Fusce vehicula euismod.",
+      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
     },
     {
       year1: "20",
       year2: "15",
       title: "Event 8",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut imperdiet odio. Fusce vehicula euismod.",
+      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
     },
     {
       year1: "20",
       year2: "18",
       title: "Event 9",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut imperdiet odio. Fusce vehicula euismod.",
+      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
     },
     {
       year1: "20",
       year2: "23",
       title: "Event 10",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut imperdiet odio. Fusce vehicula euismod.",
+      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
     },
   ];
 
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [dragStartX, setDragStartX] = useState(null);
-  const containerRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [translateYValue, setTranslateYValue] = useState(0);
 
-  const updateLabelWithAnimation = () => {
-    const label = document.querySelector(".timeline_year0");
-    label.style.transform = "translateX(50%)";
-    setTimeout(() => {
-      label.style.transform = "translateX(0)";
-    }, 400);
-  };
-
-  const handleMouseDown = (event) => {
-    setDragStartX(event.clientX);
-    containerRef.current.style.cursor = "grabbing";
-  };
-
-  const handleMouseMove = (event) => {
-    if (dragStartX !== null) {
-      const dragDistance = event.clientX - dragStartX;
-      containerRef.current.scrollLeft = scrollPosition - dragDistance;
+  const TitleChange = (yazi) => {
+    const yearLabel = document.querySelector(".timeline_year0");
+    if (yearLabel.textContent !== yazi) {
+      yearLabel.classList.add("fade-out"); // Add the fade-out class
+      setTimeout(() => {
+        yearLabel.textContent = yazi; // Update the text content after the fade-out animation completes
+        yearLabel.classList.remove("fade-out"); // Remove the fade-out class
+        yearLabel.classList.add("fade-in"); // Add the fade-in class
+        setTimeout(() => {
+          yearLabel.classList.remove("fade-in"); // Remove the fade-in class after the fade-in animation completes
+        }, 500);
+      }, 500);
     }
   };
 
-  const handleMouseUp = () => {
-    setDragStartX(null);
-    setScrollPosition(containerRef.current.scrollLeft);
-    containerRef.current.style.cursor = "grab";
+  const SubTitleChange = (yazi1, yazi2, yazi3) => {
+    const sub1 = document.querySelector("#Sub_1");
+    const sub2 = document.querySelector("#Sub_2");
+    const sub3 = document.querySelector("#Sub_3");
+    sub1.textContent = yazi1;
+    sub2.textContent = yazi2;
+    sub3.textContent = yazi3;
   };
 
-  const handleTouchStart = (event) => {
-    setDragStartX(event.touches[0].clientX);
-  };
-
-  const handleTouchMove = (event) => {
-    if (dragStartX !== null) {
-      const dragDistance = event.touches[0].clientX - dragStartX;
-      containerRef.current.scrollLeft = scrollPosition - dragDistance;
+  const handleNext = () => {
+    if (currentIndex < events.length - 1) {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
 
-  const handleTouchEnd = () => {
-    setDragStartX(null);
-    setScrollPosition(containerRef.current.scrollLeft);
+  const handlePrevious = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prevIndex) => prevIndex - 1);
+    }
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const key_year = parseInt(entry.target.getAttribute("data-index"));
-            const year2 = entry.target.getAttribute("data-year2");
-            const year3 = entry.target.getAttribute("data-year3");
-            const rect = entry.boundingClientRect;
-            const containerRect = containerRef.current.getBoundingClientRect();
-            const containerCenterX =
-              containerRect.left + containerRect.width / 2;
-            const rectCenterX = rect.left + rect.width / 2;
+    const handleResize = () => {
+      const screenHeight = window.innerHeight; // Use window.innerHeight for vertical carousel
+      setTranslateYValue(screenHeight < 600 ? -87 : -87); // Adjust translate value for vertical carousel
+    };
 
-            if (rectCenterX <= containerCenterX) {
-              const yearLabel = document.querySelector(".timeline_year0");
-              const labe_id = "year_" + (key_year+1);
-              const little_year = document.getElementById(labe_id);
-              const final_year = year3 + year2;
-              if (yearLabel) {
-                yearLabel.textContent = final_year;
-                updateLabelWithAnimation();
-              }
-            }
-          } else {
-            const key_year = parseInt(entry.target.getAttribute("data-index"));
-            const year4 = entry.target.getAttribute("data-year4");
-            const year5 = entry.target.getAttribute("data-year5");
-            const rect = entry.target.getBoundingClientRect();
-            const containerRect = containerRef.current.getBoundingClientRect();
-            const left = rect.left < containerRect.left;
+    handleResize(); // Initial call to set initial translateY value
 
-            if (left) {
-              const yearLabel = document.querySelector(".timeline_year0");
-              const labe_id = "year_" + (key_year+1);
-              const little_year = document.getElementById(labe_id);
-              const final_year = year5 + year4;
-              if (yearLabel) {
-                yearLabel.textContent = final_year;
-                updateLabelWithAnimation();
-              }
-            }
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "0%",
-        threshold: 1,
-      }
-    );
-
-    const elements = document.querySelectorAll(".times");
-    elements.forEach((element) => observer.observe(element));
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, []); // Run effect only once after component mount
 
   return (
-    <div className="baslik p-md-5 p-3 pt-5 pb-5">
-      <div style={{ height: "180px" }}>
+    <div
+      className="baslik deneme p-md-5 p-3 pt-5 pb-5"
+      style={{ height: "700px" }}
+    >
+      <div className="year_header">
         <label className="timeline_year0">19</label>
       </div>
-      <div
-        className="timeline"
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        onTouchCancel={handleTouchEnd}
-        ref={containerRef}
-      >
-        <div className="container_timer">
-          {events.map((item, index) => (
+      <div className="d-flex row card_window">
+        <div
+          className="time_slide_card p-0 m-0"
+          style={{
+            transform: `translateY(${translateYValue * currentIndex}%)`,
+          }}
+        >
+          {events.map((pagerItem, index) => (
             <div
-              className="times"
-              data-index={index}
-              data-year2={item.year2}
-              data-year3={item.year1}
-              data-year4={events[index + 1]?.year2}
-              data-year5={events[index + 1]?.year1}
-              style={{
-                marginLeft: isPhoneScreen()
-                  ? index === 0
-                    ? "28%"
-                    : "65%"
-                  : index === 0
-                  ? "10%"
-                  : "30%",
+              className="times col-12 col-md-6 p-md-5 pr-0 d-flex justify-content-center"
+              onMouseEnter={() => {
+                const timeSlideCard = document.querySelector(
+                  ".time_slide_card"
+                );
+                timeSlideCard.classList.add("full-width");
+              }}
+              onMouseLeave={() => {
+                const timeSlideCard = document.querySelector(
+                  ".time_slide_card"
+                );
+                timeSlideCard.classList.remove("full-width");
               }}
             >
               <div className="year">
-                <label
-                  key={index}
-                  id={`year_${index}`}
-                  className="timeline_year"
-                >
-                  {item.year2}
-                </label>
+                <label className="timeline_year">{pagerItem.year2}</label>
               </div>
-              <button id={`card_${index}`} className="timer_button d-flex justify-content-start m-1 m-md-4">
-                <div className="flex-column ">
-                  <div className="timeline_label p-2 order-md-2 order-1 m-2">
+              <button className="timer_button d-flex justify-content-start p-5">
+                <div
+                  class="d-flex align-items-center flex-column bd-highlight"
+                  style={{ height: "100%", width: "100%" }}
+                >
+                  <button
+                    className="p-2 bd-highlight arrow"
+                    style={{ width: "100%" }}
+                    onClick={() => {
+                      handlePrevious();
+                      let nextIndex = index - 1;
+                      let nextsubIndex = index + 1;
+                      if (nextsubIndex < events.length) {
+                        SubTitleChange(
+                          events[nextsubIndex].year2,
+                          events[nextsubIndex].title,
+                          events[nextsubIndex].text
+                        );
+                      }
+                      if (nextIndex >= 0 && nextIndex < events.length) {
+                        TitleChange(events[nextIndex].year1); // Pass the year2 value of the next page item to deneme function
+                      }
+                    }}
+                    disabled={currentIndex === 0}
+                  >
+                    ↑
+                  </button>
+                  <div className="p-2 bd-highlight" style={{ width: "100%" }}>
                     <div className="timer_headers d-flex flex-column align-items-start">
                       <label className="timeline_header pt-4">
-                        {item.title}
+                        {pagerItem.title}
                       </label>
-                      <label className="timeline_text pt-4">{item.text}</label>
+                      <label className="timeline_text pt-4">
+                        {pagerItem.text}
+                      </label>
                     </div>
                   </div>
+                  <button
+                    className="mt-auto p-2 bd-highlight arrow"
+                    style={{ width: "100%" }}
+                    onClick={() => {
+                      handleNext();
+                      let nextIndex = index + 1;
+                      let nextsubIndex = index + 2;
+                      if (nextsubIndex < events.length) {
+                        SubTitleChange(
+                          events[nextsubIndex].year2,
+                          events[nextsubIndex].title,
+                          events[nextsubIndex].text
+                        );
+                      }
+                      if (nextIndex >= 0 && nextIndex < events.length) {
+                        TitleChange(events[nextIndex].year1); // Pass the year2 value of the next page item to deneme function
+                      }
+                    }}
+                  >
+                    ↓
+                  </button>
                 </div>
               </button>
             </div>
-            
           ))}
+        </div>
+
+        <div className="times_side col-12 col-md-6 p-5 d-flex justify-content-center">
+          <div className="year">
+            <label className="timeline_year" id="Sub_1">
+              {events[1].year2}
+            </label>
+          </div>
+          <button className="timer_button d-flex justify-content-start ml-5 p-5">
+            <div className="flex-column">
+              <div className="timeline_label p-2 order-md-2 order-1 m-2"  style={{ width: "100%" }}>
+                <div className="timer_headers d-flex flex-column align-items-start">
+                  <label className="timeline_header pt-4" id="Sub_2">
+                    {events[1].title}
+                  </label>
+                  <label className="timeline_text pt-4" id="Sub_3">
+                    {events[1].text}
+                  </label>
+                </div>
+              </div>
+            </div>
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Timeline;
+export default Timeline_new;

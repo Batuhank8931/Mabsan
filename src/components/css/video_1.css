@@ -44,7 +44,14 @@
   width: 50%;
 }
 
+.left_bottom_big{
+  transform: translateY(5.5%);
+  font-size: 70px;
+}
 
+.left_bottom_small{
+  font-size: 20px;
+}
 
 @media (max-width: 600px) { /* Adjust font size for screens smaller than 576px (e.g., phones) */
   .label {
@@ -55,6 +62,14 @@
     font-size: 30px;
   }
 
+  .left_bottom_big{
+    transform: translateY(5%);
+    font-size: 52px;
+  }
+
+  .left_bottom_small{
+    font-size: 15px;
+  }
 
 }
 

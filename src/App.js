@@ -7,7 +7,7 @@ import Right_Header from "./components/Right_Header";
 import Carousel from "./components/Carousel";
 import Pager from "./components/Pager";
 import SubNavbar from "./components/SubNavbar";
-import Timeline_new from "./components/Timeline_new";
+
 
 import backgroundSVG from "./assets/HeaderBackground.svg";
 import "./App.css"; // Import the CSS file
@@ -51,7 +51,7 @@ const App = () => {
           <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
         )}
         <Left_Header sectorLabel={"Yolculuğumuz"} />
-        <Timeline_new />
+        <Timeline/>
         <Footer />
       </div>
     </div>

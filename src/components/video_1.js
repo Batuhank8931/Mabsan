@@ -70,11 +70,12 @@ const Video_1 = ({ change_page }) => {
         width: "100%",
       }}
     >
-      {showNavbar &&  <Navbar change_page={change_page} showButtonsAgain={showButtonsAgain} />}
+      {showNavbar && (
+        <Navbar change_page={change_page} showButtonsAgain={showButtonsAgain} />
+      )}
       {window.innerWidth <= 600 && (
         <div // 1. BLANK AREA BİLGİSAYARDA YOK TELEFONDA VAR
         >
-          
           <div
             className="bg-cover bg-fixed d-flex justify-content-center"
             style={{
@@ -99,7 +100,7 @@ const Video_1 = ({ change_page }) => {
                 className="label d-flex flex-row justify-content-center align-content-between  p-md-5 p-3 pt-5 col-md-11 col-10"
                 style={{ position: "absolute", width: "100%", height: "100%" }}
               >
-                <div className="d-flex flex-column col-10" >
+                <div className="d-flex flex-column col-10">
                   {showButtons && (
                     <div style={{ width: "100%" }}>
                       <div className="d-flex justify-content-between">
@@ -110,7 +111,6 @@ const Video_1 = ({ change_page }) => {
                             className="mabsan h-10"
                           />
                         </div>
-
                       </div>
                     </div>
                   )}
@@ -235,14 +235,11 @@ const Video_1 = ({ change_page }) => {
                     className="d-flex align-items-end"
                     style={{ height: "100%" }}
                   >
-                    <div
-                      className="d-flex justify-content-end"
-                      style={{ width: "100%" }}
-                    >
-                      <label style={{ fontSize: "50px" }}>36</label>
-                      <div className="d-flex flex-column justify-content-end">
-                        <label style={{ fontSize: "25px" }}>YILLIK</label>
-                        <label style={{ fontSize: "25px" }}>TECRÜBE</label>
+                    <div className="d-flex justify-content-end col-8 ">
+                      <label className="left_bottom_big">36</label>
+                      <div className="d-flex flex-column justify-content-end col-4 p-3">
+                        <label className="left_bottom_small">YILLIK</label>
+                        <label className="left_bottom_small">TECRÜBE</label>
                       </div>
                     </div>
                   </div>
@@ -291,10 +288,10 @@ const Video_1 = ({ change_page }) => {
                           className="d-flex justify-content-end"
                           style={{ width: "100%" }}
                         >
-                          <label style={{ fontSize: "50px" }}>36</label>
-                          <div className="d-flex flex-column justify-content-end">
-                            <label style={{ fontSize: "25px" }}>YILLIK</label>
-                            <label style={{ fontSize: "25px" }}>TECRÜBE</label>
+                          <label className="left_bottom_big">36</label>
+                          <div className="d-flex flex-column justify-content-end p-3">
+                            <label className="left_bottom_small">YILLIK</label>
+                            <label className="left_bottom_small">TECRÜBE</label>
                           </div>
                         </div>
                       </div>
