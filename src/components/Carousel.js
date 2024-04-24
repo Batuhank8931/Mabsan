@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
 import "./css/Carousel.css";
-import polygon from "../../assets/polygon.svg";
-import rectangle from "../../assets/Rectangle.svg";
-import rectangleYatik from "../../assets/Rectangle_yatik.svg";
+import polygon from "../assets/polygon.svg";
+import rectangle from "../assets/Rectangle.svg";
+import rectangleYatik from "../assets/Rectangle_yatik.svg";
+import card_item from "../assets/card_item.svg"
 
 const Carousel = () => {
   const carouselItems = [
@@ -112,7 +113,7 @@ const Carousel = () => {
                           }}
                         >
                           <img
-                            src="https://s3-alpha-sig.figma.com/img/9480/236d/c33af55d162a4580ed944cd3a9fb38a8?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RUv7OOYu4aV9~q6oQuHDHFykm73wkgLGKT3sNKTMPYovLI08uDtQ~4YQyLFT1vDaqfyMLvrwe6-wE-I2iPUqs7msdR-~Q4Kv8xOrNsSQEJuEVXROD7FjEkxUzugpvGq0zctC4FuuDyq8T0qAwyT6h8aMldJKiNivuhzSWAIsnEIpi5b8wNuCZaYmUfU-n-UZnGRwsJ9EgnYCcwnInN-pQbcj0MqZ-aiVYyovhhVVs5C7zOPL8qDs9REgD1wAzKMirL4-Fywsnd8MEz38gE3F2zI98GWb0qvq9XB84pD1w2mcJJnDAdij4QlDF8H1gkmVPwvNPFQH5WZGNhLzFLVr0Q__"
+                            src={card_item}
                             alt="Mabsan Logo"
                           />
                         </div>
@@ -143,8 +144,8 @@ const Carousel = () => {
                     className="sector_card_1" // TELEFONDA GÖZÜKEN HOVER CARDI
                   >
                     <img
-                      src="https://s3-alpha-sig.figma.com/img/9480/236d/c33af55d162a4580ed944cd3a9fb38a8?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RUv7OOYu4aV9~q6oQuHDHFykm73wkgLGKT3sNKTMPYovLI08uDtQ~4YQyLFT1vDaqfyMLvrwe6-wE-I2iPUqs7msdR-~Q4Kv8xOrNsSQEJuEVXROD7FjEkxUzugpvGq0zctC4FuuDyq8T0qAwyT6h8aMldJKiNivuhzSWAIsnEIpi5b8wNuCZaYmUfU-n-UZnGRwsJ9EgnYCcwnInN-pQbcj0MqZ-aiVYyovhhVVs5C7zOPL8qDs9REgD1wAzKMirL4-Fywsnd8MEz38gE3F2zI98GWb0qvq9XB84pD1w2mcJJnDAdij4QlDF8H1gkmVPwvNPFQH5WZGNhLzFLVr0Q__"
-                      alt="Mabsan Logo"
+                      src={card_item}
+                      alt="card_item"
                       className="picture_1"
                     />
                   </div>{" "}

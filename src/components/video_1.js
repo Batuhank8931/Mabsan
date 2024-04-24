@@ -1,12 +1,12 @@
 import React, { useRef, useEffect, useState } from "react";
-import Mabsan from "../../assets/mabsan.svg";
-import MenuButton from "../../assets/MenuButton.svg";
-import bayrak from "../../assets/bayrak.svg";
+import Mabsan from "../assets/mabsan.svg";
+import MenuButton from "../assets/MenuButton.svg";
+import bayrak from "../assets/bayrak.svg";
 import Navbar from "./NavBar.js"; // Importing the NavBar component
 import "./css/video_1.css"; // Importing the CSS file
-import Apples from "../../assets/apples.mp4";
+import Apples from "../assets/apples.mp4";
 
-const Video_1 = () => {
+const Video_1 = ({ change_page }) => {
   const videoId = "l1cBhOqSV4M"; // YouTube video ID
   const [containerWidth, setContainerWidth] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
@@ -41,7 +41,7 @@ const Video_1 = () => {
     setInitialRender(false);
   }, []);
 
-  const toggleButtons = () => {
+  const show_Navbar = () => {
     setShowButtons(!showButtons);
     if (!showNavbar) {
       setShowNavbar(true); // Show navbar only if it's not visible
@@ -70,10 +70,11 @@ const Video_1 = () => {
         width: "100%",
       }}
     >
+      {showNavbar &&  <Navbar change_page={change_page} showButtonsAgain={showButtonsAgain} />}
       {window.innerWidth <= 600 && (
         <div // 1. BLANK AREA BİLGİSAYARDA YOK TELEFONDA VAR
         >
-          {showNavbar && <Navbar showButtonsAgain={showButtonsAgain} />}
+          
           <div
             className="bg-cover bg-fixed d-flex justify-content-center"
             style={{
@@ -95,10 +96,10 @@ const Video_1 = () => {
               {/* Conditionally render the buttons based on showButtons state */}
 
               <div
-                className="label d-flex flex-row justify-content-center align-content-between pt-5 pl-3 pr-3 col-10"
+                className="label d-flex flex-row justify-content-center align-content-between  p-md-5 p-3 pt-5 col-md-11 col-10"
                 style={{ position: "absolute", width: "100%", height: "100%" }}
               >
-                <div className="d-flex flex-column" style={{ width: "100%" }}>
+                <div className="d-flex flex-column col-10" >
                   {showButtons && (
                     <div style={{ width: "100%" }}>
                       <div className="d-flex justify-content-between">
@@ -118,7 +119,7 @@ const Video_1 = () => {
                   <div className="menu d-flex align-items-start justify-content-end col-2">
                     <button
                       className="btn p-0 position-relative"
-                      onClick={toggleButtons} // Add onClick handler to toggle the visibility of buttons
+                      onClick={show_Navbar} // Add onClick handler to toggle the visibility of buttons
                     >
                       <div>
                         <img
@@ -140,9 +141,6 @@ const Video_1 = () => {
 
       <div // 2. MIDDLE AREA
       >
-        {showButtons == false && window.innerWidth > 600 && (
-          <Navbar showButtonsAgain={showButtonsAgain} />
-        )}
         <div
           className="bg-cover bg-fixed d-flex justify-content-center"
           style={{
@@ -223,7 +221,7 @@ const Video_1 = () => {
                 {showButtons && window.innerWidth > 600 && (
                   <button
                     className="btn p-0 position-relative"
-                    onClick={toggleButtons} // Add onClick handler to toggle the visibility of buttons
+                    onClick={show_Navbar} // Add onClick handler to toggle the visibility of buttons
                   >
                     <div>
                       <img src={MenuButton} alt="Menu Button" />

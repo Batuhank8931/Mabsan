@@ -188,7 +188,7 @@ const Timeline = () => {
   return (
     <div className="baslik p-md-5 p-3 pt-5 pb-5">
       <div style={{ height: "180px" }}>
-        <label className="timeline_year0"></label>
+        <label className="timeline_year0">19</label>
       </div>
       <div
         className="timeline"

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import backgroundSVG from "../../assets/HeaderBackground.svg";
-import MabsanLogo from "../../assets/mabsan-logo-menu.svg";
-import MenuButton from "../../assets/MenuButton.svg";
-import bayrak from "../../assets/bayrak.svg";
-import politika from "../../assets/politika.svg";
+import backgroundSVG from "../assets/HeaderBackground.svg";
+import MabsanLogo from "../assets/mabsan-logo-menu.svg";
+import MenuButton from "../assets/MenuButton.svg";
+import bayrak from "../assets/bayrak.svg";
+import politika from "../assets/politika.svg";
 import "./css/NavBar.css"; // Importing the CSS file
 
-const NavBar = ({ showButtonsAgain }) => {
+const NavBar = ({ showButtonsAgain, change_page }) => {
   const [showNavbar, setShowNavbar] = useState(true); // State to control the visibility of the navbar
 
   // Function to toggle the visibility of the navbar
@@ -31,14 +31,54 @@ const NavBar = ({ showButtonsAgain }) => {
 
             <div class="d-flex flex-column col-8 col-md-10">
               <div className="d-flex flex-md-row flex-column align-items-start justify-content-around w-100 h-50 p-md-2 p-3 pt-0 m-5 m-md-0 ">
-                <button className="buttons mx-2 mt-2 mb-4">Kurumsal</button>
-                <button className="mx-2 buttons mt-2 mb-4">Üretim</button>
-                <button className="mx-2 buttons mt-2 mb-4">Ürünler</button>
-                <button className=" mx-2 buttons mt-2 mb-4">Kariyer</button>
-                <button className=" mx-2 buttons mt-2 mb-4">
+                <button
+                  className="buttons mx-2 mt-2 mb-4"
+                  onClick={() => {
+                    change_page("Kurumsal");
+                  }}
+                >
+                  Kurumsal
+                </button>
+                <button
+                  className="mx-2 buttons mt-2 mb-4"
+                  onClick={() => {
+                    change_page("Üretim");
+                  }}
+                >
+                  Üretim
+                </button>
+                <button
+                  className="mx-2 buttons mt-2 mb-4"
+                  onClick={() => {
+                    change_page("Ürünler");
+                  }}
+                >
+                  Ürünler
+                </button>
+                <button
+                  className="mx-2 buttons mt-2 mb-4"
+                  onClick={() => {
+                    change_page("Kariyer");
+                  }}
+                >
+                  Kariyer
+                </button>
+                <button
+                  className="mx-2 buttons mt-2 mb-4"
+                  onClick={() => {
+                    change_page("Kariyer Blog");
+                  }}
+                >
                   Kariyer Blog
                 </button>
-                <button className=" mx-2 buttons mt-2">İletişim</button>
+                <button
+                  className="mx-2 buttons mt-2"
+                  onClick={() => {
+                    change_page("İletişim");
+                  }}
+                >
+                  İletişim
+                </button>
               </div>
               <div className="underline_0">
                 <div

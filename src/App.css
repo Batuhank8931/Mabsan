@@ -7,7 +7,7 @@ body {
 
 
 .App-container {
-  max-width: 1000px; /* Set the maximum width for the container */
+  max-width: 1200px; /* Set the maximum width for the container */
   width: "70%";
   margin: 0 auto; /* Center the container horizontally */
   text-align: center; /* Center the content inside the container */

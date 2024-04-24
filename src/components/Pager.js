@@ -117,7 +117,7 @@ const Pager = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      setTranslateXValue(screenWidth < 600 ? -85 : -95);
+      setTranslateXValue(screenWidth < 600 ? -90 : -87);
     };
 
     handleResize(); // Initial call to set initial translateX value

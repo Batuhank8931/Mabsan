@@ -1,0 +1,199 @@
+/* timeline.css */
+
+  .card_window {
+    height: 800px; /* Set a fixed height */
+    width: 100%;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: hidden; /* Hide vertical overflow */
+    transform: translateY(-20%);
+
+  }
+
+  
+  .year_header{
+    transform: translateY(-230px);
+    height: 100px;
+  }
+
+   
+  .times{
+    position: relative;
+    background-color: transparent;
+    height: 600px;
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+    transform: translateY(20%);
+    width: 100%;
+    margin-bottom: 96px;
+
+  }
+
+  .time_slide_card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out; /* Add transition for smooth movement and width enlargement */
+    width: 50%;
+    height: 100%;
+    
+  }
+
+
+  .times_side{
+    position: relative;
+    background-color: transparent;
+    height: 600px;
+    transition: transform 0.3s ease; /* Add transition for smooth movement */
+    transform: translateY(20%);
+  }
+
+  .year {
+    background-color: transparent;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+
+  }
+  
+  .year_0{
+    background-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+
+
+  .timer_button {
+    width: 80%;
+    border-radius: 50px 0 50px 0 ;
+    transition: width 0.3s ease; /* Add transition property */
+    background-color: rgba(146, 43, 43, 0.263);
+    backdrop-filter: blur(3px); /* Blur effect with 10px radius */
+    /* Add any other styles you need for your button */
+  }
+
+  .timeline_label{
+    width: 200%;
+  }
+
+
+  .timer_headers {
+    width: 100%;
+  }
+  
+
+  .timeline_header {
+    color: white;
+    font-size: 40px;
+ 
+  }
+
+  .timeline_text {
+    color: white;
+    font-size: 20px;
+    text-align: left ;
+ 
+  }
+
+  .timeline_year {
+    color: white;
+    font-size: 110px;
+    font-weight: bold;
+    transition: transform 1s ease, width 1s ease, font-size 1s ease, color 1s ease; /* Add transitions for smooth movement, width enlargement, font size change, and color change */
+
+ 
+  }
+
+  .timeline_year0 {
+    background: linear-gradient(317.85deg, #FA0000 -41.59%, rgba(250, 0, 0, 0) 143.46%);
+    -webkit-background-clip: text; /* For WebKit/Blink browsers */
+    background-clip: text;
+    color: transparent; /* Make the text transparent */
+    font-size: 400px;
+    font-weight: bold;
+  }
+  
+  
+  
+  .arrow{
+    display: none;
+    transition: font-size 0.3s ease; /* Add transition for smooth font size change */
+  }
+
+  
+  .times:hover > .year >.timeline_year {
+    background: linear-gradient(317.85deg, #FA0000 -41.59%, rgba(250, 0, 0, 0) 143.46%);
+    -webkit-background-clip: text; /* For WebKit/Blink browsers */
+    background-clip: text;
+    color: transparent; /* Make the text transparent */
+    font-size: 400px;
+    font-weight: bold;
+    transform: translateY(-350px) translateX(300px);
+  }
+
+
+  .times:hover .arrow {
+    display: block; /* Hide the .downarrow when .times is being hovered */
+  }
+  
+
+  .arrow:hover {
+    font-size: larger; /* Increase width on hover */
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+
+  @media (max-width: 601px) {
+
+    .timeline {
+      height: 550px;
+  
+    }
+
+    .year_header{
+      transform: translateY(-80px);
+    }
+
+    .timeline_year0 {
+      font-size: 200px;
+
+    }
+    
+    .time_slide_card {
+      width: 100%;
+
+    }
+
+    .timer_button {
+      width: 100%;
+      height: 80%;
+    }
+
+
+    .year {
+      background-color: transparent;
+      position: absolute;
+
+    }
+
+    .time_slide_card {
+      width: 100%;
+
+      
+    }
+
+    .times{
+      transform: translateX(25%) translateY(25%);
+      width: 80%;
+
+  
+    }
+  
+    .times:hover > .year >.timeline_year {
+      font-size: 200px;
+      transform: translateY(-230px) translateX(100px);
+    }
+
+
+  }
+

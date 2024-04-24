@@ -8,6 +8,7 @@
     text-align: left;
     background-color: black;
   }
+
   
   .middle-div {
     flex-grow: 1; /* Allow the div to grow to fill the remaining space */

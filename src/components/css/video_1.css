@@ -129,3 +129,51 @@
     transform: translateY(0%);
   }
 }
+
+
+
+
+  
+.baslik_subnavbar {
+  font-size: 70px;
+  outline: none;
+  transition: 0.3s;
+  padding-bottom: 0px;
+  color: white;
+  text-align: left;
+}
+
+
+.fade-in {
+  transition: opacity 0.3s ease-in-out; /* Apply the transition effect */
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.middle-div {
+  flex-grow: 1; /* Allow the div to grow to fill the remaining space */
+}
+
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+
+
+/* Apply row layout for larger screens */
+@media (max-width: 601px) {
+
+  .baslik_subnavbar {
+    font-size: 50px; /* Adjust font size as needed */
+  }
+
+
+}
+
+
+
