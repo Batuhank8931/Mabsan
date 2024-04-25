@@ -69,10 +69,18 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                     change_page("Kariyer Blog");
                   }}
                 >
-                  Kariyer Blog
+                  Blog
                 </button>
                 <button
-                  className="mx-2 buttons mt-2"
+                  className="mx-2 buttons mt-2 mb-4"
+                  onClick={() => {
+                    change_page("İletişim");
+                  }}
+                >
+                  Perakende
+                </button>
+                <button
+                  className="mx-2 buttons mt-2 mb-4"
                   onClick={() => {
                     change_page("İletişim");
                   }}
@@ -85,13 +93,13 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                   className="d-flex align-items-end "
                   style={{ width: "20%" }}
                 >
-                  <img src={politika} alt="politika" className="politika" />
+                  <img src={politika} alt="politika" className="politika buttontrs" />
                 </div>
               </div>
             </div>
 
             <div className="d-flex flex-column col-2 col-md-1">
-              <div className="d-flex flex-column align-items-end">
+              <div className="d-flex flex-column align-items-end menu_button">
                 {" "}
                 <button
                   className="p-0"
@@ -128,7 +136,7 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
             }
             <div class="d-flex justify-content-between">
               <div className="d-flex align-items-end" style={{ width: "30%" }}>
-                <img src={politika} alt="politika" className="politika" />
+                <img src={politika} alt="politika" className="politika buttontrs" />
               </div>
               <div className="d-flex align-items-center">
                 <button className="mx-2 buttontrs d-flex align-items-center justify-content-center">

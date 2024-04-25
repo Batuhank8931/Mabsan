@@ -1,5 +1,8 @@
-.altlogo{
-    height: 150px;
+
+.video-container{
+  height: 300px;
+  overflow: hidden;
+  position: relative;
 }
 
 .kart_1 {
@@ -8,7 +11,8 @@
 
 .kart_2 {
     height: 100%;
-    border-radius: 20px;
+    border-radius: 10px 10px 0 0; /* Top-left and top-right corners have radius, bottom corners have no radius */
+    padding: 0.2%;
 
     }
 
@@ -21,9 +25,15 @@
     font-size: 40%;
 }
 
-.detay_title{
+.detay_title {
   font-size: 60%;
   text-align: center;
+  font-weight: bold; /* Make the text bold */
+  text-decoration: underline; /* Underline the text */
+}
+
+.hidden_bottom{
+  display: none !important;
 }
 
 .redline_footer_left {
@@ -42,15 +52,15 @@
 
   }
 
-  .detay_button{
+  .detay_button {
     width: 100%;
     background-color: grey;
-    border-radius: 10px;
     opacity: 0.78;
     margin-bottom: 5px;
     height: 60px;
     font-size: 25px;
   }
+  
 
 
   .footer_h1{
@@ -70,7 +80,7 @@
   ul {
     font-size: 40%;
     list-style-type: circle; /* or 'circle' or 'square' */
-    margin-left: 10%;
+    margin-left: 15%;
   }
 
 
@@ -86,6 +96,9 @@
   .adres, .iletisim {
     width: 40%;
   }
+
+
+
 
   @keyframes rotate {
     from {
@@ -103,6 +116,15 @@
 
   @media (max-width: 601px) {
 
+    .hidden_bottom{
+      display: flex !important;
+    }
+
+
+    .video-container{
+      height: 120px;
+    }
+
     .altlogo{
         height: 75px;
     }
@@ -113,7 +135,10 @@
     
     .kart_2 {
         height: 70%;
-        border-radius: 20px;
+        border-radius: 10px 10px 0 0; /* Top-left and top-right corners have radius, bottom corners have no radius */
+        padding: 1%;
+        width: 70%;
+
     
         }
     

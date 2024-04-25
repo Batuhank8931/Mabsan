@@ -68,6 +68,7 @@ const Video_1 = ({ change_page }) => {
         position: "relative",
         backgroundColor: "black",
         width: "100%",
+        height: "730px"
       }}
     >
       {showNavbar && (
@@ -121,11 +122,9 @@ const Video_1 = ({ change_page }) => {
                       className="btn p-0 position-relative"
                       onClick={show_Navbar} // Add onClick handler to toggle the visibility of buttons
                     >
-                      <div>
+                      <div className="menu_button">
                         <img
                           src={MenuButton}
-                          alt="Menu Button"
-                          className="menu-button"
                         />
                       </div>
                       <div className="overlay"></div>
@@ -206,7 +205,7 @@ const Video_1 = ({ change_page }) => {
                   </div>
                 )}
                 <div
-                  className="d-flex align-items-left flex-column justify-content-center"
+                  className="d-flex align-items-left flex-column justify-content-center video_page_header"
                   style={{ width: "100%", minHeight: "0", flex: 1 }}
                 >
                   <label>
@@ -223,7 +222,7 @@ const Video_1 = ({ change_page }) => {
                     className="btn p-0 position-relative"
                     onClick={show_Navbar} // Add onClick handler to toggle the visibility of buttons
                   >
-                    <div>
+                    <div className="menu_button">
                       <img src={MenuButton} alt="Menu Button" />
                     </div>
 
@@ -235,7 +234,7 @@ const Video_1 = ({ change_page }) => {
                     className="d-flex align-items-end"
                     style={{ height: "100%" }}
                   >
-                    <div className="d-flex justify-content-end col-8 ">
+                    <div className="d-flex justify-content-end col-8  ">
                       <label className="left_bottom_big">36</label>
                       <div className="d-flex flex-column justify-content-end col-4 p-3">
                         <label className="left_bottom_small">YILLIK</label>

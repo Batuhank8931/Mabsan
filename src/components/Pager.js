@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./css/Pager.css";
+import arka from "../assets/arka.svg";
+import benek from "../assets/benek.svg";
 
 const Pager = () => {
   const pagerData = [
     {
       id: "1",
-      header1: "Subject 1 Header",
+      header1: '"El emeğiyle şekillenen her kutu, bir sanat eseridir."',
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
       header2: "Subject1",
@@ -117,7 +119,7 @@ const Pager = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      setTranslateXValue(screenWidth < 600 ? -90 : -87);
+      setTranslateXValue(screenWidth < 600 ? -11.21 : -12.5);
     };
 
     handleResize(); // Initial call to set initial translateX value
@@ -132,27 +134,38 @@ const Pager = () => {
   const currentItem = pagerData[currentIndex];
 
   return (
-    <div className="baslik  p-md-5 p-3 pt-5 pb-5">
-      <div className="pager_back d-flex row">
-        <div className="header_card col-12 col-md-6 d-flex row p-4 pb-0 ">
+    <div
+      className="baslik pager_back p-md-5 p-3 pt-5 pb-5"
+      style={{
+        position: "relative",
+        width: "100%",
+        backgroundImage: `url(${arka})`,
+        backgroundSize: "95% auto",
+        backgroundPosition: "center",
+      }}
+    >
+      {" "}
+      <div className="centered_image"
+        style={{
+          backgroundImage: `url(${benek})`,
+        }}
+      ></div>
+      <div className="d-flex row">
+        <div className="header_card col-12 col-md-6 d-flex row p-0 p-md-4 pb-0  ">
           <div className="d-flex align-items-center justify-content-start">
             <label className="pager_label_1 p-4">{currentItem.header1}</label>
           </div>
           <div>
             <label className="pager_label_2 p-4">{currentItem.detail}</label>
           </div>
-          <div className="d-flex align-items-center justify-content-start pl-0">
+          <div className="d-flex align-items-center justify-content-end justify-content-md-start pl-0">
             <div className="d-flex column p-3 pl-0">
               <button
                 className="previous_button m-3"
                 onClick={handlePrevious}
                 disabled={currentIndex === 0}
-              >
-
-              </button>
-              <button className="next_button m-3" onClick={handleNext}>
-
-              </button>
+              ></button>
+              <button className="next_button m-3" onClick={handleNext}></button>
             </div>
           </div>
         </div>
@@ -166,8 +179,8 @@ const Pager = () => {
                 }}
               >
                 {pagerData.map((pagerItem, index) => (
-                  <div className="card_front" key={index}>
-                    <div className="d-flex justify-content-evenly m-4">
+                  <div className="card_front p-5 pt-0 d-flex align-items-start flex-column bd-highlight" key={index}>
+                    <div className="d-flex justify-content-evenly m-4 mb-auto bd-highlight">
                       <label className="pager_card_header_1 pr-4">
                         {pagerItem.id}
                       </label>
@@ -175,7 +188,7 @@ const Pager = () => {
                         {pagerItem.header2}
                       </label>
                     </div>
-                    <div className="d-flex justify-content-center ">
+                    <div className="d-flex justify-content-end align-items-end bd-highlight">
                       <img
                         src={pagerItem.photoLink}
                         alt="bayrak"
@@ -189,6 +202,8 @@ const Pager = () => {
           </div>
         </div>
       </div>
+    <div className="right_grey">
+    </div>
     </div>
   );
 };

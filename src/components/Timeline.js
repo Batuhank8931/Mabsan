@@ -125,8 +125,8 @@ const Timeline_new = () => {
 
   return (
     <div
-      className="baslik deneme p-md-5 p-3 pt-5 pb-5"
-      style={{ height: "700px" }}
+      className="baslik deneme p-md-5 p-3 pt-5 pb-0"
+      style={{ height: "670px" }}
     >
       <div className="year_header">
         <label className="timeline_year0">19</label>

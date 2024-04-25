@@ -43,6 +43,7 @@ const App = () => {
           <>
             <Video_1 change_page={change_page} />
             <Left_Header sectorLabel={"Sektörler"} />
+            
             <Carousel />
             <Right_Header sectorLabel={"Üretim"} />
             <Pager />

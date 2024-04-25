@@ -1,27 +1,59 @@
-  
-  .baslik {
-    font-size: 25px;
-    outline: none;
-    transition: 0.3s;
-    padding-bottom: 0px;
-    color: white;
-    text-align: left;
-    background-color: black;
-  }
+.baslik {
+  font-size: 25px;
+  outline: none;
+  transition: 0.3s;
+  padding-bottom: 0px;
+  color: white;
+  text-align: left;
+  background-color: black;
+}
 
-  
-  .middle-div {
-    flex-grow: 1; /* Allow the div to grow to fill the remaining space */
-  }
+.middle-div {
+  flex-grow: 1; /* Allow the div to grow to fill the remaining space */
+}
 
-  
-  .line {
+.line {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+}
+
+.line_header{
+  transition: font-size 0.3s ease; /* Smooth transition */
+}
+
+@keyframes expandLine_left {
+  from {
+    width: 0;
+    margin-left: 100%;
+  }
+  to {
     width: 100%;
-    height: 1px;
-    background-color: white;
+    margin-left: 0;
   }
-  
-  
+}
+
+@keyframes expandLine_right {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+/* Apply the animation when the animate-line class is present */
+.animate-line-left {
+  animation: expandLine_left 2s forwards; /* Adjust the animation duration as needed */
+}
+
+
+.animate-line-right {
+  animation: expandLine_right 2s forwards; /* Adjust the animation duration as needed */
+}
+
+
   
   /* Apply row layout for larger screens */
   @media (min-width: 601px) {
@@ -29,9 +61,12 @@
     .baslik {
       font-size: 40px; /* Adjust font size as needed */
     }
-  
-  
+
   }
   
+
+  .line_header:hover {
+    font-size: 110%;
+  }
   
   

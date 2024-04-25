@@ -8,7 +8,15 @@
 }
 
 
-  
+.video_page_header {
+  transition: font-size 0.3s;
+}
+
+.video_page_header:hover {
+  font-size: 65px;
+}
+
+
 
 .buttontr {
   background: transparent;
@@ -23,8 +31,21 @@
   color: white;
 }
 
+.menu_button {
+  transition: background-color 0.2s; /* Transition the background property over 0.2s */
+}
+
+
+.menu_button:hover {
+  background-color: rgba(128, 128, 128, 0.212);
+  border-radius: 10px;
+}
+
+
 .buttontr:hover {
-  background: black;
+  background-color: rgba(128, 128, 128, 0.212);
+  font-size: 52%;
+  border-radius: 10px;
   padding: 0;
 }
 
@@ -47,10 +68,21 @@
 .left_bottom_big{
   transform: translateY(5.5%);
   font-size: 70px;
+  transition: font-size 0.3s;
 }
 
 .left_bottom_small{
   font-size: 20px;
+  transition: font-size 0.3s;
+}
+
+
+.left_bottom_big:hover {
+  font-size: 75px;
+}
+
+.left_bottom_small:hover {
+  font-size: 25px;
 }
 
 @media (max-width: 600px) { /* Adjust font size for screens smaller than 576px (e.g., phones) */
@@ -69,6 +101,19 @@
 
   .left_bottom_small{
     font-size: 15px;
+  }
+
+  .video_page_header:hover {
+    font-size: 40px;
+  }
+  
+
+  .left_bottom_big:hover {
+    font-size: 55px;
+  }
+  
+  .left_bottom_small:hover {
+    font-size: 17px;
   }
 
 }

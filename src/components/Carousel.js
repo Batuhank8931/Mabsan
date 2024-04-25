@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import "./css/Carousel.css";
-import polygon from "../assets/polygon.svg";
+import polygon from "../assets/red-dot-ploygon.svg";
 import rectangle from "../assets/Rectangle.svg";
 import rectangleYatik from "../assets/Rectangle_yatik.svg";
-import card_item from "../assets/card_item.svg"
+import card_item from "../assets/card_item.svg";
+import Apples from "../assets/apples.mp4";
 
 const Carousel = () => {
   const carouselItems = [
@@ -13,7 +14,7 @@ const Carousel = () => {
     "Perakende",
     "Kozmetik",
     "İlaç",
-    "Otomotiv",
+    "Otomotiv"
   ];
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -89,7 +90,7 @@ const Carousel = () => {
                       }}
                     >
                       <div className="d-flex number_label">
-                        <img className="w-8" src={polygon} />
+                        <img className="w-6" src={polygon} />
                         <label
                           className="sektor_label ml-2"
                           style={{
@@ -106,16 +107,22 @@ const Carousel = () => {
                         // BİLGİSAYARDA GÖZÜKEN HOVER CARDI
                       >
                         {" "}
-                        <div
-                          className="d-flex align-items-center justify-content-center"
-                          style={{
-                            width: "70%",
-                          }}
-                        >
-                          <img
-                            src={card_item}
-                            alt="Mabsan Logo"
-                          />
+                        <div className="d-flex align-items-center justify-content-center card_video">
+                          <div id="video-container">
+                            <video
+                              autoPlay
+                              loop
+                              muted
+                              style={{
+                                width: "100%",
+                                pointerEvents: "none",
+                                opacity: 1,
+                              }}
+                            >
+                              <source src={Apples} type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
                         </div>
                       </div>{" "}
                     </div>
@@ -143,11 +150,23 @@ const Carousel = () => {
                   <div
                     className="sector_card_1" // TELEFONDA GÖZÜKEN HOVER CARDI
                   >
-                    <img
-                      src={card_item}
-                      alt="card_item"
-                      className="picture_1"
-                    />
+                    <div className="d-flex align-items-center justify-content-center card_video">
+                      <div id="video-container">
+                        <video
+                          autoPlay
+                          loop
+                          muted
+                          style={{
+                            height: "10%",
+                            pointerEvents: "none",
+                            opacity: 1,
+                          }}
+                        >
+                          <source src={Apples} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
                   </div>{" "}
                 </button>
               </div>
