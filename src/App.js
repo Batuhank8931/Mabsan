@@ -92,6 +92,52 @@ const App = () => {
               <>
                 {" "}
                 <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
+                <Tanitim_Filmi />
+                <div>Main content</div>
+              </>
+            )}
+            {BigHeader === "Ürünler" && (
+              // add your Main content here
+              <>
+                {" "}
+                <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
+                <Tanitim_Filmi />
+                <div>Main content</div>
+              </>
+            )}
+            {BigHeader === "Kariyer" && (
+              // add your Main content here
+              <>
+                {" "}
+                <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
+                <Tanitim_Filmi />
+                <div>Main content</div>
+              </>
+            )}
+            {BigHeader === "Blog" && (
+              // add your Main content here
+              <>
+                {" "}
+                <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
+                <Tanitim_Filmi />
+                <div>Main content</div>
+              </>
+            )}
+            {BigHeader === "Perakende" && (
+              // add your Main content here
+              <>
+                {" "}
+                <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
+                <Tanitim_Filmi />
+                <div>Main content</div>
+              </>
+            )}
+            {BigHeader === "İletişim" && (
+              // add your Main content here
+              <>
+                {" "}
+                <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
+                <Tanitim_Filmi />
                 <div>Main content</div>
               </>
             )}
