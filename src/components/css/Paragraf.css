@@ -1,0 +1,24 @@
+.paragraf {
+
+    text-align: left;
+    font-size: 25px;
+    white-space: pre-line;
+    font-family: 'Calibri Light', sans-serif;
+    line-height: 1.2;
+
+  }
+  
+
+  @media (max-width: 601px) {
+
+    .paragraf {
+
+        text-align: left;
+        font-size: 15px;
+        white-space: pre-line;
+        font-family: 'Calibri Light', sans-serif;
+        line-height: 1.2;
+    
+      }
+
+  }

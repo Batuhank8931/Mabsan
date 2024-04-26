@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./css/Pager.css";
+import "./css/Uretim.css";
 import arka from "../assets/arka.svg";
 import benek from "../assets/benek.svg";
 
-const Pager = () => {
+const Uretim = () => {
   const pagerData = [
     {
       id: "1",
@@ -208,4 +208,4 @@ const Pager = () => {
   );
 };
 
-export default Pager;
+export default Uretim;

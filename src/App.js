@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import Left_Header from "./components/Left_Header";
-import Timeline from "./components/Timeline";
+
+import Acilis_Sayfasi from "./components/Acilis_Sayfasi";
+import Sektorler from "./components/Sektorler";
+import Pager from "./components/Uretim";
+import Yolculugumuz from "./components/Yolculugumuz";
 import Footer from "./components/Footer";
-import Video_1 from "./components/video_1";
+import Paragraf from "./components/Paragraf";
+import Yonetim_Ekibi from "./components/Yonetim_Ekibi";
+
+import Tanitim_Filmi from "./components/Tanitim_Filmi";
+
+import Left_Header from "./components/Left_Header";
 import Right_Header from "./components/Right_Header";
-import Carousel from "./components/Carousel";
-import Pager from "./components/Pager";
 import SubNavbar from "./components/SubNavbar";
-
-
 import backgroundSVG from "./assets/HeaderBackground.svg";
+
 import "./App.css"; // Import the CSS file
 
 const App = () => {
@@ -29,6 +34,14 @@ const App = () => {
     }
   };
 
+  const hakkimizda = `Mabsan Oluklu Mukavva Kutu San. ve Tic.Ltd.Şti 1988 yılında hizmete açılmış olup, sürekli gelişip hizmet kalitesini arttırak günümüz teknolojisiyle beraber kaliteli ve güvenilir çalışmalarına devam etmektedir. Geniş müşteri portföyü ve kaliteli ürün yelpazesi ile sektörünün önde gelen firmalarından olan firmamız, güncel teknolojik gelişmeleri üretim sürecinin her aşamasında kullanarak, yüksek kalite standartlarını hedefe ulaşmasındaki büyük dayanak olarak görmüştür.\n\nHızla büyümelerini 'Doğru ve Kaliteli' hizmet anlayışına borçlu olan firmamız, ilkelerinden taviz vermeden, istikrarlı büyümesi ile de sektörünün saygın firmaları arasındaki yerini gün geçtikçe sağlamlaştırmaktadır.\n\nMüşteri memnuniyetimizden aldığımız güç ile iç piyasada daha da büyümeyi hedeflemekteyiz.`;
+
+  const misyon =
+    "Mabsan Ailesi olarak misyonumuz, etik ilkelerden asla ödün vermeden genç, dinamik, lider kişilikli kadrosu ile teknolojik gelişmeleri takip eden ve faaliyet alanlarında uygulayan, tüketicilerine, tedarikçilerine memnuniyet odaklı hizmet anlayışını benimsemiş ve sürdürmeyi ilke edinmiştir. Sektörünün gelişimine, kapsamlı, yenilikçi, çeşitli piyasa segmentlerinin beklentilerini ve gereksinimlerini karşılayan, kaliteli ürün ve hizmetlerin sunumu ile katkı sağlamaktır. Müşteri beklentilerini, yeni ürünleri ve hizmetleri ile büyümek, geldiğimiz konumda da siz paydaşlarına artan katma değer kazandırmaktır.";
+
+  const vizyon =
+    "\n\u2022 Koşulsuz müşteri memnuniyeti sağlamak,\n\u2022 Sektörünün önde gelen firmaları arasında kalıcığını korumak,\n\u2022 Güçlü büyüme ile siz müşterilerimize kalıcı değer yaratmak, \n\u2022Karlılığınızı, bilinirliğinizi ve markanızın yapısını korumak, \n\u2022Kalitede ve üretimde lider olmak.";
+
   return (
     <div
       className="App-container"
@@ -39,20 +52,53 @@ const App = () => {
     >
       {/* Wrap everything with the container */}
       <div className="App">
-        {Subheader ? (
-          <>
-            <Video_1 change_page={change_page} />
+        {Subheader || Subheader === "Main" ? (
+          <div className="">
+            <Acilis_Sayfasi change_page={change_page} />
             <Left_Header sectorLabel={"Sektörler"} />
-            
-            <Carousel />
+            <Sektorler />
             <Right_Header sectorLabel={"Üretim"} />
             <Pager />
-          </>
+          </div>
         ) : (
-          <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
+          <div className="slide-up">
+            {BigHeader === "Main" && (
+              <>
+                <Acilis_Sayfasi change_page={change_page} />
+                <Left_Header sectorLabel={"Sektörler"} />
+                <Sektorler />
+                <Right_Header sectorLabel={"Üretim"} />
+                <Pager />
+              </>
+            )}
+
+            {BigHeader === "Kurumsal" && (
+              <>
+                <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
+                <Tanitim_Filmi />
+                <Left_Header sectorLabel={"Yönetim Ekibimiz"} />
+                <Yonetim_Ekibi />
+                <Right_Header sectorLabel={"Hakkımızda"} />
+                <Paragraf paragraf_metni={hakkimizda} />
+                <Left_Header sectorLabel={"Misyon"} />
+                <Paragraf paragraf_metni={misyon} />
+                <Right_Header sectorLabel={"Vizyon"} />
+                <Paragraf paragraf_metni={vizyon} />
+              </>
+            )}
+
+            {BigHeader === "Üretim" && (
+              // add your Main content here
+              <>
+                {" "}
+                <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
+                <div>Main content</div>
+              </>
+            )}
+          </div>
         )}
         <Left_Header sectorLabel={"Yolculuğumuz"} />
-        <Timeline/>
+        <Yolculugumuz />
         <Footer />
       </div>
     </div>

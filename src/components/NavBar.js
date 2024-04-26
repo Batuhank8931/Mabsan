@@ -21,12 +21,16 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
           style={{ backgroundImage: `url(${backgroundSVG})` }}
         >
           <div className="d-flex">
-            <div className="col-2 col-md-1">
-              <img
-                src={MabsanLogo}
-                alt="Mabsan Logo"
-                className="mabsan-logo "
-              />
+            <div className="col-2 col-md-1 ">
+              <button
+                className="mabsan-logo"
+                onClick={() => {
+                  change_page("Main");
+                }}
+              >
+                {" "}
+                <img src={MabsanLogo} alt="Mabsan Logo" />
+              </button>
             </div>
 
             <div class="d-flex flex-column col-8 col-md-10">
@@ -66,7 +70,7 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                 <button
                   className="mx-2 buttons mt-2 mb-4"
                   onClick={() => {
-                    change_page("Kariyer Blog");
+                    change_page("Blog");
                   }}
                 >
                   Blog
@@ -74,7 +78,7 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                 <button
                   className="mx-2 buttons mt-2 mb-4"
                   onClick={() => {
-                    change_page("İletişim");
+                    change_page("Perakende");
                   }}
                 >
                   Perakende
@@ -93,7 +97,11 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                   className="d-flex align-items-end "
                   style={{ width: "20%" }}
                 >
-                  <img src={politika} alt="politika" className="politika buttontrs" />
+                  <img
+                    src={politika}
+                    alt="politika"
+                    className="politika buttontrs"
+                  />
                 </div>
               </div>
             </div>
@@ -136,7 +144,11 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
             }
             <div class="d-flex justify-content-between">
               <div className="d-flex align-items-end" style={{ width: "30%" }}>
-                <img src={politika} alt="politika" className="politika buttontrs" />
+                <img
+                  src={politika}
+                  alt="politika"
+                  className="politika buttontrs"
+                />
               </div>
               <div className="d-flex align-items-center">
                 <button className="mx-2 buttontrs d-flex align-items-center justify-content-center">

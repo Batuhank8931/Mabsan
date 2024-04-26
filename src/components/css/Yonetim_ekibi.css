@@ -1,0 +1,143 @@
+.container {
+    background-color: transparent;
+    width: 100%;
+}
+
+
+.previous_button, .next_button {
+    width: 65px;
+    height: 65px;
+    background-color: #cccccc63;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+  }
+  
+  .previous_button::before, .next_button::after {
+    content: "\2190"; /* Unicode for left arrow */
+    font-size: 30px;
+  }
+  
+  .next_button::after {
+    content: "\2192"; /* Unicode for right arrow */
+  }
+  
+  /* Additional styles */
+  .previous_button:hover, .next_button:hover {
+    background-color: #999999de;
+    width: 68px;
+    height: 68px;
+  }
+  
+  
+  /* Reset hover styles when button is clicked */
+  .previous_button:active:hover, .next_button:active:hover {
+    background-color: #cccccc63; /* Reset background color */
+    width: 80px;
+    height: 80px;
+  }
+  
+
+  .yonetim-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .yonetim_card {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    
+  }
+    
+
+  .yonetim_front{
+    background-color: black; /* Fully opaque light grey background */
+    width: 270px;
+    height: 300px;
+  }
+
+  .yonetim_header{
+    background-color: transparent; /* Transparent background */
+    color: white;
+    font-size: 17px;
+    display: flex;
+    text-align: center;
+    width: auto;
+    transition: font-size 0.2s;
+  }
+
+  .yonetim_header:hover{
+    font-size: 19px;
+  }
+
+
+  .yonetim_image_container {
+    position: relative;
+    width: 115px;
+    height: 115px; /* Set a fixed height */
+    border-radius: 50%;
+    overflow: hidden;
+    transition: width 0.3s ease, height 0.3s ease; /* Add transition for smooth effect */
+  }
+  
+
+  .yonetim_image_container:hover {
+    width: 150px;
+    height: 150px;
+
+  }
+
+  .yonetim_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .yonetim_image_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.5); /* Red color with 50% opacity */
+    border-radius: 50%; /* Ensures the filter covers the rounded border */
+    transition: background-color 0.3s ease;
+  }
+
+  .yonetim_image_container:hover::before {
+    background-color: rgba(255, 0, 0, 0); /* Transparent red color with 0% opacity */
+    animation: fadeOut 0.5s; /* Add fade animation */
+  }
+
+
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1; /* Start with full opacity */
+    }
+    to {
+      opacity: 0; /* Fade out to completely transparent */
+    }
+  }
+
+  @media (min-width: 601px) {
+
+    
+    .yonetim_card_wrapper{
+      height: 100%;
+      width: 100%;
+    }
+
+  }
+

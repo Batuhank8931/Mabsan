@@ -11,8 +11,8 @@
 
   
   .year_header{
-    transform: translateY(-230px);
-    height: 100px;
+    transform: translateY(-180px);
+    height: 80px;
   }
 
    
@@ -109,12 +109,12 @@
     -webkit-background-clip: text; /* For WebKit/Blink browsers */
     background-clip: text;
     color: transparent; /* Make the text transparent */
-    font-size: 400px;
+    font-size: 350px;
     font-weight: bold;
     width: 45%;
     text-align: end;
     transition: opacity 0.5s ease-in-out;
-    pointer-events: none; /* Make the element unclickable */
+    pointer-events: none; 
   }
   
 
@@ -137,9 +137,9 @@
     -webkit-background-clip: text; /* For WebKit/Blink browsers */
     background-clip: text;
     color: transparent; /* Make the text transparent */
-    font-size: 400px;
+    font-size: 350px;
     font-weight: bold;
-    transform: translateY(-350px) translateX(450px);
+    transform: translateY(-295px) translateX(450px);
   }
 
 
@@ -168,8 +168,8 @@
     }
 
     .timeline_year0 {
-      font-size: 150px;
-      width: 55%;
+      font-size: 120px;
+      width: 50%;
       padding-right: 5%;
 
     }
@@ -205,8 +205,9 @@
     }
   
     .times:hover > .year >.timeline_year {
-      font-size: 150px;
-      transform: translateY(-230px) translateX(110px);
+      font-size: 120px;
+      width: 150px;
+      transform: translateY(-228px) translateX(92px);
     }
 
 

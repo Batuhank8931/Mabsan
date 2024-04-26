@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react";
-import "./css/Carousel.css";
+import "./css/Sektorler.css";
 import polygon from "../assets/red-dot-ploygon.svg";
 import rectangle from "../assets/Rectangle.svg";
 import rectangleYatik from "../assets/Rectangle_yatik.svg";
 import card_item from "../assets/card_item.svg";
 import Apples from "../assets/apples.mp4";
 
-const Carousel = () => {
+const Sektorler = () => {
   const carouselItems = [
     "E-Ticaret",
     "Endüstriyel",
@@ -178,4 +178,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default Sektorler;

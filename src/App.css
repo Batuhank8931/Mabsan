@@ -33,3 +33,47 @@ body {
   font-style: normal;
 }
 
+
+.slide-up {
+  animation: slideUpAnimation 0.5s ease forwards;
+  background-color: black;
+}
+
+@keyframes slideUpAnimation {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+/* FAZLAAAAAAAA */
+
+.slide-left {
+  animation: slideLeftAnimation 0.5s ease forwards;
+}
+
+.slide-right {
+  animation: slideRightAnimation 0.5s ease forwards;
+}
+
+
+@keyframes slideLeftAnimation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRightAnimation {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

@@ -2,11 +2,11 @@ import React, { useRef, useEffect, useState } from "react";
 import Mabsan from "../assets/mabsan.svg";
 import MenuButton from "../assets/MenuButton.svg";
 import backgroundSVG from "../assets/HeaderBackground.svg";
-import Left_Header from "./Left_Header";
 import polygon from "../assets/polygon.svg";
+import { CSSTransition } from "react-transition-group";
 
 import Navbar from "./NavBar.js"; // Importing the NavBar component
-import "./css/video_1.css"; // Importing the CSS file
+import "./css/Acilis_Sayfasi.css"; // Importing the CSS file
 
 const SubNavbar = ({ change_page, sectorLabel }) => {
   const [containerWidth, setContainerWidth] = useState(0);
@@ -54,9 +54,19 @@ const SubNavbar = ({ change_page, sectorLabel }) => {
     setShowButtons(true);
   };
 
+  useEffect(() => {
+    const labelElement = document.querySelector(".left-div label");
+    if (labelElement) {
+      labelElement.classList.add("label-animation");
+      setTimeout(() => {
+        labelElement.classList.remove("label-animation");
+      }, 500);
+    }
+  }, [sectorLabel]);
+
   return (
     <div
-      className={`bg-cover video-1-container ${
+      className={`bg-cover ${
         initialRender
           ? ""
           : showNavbar === true
@@ -86,29 +96,32 @@ const SubNavbar = ({ change_page, sectorLabel }) => {
         >
           {/* Conditionally render the buttons based on showButtons state */}
           {showButtons && (
-          <div
-            className="label d-flex flex-row justify-content-center align-content-between p-md-5 p-3 pt-5 col-md-11 col-10"
-            style={{width: "100%", height: "100%" }}
-          >
-            <div className="d-flex flex-column" style={{ width: "100%" }}>
-              <div style={{ width: "100%" }}>
-                <div className="d-flex justify-content-between">
-                  {showButtons && (
-                    <div className="col-10">
-                      <img src={Mabsan} alt="Mabsan" className="mabsan h-10" />
-                    </div>
-                  )}
+            <div
+              className="label d-flex flex-row justify-content-center align-content-between p-md-5 p-3 pt-5 col-md-11 col-10"
+              style={{ width: "100%", height: "100%" }}
+            >
+              <div className="d-flex flex-column" style={{ width: "100%" }}>
+                <div style={{ width: "100%" }}>
+                  <div className="d-flex justify-content-between">
+                    {showButtons && (
+                      <div className="col-10">
+                        <img
+                          src={Mabsan}
+                          alt="Mabsan"
+                          className="mabsan h-10"
+                        />
+                      </div>
+                    )}
+                  </div>
                 </div>
+
+                <div
+                  className="d-flex align-items-left flex-column justify-content-center"
+                  style={{ width: "100%", minHeight: "0", flex: 1 }}
+                ></div>
               </div>
 
-              <div
-                className="d-flex align-items-left flex-column justify-content-center"
-                style={{ width: "100%", minHeight: "0", flex: 1 }}
-              ></div>
-            </div>
-
-            <div className="d-flex flex-column align-items-end col-md-1 col-2">
-
+              <div className="d-flex flex-column align-items-end col-md-1 col-2">
                 <button
                   className="btn p-0 position-relative"
                   onClick={show_Navbar} // Add onClick handler to toggle the visibility of buttons
@@ -120,13 +133,13 @@ const SubNavbar = ({ change_page, sectorLabel }) => {
                   {/* Semi-transparent overlay */}
                 </button>
 
-              <div
-                className="d-flex align-items-end"
-                style={{ height: "100%" }}
-              ></div>
+                <div
+                  className="d-flex align-items-end"
+                  style={{ height: "100%" }}
+                ></div>
+              </div>
             </div>
-          </div>
-        )}
+          )}
         </div>
         <div className="baslik_subnavbar p-md-5 p-3">
           <div className="d-flex justify-content-between">
@@ -141,7 +154,6 @@ const SubNavbar = ({ change_page, sectorLabel }) => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

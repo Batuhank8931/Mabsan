@@ -1,5 +1,14 @@
   
+.mabsan-logo {
+  width: 100%;
+  transition: background-color 0.3s, color 0.3s, width 0.3s;
+}
 
+.mabsan-logo:hover {
+  background-color: rgba(128, 128, 128, 0.212);
+  border-radius: 10px;
+  width: 105%;
+}
 
 
 .buttons {

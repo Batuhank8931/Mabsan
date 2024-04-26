@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./css/Timeline.css";
+import "./css/Yolculugumuz.css";
 
 function isPhoneScreen() {
   return window.matchMedia("(max-width: 768px)").matches; // Adjust the max-width as needed
 }
 
-const Timeline_new = () => {
+const Yolculugumuz = () => {
   const events = [
     {
       year1: "19",
@@ -111,7 +111,7 @@ const Timeline_new = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenHeight = window.innerHeight; // Use window.innerHeight for vertical carousel
-      setTranslateYValue(screenHeight < 600 ? -87 : -87); // Adjust translate value for vertical carousel
+      setTranslateYValue(screenHeight < 600 ? -87 : -99.55); // Adjust translate value for vertical carousel
     };
 
     handleResize(); // Initial call to set initial translateY value
@@ -125,7 +125,7 @@ const Timeline_new = () => {
 
   return (
     <div
-      className="baslik deneme p-md-5 p-3 pt-5 pb-0"
+      className="baslik p-md-5 p-3 pt-5 pb-0"
       style={{ height: "670px" }}
     >
       <div className="year_header">
@@ -247,4 +247,4 @@ const Timeline_new = () => {
   );
 };
 
-export default Timeline_new;
+export default Yolculugumuz;

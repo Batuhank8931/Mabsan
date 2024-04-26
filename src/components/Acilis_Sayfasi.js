@@ -3,10 +3,10 @@ import Mabsan from "../assets/mabsan.svg";
 import MenuButton from "../assets/MenuButton.svg";
 import bayrak from "../assets/bayrak.svg";
 import Navbar from "./NavBar.js"; // Importing the NavBar component
-import "./css/video_1.css"; // Importing the CSS file
+import "./css/Acilis_Sayfasi.css"; // Importing the CSS file
 import Apples from "../assets/apples.mp4";
 
-const Video_1 = ({ change_page }) => {
+const Acilis_Sayfasi = ({ change_page }) => {
   const videoId = "l1cBhOqSV4M"; // YouTube video ID
   const [containerWidth, setContainerWidth] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
@@ -68,7 +68,6 @@ const Video_1 = ({ change_page }) => {
         position: "relative",
         backgroundColor: "black",
         width: "100%",
-        height: "730px"
       }}
     >
       {showNavbar && (
@@ -306,4 +305,4 @@ const Video_1 = ({ change_page }) => {
   );
 };
 
-export default Video_1;
+export default Acilis_Sayfasi;

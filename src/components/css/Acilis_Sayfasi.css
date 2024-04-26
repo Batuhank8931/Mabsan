@@ -197,10 +197,10 @@
 .baslik_subnavbar {
   font-size: 70px;
   outline: none;
-  transition: 0.3s;
-  padding-bottom: 0px;
   color: white;
   text-align: left;
+  transition: opacity 0.3s ease-in-out; /* Apply the transition effect */
+  
 }
 
 
@@ -236,4 +236,17 @@
 }
 
 
+.label-animation {
+  animation: label-animation 0.5s ease-in-out;
+}
 
+@keyframes label-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
