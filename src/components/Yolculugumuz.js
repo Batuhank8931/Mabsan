@@ -111,7 +111,7 @@ const Yolculugumuz = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenHeight = window.innerHeight; // Use window.innerHeight for vertical carousel
-      setTranslateYValue(screenHeight < 600 ? -87 : -99.55); // Adjust translate value for vertical carousel
+      setTranslateYValue(screenHeight <600 ? -100 : -100); // Adjust translate value for vertical carousel
     };
 
     handleResize(); // Initial call to set initial translateY value

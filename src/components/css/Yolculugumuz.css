@@ -23,7 +23,7 @@
     transition: transform 0.3s ease; /* Add transition for smooth movement */
     transform: translateY(20%);
     width: 100%;
-    margin-bottom: 96px;
+    margin-bottom: 100px;
 
   }
 
@@ -98,8 +98,9 @@
     font-size: 110px;
     font-weight: bold;
     transition: transform 1s ease, width 1s ease, font-size 1s ease, color 1s ease; /* Add transitions for smooth movement, width enlargement, font size change, and color change */
-    width: 100%;
     text-align: start;
+    height: 500px;
+    width: 500px;
 
  
   }
@@ -111,10 +112,12 @@
     color: transparent; /* Make the text transparent */
     font-size: 350px;
     font-weight: bold;
-    width: 45%;
     text-align: end;
-    transition: opacity 0.5s ease-in-out;
+    transition: transform 1s ease, width 1s ease, font-size 1s ease, color 1s ease;
     pointer-events: none; 
+    height: 500px;
+    width: 500px;
+
   }
   
 
@@ -131,17 +134,26 @@
     transition: font-size 0.3s ease; /* Add transition for smooth font size change */
   }
 
+
+  .baslik:hover .year_header .timeline_year0 {
+    font-size: 300px;
+    transform: translateY(10%) translateX(-20%);
+
+  }
   
   .times:hover > .year >.timeline_year {
     background: linear-gradient(317.85deg, #FA0000 -41.59%, rgba(250, 0, 0, 0) 143.46%);
     -webkit-background-clip: text; /* For WebKit/Blink browsers */
     background-clip: text;
     color: transparent; /* Make the text transparent */
-    font-size: 350px;
+    font-size: 300px;
     font-weight: bold;
-    transform: translateY(-295px) translateX(450px);
+    transform: translateY(-50%) translateX(73%);
   }
 
+  
+
+  
 
   .times:hover .arrow {
     display: block; /* Hide the .downarrow when .times is being hovered */
@@ -169,8 +181,17 @@
 
     .timeline_year0 {
       font-size: 120px;
-      width: 50%;
-      padding-right: 5%;
+      padding-right: 2%;
+      height: 200px;
+      width: 200px;
+      text-align: end;
+
+    }
+
+    .timeline_year {
+      text-align: start;
+      height: 200px;
+      width: 200px;
 
     }
     
@@ -204,11 +225,19 @@
   
     }
   
-    .times:hover > .year >.timeline_year {
-      font-size: 120px;
-      width: 150px;
-      transform: translateY(-228px) translateX(92px);
+    .baslik:hover .year_header .timeline_year0 {
+      font-size: 150px;
+      transform: translateY(2%) translateX(-10%);
+
+  
     }
+    
+    .times:hover > .year >.timeline_year {
+      font-size: 150px;
+      transform: translateY(-113%) translateX(48%);
+    }
+  
+    
 
 
   }

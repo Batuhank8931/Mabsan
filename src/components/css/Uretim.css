@@ -97,28 +97,36 @@
 
   .slider-container {
     overflow: hidden;
-    width: 100%;
     height: 100%;
   }
 
 
   .slide_card {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 800%;
-    height: 100%;
-    
+    transition: transform 0.5s ease-in-out;    
+    width: 1500%;
+    align-items: center;
   }
     
 
   .card_front{
     background-color: rgba(204, 204, 204, 0.4); /* Fully opaque light grey background */
     backdrop-filter: blur(3px); /* Blur effect with 10px radius */
-    border: 2px solid transparent; 
     border-radius: 30px 0 30px 0 ; /* Top left and bottom right corners have border radius */
-    margin: 2%;
-    width: 700px;
-    height: 450px;
+    margin-right: 60px;
+    margin-left: 20px;
+    height: 550px;
+    width: 370px;
+    transition: height 0.3s ease; /* Add transition for height property */
+  }
+
+
+  .title_window{
+    width: 100%;
+  }
+
+  .picture_window{
+    height: 250px;
   }
 
   .pager_card_header_1{
@@ -129,6 +137,7 @@
     justify-content: center; /* Align horizontally center */
     align-items: center; /* Align vertically center */
     transition: font-size 0.2s;
+    width: 70px;
   }
 
   .pager_card_header_1:hover{
@@ -151,6 +160,7 @@
 
   .image_container {
     border-radius: 20px; /* Adjust the value as needed */
+    width: 80%;
   }
   
   .right_grey{
@@ -183,6 +193,7 @@
       font-size: 40px;
     }
 
+
     .card_header_1{
       font-size: 80px;
     }
@@ -193,21 +204,27 @@
 
   }
 
-  @media (max-width: 601px) {
+  @media (max-width: 600px) {
 
   .pager_back {
     background-image: none !important; 
   }
 
   .card_front{
-    height: 350px;
-    width: 260px;
-    margin-right: 0;
+    margin-right: 20px;
+    margin-left: 0px;
+    width: 280px;
   
   }
 
-    
+  .title_window{
+    width: 100%;
+  }
 
+  .picture_window{
+    width: 100%;
+  }
+    
 
   .centered_image {
     position: absolute;
@@ -220,18 +237,5 @@
     opacity: 0.5;
   }
 
-
-  .right_grey{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 30px 0 0 0 ;
-    transform: translate(300%, -70px);
-    width: 50px;
-    height: 450px;
-    background-size: cover;
- 
-
-  }
 
 }

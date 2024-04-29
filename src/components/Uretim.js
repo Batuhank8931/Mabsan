@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./css/Uretim.css";
 import arka from "../assets/arka.svg";
 import benek from "../assets/benek.svg";
 
 const Uretim = () => {
+  const photoanan =
+    "https://s3-alpha-sig.figma.com/img/710a/d68c/9f241d0188983a0895548df77be50617?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lClo58bmk-wMlhMQX~RM2DF8oq451tgagc8Evoi0X~79Bn9JyiSo94OD-1aKPCFNlQcW9UQPRq61MKzIO8~QSYc83KhniLobHC2mRo3LzfCJr4jAakAQ1V~kX8tzxVxEeIuI4NzhgABF9vlvLgP3JdpwneaANr7vNcmJ9s97woRbYmuF98xyqgOuo694BnUv6RVkaHvtsQE~Rua8E7yBetjQt3YeewA8apLx0x8hz2rClph5DPFmel7mvERWdpWIM6CbQ84MF2GIi5MkAycooUGHmidsJk0c95NkpgQjaIQkiLZF9gQjNbgsQ0btg3iBNQTAq4D3vmR33qQ1bJ39~g__";
+
   const pagerData = [
     {
       id: "1",
@@ -11,8 +14,7 @@ const Uretim = () => {
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
       header2: "Subject1",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/710a/d68c/9f241d0188983a0895548df77be50617?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yvto5ZGSNQonW1IcuFtBnzPS6Pkf5Vnvlf18Ria7Z-68CoW3GWtxSR-THQda2twMOP4mwGvyWnEKgCf6TSXqHxBfBMAvZ-efn1zHhRf8KY5eERBe~ul2gebu81joQd-VcQIhEOi8U1a0nl3SP0sH-Pg-oyrIJ1YODQsV3ECU2IG7BD33VKC7wx~N7jITBXwTc2LBQDrZ-82lh94WteCjg5tG31hPQfaH4UcUec82C5Ufjo-umsG8o6-GgLDvlWbaTWuMpUr6PvTxoBNwDD33UK6DzXVnx~gjROnCjTUv2uBJaRHnkLEDOAyHTdCLZb8ZW~k7vTHux2LbZVj2l5UO5g__",
+      photoLink: photoanan,
     },
     {
       id: "2",
@@ -20,8 +22,7 @@ const Uretim = () => {
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
       header2: "Subject2",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/710a/d68c/9f241d0188983a0895548df77be50617?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yvto5ZGSNQonW1IcuFtBnzPS6Pkf5Vnvlf18Ria7Z-68CoW3GWtxSR-THQda2twMOP4mwGvyWnEKgCf6TSXqHxBfBMAvZ-efn1zHhRf8KY5eERBe~ul2gebu81joQd-VcQIhEOi8U1a0nl3SP0sH-Pg-oyrIJ1YODQsV3ECU2IG7BD33VKC7wx~N7jITBXwTc2LBQDrZ-82lh94WteCjg5tG31hPQfaH4UcUec82C5Ufjo-umsG8o6-GgLDvlWbaTWuMpUr6PvTxoBNwDD33UK6DzXVnx~gjROnCjTUv2uBJaRHnkLEDOAyHTdCLZb8ZW~k7vTHux2LbZVj2l5UO5g__",
+      photoLink: photoanan,
     },
     {
       id: "3",
@@ -29,8 +30,7 @@ const Uretim = () => {
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
       header2: "Subject3",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/710a/d68c/9f241d0188983a0895548df77be50617?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yvto5ZGSNQonW1IcuFtBnzPS6Pkf5Vnvlf18Ria7Z-68CoW3GWtxSR-THQda2twMOP4mwGvyWnEKgCf6TSXqHxBfBMAvZ-efn1zHhRf8KY5eERBe~ul2gebu81joQd-VcQIhEOi8U1a0nl3SP0sH-Pg-oyrIJ1YODQsV3ECU2IG7BD33VKC7wx~N7jITBXwTc2LBQDrZ-82lh94WteCjg5tG31hPQfaH4UcUec82C5Ufjo-umsG8o6-GgLDvlWbaTWuMpUr6PvTxoBNwDD33UK6DzXVnx~gjROnCjTUv2uBJaRHnkLEDOAyHTdCLZb8ZW~k7vTHux2LbZVj2l5UO5g__",
+      photoLink: photoanan,
     },
     {
       id: "4",
@@ -38,8 +38,7 @@ const Uretim = () => {
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
       header2: "Subject4",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/710a/d68c/9f241d0188983a0895548df77be50617?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yvto5ZGSNQonW1IcuFtBnzPS6Pkf5Vnvlf18Ria7Z-68CoW3GWtxSR-THQda2twMOP4mwGvyWnEKgCf6TSXqHxBfBMAvZ-efn1zHhRf8KY5eERBe~ul2gebu81joQd-VcQIhEOi8U1a0nl3SP0sH-Pg-oyrIJ1YODQsV3ECU2IG7BD33VKC7wx~N7jITBXwTc2LBQDrZ-82lh94WteCjg5tG31hPQfaH4UcUec82C5Ufjo-umsG8o6-GgLDvlWbaTWuMpUr6PvTxoBNwDD33UK6DzXVnx~gjROnCjTUv2uBJaRHnkLEDOAyHTdCLZb8ZW~k7vTHux2LbZVj2l5UO5g__",
+      photoLink: photoanan,
     },
     {
       id: "5",
@@ -47,8 +46,7 @@ const Uretim = () => {
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
       header2: "Subject5",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/710a/d68c/9f241d0188983a0895548df77be50617?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yvto5ZGSNQonW1IcuFtBnzPS6Pkf5Vnvlf18Ria7Z-68CoW3GWtxSR-THQda2twMOP4mwGvyWnEKgCf6TSXqHxBfBMAvZ-efn1zHhRf8KY5eERBe~ul2gebu81joQd-VcQIhEOi8U1a0nl3SP0sH-Pg-oyrIJ1YODQsV3ECU2IG7BD33VKC7wx~N7jITBXwTc2LBQDrZ-82lh94WteCjg5tG31hPQfaH4UcUec82C5Ufjo-umsG8o6-GgLDvlWbaTWuMpUr6PvTxoBNwDD33UK6DzXVnx~gjROnCjTUv2uBJaRHnkLEDOAyHTdCLZb8ZW~k7vTHux2LbZVj2l5UO5g__",
+      photoLink: photoanan,
     },
     {
       id: "6",
@@ -56,8 +54,7 @@ const Uretim = () => {
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
       header2: "Subject6",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/710a/d68c/9f241d0188983a0895548df77be50617?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yvto5ZGSNQonW1IcuFtBnzPS6Pkf5Vnvlf18Ria7Z-68CoW3GWtxSR-THQda2twMOP4mwGvyWnEKgCf6TSXqHxBfBMAvZ-efn1zHhRf8KY5eERBe~ul2gebu81joQd-VcQIhEOi8U1a0nl3SP0sH-Pg-oyrIJ1YODQsV3ECU2IG7BD33VKC7wx~N7jITBXwTc2LBQDrZ-82lh94WteCjg5tG31hPQfaH4UcUec82C5Ufjo-umsG8o6-GgLDvlWbaTWuMpUr6PvTxoBNwDD33UK6DzXVnx~gjROnCjTUv2uBJaRHnkLEDOAyHTdCLZb8ZW~k7vTHux2LbZVj2l5UO5g__",
+      photoLink: photoanan,
     },
     {
       id: "7",
@@ -65,8 +62,7 @@ const Uretim = () => {
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
       header2: "Subject7",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/710a/d68c/9f241d0188983a0895548df77be50617?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yvto5ZGSNQonW1IcuFtBnzPS6Pkf5Vnvlf18Ria7Z-68CoW3GWtxSR-THQda2twMOP4mwGvyWnEKgCf6TSXqHxBfBMAvZ-efn1zHhRf8KY5eERBe~ul2gebu81joQd-VcQIhEOi8U1a0nl3SP0sH-Pg-oyrIJ1YODQsV3ECU2IG7BD33VKC7wx~N7jITBXwTc2LBQDrZ-82lh94WteCjg5tG31hPQfaH4UcUec82C5Ufjo-umsG8o6-GgLDvlWbaTWuMpUr6PvTxoBNwDD33UK6DzXVnx~gjROnCjTUv2uBJaRHnkLEDOAyHTdCLZb8ZW~k7vTHux2LbZVj2l5UO5g__",
+      photoLink: photoanan,
     },
     {
       id: "8",
@@ -74,19 +70,29 @@ const Uretim = () => {
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
       header2: "Subject8",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/710a/d68c/9f241d0188983a0895548df77be50617?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Yvto5ZGSNQonW1IcuFtBnzPS6Pkf5Vnvlf18Ria7Z-68CoW3GWtxSR-THQda2twMOP4mwGvyWnEKgCf6TSXqHxBfBMAvZ-efn1zHhRf8KY5eERBe~ul2gebu81joQd-VcQIhEOi8U1a0nl3SP0sH-Pg-oyrIJ1YODQsV3ECU2IG7BD33VKC7wx~N7jITBXwTc2LBQDrZ-82lh94WteCjg5tG31hPQfaH4UcUec82C5Ufjo-umsG8o6-GgLDvlWbaTWuMpUr6PvTxoBNwDD33UK6DzXVnx~gjROnCjTUv2uBJaRHnkLEDOAyHTdCLZb8ZW~k7vTHux2LbZVj2l5UO5g__",
+      photoLink: photoanan,
     },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [translateXValue, setTranslateXValue] = useState(0);
 
   const handleNext = () => {
     if (currentIndex < pagerData.length - 1) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-    }
-    if (currentIndex < pagerData.length - 1) {
-      setCurrentIndex(currentIndex + 1);
+      const nextIndex = currentIndex + 1;
+      setCurrentIndex(nextIndex);
+  
+      // Update height of card_front with index equal to currentIndex + 1
+      const cardFronts = document.querySelectorAll(".card_front");
+      cardFronts.forEach((card, index) => {
+        if (index === nextIndex) {
+          card.style.height = window.innerWidth <= 600 ? "380px" : "450px";
+          // Add class to trigger animation
+          card.classList.add("height-animation");
+        } else {
+          const height = window.innerWidth <= 600 ? "500px" : "550px";
+          card.style.height = height;
+        }
+      });
+  
       const label1 = document.querySelector(".pager_label_1");
       const label2 = document.querySelector(".pager_label_2");
       label1.classList.add("fade-out");
@@ -97,14 +103,30 @@ const Uretim = () => {
       }, 300);
     }
   };
+  
+  
+  
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
-    }
-
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
+      const prevIndex = currentIndex - 1;
+      setCurrentIndex(prevIndex);
+  
+      // Update height of card_front with index equal to currentIndex - 1
+      const cardFronts = document.querySelectorAll(".card_front");
+      cardFronts.forEach((card, index) => {
+        if (index === prevIndex) {
+          // Conditionally set height based on window width
+          const height = window.innerWidth <= 600 ? "380px" : "450px";
+          card.style.height = height;
+          // Add class to trigger animation
+          card.classList.add("height-animation");
+        } else {
+          const height = window.innerWidth <= 600 ? "500px" : "550px";
+          card.style.height = height;
+        }
+      });
+  
       const label1 = document.querySelector(".pager_label_1");
       const label2 = document.querySelector(".pager_label_2");
       label1.classList.add("fade-out");
@@ -115,21 +137,8 @@ const Uretim = () => {
       }, 300);
     }
   };
-
-  useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      setTranslateXValue(screenWidth < 600 ? -11.21 : -12.5);
-    };
-
-    handleResize(); // Initial call to set initial translateX value
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []); // Run effect only once after component mount
+  
+  
 
   const currentItem = pagerData[currentIndex];
 
@@ -145,7 +154,8 @@ const Uretim = () => {
       }}
     >
       {" "}
-      <div className="centered_image"
+      <div
+        className="centered_image"
         style={{
           backgroundImage: `url(${benek})`,
         }}
@@ -174,13 +184,26 @@ const Uretim = () => {
             <div className="slider-container">
               <div
                 className="slide_card"
-                style={{
-                  transform: `translateX(${translateXValue * currentIndex}%)`,
-                }}
+                style={
+                  window.innerWidth >= 600
+                    ? {
+                        transform: `translateX(${-450 * currentIndex}px)`,
+                      }
+                    : { transform: `translateX(${-300 * currentIndex}px)` }
+                }
               >
                 {pagerData.map((pagerItem, index) => (
-                  <div className="card_front p-5 pt-0 d-flex align-items-start flex-column bd-highlight" key={index}>
-                    <div className="d-flex justify-content-evenly m-4 mb-auto bd-highlight">
+                  <div
+                    className={`card_front p-3 p-md-5 pt-0 d-flex align-items-start flex-column bd-highlight 
+                    }`}
+                    key={index}
+                    style={window.innerWidth >= 600
+                      ?{ height: index === 0 ? "450px" : "550px" }
+                      :
+                      { height: index === 0 ? "380px" : "500px" }
+                    }
+                  >
+                    <div className="title_window d-flex m-4 mb-auto bd-highlight">
                       <label className="pager_card_header_1 pr-4">
                         {pagerItem.id}
                       </label>
@@ -188,7 +211,7 @@ const Uretim = () => {
                         {pagerItem.header2}
                       </label>
                     </div>
-                    <div className="d-flex justify-content-end align-items-end bd-highlight">
+                    <div className="d-flex justify-content-center align-items-center bd-highlight picture_window">
                       <img
                         src={pagerItem.photoLink}
                         alt="bayrak"
@@ -202,8 +225,6 @@ const Uretim = () => {
           </div>
         </div>
       </div>
-    <div className="right_grey">
-    </div>
     </div>
   );
 };
