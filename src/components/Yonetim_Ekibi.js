@@ -126,20 +126,6 @@ const Uretim = () => {
     }
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      setTranslateXValue(screenWidth < 600 ? -11.21 : -12.5);
-    };
-
-    handleResize(); // Initial call to set initial translateX value
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []); // Run effect only once after component mount
 
   return (
     <div className="baslik p-md-5 p-3 pt-md-1 pb-md-1 ">
@@ -168,13 +154,17 @@ const Uretim = () => {
             >
               <div
                 className="yonetim_card"
-                style={{
-                  transform: `translateX(${translateXValue * currentIndex}%)`,
-                }}
+                style={
+                  window.innerWidth >= 600
+                    ? {
+                        transform: `translateX(${-149 * currentIndex}px)`,
+                      }
+                    : { transform: `translateX(${-175 * currentIndex}px)` }
+                }
               >
                 {pagerData.map((pagerItem, index) => (
                   <div
-                    className="yonetim_front d-flex align-items-center flex-column p-3"
+                    className="yonetim_front d-flex align-items-center flex-column"
                     key={index}
                   >
                     <div className="yonetim_image_container">

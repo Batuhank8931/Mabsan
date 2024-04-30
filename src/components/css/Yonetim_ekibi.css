@@ -62,8 +62,8 @@
 
   .yonetim_front{
     background-color: black; /* Fully opaque light grey background */
-    width: 270px;
     height: 300px;
+    padding: 17px;
   }
 
   .yonetim_header{
@@ -139,5 +139,15 @@
       width: 100%;
     }
 
+
   }
 
+
+  @media (max-width: 601px) {
+
+    
+    .yonetim_front{
+      padding: 30px;
+    }
+
+  }

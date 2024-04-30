@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./css/Sektorler.css";
 import polygon from "../assets/red-dot-ploygon.svg";
 import rectangle from "../assets/Rectangle.svg";
@@ -14,8 +14,20 @@ const Sektorler = () => {
     "Perakende",
     "Kozmetik",
     "İlaç",
-    "Otomotiv"
+    "Otomotiv",
   ];
+
+  useEffect(() => {
+    // Preload the video
+    preloadVideo('../assets/apples.mp4');
+  }, []);
+
+  function preloadVideo(url) {
+    var video = document.createElement('video');
+    video.src = url;
+    video.style.display = 'none';
+    document.body.appendChild(video);
+  }
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const [dragStartX, setDragStartX] = useState(null);
@@ -102,27 +114,33 @@ const Sektorler = () => {
                           {index + 1}
                         </label>
                       </div>
+                      
                       <div
                         className="sector_card_2"
                         // BİLGİSAYARDA GÖZÜKEN HOVER CARDI
                       >
                         {" "}
-                        <div className="d-flex align-items-center justify-content-center card_video">
-                          <div id="video-container">
-                            <video
-                              autoPlay
-                              loop
-                              muted
-                              style={{
-                                width: "100%",
-                                pointerEvents: "none",
-                                opacity: 1,
-                              }}
-                            >
-                              <source src={Apples} type="video/mp4" />
-                              Your browser does not support the video tag.
-                            </video>
-                          </div>
+                        <div
+                          className="d-flex align-items-center justify-content-center"
+                          id="video-container"
+                          style={{
+                            height:"250px"
+                          }}
+                        >
+                          <video
+                            autoPlay
+                            loop
+                            muted
+                            controls={false} // This will hide the video controls
+                            playsInline
+                            style={{
+                              pointerEvents: "none",
+                              opacity: 1,
+                            }}
+                          >
+                            <source src={Apples} type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
                         </div>
                       </div>{" "}
                     </div>
@@ -150,14 +168,15 @@ const Sektorler = () => {
                   <div
                     className="sector_card_1" // TELEFONDA GÖZÜKEN HOVER CARDI
                   >
-                    <div className="d-flex align-items-center justify-content-center card_video">
+                    <div className="flex-row align-items-center justify-content-center card_video">
                       <div id="video-container">
                         <video
                           autoPlay
                           loop
                           muted
+                          controls={false} // This will hide the video controls
+                          playsInline
                           style={{
-                            height: "10%",
                             pointerEvents: "none",
                             opacity: 1,
                           }}

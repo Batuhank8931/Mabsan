@@ -33,8 +33,8 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
               </button>
             </div>
 
-            <div class="d-flex flex-column col-8 col-md-10">
-              <div className="d-flex flex-md-row flex-column align-items-start justify-content-around w-100 h-50 p-md-2 p-3 pt-0 m-5 m-md-0 ">
+            <div class="flex-column col-8 col-md-10">
+              <div className="d-md-flex flex-md-row flex-column align-items-start justify-content-around w-100 h-50 p-md-2 p-3 pt-0 m-5 m-md-0 ">
                 <button
                   className="buttons mx-2 mt-2 mb-4"
                   onClick={() => {

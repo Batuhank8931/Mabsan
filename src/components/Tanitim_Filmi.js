@@ -1,34 +1,48 @@
-import React from "react";
-import YouTube from "react-youtube";
+import React, { useState, useRef } from "react";
 import "./css/Tanitim_Filmi.css";
+import tanitim_filmi from "../assets/araba.mp4";
+import PlayButtonIcon from "../assets/play_button.svg";
 
 const Tanitim_Filmi = () => {
-  const videoId = "mb1P5WsRlMo"; // YouTube video ID
+  const [showPlayButton, setShowPlayButton] = useState(true);
+  const videoRef = useRef(null);
 
-  // Options for the YouTube component
-  const opts = {
-    width: "100%", 
-    height: "auto", // Set height to "auto" to allow dynamic resizing
-    playerVars: {
-      autoplay: 1,
-      loop: 1,
-      controls: 1,
-      modestbranding: 1,
-      fs: 0,
-      iv_load_policy: 3,
-      playsinline: 1,
-      mute: 1,
-    },
+  const handlePlayButtonClick = (e) => {
+    videoRef.current.play();
+    setShowPlayButton(false); // Hide the play button container
   };
 
-  // Function to handle when the video ends
-  const handleVideoEnd = (event) => {
-    event.target.playVideo(); // Restart the video
+  const handleVideoClick = () => {
+    if (videoRef.current && !videoRef.current.paused) {
+      setShowPlayButton(true); // Show the play button container if video is playing
+    } else {
+      setShowPlayButton(false); // Hide the play button container if video is paused
+    }
   };
+  
 
   return (
-    <div className="video-iframe">
-      <YouTube videoId={videoId} opts={opts} onEnd={handleVideoEnd} />
+    <div className="video-container-main">
+      <video
+        controls
+        className="video-element"
+        onClick={handleVideoClick}
+        ref={videoRef}
+      >
+        <source src={tanitim_filmi} type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+      {showPlayButton && (
+        <div className="play-button-container">
+          <img
+            src={PlayButtonIcon}
+            alt="Play Button"
+            className="play-button"
+            onClick={handlePlayButtonClick}
+          />
+          <label className="play-button-label">Mabsan Tanıtım Filmi</label>
+        </div>
+      )}
     </div>
   );
 };

@@ -3,7 +3,7 @@
     width: 100%;
 }
 
-.centered_image {
+.centered_image_uretim {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11,7 +11,7 @@
   width: 180px;
   height: 180px;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .pager_label_1 {
@@ -226,7 +226,7 @@
   }
     
 
-  .centered_image {
+  .centered_image_uretim {
     position: absolute;
     top: 50%;
     left: 50%;

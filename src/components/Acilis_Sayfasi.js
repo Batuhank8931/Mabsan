@@ -163,6 +163,8 @@ const Acilis_Sayfasi = ({ change_page }) => {
                 autoPlay
                 loop
                 muted
+                controls={false} // This will hide the video controls
+                playsInline
                 style={{
                   position: "absolute",
                   top: 0,

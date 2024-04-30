@@ -105,8 +105,6 @@ const Uretim = () => {
   };
   
   
-  
-
   const handlePrevious = () => {
     if (currentIndex > 0) {
       const prevIndex = currentIndex - 1;
@@ -151,11 +149,13 @@ const Uretim = () => {
         backgroundImage: `url(${arka})`,
         backgroundSize: "95% auto",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        
       }}
     >
       {" "}
       <div
-        className="centered_image"
+        className="centered_image_uretim"
         style={{
           backgroundImage: `url(${benek})`,
         }}

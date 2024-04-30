@@ -1,0 +1,215 @@
+.container {
+    background-color: transparent;
+    width: 100%;
+}
+
+
+.pager_label_1 {
+    background-color: transparent;
+    font-size: 85%;
+    outline: none;
+    transition: opacity 0.2s ease-in-out, font-size 0.2s; 
+    opacity: 1;
+    padding-bottom: 0px;
+    color: white;
+    text-align: left;
+
+}
+
+.pager_label_1:hover {
+  font-size: 95%;
+}
+
+.pager_label_1.fade-out {
+  opacity: 0;
+}
+
+
+.pager_label_2 {
+    background-color: transparent;
+    font-size: 50%;
+    outline: none;
+    transition: opacity 0.2s ease-in-out, font-size 0.2s; 
+    padding-bottom: 0px;
+    color: white;
+    text-align: left;
+
+}
+
+.pager_label_2:hover {
+  font-size: 55%;
+}
+
+.pager_label_2.fade-out {
+  opacity: 0;
+}
+
+.previous_button, .next_button {
+    width: 65px;
+    height: 65px;
+    background-color: #cccccc63;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+  }
+  
+  .previous_button::before, .next_button::after {
+    content: "\2190"; /* Unicode for left arrow */
+    font-size: 30px;
+  }
+  
+  .next_button::after {
+    content: "\2192"; /* Unicode for right arrow */
+  }
+  
+  /* Additional styles */
+  .previous_button:hover, .next_button:hover {
+    background-color: #999999de;
+    width: 68px;
+    height: 68px;
+  }
+  
+
+  
+  /* Reset hover styles when button is clicked */
+  .previous_button:active:hover, .next_button:active:hover {
+    background-color: #cccccc63; /* Reset background color */
+    width: 80px;
+    height: 80px;
+  }
+  
+
+  .slider-container {
+    overflow: hidden;
+    height: 100%;
+  }
+
+
+  .slide_card {
+    display: flex;
+    transition: transform 0.5s ease-in-out;    
+    width: 1500%;
+    align-items: center;
+
+  }
+    
+
+  .card_front{
+    background-color: rgba(204, 204, 204, 0.4); /* Fully opaque light grey background */
+    backdrop-filter: blur(3px); /* Blur effect with 10px radius */
+    border-radius: 30px 0 30px 0 ; /* Top left and bottom right corners have border radius */
+    transition: height 0.3s ease; /* Add transition for height property */
+    
+  }
+
+
+  .title_window{
+    width: 100%;
+  }
+
+
+  .pager_card_header_1{
+    background-color: transparent; /* Transparent background */
+    color: white;
+    font-size: 100%;
+    display: flex;
+    justify-content: center; /* Align horizontally center */
+    align-items: center; /* Align vertically center */
+    transition: font-size 0.2s;
+    width: 70px;
+  }
+
+  .pager_card_header_1:hover{
+    font-size: 105%;
+  }
+
+  .pager_card_header_2 {
+    background-color: transparent; /* Transparent background */
+    color: white;
+    font-size: 70%;
+    display: flex;
+    justify-content: start; /* Align horizontally center */
+    align-items: center; /* Align vertically center */
+    transition: font-size 0.2s;
+  }
+  
+  .pager_card_header_2:hover{
+    font-size: 100%;
+  }
+
+  .image_container_makina {
+    border-radius: 20px 0 20px 0; /* Adjust the value as needed */
+    width: 85%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1); /* Adjust the shadow values as needed */
+  }
+  
+  .right_grey{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 30px 0 0 0 ;
+    transform: translate(480px, -275px);
+    width: 60px;
+    height: 550px;
+    background-size: cover;
+    background-color: rgb(94, 90, 90)
+
+  }
+
+  @media (min-width: 601px) {
+
+    
+    .slide_card_wrapper{
+      height: 100%;
+      width: 100%;
+    }
+    
+
+    .label_1{
+      font-size: 80px;
+    }
+
+    .label_2{
+      font-size: 40px;
+    }
+
+
+    .card_header_1{
+      font-size: 80px;
+    }
+
+    .card_header_2{
+      font-size: 50px;
+    }
+
+  }
+
+  @media (max-width: 600px) {
+
+
+
+  .pager_back {
+    background-image: none !important; 
+  }
+
+  .card_front{
+    margin-right: 20px;
+    margin-left: 0px;
+    width: 280px;
+  
+  }
+
+  .title_window{
+    width: 100%;
+  }
+
+
+
+
+}
