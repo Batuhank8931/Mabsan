@@ -21,6 +21,8 @@ const Footer = () => {
             autoPlay
             loop
             muted
+            controls={false} // This will hide the video controls
+            playsInline
             style={{
               transform: "translate(-0%, -24%)",
               width: "auto",

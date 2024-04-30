@@ -2,13 +2,15 @@ import React, { useState } from "react";
 
 import Acilis_Sayfasi from "./components/Acilis_Sayfasi";
 import Sektorler from "./components/Sektorler";
-import Pager from "./components/Uretim";
+import Uretim from "./components/Uretim";
 import Yolculugumuz from "./components/Yolculugumuz";
 import Footer from "./components/Footer";
 import Paragraf from "./components/Paragraf";
 import Yonetim_Ekibi from "./components/Yonetim_Ekibi";
+import Kapasite from "./components/Kapasite";
 
 import Tanitim_Filmi from "./components/Tanitim_Filmi";
+import Arka_Plan from "./components/Arka_Plan";
 
 import Left_Header from "./components/Left_Header";
 import Right_Header from "./components/Right_Header";
@@ -58,7 +60,10 @@ const App = () => {
             <Left_Header sectorLabel={"Sektörler"} />
             <Sektorler />
             <Right_Header sectorLabel={"Üretim"} />
-            <Pager />
+            <Uretim />
+            <Left_Header sectorLabel={"Yolculuğumuz"} />
+            <Yolculugumuz />
+            <Footer />
           </div>
         ) : (
           <div className="slide-up">
@@ -68,7 +73,10 @@ const App = () => {
                 <Left_Header sectorLabel={"Sektörler"} />
                 <Sektorler />
                 <Right_Header sectorLabel={"Üretim"} />
-                <Pager />
+                <Uretim />
+                <Left_Header sectorLabel={"Yolculuğumuz"} />
+                <Yolculugumuz />
+                <Footer />
               </>
             )}
 
@@ -84,6 +92,9 @@ const App = () => {
                 <Paragraf paragraf_metni={misyon} />
                 <Right_Header sectorLabel={"Vizyon"} />
                 <Paragraf paragraf_metni={vizyon} />
+                <Left_Header sectorLabel={"Yolculuğumuz"} />
+                <Yolculugumuz />
+                <Footer />
               </>
             )}
 
@@ -93,7 +104,9 @@ const App = () => {
                 {" "}
                 <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
                 <Tanitim_Filmi />
-                <div>Main content</div>
+                <Kapasite />
+                <Arka_Plan sub_pages={<Footer />} />
+                <Footer />
               </>
             )}
             {BigHeader === "Ürünler" && (
@@ -143,9 +156,6 @@ const App = () => {
             )}
           </div>
         )}
-        <Left_Header sectorLabel={"Yolculuğumuz"} />
-        <Yolculugumuz />
-        <Footer />
       </div>
     </div>
   );

@@ -18,8 +18,7 @@
 
 .blocks{
   background-color:white;
-  border: 10px;
-  border-color: black;
+  transform: translateY(-1%);
 }
 
 /* Hide scrollbar */
@@ -52,7 +51,6 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
 .sektor_button {
   opacity: 1;
   height: 140px;
-  opacity: 1;
   transition: width 0.3s ease; /* Add transition property */
   
 
@@ -89,6 +87,7 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
 .picture_1{
   height: 100%;
 }
+
 
 /* Apply row layout for larger screens */
 @media (min-width: 601px) {
@@ -139,7 +138,7 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
   }
 
   .card_video {
-    height: 280px;
+    height: 100%;
   }
 
 }
@@ -195,7 +194,7 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
 
 
   .card_video {
-    height: 10px;
+    height: 100%;
   }
 
 }

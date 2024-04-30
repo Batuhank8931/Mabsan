@@ -31,3 +31,70 @@
   }
 
   
+
+  .video-container-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 40px 0px 40px; 
+    overflow: hidden;
+  }
+  
+  .video-element {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .play-button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Center the play button horizontally */
+  }
+  
+  .play-button {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    /* Margin auto will center the play button horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    transition: height .3s;
+  }
+
+  .play-button-label {
+    font-size: 50px;
+    color: white;
+  }
+
+
+  .play-button-container:hover .play-button{
+    width: 120px;
+    height: 120px;
+  }
+
+
+  @media (max-width: 601px) {
+
+    
+    .play-button {
+      width: 60px;
+      height: 80px;
+      transition: height .3s;
+      opacity: 0;
+    }
+  
+    .play-button-label {
+      font-size: 22px;
+      color: white;
+    }
+  
+  
+    .play-button-container:hover .play-button{
+      width: 62px;
+      height: 62px;
+    }
+
+
+  }

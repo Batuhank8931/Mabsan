@@ -3,16 +3,6 @@
     width: 100%;
 }
 
-.centered_image_uretim {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-10%, -170%) translateX(-10px);
-  width: 180px;
-  height: 180px;
-  background-size: cover;
-  opacity: 0.3;
-}
 
 .pager_label_1 {
     background-color: transparent;
@@ -106,6 +96,7 @@
     transition: transform 0.5s ease-in-out;    
     width: 1500%;
     align-items: center;
+
   }
     
 
@@ -113,11 +104,8 @@
     background-color: rgba(204, 204, 204, 0.4); /* Fully opaque light grey background */
     backdrop-filter: blur(3px); /* Blur effect with 10px radius */
     border-radius: 30px 0 30px 0 ; /* Top left and bottom right corners have border radius */
-    margin-right: 60px;
-    margin-left: 20px;
-    height: 550px;
-    width: 370px;
     transition: height 0.3s ease; /* Add transition for height property */
+    
   }
 
 
@@ -125,9 +113,6 @@
     width: 100%;
   }
 
-  .picture_window{
-    height: 250px;
-  }
 
   .pager_card_header_1{
     background-color: transparent; /* Transparent background */
@@ -147,9 +132,9 @@
   .pager_card_header_2 {
     background-color: transparent; /* Transparent background */
     color: white;
-    font-size: 95%;
+    font-size: 70%;
     display: flex;
-    justify-content: center; /* Align horizontally center */
+    justify-content: start; /* Align horizontally center */
     align-items: center; /* Align vertically center */
     transition: font-size 0.2s;
   }
@@ -158,9 +143,10 @@
     font-size: 100%;
   }
 
-  .image_container {
-    border-radius: 20px; /* Adjust the value as needed */
-    width: 80%;
+  .image_container_makina {
+    border-radius: 20px 0 20px 0; /* Adjust the value as needed */
+    width: 85%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1); /* Adjust the shadow values as needed */
   }
   
   .right_grey{
@@ -206,6 +192,8 @@
 
   @media (max-width: 600px) {
 
+
+
   .pager_back {
     background-image: none !important; 
   }
@@ -221,21 +209,7 @@
     width: 100%;
   }
 
-  .picture_window{
-    width: 100%;
-  }
-    
 
-  .centered_image_uretim {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-130%, -50%) translateX(-10px);
-    width: 120px;
-    height: 120px;
-    background-size: cover;
-    opacity: 0.5;
-  }
 
 
 }

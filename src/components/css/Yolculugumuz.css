@@ -148,7 +148,7 @@
     color: transparent; /* Make the text transparent */
     font-size: 300px;
     font-weight: bold;
-    transform: translateY(-50%) translateX(73%);
+    transform: translateY(-50%) translateX(72%);
   }
 
   
@@ -226,14 +226,14 @@
     }
   
     .baslik:hover .year_header .timeline_year0 {
-      font-size: 150px;
+      font-size: 125px;
       transform: translateY(2%) translateX(-10%);
 
   
     }
     
     .times:hover > .year >.timeline_year {
-      font-size: 150px;
+      font-size: 125px;
       transform: translateY(-113%) translateX(48%);
     }
   

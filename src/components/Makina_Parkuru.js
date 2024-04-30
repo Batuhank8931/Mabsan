@@ -1,11 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
-import "./css/Uretim.css";
-import arka from "../assets/arka.svg";
-import benek from "../assets/benek.svg";
+import React, {  useState } from "react";
+import "./css/Makina_Parkuru.css";
 
-const Uretim = () => {
+
+const Makina_Parkuru = () => {
   const photoanan =
-    "https://s3-alpha-sig.figma.com/img/710a/d68c/9f241d0188983a0895548df77be50617?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lClo58bmk-wMlhMQX~RM2DF8oq451tgagc8Evoi0X~79Bn9JyiSo94OD-1aKPCFNlQcW9UQPRq61MKzIO8~QSYc83KhniLobHC2mRo3LzfCJr4jAakAQ1V~kX8tzxVxEeIuI4NzhgABF9vlvLgP3JdpwneaANr7vNcmJ9s97woRbYmuF98xyqgOuo694BnUv6RVkaHvtsQE~Rua8E7yBetjQt3YeewA8apLx0x8hz2rClph5DPFmel7mvERWdpWIM6CbQ84MF2GIi5MkAycooUGHmidsJk0c95NkpgQjaIQkiLZF9gQjNbgsQ0btg3iBNQTAq4D3vmR33qQ1bJ39~g__";
+    "https://s3-alpha-sig.figma.com/img/6637/7c4a/aae7adfd6e7437b49f5ef3db871c9446?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZQXw76Kw1EIJNdjZAbSoDEbKzmBVraO7-vHGztY4VJxtBRrV6q-vzduelmAHeQ9nFlAOF0zETk4dZq0aLHbZQsg52DtTGCVOSdOINtZqLLxnSrwXSyeioxfyBwv~pH8dpkriWo4U~b43Hy0jks9rBH2ZEPwMG9Qy8Gnb~TpoxE0llncq6nTljHJy5YzEeYP0QhPiyJBz7OmGNsnfyjeU-l4d9d5vF9Y4yfhrhkx4kBmGuvhfje8purC2P1bM9sw-1-Rf7tMntkFiP4Vhywquy3a8OYcKn2ZaY5Wef~fQqpp7JG2rQF6B0~N0FhBmkndhldO-XdzSH7xF8gHA3hFINA__";
 
   const pagerData = [
     {
@@ -13,7 +12,8 @@ const Uretim = () => {
       header1: '"El emeğiyle şekillenen her kutu, bir sanat eseridir."',
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject1",
+      header2: "173 cm B+C",
+      header3: "Oluklu Mukavva Hattı",
       photoLink: photoanan,
     },
     {
@@ -21,7 +21,8 @@ const Uretim = () => {
       header1: "Subject 2 Header",
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject2",
+        header2: "173 cm B+C",
+        header3: "Oluklu Mukavva Hattı",
       photoLink: photoanan,
     },
     {
@@ -29,7 +30,8 @@ const Uretim = () => {
       header1: "Subject 3 Header",
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject3",
+        header2: "173 cm B+C",
+        header3: "Oluklu Mukavva Hattı",
       photoLink: photoanan,
     },
     {
@@ -37,7 +39,8 @@ const Uretim = () => {
       header1: "Subject 4 Header",
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject4",
+        header2: "173 cm B+C",
+        header3: "Oluklu Mukavva Hattı",
       photoLink: photoanan,
     },
     {
@@ -45,7 +48,8 @@ const Uretim = () => {
       header1: "Subject 5 Header",
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject5",
+        header2: "173 cm B+C",
+        header3: "Oluklu Mukavva Hattı",
       photoLink: photoanan,
     },
     {
@@ -53,7 +57,8 @@ const Uretim = () => {
       header1: "Subject 6 Header",
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject6",
+        header2: "173 cm B+C",
+        header3: "Oluklu Mukavva Hattı",
       photoLink: photoanan,
     },
     {
@@ -61,7 +66,8 @@ const Uretim = () => {
       header1: "Subject 7 Header",
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject7",
+        header2: "173 cm B+C",
+        header3: "Oluklu Mukavva Hattı",
       photoLink: photoanan,
     },
     {
@@ -69,7 +75,8 @@ const Uretim = () => {
       header1: "Subject 8 Header",
       detail:
         "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject8",
+        header2: "173 cm B+C",
+        header3: "Oluklu Mukavva Hattı",
       photoLink: photoanan,
     },
   ];
@@ -79,20 +86,19 @@ const Uretim = () => {
     if (currentIndex < pagerData.length - 1) {
       const nextIndex = currentIndex + 1;
       setCurrentIndex(nextIndex);
-  
-      // Update height of card_front with index equal to currentIndex + 1
+
       const cardFronts = document.querySelectorAll(".card_front");
       cardFronts.forEach((card, index) => {
         if (index === nextIndex) {
-          card.style.height = window.innerWidth <= 600 ? "380px" : "450px";
+          card.style.height = window.innerWidth <= 600 ? "350px" : "500px";;
           // Add class to trigger animation
           card.classList.add("height-animation");
         } else {
-          const height = window.innerWidth <= 600 ? "500px" : "550px";
+          const height = window.innerWidth <= 600 ? "450px" : "600px";
           card.style.height = height;
         }
       });
-  
+
       const label1 = document.querySelector(".pager_label_1");
       const label2 = document.querySelector(".pager_label_2");
       label1.classList.add("fade-out");
@@ -103,28 +109,26 @@ const Uretim = () => {
       }, 300);
     }
   };
-  
-  
+
   const handlePrevious = () => {
     if (currentIndex > 0) {
       const prevIndex = currentIndex - 1;
       setCurrentIndex(prevIndex);
-  
-      // Update height of card_front with index equal to currentIndex - 1
+
       const cardFronts = document.querySelectorAll(".card_front");
       cardFronts.forEach((card, index) => {
         if (index === prevIndex) {
           // Conditionally set height based on window width
-          const height = window.innerWidth <= 600 ? "380px" : "450px";
+          const height = window.innerWidth <= 600 ? "350px" : "500px";
           card.style.height = height;
           // Add class to trigger animation
           card.classList.add("height-animation");
         } else {
-          const height = window.innerWidth <= 600 ? "500px" : "550px";
+          const height = window.innerWidth <= 600 ? "450px" : "600px";
           card.style.height = height;
         }
       });
-  
+
       const label1 = document.querySelector(".pager_label_1");
       const label2 = document.querySelector(".pager_label_2");
       label1.classList.add("fade-out");
@@ -135,8 +139,6 @@ const Uretim = () => {
       }, 300);
     }
   };
-  
-  
 
   const currentItem = pagerData[currentIndex];
 
@@ -146,22 +148,12 @@ const Uretim = () => {
       style={{
         position: "relative",
         width: "100%",
-        backgroundImage: `url(${arka})`,
-        backgroundSize: "95% auto",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        
+        backgroundColor: "rgba(0, 0, 0, 0)",
       }}
     >
       {" "}
-      <div
-        className="centered_image_uretim"
-        style={{
-          backgroundImage: `url(${benek})`,
-        }}
-      ></div>
       <div className="d-flex row">
-        <div className="header_card col-12 col-md-6 d-flex row p-0 p-md-4 pb-0  ">
+        <div className="header_card col-12 col-md-5 d-flex row p-0 p-md-4 pb-0  ">
           <div className="d-flex align-items-center justify-content-start">
             <label className="pager_label_1 p-4">{currentItem.header1}</label>
           </div>
@@ -179,7 +171,7 @@ const Uretim = () => {
             </div>
           </div>
         </div>
-        <div className="pager_front col-12 col-md-6 p-4 pt-0">
+        <div className="pager_front col-12 col-md-7 p-1 pt-0">
           <div className="slide_card_wrapper">
             <div className="slider-container">
               <div
@@ -187,35 +179,42 @@ const Uretim = () => {
                 style={
                   window.innerWidth >= 600
                     ? {
-                        transform: `translateX(${-450 * currentIndex}px)`,
+                        transform: `translateX(${-600 * currentIndex}px)`,
                       }
-                    : { transform: `translateX(${-300 * currentIndex}px)` }
+                    : { transform: `translateX(${-370 * currentIndex}px)` }
                 }
               >
                 {pagerData.map((pagerItem, index) => (
                   <div
-                    className={`card_front p-3 p-md-5 pt-0 d-flex align-items-start flex-column bd-highlight 
+                    className={`card_front p-1 p-md-1 d-flex align-items-start flex-column bd-highlight 
                     }`}
                     key={index}
-                    style={window.innerWidth >= 600
-                      ?{ height: index === 0 ? "450px" : "550px" }
-                      :
-                      { height: index === 0 ? "380px" : "500px" }
+                    style={
+                      window.innerWidth >= 600
+                        ? {
+                            height: index === 0 ? "500px" : "600px",
+                            width: "520px",
+                            marginTop:"20px"
+                          }
+                        : {
+                            height: index === 0 ? "350px" : "450px",
+                            width: "350px",
+                          }
                     }
                   >
-                    <div className="title_window d-flex m-4 mb-auto bd-highlight">
-                      <label className="pager_card_header_1 pr-4">
-                        {pagerItem.id}
-                      </label>
+                    <div className="title_window flex-row m-4 ">
                       <label className="pager_card_header_2">
                         {pagerItem.header2}
                       </label>
+                      <label className="pager_card_header_2">
+                        {pagerItem.header3}
+                      </label>
                     </div>
-                    <div className="d-flex justify-content-center align-items-center bd-highlight picture_window">
+                    <div className="d-flex justify-content-center align-items-center mb-5">
                       <img
                         src={pagerItem.photoLink}
                         alt="bayrak"
-                        className="image_container"
+                        className="image_container_makina"
                       />
                     </div>
                   </div>
@@ -229,4 +228,4 @@ const Uretim = () => {
   );
 };
 
-export default Uretim;
+export default Makina_Parkuru;

@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./css/Yolculugumuz.css";
 
-function isPhoneScreen() {
-  return window.matchMedia("(max-width: 768px)").matches; // Adjust the max-width as needed
-}
 
 const Yolculugumuz = () => {
   const events = [
@@ -128,7 +125,7 @@ const Yolculugumuz = () => {
       className="baslik p-md-5 p-3 pt-5 pb-0"
       style={{ height: "670px" }}
     >
-      <div className="year_header">
+      <div className="year_header" >
         <label className="timeline_year0">19</label>
       </div>
       <div className="d-flex row card_window">
