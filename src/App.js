@@ -11,6 +11,15 @@ import Kapasite from "./components/Kapasite";
 
 import Tanitim_Filmi from "./components/Tanitim_Filmi";
 import Arka_Plan from "./components/Arka_Plan";
+import Why_Work from "./components/Why_Work";
+import Cv_Gonder from "./components/Cv_Gonder";
+import Mabsan_Way_Form from "./components/Mabsan_Way_Form";
+import Discover_1 from "./assets/Discover_1.svg";
+import Mabsan_Way_Form_Reverse from "./components/Mabsan_Way_Form_Reverse";
+import Discover_2 from "./assets/Discover_2.svg";
+
+import Blog from "./components/Blog";
+import Blog_1 from "./components/Blog_1";
 
 import Left_Header from "./components/Left_Header";
 import Right_Header from "./components/Right_Header";
@@ -43,6 +52,63 @@ const App = () => {
 
   const vizyon =
     "\n\u2022 Koşulsuz müşteri memnuniyeti sağlamak,\n\u2022 Sektörünün önde gelen firmaları arasında kalıcığını korumak,\n\u2022 Güçlü büyüme ile siz müşterilerimize kalıcı değer yaratmak, \n\u2022Karlılığınızı, bilinirliğinizi ve markanızın yapısını korumak, \n\u2022Kalitede ve üretimde lider olmak.";
+
+  const value1 = "Discover New Opportunities";
+
+  const value2 = `At Mabsan Way, we pride ourselves on our unique approach to cardboard production. Our way is defined by a steadfast commitment to sustainability, where every fold and crease in our cardboard products reflects our dedication to minimizing environmental impact.`;
+
+  const value3 = "Discover";
+
+  const value4 = Discover_1;
+  const value5 = Discover_2;
+
+  const blogData = [
+    { id: 1, title: "Blog Post 1", content: "Content of Blog Post 1" },
+    { id: 2, title: "Blog Post 2", content: "Content of Blog Post 2" },
+    { id: 3, title: "Blog Post 3", content: "Content of Blog Post 3" },
+    { id: 4, title: "Blog Post 4", content: "Content of Blog Post 4" },
+    { id: 5, title: "Blog Post 5", content: "Content of Blog Post 5" },
+    { id: 6, title: "Blog Post 6", content: "Content of Blog Post 6" },
+    { id: 7, title: "Blog Post 7", content: "Content of Blog Post 7" },
+    { id: 8, title: "Blog Post 8", content: "Content of Blog Post 8" },
+    { id: 9, title: "Blog Post 9", content: "Content of Blog Post 9" },
+    { id: 10, title: "Blog Post 10", content: "Content of Blog Post 10" },
+    { id: 11, title: "Blog Post 11", content: "Content of Blog Post 11" },
+    { id: 12, title: "Blog Post 12", content: "Content of Blog Post 12" },
+    { id: 13, title: "Blog Post 13", content: "Content of Blog Post 13" },
+    { id: 14, title: "Blog Post 14", content: "Content of Blog Post 14" },
+    { id: 15, title: "Blog Post 15", content: "Content of Blog Post 15" },
+    { id: 16, title: "Blog Post 16", content: "Content of Blog Post 16" },
+    { id: 17, title: "Blog Post 17", content: "Content of Blog Post 17" },
+    { id: 18, title: "Blog Post 18", content: "Content of Blog Post 18" },
+    { id: 19, title: "Blog Post 19", content: "Content of Blog Post 19" },
+    { id: 20, title: "Blog Post 20", content: "Content of Blog Post 20" },
+    { id: 21, title: "Blog Post 21", content: "Content of Blog Post 21" },
+    { id: 22, title: "Blog Post 22", content: "Content of Blog Post 22" },
+    { id: 23, title: "Blog Post 23", content: "Content of Blog Post 23" },
+    { id: 24, title: "Blog Post 24", content: "Content of Blog Post 24" },
+    { id: 25, title: "Blog Post 25", content: "Content of Blog Post 25" },
+    { id: 26, title: "Blog Post 26", content: "Content of Blog Post 26" },
+    { id: 27, title: "Blog Post 27", content: "Content of Blog Post 27" },
+    { id: 28, title: "Blog Post 28", content: "Content of Blog Post 28" },
+    { id: 29, title: "Blog Post 29", content: "Content of Blog Post 29" },
+    { id: 30, title: "Blog Post 30", content: "Content of Blog Post 30" },
+    { id: 31, title: "Blog Post 31", content: "Content of Blog Post 31" },
+    { id: 32, title: "Blog Post 32", content: "Content of Blog Post 32" },
+    { id: 33, title: "Blog Post 33", content: "Content of Blog Post 33" },
+    { id: 34, title: "Blog Post 34", content: "Content of Blog Post 34" },
+    { id: 35, title: "Blog Post 35", content: "Content of Blog Post 35" },
+    { id: 36, title: "Blog Post 36", content: "Content of Blog Post 36" },
+    { id: 37, title: "Blog Post 37", content: "Content of Blog Post 37" },
+    { id: 38, title: "Blog Post 38", content: "Content of Blog Post 38" },
+    { id: 39, title: "Blog Post 39", content: "Content of Blog Post 39" },
+    { id: 40, title: "Blog Post 40", content: "Content of Blog Post 40" },
+    { id: 41, title: "Blog Post 41", content: "Content of Blog Post 41" },
+    { id: 42, title: "Blog Post 42", content: "Content of Blog Post 42" },
+    { id: 43, title: "Blog Post 43", content: "Content of Blog Post 43" },
+    { id: 44, title: "Blog Post 44", content: "Content of Blog Post 44" },
+    { id: 45, title: "Blog Post 45", content: "Content of Blog Post 45" },
+  ];
 
   return (
     <div
@@ -105,7 +171,7 @@ const App = () => {
                 <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
                 <Tanitim_Filmi />
                 <Kapasite />
-                <Arka_Plan sub_pages={<Footer />} />
+                <Arka_Plan />
                 <Footer />
               </>
             )}
@@ -123,8 +189,21 @@ const App = () => {
               <>
                 {" "}
                 <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
-                <Tanitim_Filmi />
-                <div>Main content</div>
+                <Why_Work />
+                <Cv_Gonder />
+                <Mabsan_Way_Form
+                  PARAMATER1={value1}
+                  PARAMATER2={value2}
+                  PARAMATER3={value3}
+                  PARAMATER4={value4}
+                />
+                <Mabsan_Way_Form_Reverse
+                  PARAMATER1={value1}
+                  PARAMATER2={value2}
+                  PARAMATER3={value3}
+                  PARAMATER4={value5}
+                />
+                <Footer />
               </>
             )}
             {BigHeader === "Blog" && (
@@ -132,8 +211,8 @@ const App = () => {
               <>
                 {" "}
                 <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
-                <Tanitim_Filmi />
-                <div>Main content</div>
+                <Blog blogData={blogData} />
+                <Blog_1 />
               </>
             )}
             {BigHeader === "Perakende" && (

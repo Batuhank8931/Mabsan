@@ -1,0 +1,64 @@
+.segment_button {
+    width: 300px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid #FFB0B0;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+    }
+
+
+.segment_button:hover {
+    width: 320px;
+    height: 80px;
+    }
+
+
+
+
+.image_container_way {
+    border-radius: 20px 0 20px 0; /* Adjust the value as needed */
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1); /* Adjust the shadow values as needed */
+    }
+
+
+.form_label_1 {
+    background-color: transparent;
+    font-size: 85%;
+    outline: none;
+    transition: opacity 0.2s ease-in-out, font-size 0.2s; 
+    opacity: 1;
+    padding-bottom: 0px;
+    color: white;
+    text-align: left;
+
+}
+
+
+.form_label_1:hover {
+    font-size: 95%;
+}
+
+.form_label_1.fade-out {
+    opacity: 0;
+}
+
+
+.form_label_2 {
+    background-color: transparent;
+    font-size: 50%;
+    outline: none;
+    transition: opacity 0.2s ease-in-out, font-size 0.2s; 
+    padding-bottom: 0px;
+    color: white;
+    text-align: left;
+
+}
+
+.form_label_2:hover {
+    font-size: 55%;
+}
+
+.form_label_2.fade-out {
+    opacity: 0;
+}
