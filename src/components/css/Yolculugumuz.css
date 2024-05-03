@@ -134,6 +134,7 @@
     transition: font-size 0.3s ease; /* Add transition for smooth font size change */
   }
 
+  @media (min-width: 601px) {
 
   .baslik:hover .year_header .timeline_year0 {
     font-size: 300px;
@@ -152,7 +153,7 @@
   }
 
   
-
+  }
   
 
   .times:hover .arrow {
@@ -186,13 +187,22 @@
       width: 200px;
       text-align: end;
 
+
+  
+
     }
 
     .timeline_year {
       text-align: start;
       height: 200px;
       width: 200px;
+      
 
+
+    }
+
+    .arrow {
+      display: block; /* Hide the .downarrow when .times is being hovered */
     }
     
     .time_slide_card {
@@ -212,11 +222,6 @@
 
     }
 
-    .time_slide_card {
-      width: 100%;
-
-      
-    }
 
     .times{
       transform: translateX(25%) translateY(25%);
@@ -224,21 +229,9 @@
 
   
     }
-  
-    .baslik:hover .year_header .timeline_year0 {
-      font-size: 125px;
-      transform: translateY(2%) translateX(-10%);
 
+    /*  YUKARIDA AŞAĞIDAKİ ÖZELLİKLER ÇOKTAN GERÇEKLEŞİYOR */
   
-    }
-    
-    .times:hover > .year >.timeline_year {
-      font-size: 125px;
-      transform: translateY(-113%) translateX(48%);
-    }
-  
-    
-
 
   }
 

@@ -34,7 +34,7 @@ const Arka_Plan = () => {
       <Makina_Parkuru />
 
       <div className="p-md-5 p-1">
-        <img src={MabsanWay} alt="MabsanWay" className="MabsanWay p-md-5 p-1" style={{ width:"100%"}}/>
+        <img src={MabsanWay} alt="MabsanWay" className="MabsanWay p-md-5 p-1" />
       </div>
       <Mabsan_Way_Form PARAMATER1={value1} PARAMATER2={value2} PARAMATER3={value3} PARAMATER4={value4} />
 

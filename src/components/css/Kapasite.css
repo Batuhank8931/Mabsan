@@ -4,6 +4,7 @@
 
 .each_header{
     width: 230px;
+    transition: all .3s;
 }
 
 .kapasite_label{
@@ -11,6 +12,7 @@
     text-align: center;
     font-size: 30px;
     padding-bottom: 20px;
+    transition: all .3s;
 }
 
 .kapasite_band {
@@ -23,9 +25,22 @@
     background: rgb(81, 2, 2);
     border-color: black;
     border-width: 2px;
+    transition: all .3s;
     
 
   }
+
+.kapasite_label:hover{
+    font-size: 32px;
+}
+
+.kapasite_band:hover{
+    font-size: 32px;
+}
+
+.each_header:hover{
+    width: 235px;
+}
   
 
   @media (max-width: 600px) { /* Adjust font size for screens smaller than 576px (e.g., phones) */

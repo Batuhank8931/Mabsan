@@ -14,7 +14,7 @@ import Turning_logo from "../assets/logo_1.mp4";
 
 const Footer = () => {
   return (
-    <div className="baslik p-md-5 p-3 pt-0 pb-5 ">
+    <div className="baslik p-md-5 pt-0 pb-5 ">
       <div className="d-flex align-items-center justify-content-center mb-0 mb-md-5 mt-0">
         <div className="video-container">
           <video
@@ -24,7 +24,7 @@ const Footer = () => {
             controls={false} // This will hide the video controls
             playsInline
             style={{
-              transform: "translate(-0%, -24%)",
+              transform: "translate(-0%, 0%)",
               width: "auto",
               height: "auto",
             }}
@@ -56,6 +56,7 @@ const Footer = () => {
           style={{
             backgroundImage: `url(${red_hoverSVG})`,
             backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div className="bd-highlight p-md-3 pt-4">
@@ -103,8 +104,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-center justify-content-md-start row mt-2 mr-md-5 ml-md-5">
-        <div className="col-md-3 col-12 align-items-center justift-content-center w-60 w-md-70">
-          <div className="d-flex justify-content-between mr-md-5 mb-3 mr-3 ml-md-0 mt-3">
+        <div className="col-md-3 col-12 align-items-center justift-content-center w-60 w-md-70 ">
+          <div className="d-flex justify-content-between mr-md-5 mb-3 mr-0 ml-md-0 mt-3">
             <button>
               <img src={faceSVG} alt="Face Icon" />
             </button>
@@ -161,14 +162,14 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="hidden_bottom  column p-md-5 p-3 pt-0 pb-5 hidden_bottom">
+        <div className="hidden_bottom column hidden_bottom p-4">
           <div className="col-6" style={{ textAlign: "left" }}>
             <ul style={{ listStylePosition: "inside", margin: 0, padding: 0, fontSize: "20px"}}>
               <li>Yasal Bildirim</li>
               <li>Gizlilik Politikası</li>
             </ul>
           </div>
-          <div className="col-6" style={{ textAlign: "right" }}>
+          <div className="col-6" style={{ textAlign: "left" }}>
             <ul style={{ listStylePosition: "inside", margin: 0, padding: 0, fontSize: "20px" }}>
               <li>Çerez Politikası</li>
               <li>Hizmet ve Şartlar</li>

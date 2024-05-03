@@ -1,77 +1,192 @@
+.blog-container {
+  background-color: transparent;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
 
-.carousel_blog {
-    position: relative;
+
+.blog_card {
+  display: flex;
+  transition: transform 0.5s ease-in-out;    
+  width: 5500%;
+  align-items: center;
+}
+  
+
+.blog_front{
+  backdrop-filter: blur(3px); /* Blur effect with 10px radius */
+  border-radius: 30px 0 30px 0 ; /* Top left and bottom right corners have border radius */
+  height: 100% ;
+  width: 1105px;
+  transition: height 0.3s ease; /* Add transition for height property */
+}
+
+.blog_card_title{
+  font-size: 50px;
+}
+
+.blog_card_content{
+font-size: 20px;
+}
+
+.blog_content{
+  transform: translate(50px, 0px);
+  background-color: rgba(61, 60, 60, 0.5); 
+  border-radius: 30px 30px 30px 30px ; /* Top left and bottom right corners /* Fully opaque light grey background */
+  backdrop-filter: blur(10px); /* Blur effect with 10px radius */
+  height: 350px;
+  width: 350px;
+}
+
+.date_title {
+  position: absolute;
+  z-index: -1;
+  transform: translate(-100px, -70px);
+}
+
+.day_title{
+  font-size: 150px;
+  font-weight: bold;
+}
+
+
+.blog_card_content{
+  height: 400px;
+}
+
+
+.blog_card_header_1{
+  background-color: transparent; /* Transparent background */
+  color: white;
+  font-size: 100%;
+  display: flex;
+  justify-content: center; /* Align horizontally center */
+  align-items: center; /* Align vertically center */
+  transition: font-size 0.2s;
+  width: 70px;
+}
+
+
+
+
+
+.previous_button, .next_button {
+  width: 65px;
+  height: 65px;
+  background-color: #cccccc63;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.previous_button::before, .next_button::after {
+  content: "\2190"; /* Unicode for left arrow */
+  font-size: 30px;
+}
+
+.next_button::after {
+  content: "\2192"; /* Unicode for right arrow */
+}
+
+/* Additional styles */
+.previous_button:hover, .next_button:hover {
+  background-color: #999999de;
+  width: 68px;
+  height: 68px;
+}
+
+
+
+/* Reset hover styles when button is clicked */
+.previous_button:active:hover, .next_button:active:hover {
+  background-color: #cccccc63; /* Reset background color */
+  width: 80px;
+  height: 80px;
+}
+
+.pagination_button{
+  transition: all .3s;
+  
+}
+
+.pagination_button.active{
+  color: red;
+  font-size: 120%;
+
+}
+
+.pagination_button:hover{
+  color: red;
+  font-size: 120%;
+  
+}
+
+.button_pack{
+  width: 500px;
+
+}
+
+
+@media (max-width: 601px) {
+
+  
+
+  .blog_front{
+    width: 360px;
+    height: 100% ;
+
+  }
+
+  
+.date_title {
+  transform: translate(-50px, -70px);
+  width: 200px;
+}
+
+.day_title{
+  font-size: 90px;
+}
+
+.month_title{
+  font-size: 20px;
+}
+  
+  .blog_card_content{
+    height: 250px;
     width: 100%;
-    overflow-x: hidden; /* Hide horizontal overflow */
-    overflow-y: hidden; /* Hide vertical overflow */
-  }
-  
-  .container_blog {
-    display: flex;
-    padding: 0%;
-    margin: 0%;
-    flex-direction: row;
-  }
-  
-  .blocks_blog{
-    background-color:white;
-
-  }
-  
-  /* Hide scrollbar */
-  .carousel_blog::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .scroll-button {
-    display: none; /* Hide scroll buttons */
-  }
-  
-  
-  .blog_sektor {
-    opacity: 1;
-    transition: width 0.3s ease; /* Add transition property */
-    width: 1104px;
-    height: 400px;
-  }
-    
-  .blog_label {
-    color: black;
-    text-align: left;
-    font-size: 80%;
   }
 
-  .blog_sektor:hover .blog_label {
-    color: red;
-  }
 
-  
-  /* Define animation classes for sliding up and down */
-  .slideUp {
-    animation: slideUpAnimation 0.3s ease-in forwards;
-  }
-  
-  .slideDown {
-    animation: slideDownAnimation 0.3s ease-out forwards;
-  }
-  
-  /* Define keyframes for slide up animation */
-  @keyframes slideUpAnimation {
-    from {
-      transform: translateY(50%);
-    }
-    to {
-      transform: translateY(0%);
-    }
-  }
-  
-  /* Define keyframes for slide down animation */
-  @keyframes slideDownAnimation {
-    from {
-      transform: translateY(-50%);
-    }
-    to {
-      transform: translateY(0%);
-    }
-  }
-  
+
+.blog_card_title{
+  font-size: 30px;
+}
+
+.blog_card_content{
+font-size: 10px;
+}
+
+.blog_content{
+  transform: translate(50px, 0px);
+  background-color: rgba(61, 60, 60, 0.9); 
+  border-radius: 30px 30px 30px 30px ; /* Top left and bottom right corners /* Fully opaque light grey background */
+  backdrop-filter: blur(10px); /* Blur effect with 10px radius */
+  height: 250px;
+  width: 250px;
+}
+
+.button_pack{
+  width: 200px;
+
+}
+
+}
+
+
