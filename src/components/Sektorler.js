@@ -3,29 +3,44 @@ import "./css/Sektorler.css";
 import polygon from "../assets/red-dot-ploygon.svg";
 import rectangle from "../assets/Rectangle.svg";
 import rectangleYatik from "../assets/Rectangle_yatik.svg";
-import card_item from "../assets/card_item.svg";
 import Apples from "../assets/apples.mp4";
+
+import E_Ticaret from "../assets/e_ticaret.svg";
+import Edustriyel from "../assets/endustriyel.svg";
+import Elektrik from "../assets/elektrik.svg";
+import Perakende from "../assets/perakende.svg";
+import Kozmetik from "../assets/kozmetik.svg";
+import İlac from "../assets/ilac.svg";
+import Otomotiv from "../assets/otomotiv.svg";
+
+import E_Ticaret_b from "../assets/e_ticaret_b.svg";
+import Edustriyel_b from "../assets/endustriyel_b.svg";
+import Elektrik_b from "../assets/elektrik_b.svg";
+import Perakende_b from "../assets/perakende_b.svg";
+import Kozmetik_b from "../assets/kozmetik_b.svg";
+import İlac_b from "../assets/ilac_b.svg";
+import Otomotiv_b from "../assets/otomotiv_b.svg";
 
 const Sektorler = () => {
   const carouselItems = [
-    "E-Ticaret",
-    "Endüstriyel",
-    "Elektrik- Elektronik",
-    "Perakende",
-    "Kozmetik",
-    "İlaç",
-    "Otomotiv",
+    { name: "E-Ticaret", image: E_Ticaret, image_b: E_Ticaret_b },
+    { name: "Endüstriyel", image: Edustriyel, image_b: Edustriyel_b },
+    { name: "Elektrik- Elektronik", image: Elektrik, image_b: Elektrik_b },
+    { name: "Perakende", image: Perakende, image_b: Perakende_b }, // Add image source
+    { name: "Kozmetik", image: Kozmetik, image_b: Kozmetik_b },
+    { name: "İlaç", image: İlac, image_b: İlac_b },
+    { name: "Otomotiv", image: Otomotiv, image_b: Otomotiv_b },
   ];
 
   useEffect(() => {
     // Preload the video
-    preloadVideo('../assets/apples.mp4');
+    preloadVideo("../assets/apples.mp4");
   }, []);
 
   function preloadVideo(url) {
-    var video = document.createElement('video');
+    var video = document.createElement("video");
     video.src = url;
-    video.style.display = 'none';
+    video.style.display = "none";
     document.body.appendChild(video);
   }
 
@@ -111,10 +126,9 @@ const Sektorler = () => {
                             width: "35%",
                           }}
                         >
-                          {index + 1}
+                          0{index + 1}
                         </label>
                       </div>
-                      
                       <div
                         className="sector_card_2"
                         // BİLGİSAYARDA GÖZÜKEN HOVER CARDI
@@ -124,7 +138,7 @@ const Sektorler = () => {
                           className="d-flex align-items-center justify-content-center"
                           id="video-container"
                           style={{
-                            height:"250px"
+                            height: "250px",
                           }}
                         >
                           <video
@@ -157,11 +171,21 @@ const Sektorler = () => {
                     <div className="sektor_label p-2 order-md-2 order-1 m-2">
                       <div className=" card_headers vertical-text d-flex align-items-start ">
                         <div className="">
-                          <h1 className="sektor_label mr-3">AA</h1>
+                          <div className="sektor_label mr-3">
+                            <img
+                              className="h-9 image"
+                              src={item.image}
+                              alt="Logo"
+                            />
+                            <img
+                              className="h-9 image_b"
+                              src={item.image_b}
+                              alt="Logo"
+                            />
+                          </div>
                         </div>
-                        <div>
-                          <h1 className="sektor_label ">{item}</h1>
-                        </div>
+
+                        <h1 className="sektor_label ">{item.name}</h1>
                       </div>
                     </div>
                   </div>

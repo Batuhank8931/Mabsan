@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./css/Yolculugumuz.css";
 
-
 const Yolculugumuz = () => {
   const events = [
     {
@@ -68,6 +67,9 @@ const Yolculugumuz = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [translateYValue, setTranslateYValue] = useState(0);
+  const [first_year, setFirstYear] = useState(true);
+
+
 
   const TitleChange = (yazi) => {
     const yearLabel = document.querySelector(".timeline_year0");
@@ -105,10 +107,43 @@ const Yolculugumuz = () => {
     }
   };
 
+  const isPhoneScreen = () => {
+    return window.innerWidth <= 600; // Adjust the threshold as needed
+  };
+
+  const YearClick = () => {
+    // Check if it's a phone screen
+    if (isPhoneScreen()) {
+      // Checking if first_year is true
+      if (first_year) {
+        const timeline_year0Label = document.querySelector(".timeline_year0");
+        const timeline_yearLabels = document.querySelectorAll(".timeline_year");
+
+        // Apply styles to timeline_year0Label
+        timeline_year0Label.style.fontSize = "125px";
+        timeline_year0Label.style.transform = "translateY(2%) translateX(-10%)";
+
+        // Loop through each timeline_year element and apply the styles
+        timeline_yearLabels.forEach(label => {
+          label.style.fontSize = "125px";
+          label.style.transform = "translateY(-113%) translateX(48%)";
+          label.style.background = "linear-gradient(317.85deg, #FA0000 -41.59%, rgba(250, 0, 0, 0) 143.46%)";
+          label.style.webkitBackgroundClip = "text";
+          label.style.backgroundClip = "text";
+          label.style.color = "transparent";
+        });
+
+        // Set first_year to false at the end
+        setFirstYear(false);
+      }
+    }
+  };
+
+
   useEffect(() => {
     const handleResize = () => {
       const screenHeight = window.innerHeight; // Use window.innerHeight for vertical carousel
-      setTranslateYValue(screenHeight <600 ? -100 : -100); // Adjust translate value for vertical carousel
+      setTranslateYValue(screenHeight < 600 ? -100 : -100); // Adjust translate value for vertical carousel
     };
 
     handleResize(); // Initial call to set initial translateY value
@@ -121,11 +156,8 @@ const Yolculugumuz = () => {
   }, []); // Run effect only once after component mount
 
   return (
-    <div
-      className="baslik p-md-5 p-3 pt-5 pb-0"
-      style={{ height: "670px" }}
-    >
-      <div className="year_header" >
+    <div className="baslik p-md-5 p-3 pt-5 pb-0" style={{ height: "670px" }}>
+      <div className="year_header">
         <label className="timeline_year0">19</label>
       </div>
       <div className="d-flex row card_window">
@@ -158,6 +190,7 @@ const Yolculugumuz = () => {
                 <div
                   class="d-flex align-items-center flex-column bd-highlight"
                   style={{ height: "100%", width: "100%" }}
+                  onClick={YearClick}
                 >
                   <button
                     className="p-2 bd-highlight arrow"
@@ -226,7 +259,10 @@ const Yolculugumuz = () => {
           </div>
           <button className="timer_button d-flex justify-content-start ml-5 p-5">
             <div className="flex-column">
-              <div className="timeline_label p-2 order-md-2 order-1 m-2"  style={{ width: "100%" }}>
+              <div
+                className="timeline_label p-2 order-md-2 order-1 m-2"
+                style={{ width: "100%" }}
+              >
                 <div className="timer_headers d-flex flex-column align-items-start">
                   <label className="timeline_header pt-4" id="Sub_2">
                     {events[1].title}

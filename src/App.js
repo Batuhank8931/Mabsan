@@ -19,7 +19,7 @@ import Mabsan_Way_Form_Reverse from "./components/Mabsan_Way_Form_Reverse";
 import Discover_2 from "./assets/Discover_2.svg";
 
 import Blog from "./components/Blog";
-import Blog_1 from "./components/Blog_1";
+
 
 import Left_Header from "./components/Left_Header";
 import Right_Header from "./components/Right_Header";
@@ -63,52 +63,53 @@ const App = () => {
   const value5 = Discover_2;
 
   const blogData = [
-    { id: 1, title: "Blog Post 1", content: "Content of Blog Post 1" },
-    { id: 2, title: "Blog Post 2", content: "Content of Blog Post 2" },
-    { id: 3, title: "Blog Post 3", content: "Content of Blog Post 3" },
-    { id: 4, title: "Blog Post 4", content: "Content of Blog Post 4" },
-    { id: 5, title: "Blog Post 5", content: "Content of Blog Post 5" },
-    { id: 6, title: "Blog Post 6", content: "Content of Blog Post 6" },
-    { id: 7, title: "Blog Post 7", content: "Content of Blog Post 7" },
-    { id: 8, title: "Blog Post 8", content: "Content of Blog Post 8" },
-    { id: 9, title: "Blog Post 9", content: "Content of Blog Post 9" },
-    { id: 10, title: "Blog Post 10", content: "Content of Blog Post 10" },
-    { id: 11, title: "Blog Post 11", content: "Content of Blog Post 11" },
-    { id: 12, title: "Blog Post 12", content: "Content of Blog Post 12" },
-    { id: 13, title: "Blog Post 13", content: "Content of Blog Post 13" },
-    { id: 14, title: "Blog Post 14", content: "Content of Blog Post 14" },
-    { id: 15, title: "Blog Post 15", content: "Content of Blog Post 15" },
-    { id: 16, title: "Blog Post 16", content: "Content of Blog Post 16" },
-    { id: 17, title: "Blog Post 17", content: "Content of Blog Post 17" },
-    { id: 18, title: "Blog Post 18", content: "Content of Blog Post 18" },
-    { id: 19, title: "Blog Post 19", content: "Content of Blog Post 19" },
-    { id: 20, title: "Blog Post 20", content: "Content of Blog Post 20" },
-    { id: 21, title: "Blog Post 21", content: "Content of Blog Post 21" },
-    { id: 22, title: "Blog Post 22", content: "Content of Blog Post 22" },
-    { id: 23, title: "Blog Post 23", content: "Content of Blog Post 23" },
-    { id: 24, title: "Blog Post 24", content: "Content of Blog Post 24" },
-    { id: 25, title: "Blog Post 25", content: "Content of Blog Post 25" },
-    { id: 26, title: "Blog Post 26", content: "Content of Blog Post 26" },
-    { id: 27, title: "Blog Post 27", content: "Content of Blog Post 27" },
-    { id: 28, title: "Blog Post 28", content: "Content of Blog Post 28" },
-    { id: 29, title: "Blog Post 29", content: "Content of Blog Post 29" },
-    { id: 30, title: "Blog Post 30", content: "Content of Blog Post 30" },
-    { id: 31, title: "Blog Post 31", content: "Content of Blog Post 31" },
-    { id: 32, title: "Blog Post 32", content: "Content of Blog Post 32" },
-    { id: 33, title: "Blog Post 33", content: "Content of Blog Post 33" },
-    { id: 34, title: "Blog Post 34", content: "Content of Blog Post 34" },
-    { id: 35, title: "Blog Post 35", content: "Content of Blog Post 35" },
-    { id: 36, title: "Blog Post 36", content: "Content of Blog Post 36" },
-    { id: 37, title: "Blog Post 37", content: "Content of Blog Post 37" },
-    { id: 38, title: "Blog Post 38", content: "Content of Blog Post 38" },
-    { id: 39, title: "Blog Post 39", content: "Content of Blog Post 39" },
-    { id: 40, title: "Blog Post 40", content: "Content of Blog Post 40" },
-    { id: 41, title: "Blog Post 41", content: "Content of Blog Post 41" },
-    { id: 42, title: "Blog Post 42", content: "Content of Blog Post 42" },
-    { id: 43, title: "Blog Post 43", content: "Content of Blog Post 43" },
-    { id: 44, title: "Blog Post 44", content: "Content of Blog Post 44" },
-    { id: 45, title: "Blog Post 45", content: "Content of Blog Post 45" },
+    { id: 1, day: "27", month: "Şubat", title: "Blog Post 1", content: "Content of Blog Post 1" },
+    { id: 2, day: "7", month: "Mart", title: "Blog Post 2", content: "Content of Blog Post 2" },
+    { id: 3, day: "15", month: "Mayıs", title: "Blog Post 3", content: "Content of Blog Post 3" },
+    { id: 4, day: "22", month: "Haziran", title: "Blog Post 4", content: "Content of Blog Post 4" },
+    { id: 5, day: "10", month: "Ağustos", title: "Blog Post 5", content: "Content of Blog Post 5" },
+    { id: 6, day: "3", month: "Ekim", title: "Blog Post 6", content: "Content of Blog Post 6" },
+    { id: 7, day: "18", month: "Kasım", title: "Blog Post 7", content: "Content of Blog Post 7" },
+    { id: 8, day: "5", month: "Ocak", title: "Blog Post 8", content: "Content of Blog Post 8" },
+    { id: 9, day: "9", month: "Şubat", title: "Blog Post 9", content: "Content of Blog Post 9" },
+    { id: 10, day: "11", month: "Mart", title: "Blog Post 10", content: "Content of Blog Post 10" },
+    { id: 11, day: "20", month: "Nisan", title: "Blog Post 11", content: "Content of Blog Post 11" },
+    { id: 12, day: "25", month: "Mayıs", title: "Blog Post 12", content: "Content of Blog Post 12" },
+    { id: 13, day: "3", month: "Temmuz", title: "Blog Post 13", content: "Content of Blog Post 13" },
+    { id: 14, day: "30", month: "Ağustos", title: "Blog Post 14", content: "Content of Blog Post 14" },
+    { id: 15, day: "2", month: "Ekim", title: "Blog Post 15", content: "Content of Blog Post 15" },
+    { id: 16, day: "12", month: "Kasım", title: "Blog Post 16", content: "Content of Blog Post 16" },
+    { id: 17, day: "18", month: "Aralık", title: "Blog Post 17", content: "Content of Blog Post 17" },
+    { id: 18, day: "5", month: "Ocak", title: "Blog Post 18", content: "Content of Blog Post 18" },
+    { id: 19, day: "10", month: "Şubat", title: "Blog Post 19", content: "Content of Blog Post 19" },
+    { id: 20, day: "15", month: "Mart", title: "Blog Post 20", content: "Content of Blog Post 20" },
+    { id: 21, day: "20", month: "Nisan", title: "Blog Post 21", content: "Content of Blog Post 21" },
+    { id: 22, day: "25", month: "Mayıs", title: "Blog Post 22", content: "Content of Blog Post 22" },
+    { id: 23, day: "30", month: "Haziran", title: "Blog Post 23", content: "Content of Blog Post 23" },
+    { id: 24, day: "5", month: "Ağustos", title: "Blog Post 24", content: "Content of Blog Post 24" },
+    { id: 25, day: "10", month: "Eylül", title: "Blog Post 25", content: "Content of Blog Post 25" },
+    { id: 26, day: "15", month: "Ekim", title: "Blog Post 26", content: "Content of Blog Post 26" },
+    { id: 27, day: "20", month: "Kasım", title: "Blog Post 27", content: "Content of Blog Post 27" },
+    { id: 28, day: "25", month: "Aralık", title: "Blog Post 28", content: "Content of Blog Post 28" },
+    { id: 29, day: "30", month: "Ocak", title: "Blog Post 29", content: "Content of Blog Post 29" },
+    { id: 30, day: "5", month: "Mart", title: "Blog Post 30", content: "Content of Blog Post 30" },
+    { id: 31, day: "10", month: "Nisan", title: "Blog Post 31", content: "Content of Blog Post 31" },
+    { id: 32, day: "15", month: "Mayıs", title: "Blog Post 32", content: "Content of Blog Post 32" },
+    { id: 33, day: "20", month: "Haziran", title: "Blog Post 33", content: "Content of Blog Post 33" },
+    { id: 34, day: "25", month: "Temmuz", title: "Blog Post 34", content: "Content of Blog Post 34" },
+    { id: 35, day: "30", month: "Ağustos", title: "Blog Post 35", content: "Content of Blog Post 35" },
+    { id: 36, day: "5", month: "Eylül", title: "Blog Post 36", content: "Content of Blog Post 36" },
+    { id: 37, day: "10", month: "Ekim", title: "Blog Post 37", content: "Content of Blog Post 37" },
+    { id: 38, day: "15", month: "Kasım", title: "Blog Post 38", content: "Content of Blog Post 38" },
+    { id: 39, day: "20", month: "Aralık", title: "Blog Post 39", content: "Content of Blog Post 39" },
+    { id: 40, day: "25", month: "Ocak", title: "Blog Post 40", content: "Content of Blog Post 40" },
+    { id: 41, day: "5", month: "Mart", title: "Blog Post 41", content: "Content of Blog Post 41" },
+    { id: 42, day: "10", month: "Nisan", title: "Blog Post 42", content: "Content of Blog Post 42" },
+    { id: 43, day: "15", month: "Mayıs", title: "Blog Post 43", content: "Content of Blog Post 43" },
+    { id: 44, day: "20", month: "Haziran", title: "Blog Post 44", content: "Content of Blog Post 44" },
+    { id: 45, day: "25", month: "Temmuz", title: "Blog Post 45", content: "Content of Blog Post 45" },
   ];
+  
 
   return (
     <div
@@ -212,7 +213,8 @@ const App = () => {
                 {" "}
                 <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
                 <Blog blogData={blogData} />
-                <Blog_1 />
+                <Footer />
+
               </>
             )}
             {BigHeader === "Perakende" && (
