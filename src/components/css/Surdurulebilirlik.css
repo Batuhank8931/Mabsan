@@ -1,0 +1,167 @@
+
+.belge-container {
+  background-color: transparent;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+.belge_kart {
+  height: 400px;
+  border-radius: 30px 30px 0 0; /* Top-left and top-right corners have radius, bottom corners have no radius */
+  transition: all .3s;
+
+  }
+
+.belge_card {
+  display: flex;
+  transition: transform 0.5s ease-in-out;    
+  width: 5500%;
+  align-items: center;
+}
+  
+
+.belge_front{
+  border-radius: 30px 0 30px 0 ; /* Top left and bottom right corners have border radius */
+  height: 100% ;
+  width: 1110px;
+  transition: height 0.3s ease; /* Add transition for height property */
+}
+
+.belge_title {
+  font-size: 60%;
+  text-align: center;
+  font-weight: bold; /* Make the text bold */
+  text-decoration: underline; /* Underline the text */
+  transition: all .3s;
+}
+
+
+.belge_previous_button, .belge_next_button {
+  width: 60px;
+  height: 60px;
+  background-color: #cccccc63;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.belge_previous_button::before, .belge_next_button::after {
+  content: "\2190"; /* Unicode for left arrow */
+  font-size: 30px;
+}
+
+.belge_next_button::after {
+  content: "\2192"; /* Unicode for right arrow */
+}
+
+/* Additional styles */
+.belge_previous_button:hover, .belge_next_button:hover {
+  background-color: #999999de;
+
+}
+
+
+
+/* Reset hover styles when button is clicked */
+.belge_previous_button:active:hover, .belge_next_button:active:hover {
+  background-color: #cccccc63; /* Reset background color */
+
+}
+
+.belge_pagination_button{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+  border: 3px solid grey; /* Add grey border */
+}
+
+.belge_pagination_button.active{
+  background-color: grey;
+
+}
+
+.belge_pagination_button:hover{
+  background-color: rgb(225, 225, 225);
+  
+}
+
+.belge_button_pack{
+  width: 500px;
+
+}
+
+.belge_title:hover{
+  font-size: 70%;
+}
+
+
+
+.download_button {
+  width: 100%;
+  background-color: grey;
+  opacity: 0.78;
+  margin-bottom: 5px;
+  height: 60px;
+  font-size: 25px;
+  transition: all .3s;
+  padding: 10%;
+}
+
+.download_button:hover{
+  background-color: rgb(126, 102, 102);
+}
+
+@media (max-width: 601px) {
+
+
+  .belge_front{
+    width: 430px;
+    height: 100% ;
+
+  }
+ 
+  .belge_kart {
+    height: 100%;
+    border-radius: 20px 20px 0 0; /* Top-left and top-right corners have radius, bottom corners have no radius */
+    width: 70%;
+
+    }
+
+    .belge_title{
+      font-size: 20px;
+  }
+
+  .download_button{
+    height: 40px;
+    width: 100%;
+  }
+
+  .belge_button_pack{
+    width: 100%;
+
+  }
+
+  .belge_previous_button, .belge_next_button, .pagination_button {
+    width: 50px;
+    height: 50px;
+
+  }
+
+}
+
+

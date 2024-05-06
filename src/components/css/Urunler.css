@@ -1,0 +1,188 @@
+
+.urun-container {
+  background-color: transparent;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+.urun_kart {
+  height: 320px;
+  transition: all .3s;
+  background-color: rgba(61, 60, 60, 0.0); 
+
+  }
+
+.urun_card {
+  display: flex;
+  transition: transform 0.5s ease-in-out;    
+  width: 5500%;
+  align-items: center;
+}
+  
+
+.urun_front{
+  border-radius: 30px 0 30px 0 ; /* Top left and bottom right corners have border radius */
+  height: 100% ;
+  width: 1110px;
+  transition: height 0.3s ease; /* Add transition for height property */
+}
+
+.urun_title {
+  font-family: 'Gotham', sans-serif; /* Use Gotham font */
+  font-size: 18px;
+  text-align: center;
+  transition: all .3s;
+}
+
+
+.urun_text{
+  font-family: 'Gotham', sans-serif; /* Use Gotham font */
+  font-size: 10px;
+  text-align: center;
+  transition: all .3s;
+}
+
+
+.urun_previous_button, .urun_next_button {
+  width: 60px;
+  height: 60px;
+  background-color: #cccccc63;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.urun_previous_button::before, .urun_next_button::after {
+  content: "\2190"; /* Unicode for left arrow */
+  font-size: 30px;
+}
+
+.urun_next_button::after {
+  content: "\2192"; /* Unicode for right arrow */
+}
+
+/* Additional styles */
+.urun_previous_button:hover, .urun_next_button:hover {
+  background-color: #999999de;
+
+}
+
+
+
+/* Reset hover styles when button is clicked */
+.urun_previous_button:active:hover, .urun_next_button:active:hover {
+  background-color: #cccccc63; /* Reset background color */
+
+}
+
+.urun_pagination_button{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+  border: 3px solid grey; /* Add grey border */
+}
+
+.urun_pagination_button.active{
+  background-color: grey;
+
+}
+
+.urun_pagination_button:hover{
+  background-color: rgb(225, 225, 225);
+  
+}
+
+.urun_button_pack{
+  width: 500px;
+
+}
+
+.urun_title:hover{
+  font-size: 19px;
+}
+
+.white_line {
+  border-top: 1px solid white; 
+  width: 150px;
+  transition: all .3s;
+}
+
+.white_line:hover {
+  width: 200px;
+}
+
+.urun_kart:hover .white_line {
+  width: 250px; 
+}
+
+.kutu_image{
+  width: 100%;
+}
+
+
+@media (max-width: 601px) {
+
+
+  .urun_front{
+    width: 430px;
+    height: 100% ;
+
+  }
+ 
+  .urun_kart {
+    height: 100%;
+    border-radius: 20px  0 20px 0; /* Top-left and top-right corners have radius, bottom corners have no radius */
+    width: 100%;
+
+    }
+
+
+    .urun_title {
+      font-family: 'Gotham', sans-serif; /* Use Gotham font */
+      font-size: 16px;
+      text-align: center;
+      transition: all .3s;
+    }
+    
+    
+    .urun_text{
+      font-family: 'Gotham', sans-serif; /* Use Gotham font */
+      font-size: 10px;
+      text-align: center;
+      transition: all .3s;
+    }
+
+  .download_button{
+    height: 40px;
+    width: 100%;
+  }
+
+  .urun_button_pack{
+    width: 100%;
+
+  }
+
+  .urun_previous_button, .urun_next_button, .urun_pagination_button {
+    width: 50px;
+    height: 50px;
+
+  }
+
+}
+
+
