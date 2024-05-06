@@ -1,3 +1,6 @@
+
+
+
 .blog-container {
   background-color: transparent;
   width: 100%;
@@ -15,45 +18,55 @@
   
 
 .blog_front{
-  backdrop-filter: blur(3px); /* Blur effect with 10px radius */
   border-radius: 30px 0 30px 0 ; /* Top left and bottom right corners have border radius */
   height: 100% ;
-  width: 1105px;
+  width: 1110px;
   transition: height 0.3s ease; /* Add transition for height property */
 }
 
 .blog_card_title{
-  font-size: 50px;
+  font-family: 'Gotham', sans-serif; /* Use Gotham font */
+  font-size: 25px;
 }
 
 .blog_card_content{
-font-size: 20px;
+   font-family: 'Gotham', sans-serif; /* Use Gotham font */
+  font-size: 15px;
+  height: 400px;
 }
 
 .blog_content{
   transform: translate(50px, 0px);
   background-color: rgba(61, 60, 60, 0.5); 
   border-radius: 30px 30px 30px 30px ; /* Top left and bottom right corners /* Fully opaque light grey background */
-  backdrop-filter: blur(10px); /* Blur effect with 10px radius */
-  height: 350px;
-  width: 350px;
+  backdrop-filter: blur(8px); /* Blur effect with 10px radius */
+  /* Add any other styles you need for your button */
+  height: 320px;
+  width: 320px;
 }
 
 .date_title {
+  width: 450px;
   position: absolute;
   z-index: -1;
-  transform: translate(-100px, -70px);
+  transform: translate(-20px, -70px);
 }
 
 .day_title{
-  font-size: 150px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 130px;
+  font-weight: bold;
+  height: 130px;
+
+}
+
+.month_title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
   font-weight: bold;
 }
 
 
-.blog_card_content{
-  height: 400px;
-}
 
 
 .blog_card_header_1{
@@ -71,9 +84,9 @@ font-size: 20px;
 
 
 
-.previous_button, .next_button {
-  width: 65px;
-  height: 65px;
+.blog_previous_button, .blog_next_button {
+  width: 60px;
+  height: 60px;
   background-color: #cccccc63;
   border: none;
   border-radius: 50%;
@@ -86,45 +99,50 @@ font-size: 20px;
   transition: all 0.3s ease; /* Add transition for smooth animation */
 }
 
-.previous_button::before, .next_button::after {
+.blog_previous_button::before, .blog_next_button::after {
   content: "\2190"; /* Unicode for left arrow */
   font-size: 30px;
 }
 
-.next_button::after {
+.blog_next_button::after {
   content: "\2192"; /* Unicode for right arrow */
 }
 
 /* Additional styles */
-.previous_button:hover, .next_button:hover {
+.blog_previous_button:hover, .blog_next_button:hover {
   background-color: #999999de;
-  width: 68px;
-  height: 68px;
+
 }
 
 
 
 /* Reset hover styles when button is clicked */
-.previous_button:active:hover, .next_button:active:hover {
+.blog_previous_button:active:hover, .blog_next_button:active:hover {
   background-color: #cccccc63; /* Reset background color */
-  width: 80px;
-  height: 80px;
+
 }
 
 .pagination_button{
-  transition: all .3s;
-  
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+  border: 3px solid grey; /* Add grey border */
 }
 
 .pagination_button.active{
-  color: red;
-  font-size: 120%;
+  background-color: grey;
 
 }
 
 .pagination_button:hover{
-  color: red;
-  font-size: 120%;
+  background-color: rgb(225, 225, 225);
   
 }
 
@@ -136,27 +154,28 @@ font-size: 20px;
 
 @media (max-width: 601px) {
 
-  
 
   .blog_front{
-    width: 360px;
+    width: 430px;
     height: 100% ;
 
   }
 
+  .date_title {
+    width: 50px;
+    transform: translate(-170px, -70px);
+  }
   
-.date_title {
-  transform: translate(-50px, -70px);
-  width: 200px;
-}
-
-.day_title{
-  font-size: 90px;
-}
-
-.month_title{
-  font-size: 20px;
-}
+  .day_title{
+    font-size: 100px;
+    height: 100px;
+  
+  }
+  
+  .month_title{
+    font-size: 40px;
+  }
+  
   
   .blog_card_content{
     height: 250px;
@@ -166,7 +185,7 @@ font-size: 20px;
 
 
 .blog_card_title{
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .blog_card_content{
@@ -175,15 +194,22 @@ font-size: 10px;
 
 .blog_content{
   transform: translate(50px, 0px);
-  background-color: rgba(61, 60, 60, 0.9); 
+  background-color: rgba(61, 60, 60, 0.5); 
   border-radius: 30px 30px 30px 30px ; /* Top left and bottom right corners /* Fully opaque light grey background */
-  backdrop-filter: blur(10px); /* Blur effect with 10px radius */
   height: 250px;
   width: 250px;
+  backdrop-filter: blur(8px); /* Blur effect with 10px radius */
+
 }
 
 .button_pack{
-  width: 200px;
+  width: 100%;
+
+}
+
+.blog_previous_button, .blog_next_button, .pagination_button {
+  width: 50px;
+  height: 50px;
 
 }
 

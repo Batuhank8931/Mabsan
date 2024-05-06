@@ -93,16 +93,19 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                 </button>
               </div>
               <div className="underline_0">
-                <div
+                <button
                   className="d-flex align-items-end "
                   style={{ width: "20%" }}
+                  onClick={() => {
+                    change_page("Sürdürülebilirlik");
+                  }}
                 >
                   <img
                     src={politika}
                     alt="politika"
                     className="politika buttontrs"
                   />
-                </div>
+                </button>
               </div>
             </div>
 
@@ -143,13 +146,19 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
               // SADECE TELEFONDA GÖZÜKEN ALT SATIR
             }
             <div class="d-flex justify-content-between">
-              <div className="d-flex align-items-end" style={{ width: "30%" }}>
+              <button
+                className="d-flex align-items-end"
+                style={{ width: "30%" }}
+                onClick={() => {
+                  change_page("Sürdürülebilirlik");
+                }}
+              >
                 <img
                   src={politika}
                   alt="politika"
                   className="politika buttontrs"
                 />
-              </div>
+              </button>
               <div className="d-flex align-items-center">
                 <button className="mx-2 buttontrs d-flex align-items-center justify-content-center">
                   <img src={bayrak} alt="bayrak" className="bayrak" />

@@ -20,6 +20,12 @@ import Discover_2 from "./assets/Discover_2.svg";
 
 import Blog from "./components/Blog";
 
+import Iletisim from "./components/Iletisim";
+
+import Surdurulebilirlik from "./components/Surdurulebilirlik";
+
+import Urunler_Filmi from "./components/Urunler_Filmi";
+import Urunler from "./components/Urunler";
 
 import Left_Header from "./components/Left_Header";
 import Right_Header from "./components/Right_Header";
@@ -63,53 +69,543 @@ const App = () => {
   const value5 = Discover_2;
 
   const blogData = [
-    { id: 1, day: "27", month: "Şubat", title: "Blog Post 1", content: "Content of Blog Post 1" },
-    { id: 2, day: "7", month: "Mart", title: "Blog Post 2", content: "Content of Blog Post 2" },
-    { id: 3, day: "15", month: "Mayıs", title: "Blog Post 3", content: "Content of Blog Post 3" },
-    { id: 4, day: "22", month: "Haziran", title: "Blog Post 4", content: "Content of Blog Post 4" },
-    { id: 5, day: "10", month: "Ağustos", title: "Blog Post 5", content: "Content of Blog Post 5" },
-    { id: 6, day: "3", month: "Ekim", title: "Blog Post 6", content: "Content of Blog Post 6" },
-    { id: 7, day: "18", month: "Kasım", title: "Blog Post 7", content: "Content of Blog Post 7" },
-    { id: 8, day: "5", month: "Ocak", title: "Blog Post 8", content: "Content of Blog Post 8" },
-    { id: 9, day: "9", month: "Şubat", title: "Blog Post 9", content: "Content of Blog Post 9" },
-    { id: 10, day: "11", month: "Mart", title: "Blog Post 10", content: "Content of Blog Post 10" },
-    { id: 11, day: "20", month: "Nisan", title: "Blog Post 11", content: "Content of Blog Post 11" },
-    { id: 12, day: "25", month: "Mayıs", title: "Blog Post 12", content: "Content of Blog Post 12" },
-    { id: 13, day: "3", month: "Temmuz", title: "Blog Post 13", content: "Content of Blog Post 13" },
-    { id: 14, day: "30", month: "Ağustos", title: "Blog Post 14", content: "Content of Blog Post 14" },
-    { id: 15, day: "2", month: "Ekim", title: "Blog Post 15", content: "Content of Blog Post 15" },
-    { id: 16, day: "12", month: "Kasım", title: "Blog Post 16", content: "Content of Blog Post 16" },
-    { id: 17, day: "18", month: "Aralık", title: "Blog Post 17", content: "Content of Blog Post 17" },
-    { id: 18, day: "5", month: "Ocak", title: "Blog Post 18", content: "Content of Blog Post 18" },
-    { id: 19, day: "10", month: "Şubat", title: "Blog Post 19", content: "Content of Blog Post 19" },
-    { id: 20, day: "15", month: "Mart", title: "Blog Post 20", content: "Content of Blog Post 20" },
-    { id: 21, day: "20", month: "Nisan", title: "Blog Post 21", content: "Content of Blog Post 21" },
-    { id: 22, day: "25", month: "Mayıs", title: "Blog Post 22", content: "Content of Blog Post 22" },
-    { id: 23, day: "30", month: "Haziran", title: "Blog Post 23", content: "Content of Blog Post 23" },
-    { id: 24, day: "5", month: "Ağustos", title: "Blog Post 24", content: "Content of Blog Post 24" },
-    { id: 25, day: "10", month: "Eylül", title: "Blog Post 25", content: "Content of Blog Post 25" },
-    { id: 26, day: "15", month: "Ekim", title: "Blog Post 26", content: "Content of Blog Post 26" },
-    { id: 27, day: "20", month: "Kasım", title: "Blog Post 27", content: "Content of Blog Post 27" },
-    { id: 28, day: "25", month: "Aralık", title: "Blog Post 28", content: "Content of Blog Post 28" },
-    { id: 29, day: "30", month: "Ocak", title: "Blog Post 29", content: "Content of Blog Post 29" },
-    { id: 30, day: "5", month: "Mart", title: "Blog Post 30", content: "Content of Blog Post 30" },
-    { id: 31, day: "10", month: "Nisan", title: "Blog Post 31", content: "Content of Blog Post 31" },
-    { id: 32, day: "15", month: "Mayıs", title: "Blog Post 32", content: "Content of Blog Post 32" },
-    { id: 33, day: "20", month: "Haziran", title: "Blog Post 33", content: "Content of Blog Post 33" },
-    { id: 34, day: "25", month: "Temmuz", title: "Blog Post 34", content: "Content of Blog Post 34" },
-    { id: 35, day: "30", month: "Ağustos", title: "Blog Post 35", content: "Content of Blog Post 35" },
-    { id: 36, day: "5", month: "Eylül", title: "Blog Post 36", content: "Content of Blog Post 36" },
-    { id: 37, day: "10", month: "Ekim", title: "Blog Post 37", content: "Content of Blog Post 37" },
-    { id: 38, day: "15", month: "Kasım", title: "Blog Post 38", content: "Content of Blog Post 38" },
-    { id: 39, day: "20", month: "Aralık", title: "Blog Post 39", content: "Content of Blog Post 39" },
-    { id: 40, day: "25", month: "Ocak", title: "Blog Post 40", content: "Content of Blog Post 40" },
-    { id: 41, day: "5", month: "Mart", title: "Blog Post 41", content: "Content of Blog Post 41" },
-    { id: 42, day: "10", month: "Nisan", title: "Blog Post 42", content: "Content of Blog Post 42" },
-    { id: 43, day: "15", month: "Mayıs", title: "Blog Post 43", content: "Content of Blog Post 43" },
-    { id: 44, day: "20", month: "Haziran", title: "Blog Post 44", content: "Content of Blog Post 44" },
-    { id: 45, day: "25", month: "Temmuz", title: "Blog Post 45", content: "Content of Blog Post 45" },
+    {
+      id: 1,
+      day: "27",
+      month: "Şubat",
+      title: "Cras lobortis libero a dignissim aliquet. ",
+      content:
+        "Suspendisse a enim id erat finibus ullamcorper vitae quis nisl. Curabitur a nisi libero. Suspendisse faucibus, neque id tempus dapibus, dolor sapien malesuada ante, sed hendrerit arcu sapien scelerisque arcu.",
+    },
+    {
+      id: 2,
+      day: "7",
+      month: "Mart",
+      title: "Blog Post 2",
+      content: "Content of Blog Post 2",
+    },
+    {
+      id: 3,
+      day: "15",
+      month: "Mayıs",
+      title: "Blog Post 3",
+      content: "Content of Blog Post 3",
+    },
+    {
+      id: 4,
+      day: "22",
+      month: "Haziran",
+      title: "Blog Post 4",
+      content: "Content of Blog Post 4",
+    },
+    {
+      id: 5,
+      day: "10",
+      month: "Ağustos",
+      title: "Blog Post 5",
+      content: "Content of Blog Post 5",
+    },
+    {
+      id: 6,
+      day: "3",
+      month: "Ekim",
+      title: "Blog Post 6",
+      content: "Content of Blog Post 6",
+    },
+    {
+      id: 7,
+      day: "18",
+      month: "Kasım",
+      title: "Blog Post 7",
+      content: "Content of Blog Post 7",
+    },
+    {
+      id: 8,
+      day: "5",
+      month: "Ocak",
+      title: "Blog Post 8",
+      content: "Content of Blog Post 8",
+    },
+    {
+      id: 9,
+      day: "9",
+      month: "Şubat",
+      title: "Blog Post 9",
+      content: "Content of Blog Post 9",
+    },
+    {
+      id: 10,
+      day: "11",
+      month: "Mart",
+      title: "Blog Post 10",
+      content: "Content of Blog Post 10",
+    },
+    {
+      id: 11,
+      day: "20",
+      month: "Nisan",
+      title: "Blog Post 11",
+      content: "Content of Blog Post 11",
+    },
+    {
+      id: 12,
+      day: "25",
+      month: "Mayıs",
+      title: "Blog Post 12",
+      content: "Content of Blog Post 12",
+    },
+    {
+      id: 13,
+      day: "3",
+      month: "Temmuz",
+      title: "Blog Post 13",
+      content: "Content of Blog Post 13",
+    },
+    {
+      id: 14,
+      day: "30",
+      month: "Ağustos",
+      title: "Blog Post 14",
+      content: "Content of Blog Post 14",
+    },
+    {
+      id: 15,
+      day: "2",
+      month: "Ekim",
+      title: "Blog Post 15",
+      content: "Content of Blog Post 15",
+    },
+    {
+      id: 16,
+      day: "12",
+      month: "Kasım",
+      title: "Blog Post 16",
+      content: "Content of Blog Post 16",
+    },
+    {
+      id: 17,
+      day: "18",
+      month: "Aralık",
+      title: "Blog Post 17",
+      content: "Content of Blog Post 17",
+    },
+    {
+      id: 18,
+      day: "5",
+      month: "Ocak",
+      title: "Blog Post 18",
+      content: "Content of Blog Post 18",
+    },
+    {
+      id: 19,
+      day: "10",
+      month: "Şubat",
+      title: "Blog Post 19",
+      content: "Content of Blog Post 19",
+    },
+    {
+      id: 20,
+      day: "15",
+      month: "Mart",
+      title: "Blog Post 20",
+      content: "Content of Blog Post 20",
+    },
+    {
+      id: 21,
+      day: "20",
+      month: "Nisan",
+      title: "Blog Post 21",
+      content: "Content of Blog Post 21",
+    },
+    {
+      id: 22,
+      day: "25",
+      month: "Mayıs",
+      title: "Blog Post 22",
+      content: "Content of Blog Post 22",
+    },
+    {
+      id: 23,
+      day: "30",
+      month: "Haziran",
+      title: "Blog Post 23",
+      content: "Content of Blog Post 23",
+    },
+    {
+      id: 24,
+      day: "5",
+      month: "Ağustos",
+      title: "Blog Post 24",
+      content: "Content of Blog Post 24",
+    },
+    {
+      id: 25,
+      day: "10",
+      month: "Eylül",
+      title: "Blog Post 25",
+      content: "Content of Blog Post 25",
+    },
+    {
+      id: 26,
+      day: "15",
+      month: "Ekim",
+      title: "Blog Post 26",
+      content: "Content of Blog Post 26",
+    },
+    {
+      id: 27,
+      day: "20",
+      month: "Kasım",
+      title: "Blog Post 27",
+      content: "Content of Blog Post 27",
+    },
+    {
+      id: 28,
+      day: "25",
+      month: "Aralık",
+      title: "Blog Post 28",
+      content: "Content of Blog Post 28",
+    },
+    {
+      id: 29,
+      day: "30",
+      month: "Ocak",
+      title: "Blog Post 29",
+      content: "Content of Blog Post 29",
+    },
+    {
+      id: 30,
+      day: "5",
+      month: "Mart",
+      title: "Blog Post 30",
+      content: "Content of Blog Post 30",
+    },
+    {
+      id: 31,
+      day: "10",
+      month: "Nisan",
+      title: "Blog Post 31",
+      content: "Content of Blog Post 31",
+    },
+    {
+      id: 32,
+      day: "15",
+      month: "Mayıs",
+      title: "Blog Post 32",
+      content: "Content of Blog Post 32",
+    },
+    {
+      id: 33,
+      day: "20",
+      month: "Haziran",
+      title: "Blog Post 33",
+      content: "Content of Blog Post 33",
+    },
+    {
+      id: 34,
+      day: "25",
+      month: "Temmuz",
+      title: "Blog Post 34",
+      content: "Content of Blog Post 34",
+    },
+    {
+      id: 35,
+      day: "30",
+      month: "Ağustos",
+      title: "Blog Post 35",
+      content: "Content of Blog Post 35",
+    },
+    {
+      id: 36,
+      day: "5",
+      month: "Eylül",
+      title: "Blog Post 36",
+      content: "Content of Blog Post 36",
+    },
+    {
+      id: 37,
+      day: "10",
+      month: "Ekim",
+      title: "Blog Post 37",
+      content: "Content of Blog Post 37",
+    },
+    {
+      id: 38,
+      day: "15",
+      month: "Kasım",
+      title: "Blog Post 38",
+      content: "lorem ipsum",
+    },
+    {
+      id: 39,
+      day: "20",
+      month: "Aralık",
+      title: "Blog Post 39",
+      content: "Content of Blog Post 39",
+    },
+    {
+      id: 40,
+      day: "25",
+      month: "Ocak",
+      title: "Blog Post 40",
+      content: "Content of Blog Post 40",
+    },
+    {
+      id: 41,
+      day: "5",
+      month: "Mart",
+      title: "Blog Post 41",
+      content: "Content of Blog Post 41",
+    },
+    {
+      id: 42,
+      day: "10",
+      month: "Nisan",
+      title: "Blog Post 42",
+      content: "Content of Blog Post 42",
+    },
+    {
+      id: 43,
+      day: "15",
+      month: "Mayıs",
+      title: "Blog Post 43",
+      content: "Content of Blog Post 43",
+    },
+    {
+      id: 44,
+      day: "20",
+      month: "Haziran",
+      title: "Blog Post 44",
+      content: "Content of Blog Post 44",
+    },
+    {
+      id: 45,
+      day: "25",
+      month: "Temmuz",
+      title: "Blog Post 45",
+      content: "Content of Blog Post 45",
+    },
   ];
-  
+  const SurdurData = [
+    {
+      id: 1,
+      file: "belge 1",
+      file_address: "belge - Kopya (1).pdf",
+    },
+    {
+      id: 2,
+      file: "belge 2",
+      file_address: "belge - Kopya (2).pdf",
+    },
+    {
+      id: 3,
+      file: "belge 3",
+      file_address: "belge - Kopya (3).pdf",
+    },
+    {
+      id: 4,
+      file: "belge 4",
+      file_address: "belge - Kopya (4).pdf",
+    },
+    {
+      id: 5,
+      file: "belge 5",
+      file_address: "belge - Kopya (5).pdf",
+    },
+    {
+      id: 6,
+      file: "belge 6",
+      file_address: "belge - Kopya (6).pdf",
+    },
+    {
+      id: 7,
+      file: "belge 7",
+      file_address: "belge - Kopya (7).pdf",
+    },
+    {
+      id: 8,
+      file: "belge 8",
+      file_address: "belge - Kopya (8).pdf",
+    },
+    {
+      id: 9,
+      file: "belge 9",
+      file_address: "belge - Kopya (9).pdf",
+    },
+    {
+      id: 10,
+      file: "belge 10",
+      file_address: "belge - Kopya (10).pdf",
+    },
+    {
+      id: 11,
+      file: "belge 11",
+      file_address: "belge - Kopya (11).pdf",
+    },
+    {
+      id: 12,
+      file: "belge 12",
+      file_address: "belge - Kopya (12).pdf",
+    },
+    {
+      id: 13,
+      file: "belge 13",
+      file_address: "belge - Kopya (13).pdf",
+    },
+    {
+      id: 14,
+      file: "belge 14",
+      file_address: "belge - Kopya (14).pdf",
+    },
+    {
+      id: 15,
+      file: "belge 15",
+      file_address: "belge - Kopya (15).pdf",
+    },
+    {
+      id: 16,
+      file: "belge 16",
+      file_address: "belge - Kopya (16).pdf",
+    },
+    {
+      id: 17,
+      file: "belge 17",
+      file_address: "belge - Kopya (17).pdf",
+    },
+    {
+      id: 18,
+      file: "belge 18",
+      file_address: "belge - Kopya (18).pdf",
+    },
+    {
+      id: 19,
+      file: "belge 19",
+      file_address: "belge - Kopya (19).pdf",
+    },
+  ];
+
+  const UrunData = [
+    {
+      id: 1,
+      file: "MEŞRUBAT KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 2,
+      file: "CAM ŞİŞE TAŞIYICI KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_2"
+    },
+    {
+      id: 3,
+      file: "SEKİZGEN OKTOBİN KUTU KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_3"
+    },
+    {
+      id: 4,
+      file: "MEŞRUBAT KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 5,
+      file: "CAM ŞİŞE TAŞIYICI KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 6,
+      file: "SEKİZGEN OKTOBİN KUTU KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 7,
+      file: "MEŞRUBAT KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 8,
+      file: "CAM ŞİŞE TAŞIYICI KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 9,
+      file: "SEKİZGEN OKTOBİN KUTU KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 10,
+      file: "MEŞRUBAT KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 11,
+      file: "CAM ŞİŞE TAŞIYICI KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 12,
+      file: "SEKİZGEN OKTOBİN KUTU KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 3,
+      file: "MEŞRUBAT KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 14,
+      file: "CAM ŞİŞE TAŞIYICI KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 15,
+      file: "SEKİZGEN OKTOBİN KUTU KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 16,
+      file: "MEŞRUBAT KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 17,
+      file: "CAM ŞİŞE TAŞIYICI KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 18,
+      file: "SEKİZGEN OKTOBİN KUTU KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 19,
+      file: "MEŞRUBAT KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+    {
+      id: 20,
+      file: "CAM ŞİŞE TAŞIYICI KUTUSU",
+      text: "Neque porro quisquam est qui dolorem ipsum quia dolor..",
+      image:"kutu_1"
+    },
+  ];
 
   return (
     <div
@@ -130,7 +626,6 @@ const App = () => {
             <Uretim />
             <Left_Header sectorLabel={"Yolculuğumuz"} />
             <Yolculugumuz />
-            <Footer />
           </div>
         ) : (
           <div className="slide-up">
@@ -161,7 +656,6 @@ const App = () => {
                 <Paragraf paragraf_metni={vizyon} />
                 <Left_Header sectorLabel={"Yolculuğumuz"} />
                 <Yolculugumuz />
-                <Footer />
               </>
             )}
 
@@ -173,7 +667,6 @@ const App = () => {
                 <Tanitim_Filmi />
                 <Kapasite />
                 <Arka_Plan />
-                <Footer />
               </>
             )}
             {BigHeader === "Ürünler" && (
@@ -181,8 +674,8 @@ const App = () => {
               <>
                 {" "}
                 <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
-                <Tanitim_Filmi />
-                <div>Main content</div>
+                <Urunler_Filmi />
+                <Urunler UrunData={UrunData} />
               </>
             )}
             {BigHeader === "Kariyer" && (
@@ -204,7 +697,6 @@ const App = () => {
                   PARAMATER3={value3}
                   PARAMATER4={value5}
                 />
-                <Footer />
               </>
             )}
             {BigHeader === "Blog" && (
@@ -213,8 +705,6 @@ const App = () => {
                 {" "}
                 <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
                 <Blog blogData={blogData} />
-                <Footer />
-
               </>
             )}
             {BigHeader === "Perakende" && (
@@ -222,8 +712,6 @@ const App = () => {
               <>
                 {" "}
                 <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
-                <Tanitim_Filmi />
-                <div>Main content</div>
               </>
             )}
             {BigHeader === "İletişim" && (
@@ -231,12 +719,20 @@ const App = () => {
               <>
                 {" "}
                 <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
-                <Tanitim_Filmi />
-                <div>Main content</div>
+                <Iletisim />
+              </>
+            )}
+            {BigHeader === "Sürdürülebilirlik" && (
+              // add your Main content here
+              <>
+                {" "}
+                <SubNavbar change_page={change_page} sectorLabel={BigHeader} />
+                <Surdurulebilirlik SurdurData={SurdurData} />
               </>
             )}
           </div>
         )}
+        <Footer />
       </div>
     </div>
   );

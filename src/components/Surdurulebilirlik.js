@@ -1,7 +1,35 @@
 import React, { useState } from "react";
-import "./css/Blog.css";
+import "./css/Surdurulebilirlik.css";
+import yaprakSVG from "../assets/yaprak.svg";
+import red_hoverSVG from "../assets/red_hover.svg";
+import downloadSVG from "../assets/download.svg";
 
-const Blog = ({ blogData }) => {
+
+
+function downloadPDF(pdfPath, fileName) {
+  const downloadLink = document.createElement('a');
+  downloadLink.href = pdfPath;
+  downloadLink.download = fileName;
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  document.body.removeChild(downloadLink);
+}
+
+const Surdurulebilirlik = ({ SurdurData }) => {
+
+  const handleDownload = (fileName) => {
+    // Import the PDF file
+    import(`../belgeler/${fileName}`)
+      .then(module => {
+        // Call the downloadPDF function with the PDF file path and desired filename
+        downloadPDF(module.default, fileName);
+      })
+      .catch(error => {
+        console.error('Error loading PDF file:', error);
+      });
+  };
+
+
   let itemsPerPage;
 
   const isPhoneScreen = () => {
@@ -11,12 +39,12 @@ const Blog = ({ blogData }) => {
   if (isPhoneScreen()) {
     itemsPerPage = 2;
   } else {
-    itemsPerPage = 4;
+    itemsPerPage = 6;
   }
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const totalPages = Math.ceil(blogData.length / itemsPerPage);
+  const totalPages = Math.ceil(SurdurData.length / itemsPerPage);
 
   const handleNext = () => {
     if (currentIndex < totalPages - 1) {
@@ -62,7 +90,7 @@ const Blog = ({ blogData }) => {
     if (startPage > 0) {
       pageNumbers.push(
         <button
-          className="pagination_button"
+          className="belge_pagination_button"
           key={0}
           onClick={() => handlePageClick(0)}
         >
@@ -113,17 +141,32 @@ const Blog = ({ blogData }) => {
   const getBlogItems = (start, end) => {
     return (
       <div className="row" style={{ width: "100%" }}>
-        {blogData.slice(start, end).map((item, index) => (
-          <div key={index} className="col-md-6 col-12 pb-4">
-            <div className="blog_card_content d-flex align-items-center justify-content-center">
-              <div className="date_title row justify-content-start">
-                <h1 className="day_title">{item.day}</h1>
-                <p className="month_title">{item.month}</p>
+        {SurdurData.slice(start, end).map((item, index) => (
+          <div key={index} className="col-md-4 col-12 pb-4">
+            <div
+              className="belge_kart d-flex align-items-center flex-column m-md-0 m-5 mb-0 mt-4 "
+              style={{
+                backgroundImage: `url(${red_hoverSVG})`,
+                backgroundSize: "110%",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="bd-highlight p-md-3 pt-4">
+                <img src={yaprakSVG} alt="yaprak" className="yaprak" />
               </div>
-              <div className="blog_content d-flex justify-content-center align-items-center row p-md-4 p-2">
-                {" "}
-                <label className="blog_card_title p-2">{item.title}</label>
-                <label className="blog_card_content p-2">{item.content}</label>
+              <div className="bd-highlight  ">
+                <label className="belge_title">{item.file}</label>
+              </div>
+              <div className="mt-auto bd-highlight w-100">
+                <button
+                  className="download_button"
+                  style={{
+                    backgroundImage: `url(${downloadSVG})`,
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                  onClick={() => handleDownload(item.file_address)}
+                ></button>
               </div>
             </div>
           </div>
@@ -135,9 +178,9 @@ const Blog = ({ blogData }) => {
   return (
     <div className="baslik p-md-5 p-3 pt-5 pb-5">
       <div className="d-flex flex-column align-items-center">
-        <div className="blog-container p-0 m-0">
+        <div className="belge-container p-0 m-0">
           <div
-            className="blog_card"
+            className="belge_card"
             style={
               window.innerWidth >= 600
                 ? {
@@ -146,12 +189,12 @@ const Blog = ({ blogData }) => {
                 : { transform: `translateX(${-430 * currentIndex}px)` }
             }
           >
-            {blogData.map(
+            {SurdurData.map(
               (item, index) =>
                 index % itemsPerPage === 0 && ( // Render only for every fourth item
                   <div
                     key={index}
-                    className="blog_front d-flex align-items-start flex-column bd-highlight"
+                    className="belge_front d-flex align-items-start flex-column bd-highlight"
                   >
                     {getBlogItems(index, index + itemsPerPage)}
                   </div>
@@ -163,18 +206,18 @@ const Blog = ({ blogData }) => {
         <div className="col-12 d-flex mt-3 justify-content-center">
           <div style={{ width: "70px" }}>
             <button
-              className="blog_previous_button mr-2"
+              className="belge_previous_button mr-2"
               onClick={handlePrevious}
               disabled={currentIndex === 0}
             ></button>
           </div>
 
-          <div className="d-flex justify-content-evenly button_pack">
+          <div className="d-flex justify-content-evenly belge_button_pack">
             {renderPageNumbers()}
           </div>
           <div style={{ width: "70px" }}>
             <button
-              className="blog_next_button ml-2"
+              className="belge_next_button ml-2"
               onClick={handleNext}
               disabled={currentIndex === totalPages - 1}
             ></button>
@@ -185,4 +228,4 @@ const Blog = ({ blogData }) => {
   );
 };
 
-export default Blog;
+export default Surdurulebilirlik;

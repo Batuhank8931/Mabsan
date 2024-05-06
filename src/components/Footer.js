@@ -15,7 +15,7 @@ import Turning_logo from "../assets/logo_1.mp4";
 const Footer = () => {
   return (
     <div className="baslik p-md-5 pt-0 pb-5 ">
-      <div className="d-flex align-items-center justify-content-center mb-0 mb-md-5 mt-0">
+      <div className="d-flex align-items-center justify-content-center mb-0 mb-md-5 mt-0 m-0">
         <div className="video-container">
           <video
             autoPlay
@@ -34,7 +34,7 @@ const Footer = () => {
           </video>
         </div>
       </div>
-      <div className="d-flex align-items-center justify-content-center row mr-md-5 ml-md-5 ">
+      <div className="d-flex align-items-center justify-content-center row mr-md-5 ml-md-5 m-0">
         <div className="kart_1 redline_footer_left d-flex align-items-center justify-content-center col-md-4 col-5 order-md-0 order-1">
           <div>
             <div className="d-flex align-items-center justify-content-center">
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="d-flex align-items-center justify-content-center row mt-5 mr-md-5 ml-md-5">
+      <div className="d-flex align-items-center justify-content-center row mt-5 mr-md-5 ml-md-5 m-0">
         <div className="col-md-3 col-12 d-flex justify-content-md-start justify-content-center">
           <div className="footer_h1">Sosyal</div>
         </div>
@@ -103,7 +103,7 @@ const Footer = () => {
           <div className="footer_h2">Politikalar</div>
         </div>
       </div>
-      <div className="d-flex align-items-center justify-content-center justify-content-md-start row mt-2 mr-md-5 ml-md-5">
+      <div className="d-flex align-items-center justify-content-center justify-content-md-start row mt-2 mr-md-5 ml-md-5 m-0">
         <div className="col-md-3 col-12 align-items-center justift-content-center w-60 w-md-70 ">
           <div className="d-flex justify-content-between mr-md-5 mb-3 mr-0 ml-md-0 mt-3">
             <button>
@@ -162,7 +162,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="hidden_bottom column hidden_bottom p-4">
+        <div className="hidden_bottom column">
           <div className="col-6" style={{ textAlign: "left" }}>
             <ul style={{ listStylePosition: "inside", margin: 0, padding: 0, fontSize: "20px"}}>
               <li>Yasal Bildirim</li>
