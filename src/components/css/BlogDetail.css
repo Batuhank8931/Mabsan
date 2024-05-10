@@ -1,0 +1,59 @@
+.blog_title {
+    height: 250px;
+
+  }
+
+  .blog_day_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 130px;
+    font-weight: bold;
+    height: 130px;
+    transition: all .3s;
+  
+  }
+
+  .blog_month_title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    transition: all .3s;
+    text-align: start;
+  }
+  
+
+  .blog_detail_header{
+    font-size: 40px;
+    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    font-weight: bold;
+
+  }
+
+  .blog_paragraf {
+
+    text-align: left;
+    font-size: 25px;
+    white-space: pre-line;
+    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    line-height: 1.2;
+
+  }
+
+
+  .blog_detail_photo{
+    border-radius: 10% 0 10% 0;
+  }
+  
+
+  @media (max-width: 601px) {
+
+    .blog_paragraf {
+
+        text-align: left;
+        font-size: 15px;
+        white-space: pre-line;
+        font-family: 'Gotham', sans-serif; /* Use Gotham font */
+        line-height: 1.2;
+    
+      }
+
+  }

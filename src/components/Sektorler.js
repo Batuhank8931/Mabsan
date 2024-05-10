@@ -3,39 +3,10 @@ import "./css/Sektorler.css";
 import polygon from "../assets/red-dot-ploygon.svg";
 import rectangle from "../assets/Rectangle.svg";
 import rectangleYatik from "../assets/Rectangle_yatik.svg";
-import Apples from "../assets/apples.mp4";
+import SektorApples from "../assets/SektorApples.mp4";
 
-import E_Ticaret from "../assets/e_ticaret.svg";
-import Edustriyel from "../assets/endustriyel.svg";
-import Elektrik from "../assets/elektrik.svg";
-import Perakende from "../assets/perakende.svg";
-import Kozmetik from "../assets/kozmetik.svg";
-import İlac from "../assets/ilac.svg";
-import Otomotiv from "../assets/otomotiv.svg";
+const Sektorler = ({ SektorItems }) => {
 
-import E_Ticaret_b from "../assets/e_ticaret_b.svg";
-import Edustriyel_b from "../assets/endustriyel_b.svg";
-import Elektrik_b from "../assets/elektrik_b.svg";
-import Perakende_b from "../assets/perakende_b.svg";
-import Kozmetik_b from "../assets/kozmetik_b.svg";
-import İlac_b from "../assets/ilac_b.svg";
-import Otomotiv_b from "../assets/otomotiv_b.svg";
-
-const Sektorler = () => {
-  const carouselItems = [
-    { name: "E-Ticaret", image: E_Ticaret, image_b: E_Ticaret_b },
-    { name: "Endüstriyel", image: Edustriyel, image_b: Edustriyel_b },
-    { name: "Elektrik- Elektronik", image: Elektrik, image_b: Elektrik_b },
-    { name: "Perakende", image: Perakende, image_b: Perakende_b }, // Add image source
-    { name: "Kozmetik", image: Kozmetik, image_b: Kozmetik_b },
-    { name: "İlaç", image: İlac, image_b: İlac_b },
-    { name: "Otomotiv", image: Otomotiv, image_b: Otomotiv_b },
-  ];
-
-  useEffect(() => {
-    // Preload the video
-    preloadVideo("../assets/apples.mp4");
-  }, []);
 
   function preloadVideo(url) {
     var video = document.createElement("video");
@@ -87,21 +58,28 @@ const Sektorler = () => {
       <div className="redline">
         <div
           className="carousel bar "
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-          onTouchCancel={handleTouchEnd}
-          ref={containerRef}
+          //onMouseDown={handleMouseDown}
+          //onMouseMove={handleMouseMove}
+          //onMouseUp={handleMouseUp}
+          //onMouseLeave={handleMouseUp}
+          //onTouchStart={handleTouchStart}
+          //onTouchMove={handleTouchMove}
+          //onTouchEnd={handleTouchEnd}
+          //onTouchCancel={handleTouchEnd}
+          //ref={containerRef}
         >
           <div className="container">
-            {carouselItems.map((item, index) => (
+            {SektorItems.map((item, index) => (
               <div className="blocks" key={index}>
                 <button
                   className="sektor_button"
+                  id={
+                    index === SektorItems.length - 1
+                      ? "last_sektor_button"
+                      : index === SektorItems.length - 2
+                      ? "before_last_one"
+                      : ""
+                  }
                   style={{
                     backgroundImage: `url(${
                       window.innerWidth <= 600 ? rectangleYatik : rectangle
@@ -109,22 +87,17 @@ const Sektorler = () => {
                     backgroundSize: "cover",
                   }}
                 >
-                  <div className="button_header d-flex align-items-start flex-md-column">
+                  <div className="button_header d-flex align-items-start flex-md-column justify-content-center">
                     <div
                       className="order-md-1 order-2 mt-2"
                       style={{
                         width: "100%",
                       }}
                     >
-                      <div className="d-flex number_label">
+                      <div className="d-flex number_label p-md-0 pl-5">
                         <img className="w-6" src={polygon} />
                         <label
-                          className="sektor_label ml-2"
-                          style={{
-                            alignSelf: "flex-start",
-                            textAlign: "left",
-                            width: "35%",
-                          }}
+                          className="sektor_label right_symbol pl-2"
                         >
                           0{index + 1}
                         </label>
@@ -152,8 +125,7 @@ const Sektorler = () => {
                               opacity: 1,
                             }}
                           >
-                            <source src={Apples} type="video/mp4" />
-                            Your browser does not support the video tag.
+                            <source src={SektorApples} type="video/mp4" />
                           </video>
                         </div>
                       </div>{" "}
@@ -167,15 +139,20 @@ const Sektorler = () => {
                       {" "}
                       <div className="d-flex column align-items-center justify-content-center m-0 p-0"></div>
                     </div>
-
-                    <div className="sektor_label p-2 order-md-2 order-1 m-2">
-                      <div className=" card_headers vertical-text d-flex align-items-start ">
+                    <div
+                      className="sektor_label order-md-2 order-1 ml-2"
+                      style={{
+                        width: "100%",
+                      }}
+                    >
+                      <div className=" card_headers vertical-text d-flex align-items-start">
                         <div className="">
                           <div className="sektor_label mr-3">
                             <img
-                              className="h-9 image"
+                              className="h-9 image  float-left"
                               src={item.image}
                               alt="Logo"
+                              style={{ marginLeft:"-5px"}} 
                             />
                             <img
                               className="h-9 image_b"
@@ -184,8 +161,9 @@ const Sektorler = () => {
                             />
                           </div>
                         </div>
-
-                        <h1 className="sektor_label ">{item.name}</h1>
+                        <div className="label_frame">
+                          <h1 className="sektor_label ">{item.name}</h1>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -205,7 +183,7 @@ const Sektorler = () => {
                             opacity: 1,
                           }}
                         >
-                          <source src={Apples} type="video/mp4" />
+                          <source src={SektorApples} type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>

@@ -7,7 +7,7 @@ const Kapasite = () => {
   
 
   return (
-    <div className="baslik p-md-5 p-3 pt-0 pb-5">
+    <div className="baslik p-md-5 p-3 pt-0 pb-0">
         <div className="d-flex flex-row justify-content-center header_1">
             <div className="each_header d-flex flex-column justify-content-end ">
                 <label className="kapasite_label">Tesis Kapasitesi</label>

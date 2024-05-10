@@ -13,14 +13,14 @@ const Mabsan_Way_Form = ({ PARAMATER1, PARAMATER2, PARAMATER3, PARAMATER4 }) => 
       }}
     >
       <div className="row">
-        <div className="col-12 col-md-5">
+        <div className="col-12 col-md-5 d-flex row align-items-center pt-4 pb-5">
           <div className="d-flex align-items-center justify-content-start">
             <label className="form_label_1 p-4">{PARAMATER1}</label>
           </div>
-          <div>
+          <div className="pr-5">
             <label className="form_label_2 p-4">{PARAMATER2}</label>
           </div>
-          <div className="d-flex align-items-center justify-content-start justify-content-md-start pl-0">
+          <div className="d-flex align-items-center justify-content-center justify-content-md-start pl-0">
             <div className="d-flex column p-4 pl-0">
               <button className="segment_button d-flex justify-content-between">
                 <label

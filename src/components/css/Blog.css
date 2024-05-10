@@ -25,13 +25,13 @@
 }
 
 .blog_card_title{
-  font-family: 'Gotham', sans-serif; /* Use Gotham font */
-  font-size: 25px;
+  font-family: 'Power Grotesk', sans-serif;
+  font-size: 26px;
 }
 
-.blog_card_content{
-   font-family: 'Gotham', sans-serif; /* Use Gotham font */
-  font-size: 15px;
+.blog_card_text{
+  font-family: 'Gotham', sans-serif; /* Use Gotham font */
+  font-size: 13px;
   height: 400px;
 }
 
@@ -43,27 +43,30 @@
   /* Add any other styles you need for your button */
   height: 320px;
   width: 320px;
+  transition: all .3s;
 }
 
 .date_title {
   width: 450px;
   position: absolute;
   z-index: -1;
-  transform: translate(-20px, -70px);
+  transform: translate(-20px, -50px);
 }
 
 .day_title{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat-Bold', sans-serif;
   font-size: 130px;
   font-weight: bold;
   height: 130px;
+  transition: all .3s;
 
 }
 
 .month_title{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat-Bold', sans-serif;
   font-size: 40px;
   font-weight: bold;
+  transition: all .3s;
 }
 
 
@@ -85,8 +88,8 @@
 
 
 .blog_previous_button, .blog_next_button {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background-color: #cccccc63;
   border: none;
   border-radius: 50%;
@@ -123,8 +126,8 @@
 }
 
 .pagination_button{
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   font-size: 20px;
   color: #fff;
@@ -147,10 +150,26 @@
 }
 
 .button_pack{
-  width: 500px;
+  width: 280px;
 
 }
 
+@media (min-width: 601px) {
+
+  .blog_content:hover {
+    background-color: rgba(125, 123, 123, 0.5); 
+  }
+
+
+  .blog_card_content:hover > .date_title .day_title {
+    font-size: 135px;
+  }
+
+  .blog_card_content:hover > .date_title .month_title {
+    font-size: 42px;
+  }
+
+}
 
 @media (max-width: 601px) {
 
@@ -163,7 +182,7 @@
 
   .date_title {
     width: 50px;
-    transform: translate(-170px, -70px);
+    transform: translate(-170px, -40px);
   }
   
   .day_title{
@@ -175,7 +194,7 @@
   .month_title{
     font-size: 40px;
   }
-  
+ 
   
   .blog_card_content{
     height: 250px;
@@ -185,10 +204,11 @@
 
 
 .blog_card_title{
+  font-family: 'Power Grotesk', sans-serif;
   font-size: 20px;
 }
 
-.blog_card_content{
+.blog_card_text{
 font-size: 10px;
 }
 
@@ -203,7 +223,7 @@ font-size: 10px;
 }
 
 .button_pack{
-  width: 100%;
+  width: 230px;
 
 }
 

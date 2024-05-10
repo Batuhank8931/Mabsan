@@ -1,75 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./css/Yolculugumuz.css";
 
-const Yolculugumuz = () => {
-  const events = [
-    {
-      year1: "19",
-      year2: "82",
-      title: "Event 1",
-      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-    },
-    {
-      year1: "19",
-      year2: "88",
-      title: "Event 2",
-      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-    },
-    {
-      year1: "20",
-      year2: "00",
-      title: "Event 3",
-      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-    },
-    {
-      year1: "20",
-      year2: "01",
-      title: "Event 4",
-      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-    },
-    {
-      year1: "20",
-      year2: "02",
-      title: "Event 5",
-      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-    },
-    {
-      year1: "20",
-      year2: "10",
-      title: "Event 6",
-      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-    },
-    {
-      year1: "20",
-      year2: "12",
-      title: "Event 7",
-      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-    },
-    {
-      year1: "20",
-      year2: "15",
-      title: "Event 8",
-      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-    },
-    {
-      year1: "20",
-      year2: "18",
-      title: "Event 9",
-      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-    },
-    {
-      year1: "20",
-      year2: "23",
-      title: "Event 10",
-      text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-    },
-  ];
-
+const Yolculugumuz = ({ YolculugumuzData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [translateYValue, setTranslateYValue] = useState(0);
   const [first_year, setFirstYear] = useState(true);
-
-
 
   const TitleChange = (yazi) => {
     const yearLabel = document.querySelector(".timeline_year0");
@@ -96,7 +31,7 @@ const Yolculugumuz = () => {
   };
 
   const handleNext = () => {
-    if (currentIndex < events.length - 1) {
+    if (currentIndex < YolculugumuzData.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
@@ -120,17 +55,19 @@ const Yolculugumuz = () => {
         const timeline_yearLabels = document.querySelectorAll(".timeline_year");
 
         // Apply styles to timeline_year0Label
-        timeline_year0Label.style.fontSize = "125px";
-        timeline_year0Label.style.transform = "translateY(2%) translateX(-10%)";
+        // timeline_year0Label.style.fontSize = "125px";
+        // timeline_year0Label.style.transform = "translateY(0%) translateX(0%)";
 
         // Loop through each timeline_year element and apply the styles
-        timeline_yearLabels.forEach(label => {
-          label.style.fontSize = "125px";
-          label.style.transform = "translateY(-113%) translateX(48%)";
-          label.style.background = "linear-gradient(317.85deg, #FA0000 -41.59%, rgba(250, 0, 0, 0) 143.46%)";
+        timeline_yearLabels.forEach((label) => {
+          label.style.fontSize = "120px";
+          label.style.transform = "translateY(-240px) translateX(165px)";
+          label.style.background =
+            "linear-gradient(317.85deg, #FA0000 -41.59%, rgba(250, 0, 0, 0) 143.46%)";
           label.style.webkitBackgroundClip = "text";
           label.style.backgroundClip = "text";
           label.style.color = "transparent";
+          label.style.zIndex = "3";
         });
 
         // Set first_year to false at the end
@@ -138,7 +75,6 @@ const Yolculugumuz = () => {
       }
     }
   };
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -156,124 +92,133 @@ const Yolculugumuz = () => {
   }, []); // Run effect only once after component mount
 
   return (
-    <div className="baslik p-md-5 p-3 pt-5 pb-0" style={{ height: "670px" }}>
-      <div className="year_header">
-        <label className="timeline_year0">19</label>
-      </div>
-      <div className="d-flex row card_window">
-        <div
-          className="time_slide_card p-0 m-0"
-          style={{
-            transform: `translateY(${translateYValue * currentIndex}%)`,
-          }}
-        >
-          {events.map((pagerItem, index) => (
-            <div
-              className="times col-12 col-md-6 p-md-5 pr-0 d-flex justify-content-center"
-              onMouseEnter={() => {
-                const timeSlideCard = document.querySelector(
-                  ".time_slide_card"
-                );
-                timeSlideCard.classList.add("full-width");
-              }}
-              onMouseLeave={() => {
-                const timeSlideCard = document.querySelector(
-                  ".time_slide_card"
-                );
-                timeSlideCard.classList.remove("full-width");
-              }}
-            >
-              <div className="year">
-                <label className="timeline_year">{pagerItem.year2}</label>
-              </div>
-              <button className="timer_button d-flex justify-content-start p-5">
-                <div
-                  class="d-flex align-items-center flex-column bd-highlight"
-                  style={{ height: "100%", width: "100%" }}
-                  onClick={YearClick}
-                >
-                  <button
-                    className="p-2 bd-highlight arrow"
-                    style={{ width: "100%" }}
-                    onClick={() => {
-                      handlePrevious();
-                      let nextIndex = index - 1;
-                      let nextsubIndex = index + 1;
-                      if (nextsubIndex < events.length) {
-                        SubTitleChange(
-                          events[nextsubIndex].year2,
-                          events[nextsubIndex].title,
-                          events[nextsubIndex].text
-                        );
-                      }
-                      if (nextIndex >= 0 && nextIndex < events.length) {
-                        TitleChange(events[nextIndex].year1); // Pass the year2 value of the next page item to deneme function
-                      }
-                    }}
-                    disabled={currentIndex === 0}
-                  >
-                    ↑
-                  </button>
-                  <div className="p-2 bd-highlight" style={{ width: "100%" }}>
-                    <div className="timer_headers d-flex flex-column align-items-start">
-                      <label className="timeline_header pt-4">
-                        {pagerItem.title}
-                      </label>
-                      <label className="timeline_text pt-4">
-                        {pagerItem.text}
-                      </label>
-                    </div>
-                  </div>
-                  <button
-                    className="mt-auto p-2 bd-highlight arrow"
-                    style={{ width: "100%" }}
-                    onClick={() => {
-                      handleNext();
-                      let nextIndex = index + 1;
-                      let nextsubIndex = index + 2;
-                      if (nextsubIndex < events.length) {
-                        SubTitleChange(
-                          events[nextsubIndex].year2,
-                          events[nextsubIndex].title,
-                          events[nextsubIndex].text
-                        );
-                      }
-                      if (nextIndex >= 0 && nextIndex < events.length) {
-                        TitleChange(events[nextIndex].year1); // Pass the year2 value of the next page item to deneme function
-                      }
-                    }}
-                  >
-                    ↓
-                  </button>
-                </div>
-              </button>
-            </div>
-          ))}
+    <div className="baslik p-md-5 p-3 pt-5 pb-0 frame">
+      <div className="pt-5 pt-md-0">
+        <div className="year_header">
+          <label className="timeline_year0">19</label>
         </div>
-
-        <div className="times_side col-12 col-md-6 p-5 d-flex justify-content-center">
-          <div className="year">
-            <label className="timeline_year" id="Sub_1">
-              {events[1].year2}
-            </label>
-          </div>
-          <button className="timer_button d-flex justify-content-start ml-5 p-5">
-            <div className="flex-column">
+        <div className="d-flex row card_window">
+          <div
+            className="time_slide_card p-0 m-0"
+            style={{
+              transform: `translateY(${translateYValue * currentIndex}%)`,
+            }}
+          >
+            {YolculugumuzData.map((pagerItem, index) => (
               <div
-                className="timeline_label p-2 order-md-2 order-1 m-2"
-                style={{ width: "100%" }}
+                key={index}
+                className="times col-12 col-md-6 p-md-5 pr-0 d-flex justify-content-center"
+                onMouseEnter={() => {
+                  const timeSlideCard = document.querySelector(
+                    ".time_slide_card"
+                  );
+                  timeSlideCard.classList.add("full-width");
+                }}
+                onMouseLeave={() => {
+                  const timeSlideCard = document.querySelector(
+                    ".time_slide_card"
+                  );
+                  timeSlideCard.classList.remove("full-width");
+                }}
               >
-                <div className="timer_headers d-flex flex-column align-items-start">
-                  <label className="timeline_header pt-4" id="Sub_2">
-                    {events[1].title}
-                  </label>
-                  <label className="timeline_text pt-4" id="Sub_3">
-                    {events[1].text}
-                  </label>
+                <div className="year">
+                  <label className="timeline_year">{pagerItem.year2}</label>
+                </div>
+                <div className="timer_button d-flex justify-content-start p-5">
+                  <div
+                    className="d-flex align-items-center flex-column bd-highlight"
+                    style={{ height: "100%", width: "100%" }}
+                    onClick={YearClick}
+                  >
+                    <button
+                      className="p-2 bd-highlight arrow"
+                      style={{ width: "100%" }}
+                      onClick={() => {
+                        handlePrevious();
+                        let nextIndex = index - 1;
+                        let nextsubIndex = index + 1;
+                        if (nextsubIndex < YolculugumuzData.length) {
+                          SubTitleChange(
+                            YolculugumuzData[nextsubIndex].year2,
+                            YolculugumuzData[nextsubIndex].title,
+                            YolculugumuzData[nextsubIndex].text
+                          );
+                        }
+                        if (
+                          nextIndex >= 0 &&
+                          nextIndex < YolculugumuzData.length
+                        ) {
+                          TitleChange(YolculugumuzData[nextIndex].year1); // Pass the year2 value of the next page item to deneme function
+                        }
+                      }}
+                      disabled={currentIndex === 0}
+                    >
+                      ↑
+                    </button>
+                    <div className="p-2 bd-highlight" style={{ width: "100%" }}>
+                      <div className="timer_headers d-flex flex-column align-items-start">
+                        <label className="timeline_header pt-4">
+                          {pagerItem.title}
+                        </label>
+                        <label className="timeline_text pt-4">
+                          {pagerItem.text}
+                        </label>
+                      </div>
+                    </div>
+                    <button
+                      className="mt-auto p-2 bd-highlight arrow"
+                      style={{ width: "100%" }}
+                      onClick={() => {
+                        handleNext();
+                        let nextIndex = index + 1;
+                        let nextsubIndex = index + 2;
+                        if (nextsubIndex < YolculugumuzData.length) {
+                          SubTitleChange(
+                            YolculugumuzData[nextsubIndex].year2,
+                            YolculugumuzData[nextsubIndex].title,
+                            YolculugumuzData[nextsubIndex].text
+                          );
+                        }
+                        if (
+                          nextIndex >= 0 &&
+                          nextIndex < YolculugumuzData.length
+                        ) {
+                          TitleChange(YolculugumuzData[nextIndex].year1); // Pass the year2 value of the next page item to deneme function
+                        }
+                      }}
+                    >
+                      ↓
+                    </button>
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+
+          <div className="times_side col-12 col-md-6 p-5 d-flex justify-content-center">
+            <div className="year">
+              <label className="timeline_year" id="Sub_1">
+                {YolculugumuzData[1].year2}
+              </label>
             </div>
-          </button>
+            <button className="timer_button d-flex justify-content-start ml-5 p-5">
+              <div className="flex-column">
+                <div
+                  className="timeline_label p-2 order-md-2 order-1 m-2"
+                  style={{ width: "100%" }}
+                >
+                  <div className="timer_headers d-flex flex-column align-items-start">
+                    <label className="timeline_header pt-4" id="Sub_2">
+                      {YolculugumuzData[1].title}
+                    </label>
+                    <label className="timeline_text pt-4" id="Sub_3">
+                      {YolculugumuzData[1].text}
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </div>

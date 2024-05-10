@@ -25,15 +25,6 @@ body {
 }
 
 
-@font-face {
-  font-family: 'Power Grotesk';
-  src: url('./fonts/PowerGrotesk-Regular.ttf') format('truetype');
-  /* You might need to adjust the path based on your directory structure */
-  font-weight: normal;
-  font-style: normal;
-}
-
-
 .slide-up {
   animation: slideUpAnimation 0.5s ease forwards;
   background-color: black;

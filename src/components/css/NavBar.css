@@ -91,17 +91,9 @@
 .underline_0 {
   display: block;
   /* Add the additional classes here */
-  display: flex;
-  align-items: stretch;
-  justify-content: between;
-  width: 100%;
-  padding: 0;
-  padding-top: 5px;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-bottom: 0;
-  height: 50%;
 }
+
+
 
 .underline_1 {
   display: block;
@@ -112,6 +104,7 @@
 
 .underline_2 {
   display: none;
+  height: 50px;
 }
 
 .bayrak{

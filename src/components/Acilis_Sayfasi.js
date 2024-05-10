@@ -4,7 +4,7 @@ import MenuButton from "../assets/MenuButton.svg";
 import bayrak from "../assets/bayrak.svg";
 import Navbar from "./NavBar.js"; // Importing the NavBar component
 import "./css/Acilis_Sayfasi.css"; // Importing the CSS file
-import Apples from "../assets/apples.mp4";
+import AcilisApples from "../assets/AcilisApples.mp4";
 
 const Acilis_Sayfasi = ({ change_page }) => {
   const videoId = "l1cBhOqSV4M"; // YouTube video ID
@@ -175,7 +175,7 @@ const Acilis_Sayfasi = ({ change_page }) => {
                   opacity: 1,
                 }}
               >
-                <source src={Apples} type="video/mp4" />
+                <source src={AcilisApples} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

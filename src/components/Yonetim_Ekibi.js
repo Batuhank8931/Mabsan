@@ -1,79 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./css/Yonetim_ekibi.css";
 
-const Uretim = () => {
-  const pagerData = [
-    {
-      id: "1",
-      Name: "Ayla Haktan",
-      Position: "Genel Müdür",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/0f2f/5ee9/1b4cb5c861a379b27814cc557d674344?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d2h0t6CxOjI3BOXsgaWCAiwBW4~RuH37A~QpG39GaklaH4nLvqat466XMk0jXTNiLGejDwRxbWB-WsJyoF2TWSxu1~Q3DZPbISqrSEzje6hw75F8Thv~UPDUmBQXUOfSeq9Y86xgVDn-sBnvX-WWy6NJ587JJYta9HjWSrScQAbxVlctgscaPzoKsN-exB-HHGHwp5kVV0dBNgjOBCdDPAbjxThbjC2wewGLCRb0dPztXcWM3Oj-MMBKJH04HyhmoRmf9GXrhRTHUvvPkdgH0T27FVBKQqdHTUDdNQMtJ35oyPq6E24G~51cytDX93QvyjHYK1PCTptD--hqKuSEiA__",
-    },
-    {
-      id: "2",
-      Name: "Ali Kara",
-      Position: "Muhasebe Müdürü",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/0f2f/5ee9/1b4cb5c861a379b27814cc557d674344?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d2h0t6CxOjI3BOXsgaWCAiwBW4~RuH37A~QpG39GaklaH4nLvqat466XMk0jXTNiLGejDwRxbWB-WsJyoF2TWSxu1~Q3DZPbISqrSEzje6hw75F8Thv~UPDUmBQXUOfSeq9Y86xgVDn-sBnvX-WWy6NJ587JJYta9HjWSrScQAbxVlctgscaPzoKsN-exB-HHGHwp5kVV0dBNgjOBCdDPAbjxThbjC2wewGLCRb0dPztXcWM3Oj-MMBKJH04HyhmoRmf9GXrhRTHUvvPkdgH0T27FVBKQqdHTUDdNQMtJ35oyPq6E24G~51cytDX93QvyjHYK1PCTptD--hqKuSEiA__",
-    },
-    {
-      id: "3",
-      Name: "Fatma Demir",
-      Position: "İnsan Kaynakları Müdürü",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/0f2f/5ee9/1b4cb5c861a379b27814cc557d674344?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d2h0t6CxOjI3BOXsgaWCAiwBW4~RuH37A~QpG39GaklaH4nLvqat466XMk0jXTNiLGejDwRxbWB-WsJyoF2TWSxu1~Q3DZPbISqrSEzje6hw75F8Thv~UPDUmBQXUOfSeq9Y86xgVDn-sBnvX-WWy6NJ587JJYta9HjWSrScQAbxVlctgscaPzoKsN-exB-HHGHwp5kVV0dBNgjOBCdDPAbjxThbjC2wewGLCRb0dPztXcWM3Oj-MMBKJH04HyhmoRmf9GXrhRTHUvvPkdgH0T27FVBKQqdHTUDdNQMtJ35oyPq6E24G~51cytDX93QvyjHYK1PCTptD--hqKuSEiA__",
-    },
-    {
-      id: "4",
-      Name: "Mehmet Yılmaz",
-      Position: "Teknoloji Müdürü",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/0f2f/5ee9/1b4cb5c861a379b27814cc557d674344?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d2h0t6CxOjI3BOXsgaWCAiwBW4~RuH37A~QpG39GaklaH4nLvqat466XMk0jXTNiLGejDwRxbWB-WsJyoF2TWSxu1~Q3DZPbISqrSEzje6hw75F8Thv~UPDUmBQXUOfSeq9Y86xgVDn-sBnvX-WWy6NJ587JJYta9HjWSrScQAbxVlctgscaPzoKsN-exB-HHGHwp5kVV0dBNgjOBCdDPAbjxThbjC2wewGLCRb0dPztXcWM3Oj-MMBKJH04HyhmoRmf9GXrhRTHUvvPkdgH0T27FVBKQqdHTUDdNQMtJ35oyPq6E24G~51cytDX93QvyjHYK1PCTptD--hqKuSEiA__",
-    },
-    {
-      id: "5",
-      Name: "Zeynep Güler",
-      Position: "Pazarlama Müdürü",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/0f2f/5ee9/1b4cb5c861a379b27814cc557d674344?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d2h0t6CxOjI3BOXsgaWCAiwBW4~RuH37A~QpG39GaklaH4nLvqat466XMk0jXTNiLGejDwRxbWB-WsJyoF2TWSxu1~Q3DZPbISqrSEzje6hw75F8Thv~UPDUmBQXUOfSeq9Y86xgVDn-sBnvX-WWy6NJ587JJYta9HjWSrScQAbxVlctgscaPzoKsN-exB-HHGHwp5kVV0dBNgjOBCdDPAbjxThbjC2wewGLCRb0dPztXcWM3Oj-MMBKJH04HyhmoRmf9GXrhRTHUvvPkdgH0T27FVBKQqdHTUDdNQMtJ35oyPq6E24G~51cytDX93QvyjHYK1PCTptD--hqKuSEiA__",
-    },
-    {
-      id: "6",
-      Name: "Hasan Karadeniz",
-      Position: "Satış Müdürü",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/0f2f/5ee9/1b4cb5c861a379b27814cc557d674344?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d2h0t6CxOjI3BOXsgaWCAiwBW4~RuH37A~QpG39GaklaH4nLvqat466XMk0jXTNiLGejDwRxbWB-WsJyoF2TWSxu1~Q3DZPbISqrSEzje6hw75F8Thv~UPDUmBQXUOfSeq9Y86xgVDn-sBnvX-WWy6NJ587JJYta9HjWSrScQAbxVlctgscaPzoKsN-exB-HHGHwp5kVV0dBNgjOBCdDPAbjxThbjC2wewGLCRb0dPztXcWM3Oj-MMBKJH04HyhmoRmf9GXrhRTHUvvPkdgH0T27FVBKQqdHTUDdNQMtJ35oyPq6E24G~51cytDX93QvyjHYK1PCTptD--hqKuSEiA__",
-    },
-    {
-      id: "7",
-      Name: "Selma Aksoy",
-      Position: "Sosyal Medya Müdürü",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/0f2f/5ee9/1b4cb5c861a379b27814cc557d674344?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d2h0t6CxOjI3BOXsgaWCAiwBW4~RuH37A~QpG39GaklaH4nLvqat466XMk0jXTNiLGejDwRxbWB-WsJyoF2TWSxu1~Q3DZPbISqrSEzje6hw75F8Thv~UPDUmBQXUOfSeq9Y86xgVDn-sBnvX-WWy6NJ587JJYta9HjWSrScQAbxVlctgscaPzoKsN-exB-HHGHwp5kVV0dBNgjOBCdDPAbjxThbjC2wewGLCRb0dPztXcWM3Oj-MMBKJH04HyhmoRmf9GXrhRTHUvvPkdgH0T27FVBKQqdHTUDdNQMtJ35oyPq6E24G~51cytDX93QvyjHYK1PCTptD--hqKuSEiA__",
-    },
-    {
-      id: "8",
-      Name: "Cemil Kılıç",
-      Position: "Yazılım Geliştirme Müdürü",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/0f2f/5ee9/1b4cb5c861a379b27814cc557d674344?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d2h0t6CxOjI3BOXsgaWCAiwBW4~RuH37A~QpG39GaklaH4nLvqat466XMk0jXTNiLGejDwRxbWB-WsJyoF2TWSxu1~Q3DZPbISqrSEzje6hw75F8Thv~UPDUmBQXUOfSeq9Y86xgVDn-sBnvX-WWy6NJ587JJYta9HjWSrScQAbxVlctgscaPzoKsN-exB-HHGHwp5kVV0dBNgjOBCdDPAbjxThbjC2wewGLCRb0dPztXcWM3Oj-MMBKJH04HyhmoRmf9GXrhRTHUvvPkdgH0T27FVBKQqdHTUDdNQMtJ35oyPq6E24G~51cytDX93QvyjHYK1PCTptD--hqKuSEiA__",
-    },
-    {
-      id: "9",
-      Name: "Elif Çelik",
-      Position: "Veri Analisti",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/0f2f/5ee9/1b4cb5c861a379b27814cc557d674344?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d2h0t6CxOjI3BOXsgaWCAiwBW4~RuH37A~QpG39GaklaH4nLvqat466XMk0jXTNiLGejDwRxbWB-WsJyoF2TWSxu1~Q3DZPbISqrSEzje6hw75F8Thv~UPDUmBQXUOfSeq9Y86xgVDn-sBnvX-WWy6NJ587JJYta9HjWSrScQAbxVlctgscaPzoKsN-exB-HHGHwp5kVV0dBNgjOBCdDPAbjxThbjC2wewGLCRb0dPztXcWM3Oj-MMBKJH04HyhmoRmf9GXrhRTHUvvPkdgH0T27FVBKQqdHTUDdNQMtJ35oyPq6E24G~51cytDX93QvyjHYK1PCTptD--hqKuSEiA__",
-    },
-    {
-      id: "10",
-      Name: "Ahmet Yıldız",
-      Position: "Veri Yöneticisi",
-      photoLink:
-        "https://s3-alpha-sig.figma.com/img/0f2f/5ee9/1b4cb5c861a379b27814cc557d674344?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=d2h0t6CxOjI3BOXsgaWCAiwBW4~RuH37A~QpG39GaklaH4nLvqat466XMk0jXTNiLGejDwRxbWB-WsJyoF2TWSxu1~Q3DZPbISqrSEzje6hw75F8Thv~UPDUmBQXUOfSeq9Y86xgVDn-sBnvX-WWy6NJ587JJYta9HjWSrScQAbxVlctgscaPzoKsN-exB-HHGHwp5kVV0dBNgjOBCdDPAbjxThbjC2wewGLCRb0dPztXcWM3Oj-MMBKJH04HyhmoRmf9GXrhRTHUvvPkdgH0T27FVBKQqdHTUDdNQMtJ35oyPq6E24G~51cytDX93QvyjHYK1PCTptD--hqKuSEiA__",
-    },
-  ];
+const Uretim = ({YonetimData}) => {
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [translateXValue, setTranslateXValue] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -115,7 +44,7 @@ const Uretim = () => {
   };
 
   const handleNext = () => {
-    if (currentIndex < pagerData.length - 1) {
+    if (currentIndex < YonetimData.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
@@ -162,7 +91,7 @@ const Uretim = () => {
                     : { transform: `translateX(${-175 * currentIndex}px)` }
                 }
               >
-                {pagerData.map((pagerItem, index) => (
+                {YonetimData.map((pagerItem, index) => (
                   <div
                     className="yonetim_front d-flex align-items-center flex-column"
                     key={index}

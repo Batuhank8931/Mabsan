@@ -1,0 +1,206 @@
+.baslik_diger{
+    outline: none;
+    transition: 0.3s;
+    padding-bottom: 0px;
+    color: white;
+}
+
+
+
+.red_background {
+    position: relative;
+}
+
+.red_background::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 250px); /* 50% of parent height minus half of the pseudo-element height */
+    left: calc(50% - 500px); /* 50% of parent width minus half of the pseudo-element width */
+    width: 1000px; /* Cover the entire container */
+    height: 500px; /* Cover the entire container */
+    background: linear-gradient(179.96deg, rgba(203, 2, 2, 0.3) 0%, rgba(101, 1, 1, 0.153) 100%);
+    border-radius: 70px 0px 70px 0px; /* Apply border-radius to pseudo-element */
+    background-position: center; /* Center the background gradient horizontally and vertically */
+    background-repeat: no-repeat; 
+    z-index: -1;
+}
+
+
+
+.full_scale{
+    height: 400px;
+    z-index: 1;
+}
+
+
+.Diger_Sektor_previous_button, .Diger_Sektor_next_button {
+    width: 65px;
+    height: 65px;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+    border: 4px solid white; /* Specify the border style */
+    border-radius: 80%;
+
+  }
+  
+  .Diger_Sektor_previous_button::before, .Diger_Sektor_next_button::after {
+    content: "\2190"; /* Unicode for left arrow */
+    font-size: 30px;
+    
+  }
+  
+  .Diger_Sektor_next_button::after {
+    content: "\2192"; /* Unicode for right arrow */
+  }
+  
+  /* Additional styles */
+  .Diger_Sektor_previous_button:hover, .Diger_Sektor_next_button:hover {
+
+    width: 68px;
+    height: 68px;
+  }
+  
+  
+  /* Reset hover styles when button is clicked */
+  .Diger_Sektor_previous_button:active:hover, .Diger_Sektor_next_button:active:hover {
+
+    width: 80px;
+    height: 80px;
+  }
+  
+
+  .Diger_Sektor_container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .Diger_Sektor_card {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    
+  }
+    
+
+  .Diger_Sektor_front{
+    height: 400px;
+    padding: 30px;
+  }
+
+  .Diger_Sektor_header{
+    background-color: transparent; /* Transparent background */
+    color: white;
+    font-size: 17px;
+    display: flex;
+    text-align: center;
+    width: auto;
+    transition: font-size 0.2s;
+  }
+
+
+  .Diger_Sektor_image_container {
+    position: relative;
+    width: 390px;
+    overflow: hidden;
+    transition: width 0.3s ease, height 0.3s ease; /* Add transition for smooth effect */
+    background-color: rgb(34, 34, 34);
+    border-radius: 40px 0px 40px 0px; 
+
+  }
+  
+
+  .Diger_Sektor_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .diger_urun_title {
+    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    font-size: 22px;
+    text-align: center;
+    transition: all .3s;
+  }
+  
+  
+  .diger_urun_text{
+    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    font-size: 15px;
+    text-align: center;
+    transition: all .3s;
+  }
+
+
+  .Diger_Sektor_front:hover .white_line {
+    width: 250px; 
+  }
+
+  .Diger_Sektor_front:hover .diger_urun_title {
+    font-size: 24px;
+  }
+
+  .Diger_Sektor_front:hover .diger_urun_text {
+    font-size: 15px;
+  }
+
+
+
+  @media (min-width: 601px) {
+
+    
+    .Diger_Sektor_card_wrapper{
+      height: 100%;
+      width: 100%;
+    }
+
+
+  }
+
+
+  @media (max-width: 601px) {
+
+    
+    .Diger_Sektor_front{
+      width: 600px;
+      height: 330px;
+      padding-bottom: 0px;
+    }
+
+    .Diger_Sektor_image_container {
+        width: 291px;
+
+    
+      }
+
+    .full_scale{
+        height: 480px;
+    }
+
+    .red_background::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 275px); /* 50% of parent height minus half of the pseudo-element height */
+        left: calc(50% - 175px); /* 50% of parent width minus half of the pseudo-element width */
+        width: 350px; /* Cover the entire container */
+        height: 550px; /* Cover the entire container */
+        background: linear-gradient(179.96deg, rgba(203, 2, 2, 0.3) 2%, rgba(101, 1, 1, 0.30) 100%);
+        border-radius: 70px 0px 70px 0px; /* Apply border-radius to pseudo-element */
+        background-position: center; /* Center the background gradient horizontally and vertically */
+        background-repeat: no-repeat; 
+        z-index: -1;
+    }
+
+    .deneme{
+        height: 200px;
+    }
+
+  }
