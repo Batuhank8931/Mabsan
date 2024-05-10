@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./css/Urunler.css";
-import kutu_1 from "../assets/Urunler/kutu_1.png";
+
 
 const Urunler = ({ UrunData }) => {
   let itemsPerPage;
@@ -40,11 +40,11 @@ const Urunler = ({ UrunData }) => {
     let numAdjacentPages;
 
     if (window.innerWidth >= 600) {
-      numAdjacentPages = 2;
+      numAdjacentPages = 1;
     } else {
       numAdjacentPages = 1;
     }
-    const numPagesToShow = 1 * numAdjacentPages + 1;
+    const numPagesToShow = 2 * numAdjacentPages + 1;
 
     // Calculate the range of page numbers to display
     let startPage = Math.max(0, currentIndex - numAdjacentPages);
@@ -59,21 +59,7 @@ const Urunler = ({ UrunData }) => {
       }
     }
 
-    // Add first page button
-    if (startPage > 0) {
-      pageNumbers.push(
-        <button
-          className="urun_pagination_button"
-          key={0}
-          onClick={() => handlePageClick(0)}
-        >
-          1
-        </button>
-      );
-      if (startPage > 1) {
-        pageNumbers.push(<span key={"ellipsis-start"}>...</span>);
-      }
-    }
+
 
     // Add page number buttons
     for (let i = startPage; i <= endPage; i++) {
@@ -92,21 +78,7 @@ const Urunler = ({ UrunData }) => {
       );
     }
 
-    // Add last page button
-    if (endPage < totalPages - 1) {
-      if (endPage < totalPages - 2) {
-        pageNumbers.push(<span key={"ellipsis-end"}>...</span>);
-      }
-      pageNumbers.push(
-        <button
-          className="pagination_button"
-          key={totalPages - 1}
-          onClick={() => handlePageClick(totalPages - 1)}
-        >
-          {totalPages}
-        </button>
-      );
-    }
+
 
     return pageNumbers;
   };
@@ -139,7 +111,7 @@ const Urunler = ({ UrunData }) => {
         {UrunData.slice(start, end).map((item, index) => (
           <div key={index} className="col-md-4 col-12 pb-4">
             <div className="urun_kart d-flex align-items-center flex-column m-md-0 mb-0 mt-4">
-              <div>
+              <div className="image_box">
                 {imageSrcs[index] && (
                   <img src={imageSrcs[index]} alt={imageSrcs[index]} className="kutu_image" />
                 )}
@@ -148,7 +120,7 @@ const Urunler = ({ UrunData }) => {
                 <label className="urun_title">{item.file}</label>
               </div>
               <div className="d-flex white_line p-1 align-items-center"></div>
-              <div className="d-flex ">
+              <div className="d-flex pl-5 pr-5">
                 <label className="urun_text">{item.text}</label>
               </div>
             </div>
@@ -169,7 +141,7 @@ const Urunler = ({ UrunData }) => {
                 ? {
                     transform: `translateX(${-1110 * currentIndex}px)`,
                   }
-                : { transform: `translateX(${-430 * currentIndex}px)` }
+                : { transform: `translateX(${-385 * currentIndex}px)` }
             }
           >
             {UrunData.map(
@@ -187,9 +159,9 @@ const Urunler = ({ UrunData }) => {
         </div>
 
         <div className="col-12 d-flex mt-3 justify-content-center">
-          <div style={{ width: "70px" }}>
+          <div>
             <button
-              className="urun_previous_button mr-2"
+              className="urun_previous_button"
               onClick={handlePrevious}
               disabled={currentIndex === 0}
             ></button>
@@ -198,9 +170,9 @@ const Urunler = ({ UrunData }) => {
           <div className="d-flex justify-content-evenly urun_button_pack">
             {renderPageNumbers()}
           </div>
-          <div style={{ width: "70px" }}>
+          <div>
             <button
-              className="urun_next_button ml-2"
+              className="urun_next_button"
               onClick={handleNext}
               disabled={currentIndex === totalPages - 1}
             ></button>

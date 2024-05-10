@@ -11,10 +11,11 @@ const Why_Work = () => {
         </div>
         <div className="col-md-4 col-12">
           <label className="work_label_2 p-3 h-100">
-            Our way is defined by a steadfast commitment to sustainability.
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit..."
           </label>
         </div>
-        <div className="d-flex align-items-center justify-content-center justify-content-md-start pl-0 col-md-3 col-12">
+        <div className="d-flex align-items-center justify-content-center justify-content-md-end pl-0 col-md-4 col-12">
           <div className="d-flex column p-3 pl-0">
             <button className="work_button d-flex justify-content-between">
               <label

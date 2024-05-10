@@ -65,6 +65,7 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
   width: 400px; /* Without quotes */
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
 }
 
 .sektor_label {
@@ -73,6 +74,9 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
   font-size: 80%;
 }
 
+.label_frame{
+  width: 250px;
+}
 
 .button_header{
   height: 100%;
@@ -81,6 +85,8 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
 
 .sektor_button:hover .card_headers{
   flex-direction: row;
+  padding-left: 30px;
+  padding-bottom: 20px;
 }
 
 
@@ -90,7 +96,7 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
 
 
 .image {
-  width: 50px;
+  width: 100%;
 }
 
 .image_b {
@@ -104,6 +110,10 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
 
 .sektor_button:hover .image {
   display: none;
+}
+
+.sektor_button:hover .label_frame{
+  width: 110px;
 }
 
 
@@ -126,6 +136,16 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
     width: 300px;
     background-image: none !important; /* Remove background image */
   }
+
+  #last_sektor_button{
+    transition: all 0.3s;
+
+  }
+
+  #last_sektor_button:hover{
+    transform: translateX(-110px); /* Move .blocks 150px to the left when hovered */
+
+  }
   
   .vertical-text {
     transform: rotate(270deg) translateY(-170%) translateX(50%); /* Rotate the text 270 degrees clockwise and lift it up */
@@ -135,7 +155,7 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
   .sektor_button:hover .vertical-text {
     transform: none; /* Reset the rotation and lift on hover */
   }
-  
+
   
   .sektor_button:hover .sector_card_2 {
     display: flex;
@@ -144,6 +164,10 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
     align-items: center; /* Vertically center the content */
   }
 
+  .right_symbol{
+    width: 35%;
+    text-align: left;
+  }
   .number_label{
     display: flex;
     justify-content: center; /* Horizontally center the content */
@@ -171,6 +195,10 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
     font-size: 100%;
   }
   
+  .button_header{
+    height: 100%;
+    width: 80%;
+  }
 
   .sektor_button {
     width: 100%;
@@ -187,11 +215,13 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
     transform: none; /* Reset the rotation and lift on hover */
 
   }
+
   
   .sektor_button:hover .vertical-text {
     transform: rotate(90deg) translateY(-60%) translateX(10%); /* Rotate the text 270 degrees clockwise and lift it up */
     transform-origin: left; /* Set the origin to the center */
   }
+
 
 
   .sektor_button:hover .button_header{
@@ -206,11 +236,25 @@ border-radius: 20px; /* Adjust the value as needed for the desired roundness */
     height: 240px;
   }
 
+  .right_symbol{
+    width: 100%;
+    text-align: right;
+  }
 
   .card_headers {
+    padding-top: 20px;
     width: 250px; /* Without quotes */
   }
 
+  .sektor_button:hover .card_headers{
+
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
+
+  .sektor_button:hover .image_b {
+    margin-top: -4px;
+  }
 
   .card_video {
     height: 100%;

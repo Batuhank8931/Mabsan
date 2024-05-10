@@ -9,10 +9,11 @@ const Tanitim_Filmi = () => {
         autoPlay
         loop
         muted
-        controls={false} // This will hide the video
+        controls={false} // This will hide the video controls
+        playsInline
         className="urunler-element"
       >
-        <source src={tanitim_filmi} type="video/webm" />
+        <source src={tanitim_filmi} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>

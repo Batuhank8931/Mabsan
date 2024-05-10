@@ -21,7 +21,7 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
           style={{ backgroundImage: `url(${backgroundSVG})` }}
         >
           <div className="d-flex">
-            <div className="col-2 col-md-1 ">
+            <div className="col-3 col-md-1 ">
               <button
                 className="mabsan-logo"
                 onClick={() => {
@@ -33,8 +33,8 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
               </button>
             </div>
 
-            <div class="flex-column col-8 col-md-10">
-              <div className="d-md-flex flex-md-row flex-column align-items-start justify-content-around w-100 h-50 p-md-2 p-3 pt-0 m-5 m-md-0 ">
+            <div className="flex-column col-7 col-md-10">
+              <div className="d-md-flex flex-md-row flex-column align-items-start justify-content-around p-md-2 p-3 pt-0 m-md-0 ml-0 mb-5 ">
                 <button
                   className="buttons mx-2 mt-2 mb-4"
                   onClick={() => {
@@ -92,20 +92,25 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                   İletişim
                 </button>
               </div>
-              <div className="underline_0">
-                <button
-                  className="d-flex align-items-end "
-                  style={{ width: "20%" }}
-                  onClick={() => {
-                    change_page("Sürdürülebilirlik");
-                  }}
-                >
-                  <img
-                    src={politika}
-                    alt="politika"
-                    className="politika buttontrs"
-                  />
-                </button>
+              <div
+                className="d-flex align-items-stretch"
+                style={{ height: "68%" }}
+              >
+                {" "}
+                <div className="underline_0 d-flex align-items-end">
+                  <button
+                    onClick={() => {
+                      change_page("Sürdürülebilirlik");
+                    }}
+                  >
+                    <img
+                      src={politika}
+                      style={{ width: "60%", float: "left" }}
+                      alt="politika"
+                      className="politika buttontrs"
+                    />
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -145,10 +150,10 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
             {
               // SADECE TELEFONDA GÖZÜKEN ALT SATIR
             }
-            <div class="d-flex justify-content-between">
+            <div className="d-flex justify-content-between">
               <button
                 className="d-flex align-items-end"
-                style={{ width: "30%" }}
+                style={{ width: "45%", marginLeft: "20px" }}
                 onClick={() => {
                   change_page("Sürdürülebilirlik");
                 }}

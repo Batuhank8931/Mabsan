@@ -3,80 +3,12 @@ import "./css/Uretim.css";
 import arka from "../assets/arka.svg";
 import benek from "../assets/benek.svg";
 
-const Uretim = () => {
-  const photoanan =
-    "https://s3-alpha-sig.figma.com/img/710a/d68c/9f241d0188983a0895548df77be50617?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lClo58bmk-wMlhMQX~RM2DF8oq451tgagc8Evoi0X~79Bn9JyiSo94OD-1aKPCFNlQcW9UQPRq61MKzIO8~QSYc83KhniLobHC2mRo3LzfCJr4jAakAQ1V~kX8tzxVxEeIuI4NzhgABF9vlvLgP3JdpwneaANr7vNcmJ9s97woRbYmuF98xyqgOuo694BnUv6RVkaHvtsQE~Rua8E7yBetjQt3YeewA8apLx0x8hz2rClph5DPFmel7mvERWdpWIM6CbQ84MF2GIi5MkAycooUGHmidsJk0c95NkpgQjaIQkiLZF9gQjNbgsQ0btg3iBNQTAq4D3vmR33qQ1bJ39~g__";
+const Uretim = ({UretimData}) => {
 
-  const pagerData = [
-    {
-      id: "1",
-      header1: '"El emeğiyle şekillenen her kutu, bir sanat eseridir."',
-      detail:
-        "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject1",
-      photoLink: photoanan,
-    },
-    {
-      id: "2",
-      header1: "Subject 2 Header",
-      detail:
-        "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject2",
-      photoLink: photoanan,
-    },
-    {
-      id: "3",
-      header1: "Subject 3 Header",
-      detail:
-        "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject3",
-      photoLink: photoanan,
-    },
-    {
-      id: "4",
-      header1: "Subject 4 Header",
-      detail:
-        "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject4",
-      photoLink: photoanan,
-    },
-    {
-      id: "5",
-      header1: "Subject 5 Header",
-      detail:
-        "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject5",
-      photoLink: photoanan,
-    },
-    {
-      id: "6",
-      header1: "Subject 6 Header",
-      detail:
-        "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject6",
-      photoLink: photoanan,
-    },
-    {
-      id: "7",
-      header1: "Subject 7 Header",
-      detail:
-        "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject7",
-      photoLink: photoanan,
-    },
-    {
-      id: "8",
-      header1: "Subject 8 Header",
-      detail:
-        "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-      header2: "Subject8",
-      photoLink: photoanan,
-    },
-  ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    if (currentIndex < pagerData.length - 1) {
+    if (currentIndex < UretimData.length - 1) {
       const nextIndex = currentIndex + 1;
       setCurrentIndex(nextIndex);
   
@@ -84,11 +16,11 @@ const Uretim = () => {
       const cardFronts = document.querySelectorAll(".card_front");
       cardFronts.forEach((card, index) => {
         if (index === nextIndex) {
-          card.style.height = window.innerWidth <= 600 ? "380px" : "450px";
+          card.style.height = window.innerWidth <= 600 ? "380px" : "550px";
           // Add class to trigger animation
           card.classList.add("height-animation");
         } else {
-          const height = window.innerWidth <= 600 ? "500px" : "550px";
+          const height = window.innerWidth <= 600 ? "500px" : "600px";
           card.style.height = height;
         }
       });
@@ -115,12 +47,12 @@ const Uretim = () => {
       cardFronts.forEach((card, index) => {
         if (index === prevIndex) {
           // Conditionally set height based on window width
-          const height = window.innerWidth <= 600 ? "380px" : "450px";
+          const height = window.innerWidth <= 600 ? "380px" : "550px";
           card.style.height = height;
           // Add class to trigger animation
           card.classList.add("height-animation");
         } else {
-          const height = window.innerWidth <= 600 ? "500px" : "550px";
+          const height = window.innerWidth <= 600 ? "500px" : "600px";
           card.style.height = height;
         }
       });
@@ -138,7 +70,7 @@ const Uretim = () => {
   
   
 
-  const currentItem = pagerData[currentIndex];
+  const currentItem = UretimData[currentIndex];
 
   return (
     <div
@@ -192,22 +124,22 @@ const Uretim = () => {
                     : { transform: `translateX(${-300 * currentIndex}px)` }
                 }
               >
-                {pagerData.map((pagerItem, index) => (
+                {UretimData.map((pagerItem, index) => (
                   <div
-                    className={`card_front p-3 p-md-5 pt-0 d-flex align-items-start flex-column bd-highlight 
+                    className={`card_front p-1 p-md-0 pt-0 d-flex align-items-start flex-column bd-highlight 
                     }`}
                     key={index}
                     style={window.innerWidth >= 600
-                      ?{ height: index === 0 ? "450px" : "550px" }
+                      ?{ height: index === 0 ? "550px" : "600px" }
                       :
                       { height: index === 0 ? "380px" : "500px" }
                     }
                   >
-                    <div className="title_window d-flex m-4 mb-auto bd-highlight">
-                      <label className="pager_card_header_1 pr-4">
-                        {pagerItem.id}
+                    <div className="title_window d-flex m-2 mb-auto bd-highlight pt-md-4">
+                      <label className="pager_card_header_1 pr-4 pl-4  pt-2">
+                        0{pagerItem.id}
                       </label>
-                      <label className="pager_card_header_2">
+                      <label className="pager_card_header_2 pr-2 pl-2 pt-2">
                         {pagerItem.header2}
                       </label>
                     </div>
@@ -215,7 +147,7 @@ const Uretim = () => {
                       <img
                         src={pagerItem.photoLink}
                         alt="bayrak"
-                        className="image_container"
+                        className="image_container pb-5"
                       />
                     </div>
                   </div>

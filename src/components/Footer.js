@@ -12,16 +12,16 @@ import linkedinSVG from "../assets/linkedin.svg";
 import youtubeSVG from "../assets/youtube.svg";
 import Turning_logo from "../assets/logo_1.mp4";
 
-const Footer = () => {
+const Footer = ({ change_page }) => {
   return (
-    <div className="baslik p-md-5 pt-0 pb-5 ">
+    <div className="baslik p-md-5 p-3 pt-5 pb-5">
       <div className="d-flex align-items-center justify-content-center mb-0 mb-md-5 mt-0 m-0">
         <div className="video-container">
           <video
             autoPlay
             loop
             muted
-            controls={false} // This will hide the video controls
+            controls={false}
             playsInline
             style={{
               transform: "translate(-0%, 0%)",
@@ -30,58 +30,77 @@ const Footer = () => {
             }}
           >
             <source src={Turning_logo} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-center row mr-md-5 ml-md-5 m-0">
-        <div className="kart_1 redline_footer_left d-flex align-items-center justify-content-center col-md-4 col-5 order-md-0 order-1">
+        <div className="kart_1 redline_footer_left d-flex align-items-center justify-content-center col-md-4 col-6 order-md-0 order-1">
           <div>
             <div className="d-flex align-items-center justify-content-center">
               <img src={iletisimSVG} alt="iletisim" className="iletisim" />
             </div>
-            <div className="d-flex align-items-center justify-content-center p-3">
+            <div className="d-flex align-items-center justify-content-center p-md-3 p-2">
               <label className="footer_title">İletişim</label>
             </div>
             <div className="d-flex align-items-center justify-content-center">
-              <label className="footer_title">+90 555 555 55 55</label>
+              <label className="footer_deatil_text">+90 555 555 55 55</label>
             </div>
             <div className="d-flex align-items-center justify-content-center">
-              <label className="footer_title">info@mabsan.com</label>
+              <label className="footer_deatil_text">info@mabsan.com</label>
             </div>
           </div>
         </div>
         <div
-          className="kart_2 d-flex align-items-center flex-column col-md-4 col-10 m-md-0 m-5 mb-0 mt-4 "
+          className="kart_2 d-flex align-items-center flex-column col-md-4 col-12 m-md-0 m-2 mb-0 mt-4 "
           style={{
             backgroundImage: `url(${red_hoverSVG})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="bd-highlight p-md-3 pt-4">
+          <div className="bd-highlight p-md-3 ">
             <img src={yaprakSVG} alt="yaprak" className="yaprak" />
           </div>
-          <div className="bd-highlight  ">
-            <label className="detay_title">Sürdürülebilirlik Politikası</label>
+          <div
+            className="bd-highlight"
+            onClick={() => {
+              change_page("Sürdürülebilirlik");
+            }}
+          >
+            <button
+              className="detay_title pt-3 pb-2 pt-md-4 pb-md-0
+            "
+            >
+              Sürdürülebilirlik Politikası
+            </button>
           </div>
-          <div className="mt-auto bd-highlight w-100">
-            <button className="detay_button">Detay</button>
+          <div
+            className="mt-auto bd-highlight w-100"
+            style={{ height: "60px" }}
+          >
+            <button
+              className="detay_button_footer"
+              onClick={() => {
+                change_page("Sürdürülebilirlik");
+              }}
+            >
+              Detay
+            </button>
           </div>
         </div>
-        <div className="kart_3 redline_footer_right d-flex align-items-center justify-content-center col-md-4 col-5 order-md-2 order-1">
+        <div className="kart_3 redline_footer_right d-flex align-items-center justify-content-center col-md-4 col-6 order-md-2 order-1">
           <div>
             <div className="d-flex align-items-center justify-content-center">
               <img src={adresSVG} alt="adres" className="adres" />
             </div>
-            <div className="d-flex align-items-center justify-content-center p-3">
+            <div className="d-flex align-items-center justify-content-center p-md-3 p-2">
               <label className="footer_title">Adres</label>
             </div>
             <div className="d-flex align-items-center justify-content-center">
-              <label className="footer_title">Lorem impsum met</label>
+              <label className="footer_deatil_text">Lorem impsum met</label>
             </div>
             <div className="d-flex align-items-center justify-content-center">
-              <label className="footer_title">İstanbul / Turkey</label>
+              <label className="footer_deatil_text">İstanbul / Turkey</label>
             </div>
           </div>
         </div>
@@ -123,8 +142,8 @@ const Footer = () => {
             </button>
           </div>
           <div className="d-flex justify-content-between row mr-md-5 mb-5 ">
-            <p className="footer_title">1988 - 2024 Copyright.</p>
-            <p className="footer_title">All right Reserved.</p>
+            <p className="footer_title_middle pt-3">1988 - 2024 Copyright.</p>
+            <p className="footer_title_middle">All right Reserved.</p>
           </div>
         </div>
         <div className="col-3 footer_list">
@@ -164,13 +183,27 @@ const Footer = () => {
         </div>
         <div className="hidden_bottom column">
           <div className="col-6" style={{ textAlign: "left" }}>
-            <ul style={{ listStylePosition: "inside", margin: 0, padding: 0, fontSize: "20px"}}>
+            <ul
+              style={{
+                listStylePosition: "inside",
+                margin: 0,
+                padding: 0,
+                fontSize: "15px",
+              }}
+            >
               <li>Yasal Bildirim</li>
               <li>Gizlilik Politikası</li>
             </ul>
           </div>
           <div className="col-6" style={{ textAlign: "left" }}>
-            <ul style={{ listStylePosition: "inside", margin: 0, padding: 0, fontSize: "20px" }}>
+            <ul
+              style={{
+                listStylePosition: "inside",
+                margin: 0,
+                padding: 0,
+                fontSize: "15px",
+              }}
+            >
               <li>Çerez Politikası</li>
               <li>Hizmet ve Şartlar</li>
             </ul>

@@ -2,37 +2,57 @@
 
 
 .iletisim_header{
-    font-size: 28px;
+    font-size: 20px;
+    
 }
 
 
 .iletisim_label{
-    font-size: 15px;
-    line-height: 30px;
+    font-size: 13px;
+    line-height: 13px;
+    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+
 }
 
-.iletisim-input-field{
-    height: 100%;
+.iletisim_input_field{
+    height: 70px;
     width: 95%;
     border-radius: 15px;
     padding-left: 30px;
-    font-size: 22px;
+    font-size: 18px;
     color: black;
     background-color: white;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Glowing effect */
   }
 
   
-.iletisim-submit-btn{
-    height: 100%;
+.iletisim_submit_btn{
+    height: 60px;
     width: 100%;
     border-radius: 15px;
     font-size: 22px;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    background-color: rgb(114, 4, 4);
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Glowing effect */
+    background-color: rgb(77, 2, 2);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Glowing effect */
   }
+
+  .iletisim_work_button {
+    width: 300px;
+    height: 80px;
+    background-color: transparent;
+    border: 2px solid #FFB0B0;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Add transition for smooth animation */
+    }
+
+
+
+
+.iletisim_work_button:hover {
+    width: 320px;
+    height: 80px;
+    }
 
   .iletisim_map{
     border: 0;
@@ -44,13 +64,10 @@
   @media (max-width: 601px) {
 
 
-    .iletisim-input-field{
-        height: 50px;
-        width: 100%;
-      }
-
-      .iletisim-submit-btn{
+      .iletisim_submit_btn{
         height: 50px; 
       }
+
+      
 
   }

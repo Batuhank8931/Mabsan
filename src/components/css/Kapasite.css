@@ -72,6 +72,14 @@
         
     
       }
+
+      .kapasite_label:hover{
+        font-size: 17px;
+    }
+    
+    .kapasite_band:hover{
+        font-size: 17px;
+    }
       
   
   }

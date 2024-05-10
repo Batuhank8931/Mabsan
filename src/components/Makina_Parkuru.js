@@ -1,3 +1,39 @@
+
+
+
+
+
+
+// DENEMEDİR KULLANILMAMAKTADIR.....................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React, {  useState } from "react";
 import "./css/Makina_Parkuru.css";
 
@@ -87,7 +123,7 @@ const Makina_Parkuru = () => {
       const nextIndex = currentIndex + 1;
       setCurrentIndex(nextIndex);
 
-      const cardFronts = document.querySelectorAll(".card_front");
+      const cardFronts = document.querySelectorAll(".makina_card_front");
       cardFronts.forEach((card, index) => {
         if (index === nextIndex) {
           card.style.height = window.innerWidth <= 600 ? "350px" : "500px";;
@@ -99,8 +135,8 @@ const Makina_Parkuru = () => {
         }
       });
 
-      const label1 = document.querySelector(".pager_label_1");
-      const label2 = document.querySelector(".pager_label_2");
+      const label1 = document.querySelector(".makina_label_1");
+      const label2 = document.querySelector(".makina_label_2");
       label1.classList.add("fade-out");
       label2.classList.add("fade-out");
       setTimeout(() => {
@@ -115,7 +151,7 @@ const Makina_Parkuru = () => {
       const prevIndex = currentIndex - 1;
       setCurrentIndex(prevIndex);
 
-      const cardFronts = document.querySelectorAll(".card_front");
+      const cardFronts = document.querySelectorAll(".makina_card_front");
       cardFronts.forEach((card, index) => {
         if (index === prevIndex) {
           // Conditionally set height based on window width
@@ -129,8 +165,8 @@ const Makina_Parkuru = () => {
         }
       });
 
-      const label1 = document.querySelector(".pager_label_1");
-      const label2 = document.querySelector(".pager_label_2");
+      const label1 = document.querySelector(".makina_label_1");
+      const label2 = document.querySelector(".makina_label_2");
       label1.classList.add("fade-out");
       label2.classList.add("fade-out");
       setTimeout(() => {
@@ -144,7 +180,7 @@ const Makina_Parkuru = () => {
 
   return (
     <div
-      className="baslik pager_back p-md-5 p-3 pt-5 pb-5"
+      className="baslik makina_back p-md-5 p-3 pt-5 pb-5"
       style={{
         position: "relative",
         width: "100%",
@@ -153,29 +189,29 @@ const Makina_Parkuru = () => {
     >
       {" "}
       <div className="d-flex row">
-        <div className="header_card col-12 col-md-5 d-flex row p-0 p-md-4 pb-0  ">
+        <div className="col-12 col-md-5 d-flex row p-0 p-md-4 pb-0  ">
           <div className="d-flex align-items-center justify-content-start">
-            <label className="pager_label_1 p-4">{currentItem.header1}</label>
+            <label className="makina_label_1 p-4">{currentItem.header1}</label>
           </div>
           <div>
-            <label className="pager_label_2 p-4">{currentItem.detail}</label>
+            <label className="makina_label_2 p-4">{currentItem.detail}</label>
           </div>
           <div className="d-flex align-items-center justify-content-end justify-content-md-start pl-0">
             <div className="d-flex column p-3 pl-0">
               <button
-                className="previous_button m-3"
+                className="makina_previous_button m-3"
                 onClick={handlePrevious}
                 disabled={currentIndex === 0}
               ></button>
-              <button className="next_button m-3" onClick={handleNext}></button>
+              <button className="makina_next_button m-3" onClick={handleNext}></button>
             </div>
           </div>
         </div>
-        <div className="pager_front col-12 col-md-7 p-1 pt-0">
-          <div className="slide_card_wrapper">
-            <div className="slider-container">
+        <div className="makina_front col-12 col-md-7 p-1 pt-0">
+          <div className="makina_makina_slide_card_wrapper">
+            <div className="makina_slider_container">
               <div
-                className="slide_card"
+                className="makina_slide_card"
                 style={
                   window.innerWidth >= 600
                     ? {
@@ -186,7 +222,7 @@ const Makina_Parkuru = () => {
               >
                 {pagerData.map((pagerItem, index) => (
                   <div
-                    className={`card_front p-1 p-md-1 d-flex align-items-start flex-column bd-highlight 
+                    className={`makina_card_front p-1 p-md-1 d-flex align-items-start flex-column bd-highlight 
                     }`}
                     key={index}
                     style={
@@ -203,10 +239,10 @@ const Makina_Parkuru = () => {
                     }
                   >
                     <div className="title_window flex-row m-4 ">
-                      <label className="pager_card_header_2">
+                      <label className="makina_card_header_2">
                         {pagerItem.header2}
                       </label>
-                      <label className="pager_card_header_2">
+                      <label className="makina_card_header_2">
                         {pagerItem.header3}
                       </label>
                     </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./css/Blog.css";
 
-const Blog = ({ blogData }) => {
+const Blog = ({ blogData, change_blog }) => {
   let itemsPerPage;
 
   const isPhoneScreen = () => {
@@ -39,11 +39,11 @@ const Blog = ({ blogData }) => {
     let numAdjacentPages;
 
     if (window.innerWidth >= 600) {
-      numAdjacentPages = 2;
+      numAdjacentPages = 1;
     } else {
       numAdjacentPages = 1;
     }
-    const numPagesToShow = 1 * numAdjacentPages + 1;
+    const numPagesToShow = 2 * numAdjacentPages + 1;
 
     // Calculate the range of page numbers to display
     let startPage = Math.max(0, currentIndex - numAdjacentPages);
@@ -58,21 +58,7 @@ const Blog = ({ blogData }) => {
       }
     }
 
-    // Add first page button
-    if (startPage > 0) {
-      pageNumbers.push(
-        <button
-          className="pagination_button"
-          key={0}
-          onClick={() => handlePageClick(0)}
-        >
-          1
-        </button>
-      );
-      if (startPage > 1) {
-        pageNumbers.push(<span key={"ellipsis-start"}>...</span>);
-      }
-    }
+
 
     // Add page number buttons
     for (let i = startPage; i <= endPage; i++) {
@@ -91,30 +77,23 @@ const Blog = ({ blogData }) => {
       );
     }
 
-    // Add last page button
-    if (endPage < totalPages - 1) {
-      if (endPage < totalPages - 2) {
-        pageNumbers.push(<span key={"ellipsis-end"}>...</span>);
-      }
-      pageNumbers.push(
-        <button
-          className="pagination_button"
-          key={totalPages - 1}
-          onClick={() => handlePageClick(totalPages - 1)}
-        >
-          {totalPages}
-        </button>
-      );
-    }
+
 
     return pageNumbers;
   };
+
+
 
   const getBlogItems = (start, end) => {
     return (
       <div className="row" style={{ width: "100%" }}>
         {blogData.slice(start, end).map((item, index) => (
-          <div key={index} className="col-md-6 col-12 pb-4">
+          <div
+            key={index}
+            id={`blog_${item.id}`}
+            className="col-md-6 col-12 pb-4"
+            onClick={() => change_blog(item.id,"BlogDetail")}
+          >
             <div className="blog_card_content d-flex align-items-center justify-content-center">
               <div className="date_title row justify-content-start">
                 <h1 className="day_title">{item.day}</h1>
@@ -123,7 +102,7 @@ const Blog = ({ blogData }) => {
               <div className="blog_content d-flex justify-content-center align-items-center row p-md-4 p-2">
                 {" "}
                 <label className="blog_card_title p-2">{item.title}</label>
-                <label className="blog_card_content p-2">{item.content}</label>
+                <label className="blog_card_text p-2">{item.content}</label>
               </div>
             </div>
           </div>
@@ -161,9 +140,9 @@ const Blog = ({ blogData }) => {
         </div>
 
         <div className="col-12 d-flex mt-3 justify-content-center">
-          <div style={{ width: "70px" }}>
+          <div>
             <button
-              className="blog_previous_button mr-2"
+              className="blog_previous_button"
               onClick={handlePrevious}
               disabled={currentIndex === 0}
             ></button>
@@ -172,9 +151,9 @@ const Blog = ({ blogData }) => {
           <div className="d-flex justify-content-evenly button_pack">
             {renderPageNumbers()}
           </div>
-          <div style={{ width: "70px" }}>
+          <div>
             <button
-              className="blog_next_button ml-2"
+              className="blog_next_button"
               onClick={handleNext}
               disabled={currentIndex === totalPages - 1}
             ></button>

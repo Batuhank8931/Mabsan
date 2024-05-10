@@ -1,10 +1,39 @@
+
+
+
+
+
+
+
+
+/* DENEMEDİR KULLANILMAMAKTADIR..................................................... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container {
     background-color: transparent;
     width: 100%;
 }
 
 
-.pager_label_1 {
+.makina_label_1 {
     background-color: transparent;
     font-size: 85%;
     outline: none;
@@ -16,16 +45,16 @@
 
 }
 
-.pager_label_1:hover {
+.makina_label_1:hover {
   font-size: 95%;
 }
 
-.pager_label_1.fade-out {
+.makina_label_1.fade-out {
   opacity: 0;
 }
 
 
-.pager_label_2 {
+.makina_label_2 {
     background-color: transparent;
     font-size: 50%;
     outline: none;
@@ -36,15 +65,15 @@
 
 }
 
-.pager_label_2:hover {
+.makina_label_2:hover {
   font-size: 55%;
 }
 
-.pager_label_2.fade-out {
+.makina_label_2.fade-out {
   opacity: 0;
 }
 
-.previous_button, .next_button {
+.makina_previous_button, .makina_next_button {
     width: 65px;
     height: 65px;
     background-color: #cccccc63;
@@ -59,17 +88,17 @@
     transition: all 0.3s ease; /* Add transition for smooth animation */
   }
   
-  .previous_button::before, .next_button::after {
+  .makina_previous_button::before, .makina_next_button::after {
     content: "\2190"; /* Unicode for left arrow */
     font-size: 30px;
   }
   
-  .next_button::after {
+  .makina_next_button::after {
     content: "\2192"; /* Unicode for right arrow */
   }
   
   /* Additional styles */
-  .previous_button:hover, .next_button:hover {
+  .makina_previous_button:hover, .makina_next_button:hover {
     background-color: #999999de;
     width: 68px;
     height: 68px;
@@ -78,20 +107,20 @@
 
   
   /* Reset hover styles when button is clicked */
-  .previous_button:active:hover, .next_button:active:hover {
+  .makina_previous_button:active:hover, .makina_next_button:active:hover {
     background-color: #cccccc63; /* Reset background color */
     width: 80px;
     height: 80px;
   }
   
 
-  .slider-container {
+  .makina_slider_container {
     overflow: hidden;
     height: 100%;
   }
 
 
-  .slide_card {
+  .makina_slide_card {
     display: flex;
     transition: transform 0.5s ease-in-out;    
     width: 1500%;
@@ -100,12 +129,15 @@
   }
     
 
-  .card_front{
+  .makina_card_front{
     background-color: rgba(204, 204, 204, 0.4); /* Fully opaque light grey background */
     backdrop-filter: blur(3px); /* Blur effect with 10px radius */
     border-radius: 30px 0 30px 0 ; /* Top left and bottom right corners have border radius */
+    margin-right: 60px;
+    margin-left: 20px;
+    height: 550px;
+    width: 370px;
     transition: height 0.3s ease; /* Add transition for height property */
-    
   }
 
 
@@ -114,7 +146,7 @@
   }
 
 
-  .pager_card_header_1{
+  .makina_card_header_1{
     background-color: transparent; /* Transparent background */
     color: white;
     font-size: 100%;
@@ -125,11 +157,11 @@
     width: 70px;
   }
 
-  .pager_card_header_1:hover{
+  .makina_card_header_1:hover{
     font-size: 105%;
   }
 
-  .pager_card_header_2 {
+  .makina_card_header_2 {
     background-color: transparent; /* Transparent background */
     color: white;
     font-size: 70%;
@@ -139,7 +171,7 @@
     transition: font-size 0.2s;
   }
   
-  .pager_card_header_2:hover{
+  .makina_card_header_2:hover{
     font-size: 100%;
   }
 
@@ -165,7 +197,7 @@
   @media (min-width: 601px) {
 
     
-    .slide_card_wrapper{
+    .makina_makina_slide_card_wrapper{
       height: 100%;
       width: 100%;
     }
@@ -194,11 +226,11 @@
 
 
 
-  .pager_back {
+  .makina_back {
     background-image: none !important; 
   }
 
-  .card_front{
+  .makina_card_front{
     margin-right: 20px;
     margin-left: 0px;
     width: 280px;

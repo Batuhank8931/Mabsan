@@ -1,9 +1,9 @@
-.input-field{
+.input_field{
   height: 70px;
   margin: 8px;
   border-radius: 15px;
   padding-left: 30px;
-  font-size: 22px;
+  font-size: 18px;
   color: black;
   background-color: white;
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Glowing effect */
@@ -21,15 +21,15 @@
     border: 1px solid red;
     padding-left: 30px;
     padding-top: 20px;
-    font-size: 22px;
+    font-size: 18px;
     color: black;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Glowing effect */
 
 }
 
 .work_button {
-    width: 100%;
-    height: 60px;
+    width: 300px;
+    height: 80px;
     background-color: transparent;
     border: 2px solid #FFB0B0;
     cursor: pointer;
@@ -38,7 +38,19 @@
 
 
 .work_button:hover {
-    width: 105%;
+    width: 320px;
     height: 80px;
     }
 
+    
+
+.Cv_Button{
+    transition: all .3s;
+    
+}
+    
+.Cv_Button:hover {
+    border-radius: 30%;
+    box-shadow: 0 0 10px 10px rgb(247, 138, 138); /* Red border shadow */
+    background-color: rgb(247, 138, 138);
+}

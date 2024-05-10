@@ -1,7 +1,22 @@
-
+@font-face {
+  font-family: 'Power Grotesk';
+  src: url('./fonts/PowerGrotesk-Regular.ttf') format('truetype');
+  /* You might need to adjust the path based on your directory structure */
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+      url(./fonts/Montserrat/static/Montserrat-Medium.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Montserrat-Bold';
   font-style: normal;
   font-weight: 400;
   src: local('Montserrat Regular'), local('Montserrat-Regular'),
@@ -13,8 +28,17 @@
   font-style: normal;
   font-weight: 400;
   src: local('Gotham Regular'), local('Gotham-Regular'),
-      url(./fonts/Gotham-Font/Gotham-Light.otf) format('opentype');
+      url('fonts/Gotham-Font/Gotham-Light.otf') format('opentype');
 }
+
+@font-face {
+  font-family: 'Gotham_Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gotham Regular'), local('Gotham-Regular'),
+      url('fonts/Gotham-Font/GothamBold.ttf') format('woff2');
+}
+
 
 
 body {
