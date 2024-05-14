@@ -1,7 +1,8 @@
 {
-  "name": "Mabsan",
-  "version": "0.1.0",
+  "name": "Neomani",
+  "homepage": "https://deneme.neomani.com/",
   "private": true,
+  "version": "0.0.0",
   "dependencies": {
     "@testing-library/dom": ">=9.0.0",
     "@testing-library/jest-dom": ">=5.17.0",
@@ -10,7 +11,7 @@
     "intersection-observer": ">=0.12.2",
     "react": ">=16.20.1",
     "react-dom": ">=18.3.1",
-    "react-router-dom": "^6.23.0",
+    "react-router-dom": "^6.23.1",
     "react-transition-group": ">=4.4.5",
     "react-use": ">=17.5.0",
     "react-vimeo": ">=2.0.0",

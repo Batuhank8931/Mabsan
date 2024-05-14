@@ -22,7 +22,7 @@
     border-radius: 70px 0px 70px 0px; /* Apply border-radius to pseudo-element */
     background-position: center; /* Center the background gradient horizontally and vertically */
     background-repeat: no-repeat; 
-    z-index: -1;
+    z-index: 0;
 }
 
 

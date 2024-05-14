@@ -9,7 +9,7 @@ const Mabsan_Way_Form = ({ PARAMATER1, PARAMATER2, PARAMATER3, PARAMATER4 }) => 
       className="baslik p-md-5 p-3 pt-1 pb-0 pb-md-0"
       style={{
         width: "100%",
-        backgroundColor: "rgba(0, 0, 0, 0)",
+        backgroundColor: "transparent",
       }}
     >
       <div className="row">
