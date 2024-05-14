@@ -12,6 +12,8 @@ import linkedinSVG from "../assets/linkedin.svg";
 import youtubeSVG from "../assets/youtube.svg";
 import Turning_logo from "../assets/logo_1.mp4";
 
+import { Link } from "react-router-dom";
+
 const Footer = ({ change_page }) => {
   return (
     <div className="baslik p-md-5 p-3 pt-5 pb-5">
@@ -71,7 +73,8 @@ const Footer = ({ change_page }) => {
               className="detay_title pt-3 pb-2 pt-md-4 pb-md-0
             "
             >
-              Sürdürülebilirlik Politikası
+              
+              <Link to={"/surdurulebilirlik"}> Sürdürülebilirlik Politikası </Link>
             </button>
           </div>
           <div
@@ -84,7 +87,7 @@ const Footer = ({ change_page }) => {
                 change_page("Sürdürülebilirlik");
               }}
             >
-              Detay
+              <Link to={"/surdurulebilirlik"}> Detay </Link>
             </button>
           </div>
         </div>

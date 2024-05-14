@@ -55,7 +55,7 @@ const Diger_Sektorler = ({ Diger_Sektorler_Data }) => {
   };
 
   return (
-    <div className="baslik_diger p-md-5 p-3 red_background pt-">
+    <div className="baslik_diger p-md-5 p-3 red_background">
       <div className="d-flex align-items-center flex-column">
         <label className="pt-5" style={{fontSize:"30px"}}>Diğer Sektörler</label>
       </div>

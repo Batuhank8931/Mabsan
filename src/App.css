@@ -16,6 +16,7 @@ body {
 .App {
   max-width: 100%; /* Set the maximum width for the App div */
   margin: 0 auto; /* Center the App div horizontally */
+  background-color: black; /* Set background color */
 }
 
 @media (max-width: 601px) {

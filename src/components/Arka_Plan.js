@@ -3,26 +3,11 @@ import "./css/Arka_Plan.css";
 import arka from "../assets/arka.svg";
 import benek from "../assets/benek.svg";
 import workers_man from "../assets/workers_man.svg";
-import Big_Slider from "./Big_Slider"
+import Big_Slider from "./Big_Slider";
 import MabsanWay from "../assets/MabsanWay.svg";
 import Mabsan_Way_Form from "./Mabsan_Way_Form";
-import image_1 from "../assets/image_1.svg";
 
-
-const value1 = "The Mabsan Way";
-
-const value2 = `
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-`;
-
-const value3 = "Our Strategy";
-
-
-const value4 = image_1;
-
-const Arka_Plan = ({pagerData, background}) => {
+const Arka_Plan = ({ pagerData, background, Mabsan_Way }) => {
   return (
     <div
       style={{
@@ -35,13 +20,17 @@ const Arka_Plan = ({pagerData, background}) => {
         backgroundRepeat: "no-repeat, no-repeat, no-repeat",
       }}
     >
-      <Big_Slider pagerData={pagerData} background={background}/>
+      <Big_Slider pagerData={pagerData} background={background} />
 
       <div className="p-md-5 p-1">
         <img src={MabsanWay} alt="MabsanWay" className="MabsanWay p-md-5 p-1" />
       </div>
-      <Mabsan_Way_Form PARAMATER1={value1} PARAMATER2={value2} PARAMATER3={value3} PARAMATER4={value4} />
-
+      <Mabsan_Way_Form
+        PARAMATER1={Mabsan_Way.value1}
+        PARAMATER2={Mabsan_Way.value2}
+        PARAMATER3={Mabsan_Way.value3}
+        PARAMATER4={Mabsan_Way.value4}
+      />
     </div>
   );
 };

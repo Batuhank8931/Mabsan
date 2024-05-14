@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./css/Blog.css";
 
+import { Link } from "react-router-dom";
+
 const Blog = ({ blogData, change_blog }) => {
   let itemsPerPage;
 
@@ -58,8 +60,6 @@ const Blog = ({ blogData, change_blog }) => {
       }
     }
 
-
-
     // Add page number buttons
     for (let i = startPage; i <= endPage; i++) {
       pageNumbers.push(
@@ -77,12 +77,8 @@ const Blog = ({ blogData, change_blog }) => {
       );
     }
 
-
-
     return pageNumbers;
   };
-
-
 
   const getBlogItems = (start, end) => {
     return (
@@ -92,7 +88,7 @@ const Blog = ({ blogData, change_blog }) => {
             key={index}
             id={`blog_${item.id}`}
             className="col-md-6 col-12 pb-4"
-            onClick={() => change_blog(item.id,"BlogDetail")}
+            onClick={() => change_blog(item.id, "BlogDetail")}
           >
             <div className="blog_card_content d-flex align-items-center justify-content-center">
               <div className="date_title row justify-content-start">
@@ -100,9 +96,11 @@ const Blog = ({ blogData, change_blog }) => {
                 <p className="month_title">{item.month}</p>
               </div>
               <div className="blog_content d-flex justify-content-center align-items-center row p-md-4 p-2">
-                {" "}
-                <label className="blog_card_title p-2">{item.title}</label>
-                <label className="blog_card_text p-2">{item.content}</label>
+                <Link to={`/blog/${item.id}`}>
+                  {" "}
+                  <label className="blog_card_title p-2">{item.title}</label>
+                  <label className="blog_card_text p-2">{item.content}</label>
+                </Link>{" "}
               </div>
             </div>
           </div>

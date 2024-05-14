@@ -6,6 +6,8 @@ import bayrak from "../assets/bayrak.svg";
 import politika from "../assets/politika.svg";
 import "./css/NavBar.css"; // Importing the CSS file
 
+import { Link } from "react-router-dom";
+
 const NavBar = ({ showButtonsAgain, change_page }) => {
   const [showNavbar, setShowNavbar] = useState(true); // State to control the visibility of the navbar
 
@@ -29,7 +31,9 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                 }}
               >
                 {" "}
+                <Link to={"/"}>
                 <img src={MabsanLogo} alt="Mabsan Logo" />
+                </Link>
               </button>
             </div>
 
@@ -41,7 +45,7 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                     change_page("Kurumsal");
                   }}
                 >
-                  Kurumsal
+                  <Link to={"/kurumsal"}>Kurumsal </Link>
                 </button>
                 <button
                   className="mx-2 buttons mt-2 mb-4"
@@ -49,7 +53,7 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                     change_page("Üretim");
                   }}
                 >
-                  Üretim
+                  <Link to={"/uretim"}>Üretim </Link>
                 </button>
                 <button
                   className="mx-2 buttons mt-2 mb-4"
@@ -57,7 +61,7 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                     change_page("Ürünler");
                   }}
                 >
-                  Ürünler
+                  <Link to={"/urunler"}>Ürünler </Link>
                 </button>
                 <button
                   className="mx-2 buttons mt-2 mb-4"
@@ -65,7 +69,7 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                     change_page("Kariyer");
                   }}
                 >
-                  Kariyer
+                  <Link to={"/kariyer"}>Kariyer </Link>
                 </button>
                 <button
                   className="mx-2 buttons mt-2 mb-4"
@@ -73,7 +77,7 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                     change_page("Blog");
                   }}
                 >
-                  Blog
+                  <Link to={"/blog"}>Blog </Link>
                 </button>
                 <button
                   className="mx-2 buttons mt-2 mb-4"
@@ -81,15 +85,15 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                     change_page("Perakende");
                   }}
                 >
-                  Perakende
+                  <Link to={"/perakende"}>Perakende </Link>
                 </button>
                 <button
                   className="mx-2 buttons mt-2 mb-4"
                   onClick={() => {
-                    change_page("İletişim");
+                    change_page("iletisim");
                   }}
                 >
-                  İletişim
+                  <Link to={"/iletisim"}>İletişim </Link>
                 </button>
               </div>
               <div
@@ -97,18 +101,21 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                 style={{ height: "68%" }}
               >
                 {" "}
-                <div className="underline_0 d-flex align-items-end">
+                <div className="underline_0 d-none d-md-flex align-items-end">
                   <button
                     onClick={() => {
                       change_page("Sürdürülebilirlik");
                     }}
                   >
-                    <img
-                      src={politika}
-                      style={{ width: "60%", float: "left" }}
-                      alt="politika"
-                      className="politika buttontrs"
-                    />
+                    <Link to={"/surdurulebilirlik"}>
+                      {" "}
+                      <img
+                        src={politika}
+                        style={{ width: "60%", float: "left" }}
+                        alt="politika"
+                        className="politika buttontrs"
+                      />{" "}
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -158,11 +165,14 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                   change_page("Sürdürülebilirlik");
                 }}
               >
-                <img
-                  src={politika}
-                  alt="politika"
-                  className="politika buttontrs"
-                />
+                <Link to={"/surdurulebilirlik"}>
+                  {" "}
+                  <img
+                    src={politika}
+                    alt="politika"
+                    className="politika buttontrs"
+                  />{" "}
+                </Link>
               </button>
               <div className="d-flex align-items-center">
                 <button className="mx-2 buttontrs d-flex align-items-center justify-content-center">

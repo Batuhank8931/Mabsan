@@ -3,10 +3,11 @@ import Mabsan from "../assets/mabsan.svg";
 import MenuButton from "../assets/MenuButton.svg";
 import backgroundSVG from "../assets/HeaderBackground.svg";
 import polygon from "../assets/polygon.svg";
-import { CSSTransition } from "react-transition-group";
 
 import Navbar from "./NavBar.js"; // Importing the NavBar component
 import "./css/SubNavbar.css"; // Importing the CSS file
+
+import { Link } from "react-router-dom";
 
 const SubNavbar = ({ change_page, sectorLabel }) => {
   const [containerWidth, setContainerWidth] = useState(0);
@@ -150,11 +151,14 @@ const SubNavbar = ({ change_page, sectorLabel }) => {
                           style={{ width: "auto" }}
                         >
                           {" "}
-                          <img
-                            src={Mabsan}
-                            alt="Mabsan"
-                            className="mabsan h-10"
-                          />
+                          <Link to={"/"}>
+                            {" "}
+                            <img
+                              src={Mabsan}
+                              alt="Mabsan"
+                              className="mabsan h-10"
+                            />
+                          </Link>
                         </button>
                       </div>
                     )}
