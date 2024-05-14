@@ -68,6 +68,8 @@ const Acilis_Sayfasi = ({ change_page }) => {
         position: "relative",
         backgroundColor: "black",
         width: "100%",
+        height: window.innerWidth <= 600 ? "100vh" : "100%", // Conditionally set height
+
       }}
     >
       {showNavbar && (
@@ -277,7 +279,7 @@ const Acilis_Sayfasi = ({ change_page }) => {
                 className="label d-flex flex-row justify-content-center align-content-between pt-5 pl-3 pr-3 col-10"
                 style={{ position: "absolute", width: "100%", height: "100%" }}
               >
-                <div className="d-flex flex-column" style={{ width: "100%" }}>
+                <div className="d-flex align-items-end" style={{ width: "100%" }}>
                   {showButtons && (
                     <div style={{ width: "100%" }}>
                       <div
