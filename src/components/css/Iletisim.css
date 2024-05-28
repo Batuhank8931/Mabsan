@@ -9,8 +9,10 @@
 
 .iletisim_label{
     font-size: 13px;
-    line-height: 13px;
     font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    text-align: start;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -35,6 +37,17 @@
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(77, 2, 2);
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Glowing effect */
+  }
+
+  .bilgi_input_field{
+    height: 170px;
+    width: 100%;
+    border-radius: 15px;
+    padding-left: 30px;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Glowing effect */
   }
 
   .iletisim_work_button {

@@ -16,10 +16,13 @@ const value3 = Main_Data.Cards.value3;
 const value4 = Main_Data.Cards.value4;
 const value5 = Main_Data.Cards.value5;
 
+const SektorItems = Main_Data.SektorItems;
+
+
 const Kariyer_Page = ({ change_page }) => {
   return (
     <>
-      <SubNavbar change_page={change_page} sectorLabel={"Kariyer"} />
+      <SubNavbar change_page={change_page} sectorLabel={"Kariyer"} SektorItems={SektorItems} />
       <Why_Work />
       <Cv_Gonder />
       <Mabsan_Way_Form

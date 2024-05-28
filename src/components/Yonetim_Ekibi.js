@@ -86,7 +86,7 @@ const Uretim = ({YonetimData}) => {
                 style={
                   window.innerWidth >= 600
                     ? {
-                        transform: `translateX(${-149 * currentIndex}px)`,
+                        transform: `translateX(${-0 * currentIndex}px)`,
                       }
                     : { transform: `translateX(${-175 * currentIndex}px)` }
                 }

@@ -8,6 +8,9 @@ import Kozmetik from "../assets/kozmetik.svg";
 import İlac from "../assets/ilac.svg";
 import Otomotiv from "../assets/otomotiv.svg";
 
+import teknik_kutu from "../assets/teknik_kutu.png";
+import acik_kutu from "../assets/acik_kutu.png";
+
 import E_Ticaret_b from "../assets/e_ticaret_b.svg";
 import Edustriyel_b from "../assets/endustriyel_b.svg";
 import Elektrik_b from "../assets/elektrik_b.svg";
@@ -25,13 +28,13 @@ import Mabsan_Way_image from "../assets/image_1.svg";
 import Mukavva_Data from "../assets/Mukavva_Data.png";
 
 const SektorItems = [
-  { name: "E-Ticaret", image: E_Ticaret, image_b: E_Ticaret_b },
-  { name: "Endüstriyel", image: Edustriyel, image_b: Edustriyel_b },
-  { name: "Elektrik- Elektronik", image: Elektrik, image_b: Elektrik_b },
-  { name: "Perakende", image: Perakende, image_b: Perakende_b },
-  { name: "Kozmetik", image: Kozmetik, image_b: Kozmetik_b },
-  { name: "İlaç", image: İlac, image_b: İlac_b },
-  { name: "Otomotiv", image: Otomotiv, image_b: Otomotiv_b },
+  { name: "E-Ticaret", image: E_Ticaret, image_b: E_Ticaret_b, way:"eticaret", video:"apples.mp4" , header:"E-Ticaret Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
+  { name: "Endüstriyel", image: Edustriyel, image_b: Edustriyel_b, way:"endustriyel", video:"apples.mp4" , header:"Endüstriyel Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
+  { name: "Elektrik- Elektronik", image: Elektrik, image_b: Elektrik_b, way:"elektrikelektronik", video:"apples.mp4" , header:"Elektrik-Elektronik Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
+  { name: "Perakende", image: Perakende, image_b: Perakende_b, way:"preakende", video:"apples.mp4" , header:"Perakende Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
+  { name: "Kozmetik", image: Kozmetik, image_b: Kozmetik_b, way:"kozmetik", video:"apples.mp4" , header:"Kozmetik Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
+  { name: "İlaç", image: İlac, image_b: İlac_b, way:"ilac", video:"apples.mp4" , header:"İlaç Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
+  { name: "Otomotiv", image: Otomotiv, image_b: Otomotiv_b, way:"otomotiv", video:"apples.mp4" , header:"Otomotiv Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
 ];
 
 const UretimData = [
@@ -217,31 +220,7 @@ const YonetimData = [
     Name: "Hasan Karadeniz",
     Position: "Satış Müdürü",
     photoLink: Yonetim_image,
-  },
-  {
-    id: "7",
-    Name: "Selma Aksoy",
-    Position: "Sosyal Medya Müdürü",
-    photoLink: Yonetim_image,
-  },
-  {
-    id: "8",
-    Name: "Cemil Kılıç",
-    Position: "Yazılım Geliştirme Müdürü",
-    photoLink: Yonetim_image,
-  },
-  {
-    id: "9",
-    Name: "Elif Çelik",
-    Position: "Veri Analisti",
-    photoLink: Yonetim_image,
-  },
-  {
-    id: "10",
-    Name: "Ahmet Yıldız",
-    Position: "Veri Yöneticisi",
-    photoLink: Yonetim_image,
-  },
+  }
 ];
 
 const blogData = [

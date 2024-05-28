@@ -10,10 +10,12 @@ import Main_Data from "../components/DB_converter";
 
 const UrunData = Main_Data.UrunData;
 
+const SektorItems = Main_Data.SektorItems;
+
 const Urunler_Page = ({ change_page }) => {
   return (
     <>
-      <SubNavbar change_page={change_page} sectorLabel={"Ürünler"} />
+      <SubNavbar change_page={change_page} sectorLabel={"Ürünler"} SektorItems={SektorItems}/>
       <Urunler_Filmi />
       <Middle_Header MiddleLabel={"Tüm Ürünler"} />
       <Urunler UrunData={UrunData} />

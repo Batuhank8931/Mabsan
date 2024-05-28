@@ -7,6 +7,7 @@ import BlogDetail from "../components/BlogDetail";
 import Main_Data from "../components/DB_converter";
 
 const blogData = Main_Data.blogData;
+const SektorItems = Main_Data.SektorItems;
 
 const Blog_Detail_Page = ({ change_page , Blog_Detail }) => {
 
@@ -16,7 +17,7 @@ const Blog_Detail_Page = ({ change_page , Blog_Detail }) => {
 
   return (
     <>
-      <SubNavbar change_page={change_page} sectorLabel={"Blog"} />
+      <SubNavbar change_page={change_page} sectorLabel={"Blog"} SektorItems={SektorItems} />
       <BlogDetail Blog_Detail={blogDetailId} all_data={blogData} />
       <Footer change_page={change_page}/>
     </>

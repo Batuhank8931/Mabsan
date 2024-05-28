@@ -17,10 +17,12 @@ const misyon = Main_Data.Paragraflar.misyon;
 const vizyon = Main_Data.Paragraflar.vizyon;
 const YolculugumuzData = Main_Data.YolculugumuzData;
 
+const SektorItems = Main_Data.SektorItems;
+
 const Kurumsal_Page = ({ change_page }) => {
   return (
     <>
-      <SubNavbar change_page={change_page} sectorLabel={"Kurumsal"} />
+      <SubNavbar change_page={change_page} sectorLabel={"Kurumsal"} SektorItems={SektorItems} />
       <Tanitim_Filmi />
       <Left_Header sectorLabel={"Yönetim Ekibimiz"} />
       <Yonetim_Ekibi YonetimData={YonetimData} />

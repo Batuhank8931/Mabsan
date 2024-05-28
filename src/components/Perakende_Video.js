@@ -1,10 +1,13 @@
 import React from "react";
 import "./css/Perakende_Video.css";
-import Apples from "../assets/apples.mp4";
 
-const Perakende_Video = () => {
+const Perakende_Video = ({ matchedItemDetails }) => {
+  const video = matchedItemDetails[0];
+
+  const videoSource = require(`../assets/sektorler/${video}`);
+
   return (
-    <div className="baslik p-md-5 p-3 pb-md-5 pb-4 pt-0 pt-md-0">
+    <div className="baslik p-md-5 p-3 pb-md-5 pb-4 pt-0 pt-md-0 pb-0">
       <div id="video-container">
         <video
           autoPlay
@@ -17,21 +20,14 @@ const Perakende_Video = () => {
             opacity: 1,
           }}
         >
-          <source src={Apples} type="video/mp4" />
+          <source src={videoSource} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
       <div>
         <div className="d-flex align-items-center flex-column">
-          <h1 className="perakende_header">Header</h1>
-          <label className="video_text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum
-            nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce
-            vitae dignissim odio, eget fermentum metus. Pellentesque semper
-            posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin
-            placerat risus et erat cursus consequat.
-          </label>
+          <h1 className="perakende_header">{matchedItemDetails[1]}</h1>
+          <label className="video_text">{matchedItemDetails[2]}</label>
         </div>
       </div>
     </div>

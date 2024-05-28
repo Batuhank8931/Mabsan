@@ -12,11 +12,13 @@ const MakinaData = Main_Data.MakinaData;
 
 const Mabsan_Way = Main_Data.Mabsan_Way;
 
+const SektorItems = Main_Data.SektorItems;
+
 const Uretim_Page = ({ change_page }) => {
 
   return (
     <>
-      <SubNavbar change_page={change_page} sectorLabel={"Üretim"} />
+      <SubNavbar change_page={change_page} sectorLabel={"Üretim"} SektorItems={SektorItems} />
       <Tanitim_Filmi />
       <Kapasite />
       <Arka_Plan

@@ -57,3 +57,26 @@
       }
 
   }
+
+
+  .share_button{
+    transition: all .2s ease;
+    height: 50px;
+  }
+
+  .all_buttons {
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: all .2s ease;
+  }
+  
+  .share_button_container:hover .all_buttons {
+    height: 50px;
+     /* or any desired width */
+  }
+  
+  .share_button_container:hover .share_button {
+    opacity: 0;
+    height: 0;
+  }

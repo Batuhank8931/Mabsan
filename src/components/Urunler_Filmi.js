@@ -4,7 +4,7 @@ import tanitim_filmi from "../assets/scene.mp4";
 
 const Tanitim_Filmi = () => {
   return (
-    <div className="d-flex justify-content-center p-md-5 pt-4 pb-0">
+    <div className="d-flex justify-content-center pb-0">
       <video
         autoPlay
         loop

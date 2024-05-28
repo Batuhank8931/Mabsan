@@ -8,7 +8,7 @@ import "./css/NavBar.css"; // Importing the CSS file
 
 import { Link } from "react-router-dom";
 
-const NavBar = ({ showButtonsAgain, change_page }) => {
+const NavBar = ({ showButtonsAgain, change_page, SektorItems }) => {
   const [showNavbar, setShowNavbar] = useState(true); // State to control the visibility of the navbar
 
   // Function to toggle the visibility of the navbar
@@ -32,44 +32,55 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
               >
                 {" "}
                 <Link to={"/"}>
-                <img src={MabsanLogo} alt="Mabsan Logo" />
+                  <img src={MabsanLogo} alt="Mabsan Logo" />
                 </Link>
               </button>
             </div>
 
             <div className="flex-column col-7 col-md-10">
-              <div className="d-md-flex flex-md-row flex-column align-items-start justify-content-around p-md-2 p-3 pt-0 m-md-0 ml-0 mb-5 ">
+              <div className="d-md-flex flex-md-row flex-column align-items-start justify-content-around p-md-2 p-3 pt-0 m-md-0 ml-0 mb-5 button_container ">
                 <button
                   className="buttons mx-2 mt-2 mb-4"
                   onClick={() => {
                     change_page("Kurumsal");
                   }}
                 >
-                  <Link to={"/kurumsal"}>Kurumsal </Link>
+                  <Link to={"/kurumsal"}>Kurumsal</Link>
                 </button>
                 <button
-                  className="mx-2 buttons mt-2 mb-4"
+                  className="mx-2 buttons mt-2 mb-3"
                   onClick={() => {
                     change_page("Üretim");
                   }}
                 >
-                  <Link to={"/uretim"}>Üretim </Link>
+                  <Link to={"/uretim"}>Üretim</Link>
                 </button>
-                <button
-                  className="mx-2 buttons mt-2 mb-4"
-                  onClick={() => {
-                    change_page("Ürünler");
-                  }}
-                >
-                  <Link to={"/urunler"}>Ürünler </Link>
-                </button>
+
+                <div className="dropdown">
+                  <button className="mx-2 buttons urunler_button mt-2 mb-3">
+                    Ürünler
+                  </button>
+                  <div className="dropdown_content">
+                    {/* Map through SektorItems array to generate dropdown items */}
+                    {SektorItems.map((item, index) => (
+                      <button
+                        className="dropdown_item"
+                        key={index}
+                        onClick={() => change_page(item.way)}
+                      >
+                        <Link to={`/${item.way}`}>{item.name}</Link>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
                 <button
                   className="mx-2 buttons mt-2 mb-4"
                   onClick={() => {
                     change_page("Kariyer");
                   }}
                 >
-                  <Link to={"/kariyer"}>Kariyer </Link>
+                  <Link to={"/kariyer"}>Kariyer</Link>
                 </button>
                 <button
                   className="mx-2 buttons mt-2 mb-4"
@@ -77,23 +88,25 @@ const NavBar = ({ showButtonsAgain, change_page }) => {
                     change_page("Blog");
                   }}
                 >
-                  <Link to={"/blog"}>Blog </Link>
+                  <Link to={"/blog"}>Blog</Link>
                 </button>
+                {/* Map through SektorItems array to generate dropdown items 
                 <button
                   className="mx-2 buttons mt-2 mb-4"
                   onClick={() => {
                     change_page("Perakende");
                   }}
                 >
-                  <Link to={"/perakende"}>Perakende </Link>
+                  <Link to={"/perakende"}>Sektöler</Link>
                 </button>
+                */}
                 <button
                   className="mx-2 buttons mt-2 mb-4"
                   onClick={() => {
                     change_page("iletisim");
                   }}
                 >
-                  <Link to={"/iletisim"}>İletişim </Link>
+                  <Link to={"/iletisim"}>İletişim</Link>
                 </button>
               </div>
               <div
