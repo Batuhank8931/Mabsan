@@ -17,7 +17,7 @@ const YolculugumuzData = Main_Data.YolculugumuzData;
 const Main_Page = ({ change_page }) => {
   return (
     <>
-      <Acilis_Sayfasi change_page={change_page} />
+      <Acilis_Sayfasi change_page={change_page} SektorItems={SektorItems} />
       <Left_Header sectorLabel={"Sektörler"} />
       <Sektorler SektorItems={SektorItems} />
       <Right_Header sectorLabel={"Üretim"} />

@@ -5,6 +5,8 @@ import rectangle from "../assets/Rectangle.svg";
 import rectangleYatik from "../assets/Rectangle_yatik.svg";
 import SektorApples from "../assets/SektorApples.mp4";
 
+import { Link } from "react-router-dom";
+
 const Sektorler = ({ SektorItems }) => {
 
 
@@ -71,6 +73,7 @@ const Sektorler = ({ SektorItems }) => {
           <div className="container">
             {SektorItems.map((item, index) => (
               <div className="blocks" key={index}>
+                <Link to={`/${item.way}`}>
                 <button
                   className="sektor_button"
                   id={
@@ -87,6 +90,7 @@ const Sektorler = ({ SektorItems }) => {
                     backgroundSize: "cover",
                   }}
                 >
+                  
                   <div className="button_header d-flex align-items-start flex-md-column justify-content-center">
                     <div
                       className="order-md-1 order-2 mt-2"
@@ -188,8 +192,11 @@ const Sektorler = ({ SektorItems }) => {
                         </video>
                       </div>
                     </div>
+                    
                   </div>{" "}
+                  
                 </button>
+                </Link>
               </div>
             ))}
           </div>

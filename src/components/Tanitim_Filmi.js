@@ -23,6 +23,7 @@ const Tanitim_Filmi = () => {
 
   return (
     <div className="video-container-main">
+      <div className="black_band"></div>
       <video
         controls
         className="video-element"

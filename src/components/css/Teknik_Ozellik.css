@@ -50,13 +50,14 @@
 }
 
 .header_box{
-    width: 200px;
+    width: 100%;
 }
 
 .Teknik_Header{
     font-family: 'Montserrat', sans-serif; /* Use Gotham font */
     font-weight: bold;
     font-size: 30px;
+    width: 200px;
 
 }
 
@@ -79,6 +80,13 @@
     
 }
 
+.fefco_download{
+    width: 200px;
+    height: 100%;
+    border-radius: 0%;
+    overflow: hidden;
+}
+
 .teknik_simge{
     width: 40px;
 }
@@ -92,13 +100,25 @@
 
     .acik_kutu{
         width: 75%;
-        transform: translateY(130%) translateX(-10%);
+        transform: translateY(100%) translateX(-10%);
         
     }
 
 
     .Teknik_Header{
         transform: translateX(70%);
+    }
+
+    .fefco_download{
+        width: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        transform: translateY(-110%) translateX(10%);
+    }
+
+    .left_box {
+        height: 500px;
+        position: relative;
     }
 
 }

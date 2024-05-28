@@ -4,9 +4,9 @@ import MenuButton from "../assets/MenuButton.svg";
 import bayrak from "../assets/bayrak.svg";
 import Navbar from "./NavBar.js"; // Importing the NavBar component
 import "./css/Acilis_Sayfasi.css"; // Importing the CSS file
-import AcilisApples from "../assets/AcilisApples.mp4";
+import AcilisApples from "../assets/mabsan1080low.mp4";
 
-const Acilis_Sayfasi = ({ change_page }) => {
+const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
   const videoId = "l1cBhOqSV4M"; // YouTube video ID
   const [containerWidth, setContainerWidth] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
@@ -14,6 +14,20 @@ const Acilis_Sayfasi = ({ change_page }) => {
   const [showNavbar, setShowNavbar] = useState(null); // State to control the visibility of the navbar
   const [initialRender, setInitialRender] = useState(true); // State to track initial render
   const containerRef = useRef(null);
+
+  const [shouldPlay, setShouldPlay] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShouldPlay(true);
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+    }, 3500); // Delay for 3.5 seconds
+
+    return () => clearTimeout(timer); // Clean up the timer on unmount
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,11 +83,10 @@ const Acilis_Sayfasi = ({ change_page }) => {
         backgroundColor: "black",
         width: "100%",
         height: window.innerWidth <= 600 ? "100vh" : "100%", // Conditionally set height
-
       }}
     >
       {showNavbar && (
-        <Navbar change_page={change_page} showButtonsAgain={showButtonsAgain} />
+        <Navbar change_page={change_page} showButtonsAgain={showButtonsAgain} SektorItems={SektorItems}  />
       )}
       {window.innerWidth <= 600 && (
         <div // 1. BLANK AREA BİLGİSAYARDA YOK TELEFONDA VAR
@@ -124,9 +137,7 @@ const Acilis_Sayfasi = ({ change_page }) => {
                       onClick={show_Navbar} // Add onClick handler to toggle the visibility of buttons
                     >
                       <div className="menu_button">
-                        <img
-                          src={MenuButton}
-                        />
+                        <img src={MenuButton} />
                       </div>
                       <div className="overlay"></div>
                       {/* Semi-transparent overlay */}
@@ -162,7 +173,8 @@ const Acilis_Sayfasi = ({ change_page }) => {
           >
             <div id="video-container">
               <video
-                autoPlay
+                ref={videoRef}
+                autoPlay={shouldPlay}
                 loop
                 muted
                 controls={false} // This will hide the video controls
@@ -279,7 +291,10 @@ const Acilis_Sayfasi = ({ change_page }) => {
                 className="label d-flex flex-row justify-content-center align-content-between pt-5 pl-3 pr-3 col-10"
                 style={{ position: "absolute", width: "100%", height: "100%" }}
               >
-                <div className="d-flex align-items-end" style={{ width: "100%" }}>
+                <div
+                  className="d-flex align-items-end"
+                  style={{ width: "100%" }}
+                >
                   {showButtons && (
                     <div style={{ width: "100%" }}>
                       <div

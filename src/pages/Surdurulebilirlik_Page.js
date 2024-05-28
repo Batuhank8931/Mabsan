@@ -8,11 +8,13 @@ import Main_Data from "../components/DB_converter";
 
 const SurdurData = Main_Data.SurdurData;
 
+const SektorItems = Main_Data.SektorItems;
+
 
 const Surdurulebilirlik_Page = ({ change_page }) => {
   return (
     <>
-      <SubNavbar change_page={change_page} sectorLabel={"Sürdürülebilirlik"} />
+      <SubNavbar change_page={change_page} sectorLabel={"Sürdürülebilirlik"} SektorItems={SektorItems} />
       <Surdurulebilirlik SurdurData={SurdurData} />
       <Footer change_page={change_page}/>
     </>

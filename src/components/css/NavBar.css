@@ -19,10 +19,65 @@
     font-size: 130%;
     outline: none;
     position: relative;
-    transition: 0.3s;
+    transition: all .3s;
     padding-bottom: 0px;
     color: white;
 }
+
+.button_container{
+  transition: all .3s;
+}
+
+.urunler_button {
+  transition: all .3s;
+}
+
+  /* Styles for the dropdown */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown_content {
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    z-index: 1;
+    transition: all .3s;
+    height: 0%;
+    overflow: hidden;
+  }
+
+  .dropdown:hover .dropdown_content {
+    height: 500%;
+
+  }
+
+  /* Adjust dropdown item styles as needed */
+  .dropdown_item {
+    background-color: transparent;
+    color:white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-top: 5px;
+    width: 200px;
+    font-family: 'Gotham', sans-serif;
+  }
+
+  .dropdown_item::before {
+    content: '\2022'; /* Unicode character for bullet point */
+    color: red; /* Color of the bullet point */
+    position: absolute;
+    left: 1px; /* Adjust the positioning of the bullet point */
+  }
+
+  .dropdown_item:hover {
+    background-color: gray;
+    border-radius: 10%;
+  }
+
 
 
 .buttons:before {
@@ -112,36 +167,6 @@
 }
   
 
-/* Define animation classes for sliding up and down */
-.slideUp {
-    animation: slideUpAnimation 0.3s ease-in forwards;
-  }
-  
-  .slideDown {
-    animation: slideDownAnimation 0.3s ease-out forwards;
-  }
-  
-  /* Define keyframes for slide up animation */
-  @keyframes slideUpAnimation {
-    from {
-      transform: translateY(-50%);
-    }
-    to {
-      transform: translateY(0%);
-    }
-  }
-  
-  /* Define keyframes for slide down animation */
-  @keyframes slideDownAnimation {
-    from {
-      transform: translateY(-50%);
-    }
-    to {
-      transform: translateY(0%);
-    }
-  }
-  
-
   
 @media (max-width: 601px) {
   .underline_0{
@@ -152,6 +177,25 @@
   }
   .underline_2{
     display: block;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+  
+  .dropdown_content{
+    transform: translateX(55%) translateY(-20%);
+    
+  }
+
+  .dropdown_item{
+    font-size: 15px;
+    width: 170px;
+  }
+
+  .buttons:hover{
+    background-color: grey;
+    border-radius: 10%;
   }
 
 

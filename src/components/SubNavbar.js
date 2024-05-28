@@ -9,7 +9,7 @@ import "./css/SubNavbar.css"; // Importing the CSS file
 
 import { Link } from "react-router-dom";
 
-const SubNavbar = ({ change_page, sectorLabel }) => {
+const SubNavbar = ({ change_page, sectorLabel, SektorItems }) => {
   const [containerWidth, setContainerWidth] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
   const [showButtons, setShowButtons] = useState(true); // State to control the visibility of buttons
@@ -19,40 +19,7 @@ const SubNavbar = ({ change_page, sectorLabel }) => {
 
   const lineRef = useRef(null);
 
-  useEffect(() => {
-    const line = lineRef.current;
 
-    const handleScroll = () => {
-      const rect = line.getBoundingClientRect();
-
-      // Check if the line is visible in the viewport
-      if (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <=
-          (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <=
-          (window.innerWidth || document.documentElement.clientWidth)
-      ) {
-        // If the line is visible, add a class to trigger the animation
-        line.classList.add("animate-line-left");
-      } else {
-        // If the line is not visible, remove the class
-        line.classList.remove("animate-line-left");
-      }
-    };
-
-    // Call handleScroll once on page load to check visibility
-    handleScroll();
-
-    // Add event listener for scroll
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [sectorLabel]); // Re-run the effect when sectorLabel changes
 
   useEffect(() => {
     const handleResize = () => {
@@ -119,7 +86,7 @@ const SubNavbar = ({ change_page, sectorLabel }) => {
       }}
     >
       {showNavbar && (
-        <Navbar change_page={change_page} showButtonsAgain={showButtonsAgain} />
+        <Navbar change_page={change_page} showButtonsAgain={showButtonsAgain} SektorItems={SektorItems}  />
       )}
 
       <div>
@@ -135,7 +102,7 @@ const SubNavbar = ({ change_page, sectorLabel }) => {
           {/* Conditionally render the buttons based on showButtons state */}
           {showButtons && (
             <div
-              className="label d-flex flex-row justify-content-center align-content-between p-md-5 p-3 pt-5 col-md-11 col-10"
+              className="label d-flex flex-row justify-content-center align-content-between p-md-5 p-3 pb-md-0 pt-5 col-md-11 col-10"
               style={{ width: "100%", height: "100%" }}
             >
               <div className="d-flex flex-column" style={{ width: "100%" }}>
@@ -191,7 +158,7 @@ const SubNavbar = ({ change_page, sectorLabel }) => {
             </div>
           )}
         </div>
-        <div className="baslik_subnavbar p-md-5 p-3">
+        <div className="baslik_subnavbar p-md-5 p-3 pt-md-0">
           <div className="d-flex justify-content-between">
             <div className="left-div d-flex align-items-center mr-5">
               <label className="subheader">{sectorLabel}</label>{" "}

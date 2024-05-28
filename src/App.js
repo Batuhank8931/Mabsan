@@ -10,22 +10,37 @@ import BlogPage from "./pages/Blog_Page";
 import IletisimPage from "./pages/Iletisim_Page";
 import KariyerPage from "./pages/Kariyer_Page";
 import KurumsalPage from "./pages/Kurumsal_Page";
-import PerakendePage from "./pages/Perakende_Page";
+import Sektorler_Page from "./pages/Sektorler_Page";
 import SurdurulebilirlikPage from "./pages/Surdurulebilirlik_Page";
 import UretimPage from "./pages/Uretim_Page";
 import UrunlerPage from "./pages/Urunler_Page";
+import Blog_User_Page from "./pages/Blog_User_Page";
+
+import Main_Data from "./components/DB_converter";
 
 import "./App.css"; // Import the CSS file
 
+const SektorItems = Main_Data.SektorItems;
+
 const App = () => {
   const [showLoading, setShowLoading] = useState(true);
+  const [loaderSize, setLoaderSize] = useState(250);
+  const [finishLoading, setFinishLoading] = useState(true);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowLoading(false);
-    }, 1000); // Adjust the duration (in milliseconds) as needed
+    }, 3500);
 
-    return () => clearTimeout(timeout);
+    const finish_loading = setTimeout(() => {
+      setLoaderSize(0.001);
+    }, 3350);
+
+    const timeout_make_bigger = setTimeout(() => {
+      setLoaderSize(400);
+    }, 2050);
+
+    return () => clearTimeout(timeout, timeout_make_bigger, finish_loading);
   }, []);
 
   const [Subheader, setSubheader] = useState(true);
@@ -55,6 +70,16 @@ const App = () => {
     }
   };
 
+  const routes = SektorItems.map((item) => (
+    <Route
+      key={item.way} // Provide a unique key for each route
+      path={`/${item.way}`}
+      element={
+        <Sektorler_Page change_page={change_page} sektor_item={item.name} />
+      }
+    />
+  ));
+
   return (
     <Router basename="/">
       <div
@@ -64,7 +89,6 @@ const App = () => {
           backgroundImage: `url(${backgroundSVG})`,
         }}
       >
-        {/* Wrap everything with the container */}
         <div className="App">
           <Routes>
             <Route path="/" element={<MainPage change_page={change_page} />} />
@@ -100,10 +124,6 @@ const App = () => {
               }
             />
             <Route
-              path="/perakende"
-              element={<PerakendePage change_page={change_page} />}
-            />
-            <Route
               path="/surdurulebilirlik"
               element={<SurdurulebilirlikPage change_page={change_page} />}
             />
@@ -111,11 +131,33 @@ const App = () => {
               path="/iletisim"
               element={<IletisimPage change_page={change_page} />}
             />
+            <Route
+              path="/Blog_User_Page"
+              element={<Blog_User_Page/>}
+            />
+            {routes}
           </Routes>
         </div>
+
         <div className={`loading_bar ${showLoading ? "" : "hidden"}`}>
-          <div class="progress-loader">
-            <div class="progress"></div>
+          <div
+            className={`spinner-container ${finishLoading ? "" : "hidden"}`}
+            style={{
+              width: `${loaderSize}px`,
+              height: `${loaderSize}px`,
+            }}
+          >
+            <div className="spinner">
+              <div className="spinner">
+                <div className="spinner">
+                  <div className="spinner">
+                    <div className="spinner">
+                      <div className="spinner"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

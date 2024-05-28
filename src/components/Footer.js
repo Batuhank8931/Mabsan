@@ -1,6 +1,9 @@
 import React from "react";
 import "./css/Footer.css";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+
 import iletisimSVG from "../assets/iletisim.svg";
 import yaprakSVG from "../assets/yaprak.svg";
 import adresSVG from "../assets/adres.svg";
@@ -10,11 +13,22 @@ import instaSVG from "../assets/insta.svg";
 import twitterSVG from "../assets/twitter.svg";
 import linkedinSVG from "../assets/linkedin.svg";
 import youtubeSVG from "../assets/youtube.svg";
+import WhatsAppSVG from "../assets/whatsap.svg";
 import Turning_logo from "../assets/logo_1.mp4";
 
 import { Link } from "react-router-dom";
 
 const Footer = ({ change_page }) => {
+  const phoneNumber = "+905308432383"; // Replace with your WhatsApp number
+  const message = "Hello! I have a question."; // Replace with your default message
+
+  const handleWhatsAppClick = () => {
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="baslik p-md-5 p-3 pt-5 pb-5">
       <div className="d-flex align-items-center justify-content-center mb-0 mb-md-5 mt-0 m-0">
@@ -45,7 +59,7 @@ const Footer = ({ change_page }) => {
               <label className="footer_title">İletişim</label>
             </div>
             <div className="d-flex align-items-center justify-content-center">
-              <label className="footer_deatil_text">+90 555 555 55 55</label>
+              <label className="footer_deatil_text">+90 (0216) 484 18 00</label>
             </div>
             <div className="d-flex align-items-center justify-content-center">
               <label className="footer_deatil_text">info@mabsan.com</label>
@@ -73,8 +87,10 @@ const Footer = ({ change_page }) => {
               className="detay_title pt-3 pb-2 pt-md-4 pb-md-0
             "
             >
-              
-              <Link to={"/surdurulebilirlik"}> Sürdürülebilirlik Politikası </Link>
+              <Link to={"/surdurulebilirlik"}>
+                {" "}
+                Sürdürülebilirlik Politikası{" "}
+              </Link>
             </button>
           </div>
           <div
@@ -100,7 +116,14 @@ const Footer = ({ change_page }) => {
               <label className="footer_title">Adres</label>
             </div>
             <div className="d-flex align-items-center justify-content-center">
-              <label className="footer_deatil_text">Lorem impsum met</label>
+              <label className="footer_deatil_text">
+                Büyükbakkalköy, Kaşif Sk.
+              </label>
+            </div>
+            <div className="d-flex align-items-center justify-content-center">
+              <label className="footer_deatil_text">
+                NO: 15, 34858 Maltepe
+              </label>
             </div>
             <div className="d-flex align-items-center justify-content-center">
               <label className="footer_deatil_text">İstanbul / Turkey</label>
@@ -125,8 +148,8 @@ const Footer = ({ change_page }) => {
           <div className="footer_h2">Politikalar</div>
         </div>
       </div>
-      <div className="d-flex align-items-center justify-content-center justify-content-md-start row mt-2 mr-md-5 ml-md-5 m-0">
-        <div className="col-md-3 col-12 align-items-center justift-content-center w-60 w-md-70 ">
+      <div className="d-flex align-items-start justify-content-center justify-content-md-start row mt-2 mr-md-5 ml-md-5 m-0">
+        <div className="col-md-3 col-12 align-items-center justift-content-center w-60 w-md-70 h-50 ">
           <div className="d-flex justify-content-between mr-md-5 mb-3 mr-0 ml-md-0 mt-3">
             <button>
               <img src={faceSVG} alt="Face Icon" />
@@ -144,8 +167,9 @@ const Footer = ({ change_page }) => {
               <img src={youtubeSVG} alt="Youtube Icon" />
             </button>
           </div>
+
           <div className="d-flex justify-content-between row mr-md-5 mb-5 ">
-            <p className="footer_title_middle pt-3">1988 - 2024 Copyright.</p>
+            <p className="footer_title_middle">Copyright 2024 - Neomani</p>
             <p className="footer_title_middle">All right Reserved.</p>
           </div>
         </div>
@@ -153,10 +177,18 @@ const Footer = ({ change_page }) => {
           {" "}
           <div>
             <ul>
-              <li>Hikayemiz</li>
-              <li>Mabsan Grup Politikaları</li>
-              <li>Dünya’da Mabsan</li>
-              <li>İletişim</li>
+              <li>
+                <Link to={"/kurumsal"}>Yönetim Ekibi</Link>
+              </li>
+              <li>
+                <Link to={"/kurumsal"}>Hakkımızda</Link>
+              </li>
+              <li>
+                <Link to={"/kurumsal"}>Misyon</Link>
+              </li>
+              <li>
+                <Link to={"/kurumsal"}>Vizyon</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -165,10 +197,18 @@ const Footer = ({ change_page }) => {
           <div>
             {" "}
             <ul>
-              <li>Hikayemiz</li>
-              <li>Mabsan Grup Politikaları</li>
-              <li>Dünya’da Mabsan</li>
-              <li>İletişim</li>
+              <li>
+                <Link to={"/kurumsal"}>Kurumsal</Link>
+              </li>
+              <li>
+                <Link to={"/uretim"}>Üretim</Link>
+              </li>
+              <li>
+                <Link to={"/kariyer"}>Kariyer</Link>
+              </li>
+              <li>
+                <Link to={"/blog"}>Blog</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -184,6 +224,7 @@ const Footer = ({ change_page }) => {
             </ul>
           </div>
         </div>
+
         <div className="hidden_bottom column">
           <div className="col-6" style={{ textAlign: "left" }}>
             <ul
@@ -194,8 +235,8 @@ const Footer = ({ change_page }) => {
                 fontSize: "15px",
               }}
             >
-              <li>Yasal Bildirim</li>
-              <li>Gizlilik Politikası</li>
+              <li>Üretim</li>
+              <li>Ürünler</li>
             </ul>
           </div>
           <div className="col-6" style={{ textAlign: "left" }}>
@@ -207,10 +248,15 @@ const Footer = ({ change_page }) => {
                 fontSize: "15px",
               }}
             >
-              <li>Çerez Politikası</li>
-              <li>Hizmet ve Şartlar</li>
+              <li>Kariyer</li>
+              <li>Blog</li>
             </ul>
           </div>
+        </div>
+        <div className="whatsapp_button_container">
+          <button onClick={handleWhatsAppClick}>
+            <img src={WhatsAppSVG} alt="whatsap Icon" />
+          </button>
         </div>
       </div>
     </div>
