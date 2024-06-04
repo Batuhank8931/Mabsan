@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import {
   FacebookShareButton,
@@ -20,8 +20,31 @@ import blog_detail_photo from "../assets/blog_detail_photo.png";
 
 import share_logo from "../assets/share_icon.svg";
 
-const BlogDetail = ({ Blog_Detail, all_data }) => {
-  const item = all_data.find((data) => data.id === Blog_Detail);
+const BlogDetail = ({ Blog_Detail}) => {
+
+  const [blogData, setBlogData] = useState([]);
+
+  useEffect(() => {
+    // Fetch the blog data
+    fetch("https://a.neomani.com/data.php")
+      .then((response) => response.json())
+      .then((data) => {
+        setBlogData(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []); // Empty dependency array ensures this effect runs only once on component mount
+
+  const all_data = blogData;
+  console.log(Blog_Detail);
+  console.log(all_data);
+  console.log( "cacaa");
+
+  const item = all_data.find((data) => data.id === String(Blog_Detail));
+
+
+  console.log(item);
 
   if (!item) {
     return <div>Item not found</div>;
