@@ -95,7 +95,7 @@ const Uretim = ({UretimData}) => {
       <div className="d-flex row">
         <div className="header_card col-12 col-md-6 d-flex row p-0 p-md-4 pb-0  ">
           <div className="d-flex align-items-center justify-content-start">
-            <label className="pager_label_1 p-4">{currentItem.header1}</label>
+            <label className="pager_label_1 p-4">{currentItem.header1} </label>
           </div>
           <div>
             <label className="pager_label_2 p-4">{currentItem.detail}</label>
@@ -136,10 +136,10 @@ const Uretim = ({UretimData}) => {
                     }
                   >
                     <div className="title_window d-flex m-2 mb-auto bd-highlight pt-md-4">
-                      <label className="pager_card_header_1 pr-4 pl-4  pt-2">
+                      <label className="pager_card_header_1 pr-4 pl-4 pt-2">
                         0{pagerItem.id}
                       </label>
-                      <label className="pager_card_header_2 pr-2 pl-2 pt-2">
+                      <label className="pager_card_header_2 pr-2 pl-4 ml-3">
                         {pagerItem.header2}
                       </label>
                     </div>

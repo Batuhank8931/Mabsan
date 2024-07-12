@@ -1,12 +1,12 @@
 .video_text{
-    font-size: 17px;
+    font-size: 20px;
     text-align: center;
-    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    font-family: 'Anybody-light', sans-serif;
 
 }
 
 .perakende_header{
-    font-family: 'Montserrat', sans-serif; /* Use Gotham font */
+    font-family: 'Anybody', sans-serif;
 }
 
 @media (max-width: 601px) {

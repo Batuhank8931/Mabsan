@@ -1,13 +1,27 @@
-  
+ 
+.main_bar{
+  height: 450px;
+}
+
 .mabsan-logo {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Aligns children to the top */
   transition: background-color 0.3s, color 0.3s, width 0.3s;
+  height: 100%;
+  padding: 10px; /* Add padding if needed */
 }
 
 .mabsan-logo:hover {
   background-color: rgba(128, 128, 128, 0.212);
   border-radius: 10px;
   width: 105%;
+}
+
+.menulogo {
+  height: auto; /* Adjust height as needed */
+  max-height: 80%; /* Keeps the image at 80% of button height */
 }
 
 
@@ -169,6 +183,11 @@
 
   
 @media (max-width: 601px) {
+
+  .main_bar{
+    height: 550px;
+  }
+
   .underline_0{
     display: none;
   }
@@ -184,12 +203,14 @@
   }
   
   .dropdown_content{
-    transform: translateX(55%) translateY(-20%);
+    transform: translateX(70%) translateY(-20%);
     
   }
 
   .dropdown_item{
-    font-size: 15px;
+    font-family: 'Anybody-light', sans-serif;
+    padding-left: 7px;
+    font-size: 12px;
     width: 170px;
   }
 

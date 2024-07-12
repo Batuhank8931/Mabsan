@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import backgroundSVG from "../assets/HeaderBackground.svg";
-import MabsanLogo from "../assets/mabsan-logo-menu.svg";
+import MabsanLogo from "../assets/mabsan_logo_w.png";
 import MenuButton from "../assets/MenuButton.svg";
 import bayrak from "../assets/bayrak.svg";
 import politika from "../assets/politika.svg";
@@ -19,10 +19,10 @@ const NavBar = ({ showButtonsAgain, change_page, SektorItems }) => {
     <div>
       {showNavbar && (
         <div
-          className="bg-cover bg-fixed p-md-5 p-3 pt-5 pb-5"
+          className="bg-cover bg-fixed p-md-5 p-3 pt-5 pb-5 main_bar"
           style={{ backgroundImage: `url(${backgroundSVG})` }}
         >
-          <div className="d-flex">
+          <div className="d-flex" style={{height:"100%"}}>
             <div className="col-3 col-md-1 ">
               <button
                 className="mabsan-logo"
@@ -32,7 +32,7 @@ const NavBar = ({ showButtonsAgain, change_page, SektorItems }) => {
               >
                 {" "}
                 <Link to={"/"}>
-                  <img src={MabsanLogo} alt="Mabsan Logo" />
+                  <img className="menulogo"  src={MabsanLogo} alt="Mabsan Logo" />
                 </Link>
               </button>
             </div>

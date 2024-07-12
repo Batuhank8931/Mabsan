@@ -124,7 +124,7 @@ const Yolculugumuz = ({ YolculugumuzData }) => {
                 <div className="year">
                   <label className="timeline_year">{pagerItem.year2}</label>
                 </div>
-                <div className="timer_button d-flex justify-content-start p-5">
+                <div className="timer_button d-flex justify-content-start p-3 p-md-5">
                   <div
                     className="d-flex align-items-center flex-column bd-highlight"
                     style={{ height: "100%", width: "100%" }}

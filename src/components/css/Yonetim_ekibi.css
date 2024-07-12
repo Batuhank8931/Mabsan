@@ -75,6 +75,7 @@
     text-align: center;
     width: auto;
     transition: font-size 0.2s;
+    font-family: 'Anybody-light', sans-serif;
   }
 
   .yonetim_header:hover{

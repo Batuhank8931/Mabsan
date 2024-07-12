@@ -39,6 +39,21 @@
       url('fonts/Gotham-Font/GothamBold.ttf') format('woff2');
 }
 
+@font-face {
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Anybody Regular'), local('Anybody-Regular'),
+      url('fonts/Anybody/Anybody_Expanded-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Anybody-light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Anybody Regular'), local('Anybody-Regular'),
+      url('fonts/Anybody/Anybody_Expanded-ExtraLightItalic.ttf') format('truetype');
+}
 
 
 body {

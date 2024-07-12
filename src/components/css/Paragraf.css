@@ -1,9 +1,9 @@
 .paragraf {
 
     text-align: left;
-    font-size: 25px;
+    font-size: 20px;
     white-space: pre-line;
-    font-family: 'Calibri Light', sans-serif;
+    font-family: 'Anybody-light', sans-serif;
     line-height: 1.2;
 
   }
@@ -16,7 +16,7 @@
         text-align: left;
         font-size: 15px;
         white-space: pre-line;
-        font-family: 'Calibri Light', sans-serif;
+        font-family: 'Anybody-light', sans-serif;
         line-height: 1.2;
     
       }

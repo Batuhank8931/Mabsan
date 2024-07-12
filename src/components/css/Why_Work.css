@@ -1,12 +1,14 @@
 .work_label_1 {
     background-color: transparent;
-    font-size: 50px;
+    font-size: 45px;
     outline: none;
     transition: opacity 0.2s ease-in-out, font-size 0.2s; 
     opacity: 1;
     padding-bottom: 0px;
     color: white;
     text-align: left;
+    font-family: 'Anybody', sans-serif; /* Use Gotham font */
+
 
 }
 
@@ -28,7 +30,7 @@
     display: flex;
     justify-content: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
-    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    font-family: 'Anybody-light', sans-serif; /* Use Gotham font */
 }
 
 

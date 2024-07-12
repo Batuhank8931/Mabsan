@@ -25,12 +25,12 @@
 }
 
 .blog_card_title{
-  font-family: 'Power Grotesk', sans-serif;
+  font-family: 'Anybody', sans-serif;
   font-size: 26px;
 }
 
 .blog_card_text{
-  font-family: 'Gotham', sans-serif; /* Use Gotham font */
+  font-family: 'Anybody-light', sans-serif; /* Use Gotham font */
   font-size: 13px;
   height: 400px;
 }
@@ -54,7 +54,7 @@
 }
 
 .day_title{
-  font-family: 'Montserrat-Bold', sans-serif;
+  font-family: 'Anybody', sans-serif;
   font-size: 130px;
   font-weight: bold;
   height: 130px;
@@ -63,7 +63,7 @@
 }
 
 .month_title{
-  font-family: 'Montserrat-Bold', sans-serif;
+  font-family: 'Anybody', sans-serif;
   font-size: 40px;
   font-weight: bold;
   transition: all .3s;
@@ -100,6 +100,8 @@
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease; /* Add transition for smooth animation */
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .blog_previous_button::before, .blog_next_button::after {

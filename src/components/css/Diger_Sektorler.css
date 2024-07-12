@@ -45,6 +45,8 @@
     transition: all 0.3s ease; /* Add transition for smooth animation */
     border: 4px solid white; /* Specify the border style */
     border-radius: 80%;
+    font-family: 'Montserrat', sans-serif;
+
 
   }
   
@@ -125,7 +127,7 @@
 
 
   .diger_urun_title {
-    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    font-family: 'Anybody-light', sans-serif; /* Use Gotham font */
     font-size: 22px;
     text-align: center;
     transition: all .3s;
@@ -133,7 +135,7 @@
   
   
   .diger_urun_text{
-    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    font-family: 'Anybody-light', sans-serif; /* Use Gotham font */
     font-size: 15px;
     text-align: center;
     transition: all .3s;

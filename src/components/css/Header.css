@@ -19,6 +19,7 @@
 }
 
 .line_header{
+  font-size: 25px;
   transition: font-size 0.3s ease; /* Smooth transition */
 }
 
@@ -68,6 +69,10 @@
       font-size: 40px;
     }
 
+    .line_header {
+      font-size: 15px;
+    }
+
   }
 
   
@@ -85,7 +90,7 @@
   
 
   .line_header:hover {
-    font-size: 110%;
+    font-size: 41px;
   }
 
 

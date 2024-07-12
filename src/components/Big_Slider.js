@@ -134,7 +134,7 @@ const Mukavva_Cinsleri = ({ pagerData, background, name }) => {
                           }
                     }
                   >
-                    <div className="title_window flex-row m-4 ">
+                    <div className="title_window flex-row m-4 pl-5">
                       <label className="big_slider_card_header_2">
                         {pagerItem.header2}
                       </label>

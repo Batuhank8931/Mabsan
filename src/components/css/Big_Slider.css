@@ -3,7 +3,7 @@
 
 .big_slider_label_1 {
     background-color: transparent;
-    font-size: 50px;
+    font-size: 35px;
     outline: none;
     transition: opacity 0.2s ease-in-out, font-size 0.2s; 
     opacity: 1;
@@ -25,6 +25,7 @@
 
 
 .big_slider_label_2 {
+    
     background-color: transparent;
     font-size: 15px;
     outline: none;
@@ -32,7 +33,7 @@
     padding-bottom: 0px;
     color: white;
     text-align: left;
-    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    font-family: 'Anybody-light', sans-serif;
 
 
 }
@@ -58,6 +59,7 @@
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease; /* Add transition for smooth animation */
+    font-family: 'Montserrat', sans-serif;
   }
   
   .big_slider_previous_button::before, .big_slider_next_button::after {
