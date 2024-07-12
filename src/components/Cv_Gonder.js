@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import axios from 'axios';
+
 import "./css/Cv_Gonder.css";
 import Right_Arrow from "../assets/right_arrow.svg";
 import Cv_Arka_Plan from "../assets/Cv_Arka_Plan.svg";
@@ -9,6 +11,30 @@ const Cv_Gonder = () => {
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
+  };
+
+  const handleSubmit = async () => {
+    if (selectedFile) {
+      const formData = new FormData();
+      formData.append("file", selectedFile);
+
+      try {
+        const response = await axios.post(
+          "https://a.neomani.com/upload.php",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error uploading file:", error);
+      }
+    } else {
+      console.error("No file selected");
+    }
   };
 
   return (
@@ -28,7 +54,7 @@ const Cv_Gonder = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="row align-items-center justify-content-center  col-md-6 col-12 p-4 ">
+        <div className="row align-items-center justify-content-center col-md-6 col-12 p-4">
           <input
             className="input_field"
             type="text"
@@ -39,7 +65,6 @@ const Cv_Gonder = () => {
             type="tel"
             placeholder="Telefon Numaranız"
           />
-
           <input
             className="input_field"
             type="email"
@@ -90,7 +115,7 @@ const Cv_Gonder = () => {
 
         <div className="d-flex align-items-end justify-content-center justify-content-md-start pl-0 col-md-6 col-12 p-md-4 p-1">
           <div className="d-flex column p-3 pl-0">
-            <button className="work_button d-flex justify-content-between">
+            <button className="work_button d-flex justify-content-between" onClick={handleSubmit}>
               <label
                 className="p-3 ml-4"
                 style={{
@@ -103,7 +128,7 @@ const Cv_Gonder = () => {
               >
                 Gönder
               </label>
-              <img className="h-100 mr-4" src={Right_Arrow} alt="Mabsan Logo" />
+              <img className="h-100 mr-4" src={Right_Arrow} alt="Right Arrow" />
             </button>
           </div>
         </div>

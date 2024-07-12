@@ -6,6 +6,8 @@ import Navbar from "./NavBar.js"; // Importing the NavBar component
 import "./css/Acilis_Sayfasi.css"; // Importing the CSS file
 import AcilisApples from "../assets/mabsan1080low.mp4";
 
+
+
 const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
   const videoId = "l1cBhOqSV4M"; // YouTube video ID
   const [containerWidth, setContainerWidth] = useState(0);
@@ -17,6 +19,27 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
 
   const [shouldPlay, setShouldPlay] = useState(false);
   const videoRef = useRef(null);
+
+  const texts = ["Kalite", "Güven", "Tasarım", "İnovasyon"];
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+        setFade(true);
+      }, 500); // Duration of fade-out phase
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 2.0; // Set playback rate to 2x
+    }
+  }, [shouldPlay]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -86,7 +109,11 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
       }}
     >
       {showNavbar && (
-        <Navbar change_page={change_page} showButtonsAgain={showButtonsAgain} SektorItems={SektorItems}  />
+        <Navbar
+          change_page={change_page}
+          showButtonsAgain={showButtonsAgain}
+          SektorItems={SektorItems}
+        />
       )}
       {window.innerWidth <= 600 && (
         <div // 1. BLANK AREA BİLGİSAYARDA YOK TELEFONDA VAR
@@ -207,7 +234,8 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
                         <img
                           src={Mabsan}
                           alt="Mabsan"
-                          className="mabsan h-10"
+                          className="mabsan"
+                          style={{width:"300px"}}
                         />
                       </div>
                       <div className="col-2">
@@ -220,13 +248,19 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
                   </div>
                 )}
                 <div
-                  className="d-flex align-items-left flex-column justify-content-center video_page_header"
+                  className="d-md-flex align-items-left flex-column justify-content-end video_page_header d-none"
                   style={{ width: "100%", minHeight: "0", flex: 1 }}
                 >
-                  <label>
-                    Kutuda <span style={{ color: "#FF0000" }}>Kalite</span>
+                  <label className="bukutu_1">Bu Kutunun İçinde</label>
+                  <label className="bukutu_1">
+                    <span
+                      style={{ color: "#FF0000" }}
+                      className={fade ? "fade-in" : "fade-out"}
+                    >
+                      {texts[currentTextIndex]}
+                    </span>{" "}
+                    var
                   </label>
-                  <label>Bizde bir okyanus var</label>
                 </div>
                 <div></div>
               </div>
@@ -301,10 +335,23 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
                         className="d-flex align-items-end"
                         style={{ height: "100%" }}
                       >
+                        {" "}
                         <div
-                          className="d-flex justify-content-end"
-                          style={{ width: "100%" }}
+                          className="d-flex align-items-left flex-column justify-content-end video_page_header pb-3"
+                          style={{ minHeight: "0", flex: 1 }}
                         >
+                          <label className="bukutu_2">Bu Kutunun İçinde</label>
+                          <label className="bukutu_2">
+                            <span
+                              style={{ color: "#FF0000" }}
+                              className={fade ? "fade-in" : "fade-out"}
+                            >
+                              {texts[currentTextIndex]}
+                            </span>{" "}
+                            var
+                          </label>
+                        </div>
+                        <div className="d-flex justify-content-end" style={{}}>
                           <label className="left_bottom_big">36</label>
                           <div className="d-flex flex-column justify-content-end p-3">
                             <label className="left_bottom_small">YILLIK</label>

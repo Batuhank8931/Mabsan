@@ -1,22 +1,29 @@
-import photoUretim from "../assets/Uretim_ornek.png";
+
+
+import kart_1 from "../assets/kart_1.png";
+import kart_2 from "../assets/kart_2.png";
+import kart_3 from "../assets/kart_3.png";
+import kart_4 from "../assets/kart_4.png";
+
 
 import E_Ticaret from "../assets/e_ticaret.svg";
 import Edustriyel from "../assets/endustriyel.svg";
-import Elektrik from "../assets/elektrik.svg";
 import Perakende from "../assets/perakende.svg";
 import Kozmetik from "../assets/kozmetik.svg";
-import İlac from "../assets/ilac.svg";
 import Otomotiv from "../assets/otomotiv.svg";
-
 import teknik_kutu from "../assets/teknik_kutu.png";
 import acik_kutu from "../assets/acik_kutu.png";
+import Yasmeyvesebze from "../assets/yasmeyvesebze.svg";
+import FMCG from "../assets/ilac.svg";
+import FMCG_b from "../assets/ilac_b.svg";
+import Takeaway from "../assets/takeaway.svg";
 
+import Yasmeyvesebze_b from "../assets/yasmeyvesebze_b.svg";
 import E_Ticaret_b from "../assets/e_ticaret_b.svg";
 import Edustriyel_b from "../assets/endustriyel_b.svg";
-import Elektrik_b from "../assets/elektrik_b.svg";
+import Takeaway_b from "../assets/takeaway_b.svg";
 import Perakende_b from "../assets/perakende_b.svg";
 import Kozmetik_b from "../assets/kozmetik_b.svg";
-import İlac_b from "../assets/ilac_b.svg";
 import Otomotiv_b from "../assets/otomotiv_b.svg";
 
 import Yonetim_image from "../assets/yonetim.png";
@@ -28,80 +35,177 @@ import Mabsan_Way_image from "../assets/image_1.svg";
 import Mukavva_Data from "../assets/Mukavva_Data.png";
 
 const SektorItems = [
-  { name: "E-Ticaret", image: E_Ticaret, image_b: E_Ticaret_b, way:"eticaret", video:"apples.mp4" , header:"E-Ticaret Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
-  { name: "Endüstriyel", image: Edustriyel, image_b: Edustriyel_b, way:"endustriyel", video:"apples.mp4" , header:"Endüstriyel Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
-  { name: "Elektrik- Elektronik", image: Elektrik, image_b: Elektrik_b, way:"elektrikelektronik", video:"apples.mp4" , header:"Elektrik-Elektronik Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
-  { name: "Perakende", image: Perakende, image_b: Perakende_b, way:"preakende", video:"apples.mp4" , header:"Perakende Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
-  { name: "Kozmetik", image: Kozmetik, image_b: Kozmetik_b, way:"kozmetik", video:"apples.mp4" , header:"Kozmetik Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
-  { name: "İlaç", image: İlac, image_b: İlac_b, way:"ilac", video:"apples.mp4" , header:"İlaç Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
-  { name: "Otomotiv", image: Otomotiv, image_b: Otomotiv_b, way:"otomotiv", video:"apples.mp4" , header:"Otomotiv Ürünleri", info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer enim sem, tincidunt sed aliquam quis, cursus quis tortor. Vestibulum nec lacinia massa. Vivamus pulvinar vel ante ac facilisis. Fusce vitae dignissim odio, eget fermentum metus. Pellentesque semper posuere molestie. Proin ultricies rutrum tortor ut tristique. Proin placerat risus et erat cursus consequat.", teknik_kutu:teknik_kutu, acik_kutu:acik_kutu, data_1:"30", data_2:"30", data_3:"30", data_4:"30", data_5:"30" },
+  {
+    name: "E-Ticaret",
+    image: E_Ticaret,
+    image_b: E_Ticaret_b,
+    way: "eticaret",
+    video: "eticaret.mp4",
+    header: "E-Ticaret Ürünleri",
+    info:
+      "Koşullar ne olursa olsun satışın 7/24 devam etmesi gereken e-ticaret sektöründe hız ve güven kilit önem taşır. E-ticaret uzmanlığımızla, online işletmeniz ve müşterileriniz için güvenilir, yenilikçi ve sürdürülebilir çözümler sunacağımıza güvenebilirsiniz.",
+    teknik_kutu: teknik_kutu,
+    acik_kutu: acik_kutu,
+    data_1: "30",
+    data_2: "30",
+    data_3: "30",
+    data_4: "30",
+    data_5: "30",
+  },
+  {
+    name: "Endüstriyel",
+    image: Edustriyel,
+    image_b: Edustriyel_b,
+    way: "endustriyel",
+    video: "endustriyel.mp4",
+    header: "Endüstriyel Ürünleri",
+    info:
+      "Endüstriyel pazarda ürünün güvenliği her şeyden önemlidir. Ağır ve hantal ürünlerden tehlikeli maddelere kadar, endüstriyel ürünlerin lojistik zorluklarına dayanabilecek esnek seçenekler sunmak kritik önem taşır. Bu nedenle oluklu mukavva çözümlerimiz, nakliye sırasında dayanıklılık ve güvenilirlik sağlamak için kapsamlı testlerden geçirilir.",
+    teknik_kutu: teknik_kutu,
+    acik_kutu: acik_kutu,
+    data_1: "30",
+    data_2: "30",
+    data_3: "30",
+    data_4: "30",
+    data_5: "30",
+  },
+  {
+    name: "Perakende",
+    image: Perakende,
+    image_b: Perakende_b,
+    way: "perakende",
+    video: "perakende.mp4",
+    header: "Perakende Ürünleri",
+    info:
+      "Günümüz tüketicilerinin satın alma kararlarında paketlemenin gücü tartışılmaz. Sadece tasarım değil güvenli ve kullanıcı davranışlarının hesaba katıldığı paketlemeler satışlarda büyük farklar yaratır. Ulusal ve uluslararası pek çok perakende markasıyla edindiğimiz deneyimimize güvenebilirsiniz.",
+    teknik_kutu: teknik_kutu,
+    acik_kutu: acik_kutu,
+    data_1: "30",
+    data_2: "30",
+    data_3: "30",
+    data_4: "30",
+    data_5: "30",
+  },
+  {
+    name: "Kozmetik",
+    image: Kozmetik,
+    image_b: Kozmetik_b,
+    way: "kozmetik",
+    video: "kozmetik.mp4",
+    header: "Kozmetik Ürünleri",
+    info:
+      "Rekabetin yüksek olduğu kozmetik pazarında, markaların mevcut ve yeni tüketicilerin akıllarında kalması zorlaşıyor. Bu da görsel ve doku alanında sürekli inovasyona ihtiyaç duyulmasına neden oluyor. Güvenilir ve yaratıcı bir iş ortağı olarak, ürünlerinizin öne çıkmasına yardımcı olmak için yanınızdayız. ",
+    teknik_kutu: teknik_kutu,
+    acik_kutu: acik_kutu,
+    data_1: "30",
+    data_2: "30",
+    data_3: "30",
+    data_4: "30",
+    data_5: "30",
+  },
+  {
+    name: "Yaş Meyve-Sebze",
+    image: Yasmeyvesebze,
+    image_b: Yasmeyvesebze_b,
+    way: "yasmeyvesebze",
+    video: "yasmeyvesebze.mp4",
+    header: "Yaş Meyve-Sebze Ürünleri",
+    info:
+      "Tedarik zinciri boyunca bozulmaya karşı koruma gerektiren yüksek hacimli yaş meyve-sebze ürünlerinde, güçlü ve güvenilir paketleme çözümleri kullanmak çok önemlidir. Her ürün türü için özenle tasarlanmış kâğıt bazlı çözümlerimiz, sürdürülebilirlik vaadimizi yerine getirirken, gıda ürünlerini korumak için tasarlanmış, test edilmiş ve üretilmiştir.",
+    teknik_kutu: teknik_kutu,
+    acik_kutu: acik_kutu,
+    data_1: "30",
+    data_2: "30",
+    data_3: "30",
+    data_4: "30",
+    data_5: "30",
+  },
+  {
+    name: "FMCG",
+    image: FMCG,
+    image_b: FMCG_b,
+    way: "FMCG",
+    video: "FMCG.mp4",
+    header: "FMCG Ürünleri",
+    info:
+      "Hızlı tüketim ürünlerinde ambalaj ve teşhirler, tüketicileri karar anlarında etkilemek için kritik araçlardır. Ürünlerinizin fark yaratması ve tedarik zincirinde verimliliği korumak için kapsamlı FMCG deneyimimizden yararlanıyoruz. ",
+    teknik_kutu: teknik_kutu,
+    acik_kutu: acik_kutu,
+    data_1: "30",
+    data_2: "30",
+    data_3: "30",
+    data_4: "30",
+    data_5: "30",
+  },
+  {
+    name: "Otomotiv",
+    image: Otomotiv,
+    image_b: Otomotiv_b,
+    way: "otomotiv",
+    video: "otomotiv.mp4",
+    header: "Otomotiv Ürünleri",
+    info:
+      "İster küçük ister büyük, ister hafif ister ağır bileşenleri paketliyor olalım, amaca uygun ve sürdürülebilir paketleme çözümleri sunmak için kanıtlanmış bilimsel yöntemler kullanıyoruz. Sürtünmeye ve korozyona dayanıklı paketler de dahil olmak üzere ürün yelpazemiz, tedarik zincirinizin fiziksel gereksinimlerini karşılamak için tasarlanmıştır.",
+    teknik_kutu: teknik_kutu,
+    acik_kutu: acik_kutu,
+    data_1: "30",
+    data_2: "30",
+    data_3: "30",
+    data_4: "30",
+    data_5: "30",
+  },
+  {
+    name: "Take-Away",
+    image: Takeaway,
+    image_b: Takeaway_b,
+    way: "takeaway",
+    video: "takeaway.mp4",
+    header: "Take-Away Ürünleri",
+    info:
+      "Fast-food zincirlerinden fine dining restoranlarına kadar günümüzün yeme-içme sektöründe hizmet verenlere çevresel etkilerini önemsiyor; plastik yerine kâğıt bazlı paketleri tercih ediyor. Take-away veya paket servislerinizde müşterilerinizin memnuniyetini garantiye almak için bize güvenebilirsiniz.",
+    teknik_kutu: teknik_kutu,
+    acik_kutu: acik_kutu,
+    data_1: "30",
+    data_2: "30",
+    data_3: "30",
+    data_4: "30",
+    data_5: "30",
+  }
 ];
 
 const UretimData = [
   {
     id: "1",
-    header1: '"El emeğiyle şekillenen her kutu, bir sanat eseridir."',
+    header1: '"Sürdürülebilir bir dünya için ilk adımımız geri dönüşüm."',
     detail:
-      "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-    header2: "Doğuş",
-    photoLink: photoUretim,
+      "Hurda kâğıtları, çevre dostu geri dönüşüm sürecinden geçirerek dünyaya yeniden kazandırıyoruz.",
+    header2: "Geri Dönüşüm",
+    photoLink: kart_1,
   },
   {
     id: "2",
-    header1: "Subject 2 Header",
+    header1: "Ürünlerinizi korumak için teknolojiye güveniyoruz.",
     detail:
-      "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-    header2: "Subject2",
-    photoLink: photoUretim,
+      "Geri dönüştürülen malzemeler, yüksek teknolojili makinelerle sağlam ve dayanıklı bobin kâğıtlara dönüştürülüyor.",
+    header2: "Yüksek Teknoloji",
+    photoLink: kart_2,
   },
   {
     id: "3",
-    header1: "Subject 3 Header",
+    header1: "36 yıllık tecrübemizle en iyi bildiğimiz işi yapıyoruz.",
     detail:
-      "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-    header2: "Subject3",
-    photoLink: photoUretim,
+      "Kâğıt bobinlerini, oluklu mukavva makinelerinde işleyerek oluk formunu veriyoruz. Düz kâğıtları ve oluk formu kazandırılmış kâğıtları birleştirerek düz tabaka mukavva üretimine geçiyoruz.",
+    header2: "Oluklu Mukavva",
+    photoLink: kart_3,
   },
   {
     id: "4",
-    header1: "Subject 4 Header",
+    header1: "Marka itibarınız için fark yaratan çözümler tasarlıyoruz.",
     detail:
-      "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-    header2: "Subject4",
-    photoLink: photoUretim,
-  },
-  {
-    id: "5",
-    header1: "Subject 5 Header",
-    detail:
-      "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-    header2: "Subject5",
-    photoLink: photoUretim,
-  },
-  {
-    id: "6",
-    header1: "Subject 6 Header",
-    detail:
-      "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-    header2: "Subject6",
-    photoLink: photoUretim,
-  },
-  {
-    id: "7",
-    header1: "Subject 7 Header",
-    detail:
-      "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-    header2: "Subject7",
-    photoLink: photoUretim,
-  },
-  {
-    id: "8",
-    header1: "Subject 8 Header",
-    detail:
-      "Mebsan Kutu, bir atölyede, sanat ve el emeğiyle sekillenmeye başladı. İlk katman, geleneksel sanatlarının ve yaratıcılığın doğuşunu temsil eder İlk nefesini aldığında, bir kutu olarak varlık buldu.",
-    header2: "Subject8",
-    photoLink: photoUretim,
-  },
+      "Oluklu mukavva levhaları, hassas kesim, baskı ve özel yapıştırma işlemlerinden geçirerek son ürün olan koli ve kutulara dönüştürüyoruz.",
+    header2: "Markaya Özel Çözümler",
+    photoLink: kart_4,
+  }
 ];
 
 const YolculugumuzData = [
@@ -169,11 +273,11 @@ const YolculugumuzData = [
 
 const Paragraflar = {
   hakkimizda:
-    "Mabsan Oluklu Mukavva Kutu San. ve Tic.Ltd.Şti 1988 yılında hizmete açılmış olup, sürekli gelişip hizmet kalitesini arttırak günümüz teknolojisiyle beraber kaliteli ve güvenilir çalışmalarına devam etmektedir. Geniş müşteri portföyü ve kaliteli ürün yelpazesi ile sektörünün önde gelen firmalarından olan firmamız, güncel teknolojik gelişmeleri üretim sürecinin her aşamasında kullanarak, yüksek kalite standartlarını hedefe ulaşmasındaki büyük dayanak olarak görmüştür.\n\nHızla büyümelerini 'Doğru ve Kaliteli' hizmet anlayışına borçlu olan firmamız, ilkelerinden taviz vermeden, istikrarlı büyümesi ile de sektörünün saygın firmaları arasındaki yerini gün geçtikçe sağlamlaştırmaktadır.\n\nMüşteri memnuniyetimizden aldığımız güç ile iç piyasada daha da büyümeyi hedeflemekteyiz.",
+    "1988 yılından bu yana ulusal ve uluslararası markaların paketleme çözümlerinde güvenilir ortağı olmaktan gurur duyuyoruz. Bu güveni; sürekli gelişime olan cesaretimizle, global üretim standartlarına bağlılığımızla, teknoloji yatırımlarımızla ve her müşterimize eşit özen yaklaşımımızla kazandık. \n\n Geniş müşteri portföyümüz ve kaliteli ürün yelpazemiz sayesinde sektörümüzün önde gelen firmalarından biri haline geldik. İlkelerimizden asla taviz vermeden, istikrarlı büyümemiz sayesinde sektörümüzün en saygın firmaları arasındaki konumumuzu güçlendiriyoruz. \n\n",
   misyon:
-    "Mabsan Ailesi olarak misyonumuz, etik ilkelerden asla ödün vermeden genç, dinamik, lider kişilikli kadrosu ile teknolojik gelişmeleri takip eden ve faaliyet alanlarında uygulayan, tüketicilerine, tedarikçilerine memnuniyet odaklı hizmet anlayışını benimsemiş ve sürdürmeyi ilke edinmiştir. Sektörünün gelişimine, kapsamlı, yenilikçi, çeşitli piyasa segmentlerinin beklentilerini ve gereksinimlerini karşılayan, kaliteli ürün ve hizmetlerin sunumu ile katkı sağlamaktır. Müşteri beklentilerini, yeni ürünleri ve hizmetleri ile büyümek, geldiğimiz konumda da siz paydaşlarına artan katma değer kazandırmaktır.",
+    "Kaliteli ürünler, yenilikçi tasarımlar ve uzun soluklu güvene dayalı müşteri ilişkileriyle çalıştığımız markaların itibarına ve iş süreçlerine katma değer kazandırırız. ",
   vizyon:
-    "\n\u2022 Koşulsuz müşteri memnuniyeti sağlamak,\n\u2022 Sektörünün önde gelen firmaları arasında kalıcığını korumak,\n\u2022 Güçlü büyüme ile siz müşterilerimize kalıcı değer yaratmak, \n\u2022Karlılığınızı, bilinirliğinizi ve markanızın yapısını korumak, \n\u2022Kalitede ve üretimde lider olmak.",
+    "Oluklu mukavva sektörünün sürdürülebilir dönüşümünde öncü üreticilerden biri olarak perakendeden otomotive her sektörde en güvenilir iş ortağı olmak. ",
 };
 
 const Cards = {
@@ -220,7 +324,7 @@ const YonetimData = [
     Name: "Hasan Karadeniz",
     Position: "Satış Müdürü",
     photoLink: Yonetim_image,
-  }
+  },
 ];
 
 const SurdurData = [
@@ -535,74 +639,38 @@ const MukavvaData = [
     id: "1",
     header1: "Oluklu Mukavva Cinsleri",
     detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+      "En küçük dalga formuna sahip olan E-dalga, ince ve hafif ürün ihtiyacı olan müşterilerimiz için ideal bir çözüm sunar. Ambalaj, kutu ve karton üretiminde sıklıkla tercih edilir.",
     header2: "E Dalga",
     header3: "Oluklu Mukavva",
     photoLink: Mukavva_Data,
   },
   {
     id: "2",
-    header1: "Oluklu Mukavva Cinsleri - 2",
+    header1: "Oluklu Mukavva Cinsleri",
     detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
-    photoLink: Mukavva_Data,
+      "Orta büyüklükteki dalga formuna sahip olan B-dalga, dayanıklılık gerektiren ürünler için sıklıkla kullanılır. Elektronik, beyaz eşya ve diğer sanayi ürünlerinin ambalajlanmasında tercih edilir.",
+      header2: "B Dalga",
+      header3: "Oluklu Mukavva",
+      photoLink: Mukavva_Data,
   },
   {
     id: "3",
-    header1: "Oluklu Mukavva Cinsleri - 3",
+    header1: "Oluklu Mukavva Cinsleri",
     detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
-    photoLink: Mukavva_Data,
+      "Daha büyük dalga formuna sahip olan C-dalga, süpermarket ürünleri, endüstriyel ve tarımsal ürünlerin ambalajlanmasında kullanılır. Dayanıklılık ve koruma özellikleriyle ön plana çıkar.",
+      header2: "C Dalga",
+      header3: "Oluklu Mukavva",
+      photoLink: Mukavva_Data,
   },
   {
     id: "4",
-    header1: "Oluklu Mukavva Cinsleri - 4",
+    header1: "Oluklu Mukavva Cinsleri",
     detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
-    photoLink: Mukavva_Data,
-  },
-  {
-    id: "5",
-    header1: "Oluklu Mukavva Cinsleri - 5",
-    detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
-    photoLink: Mukavva_Data,
-  },
-  {
-    id: "6",
-    header1: "Oluklu Mukavva Cinsleri - 6",
-    detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
-    photoLink: Mukavva_Data,
-  },
-  {
-    id: "7",
-    header1: "Oluklu Mukavva Cinsleri - 7",
-    detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
-    photoLink: Mukavva_Data,
-  },
-  {
-    id: "8",
-    header1: "Oluklu Mukavva Cinsleri - 8",
-    detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
-    photoLink: Mukavva_Data,
-  },
+      "En büyük dalga formuna sahip olan A-dalga, özellikle ağır ve hacimli ürünlerin ambalajlanmasında kullanılır. Yüksek dayanıklılık sunar.",
+      header2: "A Dalga",
+      header3: "Oluklu Mukavva",
+      photoLink: Mukavva_Data,
+  }
 ];
 
 const KagitData = [
@@ -610,74 +678,38 @@ const KagitData = [
     id: "1",
     header1: "Kağıt Cinsleri",
     detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
+      "Doğal, kahverengi renkli ve yüksek dayanıklılığa sahip olan kraft kâğıt, oluklu mukavva üretiminde en sık kullanılan kâğıt türüdür. Mukavemet, nem ve yırtılma direnci özellikleriyle öne çıkar",
+    header2: "Kraft ",
+    header3: "Kâğıt",
     photoLink: Mukavva_Data,
   },
   {
     id: "2",
-    header1: "Kağıt Cinsleri - 2",
+    header1: "Kağıt Cinsleri",
     detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
+      "Beyaz renkli, düz ve pürüzsüz yüzeye sahip olan bu kâğıt türü, daha yüksek baskı kalitesi gerektiren ürünlerin üretiminde tercih edilir. Ambalaj ve kutu tasarımlarında kullanışlıdır.",
+    header2: "Beyaz ",
+    header3: "Kâğıt",
     photoLink: Mukavva_Data,
   },
   {
     id: "3",
-    header1: "Kağıt Cinsleri - 3",
+    header1: "Kağıt Cinsleri",
     detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
+      "Çevre dostu bir seçenek olan geri dönüştürülmüş kâğıt, kaynak tasarrufu sağlaması ve sürdürülebilirlik ilkelerimize uygunluğu nedeniyle önem verdiğimiz bir hammaddedir.",
+    header2: "Geri Dönüştürülmüş ",
+    header3: "Kâğıt",
     photoLink: Mukavva_Data,
   },
   {
     id: "4",
-    header1: "Kağıt Cinsleri - 4",
+    header1: "Kağıt Cinsleri",
     detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
+      "Yüzeyi özel kaplamalarla güçlendirilmiş olan bu kâğıt türü, neme, yağa veya suya karşı yüksek direnç sağlar. Gıda, ilaç ve elektronik ürün ambalajlarında sıklıkla kullanılır.",
+    header2: "Özel Kaplı ",
+    header3: "Kâğıt",
     photoLink: Mukavva_Data,
-  },
-  {
-    id: "5",
-    header1: "Kağıt Cinsleri - 5",
-    detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
-    photoLink: Mukavva_Data,
-  },
-  {
-    id: "6",
-    header1: "Kağıt Cinsleri - 6",
-    detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
-    photoLink: Mukavva_Data,
-  },
-  {
-    id: "7",
-    header1: "Kağıt Cinsleri - 7",
-    detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
-    photoLink: Mukavva_Data,
-  },
-  {
-    id: "8",
-    header1: "Kağıt Cinsleri - 8",
-    detail:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    header2: "E Dalga",
-    header3: "Oluklu Mukavva",
-    photoLink: Mukavva_Data,
-  },
+  }
 ];
 
 const Diger_Sektorler_Data = [

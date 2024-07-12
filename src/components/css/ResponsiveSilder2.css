@@ -3,13 +3,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px;
+  overflow: hidden;
+  height: 350px;
 }
 
 .gridContainer {
   position: relative;
   width: 100px;
-  height: 100px;
+  height: 150px;
   transform-style: preserve-3d;
   animation: gridContaineranimate 30s linear infinite;
 }
@@ -28,10 +29,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100px;
+  height: 150px;
   transform-origin: center;
   transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 15deg)) translateZ(400px);
+  transform: rotateY(calc(var(--i) * 17.14deg)) translateZ(600px);
 }
 
 

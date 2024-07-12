@@ -94,8 +94,9 @@
 
   .timeline_text {
     color: white;
-    font-size: 18px;
+    font-size: 23px;
     text-align: left ;
+    font-family: 'Anybody-light', sans-serif;
  
   }
 
@@ -142,6 +143,8 @@
   .arrow{
     display: none;
     transition: font-size 0.3s ease; /* Add transition for smooth font size change */
+    font-family: 'Montserrat', sans-serif;
+
   }
 
   @media (min-width: 601px) {
@@ -184,6 +187,17 @@
   }
 
   @media (max-width: 601px) {
+
+    .timeline_header {
+      font-size: 22px;
+   
+    }
+
+    .timeline_text {
+      font-size: 18px;
+
+   
+    }
 
     .frame{
       height: 600px;

@@ -18,9 +18,9 @@ const Main_Page = ({ change_page }) => {
   return (
     <>
       <Acilis_Sayfasi change_page={change_page} SektorItems={SektorItems} />
-      <Left_Header sectorLabel={"Sektörler"} />
+      <Left_Header sectorLabel={"Her sektörün ihtiyacını biliyoruz"} />
       <Sektorler SektorItems={SektorItems} />
-      <Right_Header sectorLabel={"Üretim"} />
+      <Right_Header sectorLabel={"Kâğıtla başlayan güvenilir markalara uzanan bir yolculuk"} />
       <Uretim UretimData={UretimData} />
       <Left_Header sectorLabel={"Yolculuğumuz"} />
       <Yolculugumuz YolculugumuzData={YolculugumuzData} />

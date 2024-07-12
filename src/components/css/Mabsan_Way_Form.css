@@ -23,7 +23,7 @@
 
 .form_label_1 {
     background-color: transparent;
-    font-size: 52px;
+    font-size: 40px;
     outline: none;
     transition: opacity 0.2s ease-in-out, font-size 0.2s; 
     opacity: 1;
@@ -49,7 +49,7 @@
     padding-bottom: 0px;
     color: white;
     text-align: left;
-    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    font-family: 'Anybody-light', sans-serif;
 
 }
 

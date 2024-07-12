@@ -40,7 +40,7 @@ const Footer = ({ change_page }) => {
             controls={false}
             playsInline
             style={{
-              transform: "translate(-0%, 0%)",
+              transform: "translate(-0%, -15%)",
               width: "auto",
               height: "auto",
             }}
@@ -84,10 +84,10 @@ const Footer = ({ change_page }) => {
             }}
           >
             <button
-              className="detay_title pt-3 pb-2 pt-md-4 pb-md-0
+              className="detay_title pt-3 pb-2 pt-md-4 pb-md-0 
             "
             >
-              <Link to={"/surdurulebilirlik"}>
+              <Link to={"/surdurulebilirlik"} className="a_surudurlebilir">
                 {" "}
                 Sürdürülebilirlik Politikası{" "}
               </Link>

@@ -106,7 +106,7 @@ const Uretim = ({YonetimData}) => {
                     </div>
 
                     <div className="d-flex row justify-content-center">
-                      <label className="yonetim_header">{pagerItem.Name}</label>
+                      <label className="yonetim_header pt-2">{pagerItem.Name}</label>
                       <label className="yonetim_header">
                         {pagerItem.Position}
                       </label>

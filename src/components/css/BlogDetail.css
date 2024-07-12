@@ -4,7 +4,7 @@
   }
 
   .blog_day_title{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Anybody', sans-serif;
     font-size: 130px;
     font-weight: bold;
     height: 130px;
@@ -13,7 +13,7 @@
   }
 
   .blog_month_title{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Anybody', sans-serif;
     font-size: 40px;
     font-weight: bold;
     transition: all .3s;
@@ -23,7 +23,7 @@
 
   .blog_detail_header{
     font-size: 40px;
-    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    font-family: 'Anybody-light', sans-serif; /* Use Gotham font */
     font-weight: bold;
 
   }
@@ -33,7 +33,7 @@
     text-align: left;
     font-size: 25px;
     white-space: pre-line;
-    font-family: 'Gotham', sans-serif; /* Use Gotham font */
+    font-family: 'Anybody-light', sans-serif; /* Use Gotham font */
     line-height: 1.2;
 
   }
@@ -51,7 +51,6 @@
         text-align: left;
         font-size: 15px;
         white-space: pre-line;
-        font-family: 'Gotham', sans-serif; /* Use Gotham font */
         line-height: 1.2;
     
       }

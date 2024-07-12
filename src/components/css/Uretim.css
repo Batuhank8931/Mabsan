@@ -16,7 +16,7 @@
 
 .pager_label_1 {
     background-color: transparent;
-    font-size: 34px;
+    font-size: 30px;
     outline: none;
     transition: opacity 0.2s ease-in-out, font-size 0.2s; 
     opacity: 1;
@@ -37,13 +37,13 @@
 
 .pager_label_2 {
     background-color: transparent;
-    font-size: 15px;
+    font-size: 20px;
     outline: none;
     transition: opacity 0.2s ease-in-out, font-size 0.2s; 
     padding-bottom: 0px;
     color: white;
     text-align: left;
-    font-family: 'Gotham', sans-serif; /* Use 
+    font-family: 'Anybody-light', sans-serif; /* Use 
 
 }
 
@@ -73,6 +73,7 @@
   .previous_button::before, .next_button::after {
     content: "\2190"; /* Unicode for left arrow */
     font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .next_button::after {
@@ -141,7 +142,7 @@
   .pager_card_header_2 {
     background-color: transparent; /* Transparent background */
     color: white;
-    font-size: 50px;
+    font-size: 30px;
     display: flex;
     justify-content: center; /* Align horizontally center */
     align-items: center; /* Align vertically center */
@@ -220,12 +221,12 @@
   }
 
   .pager_card_header_1{
-    font-size: 60px;
+    font-size: 50px;
 
   }
 
   .pager_card_header_2 {
-    font-size: 35px;
+    font-size: 20px;
 
   }
 

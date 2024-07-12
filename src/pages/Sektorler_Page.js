@@ -10,6 +10,8 @@ import Diger_Sektorler from "../components/Diger_Sektorler";
 import Footer from "../components/Footer";
 import ResponsiveSlider2 from "../components/ResponsiveSilder2";
 
+import ResponsiveSlider3 from "../components/ResponsiveSilder3";
+
 import Mukavva_cinsleri_background from "../assets/mukavva_cinsleri_background.svg";
 import Kagit_cinsleri_background from "../assets/kagit_cinsleri_background.svg";
 
@@ -22,41 +24,51 @@ const Diger_Sektorler_Data = Main_Data.Diger_Sektorler_Data;
 const SektorItems = Main_Data.SektorItems;
 
 const Sektorler_Page = ({ change_page, sektor_item }) => {
-
-  const matchedItem = SektorItems.find(item => item.name === sektor_item);
+  const matchedItem = SektorItems.find((item) => item.name === sektor_item);
 
   // Extract the video value if the item is found
 
   const matchedItemDetails = matchedItem
-  ? [
-      matchedItem.video,
-      matchedItem.header,
-      matchedItem.info,
-      matchedItem.teknik_kutu,
-      matchedItem.acik_kutu,
-      matchedItem.data_1,
-      matchedItem.data_2,
-      matchedItem.data_3,
-      matchedItem.data_4,
-      matchedItem.data_5
-    ]
-  : [null, null, null, null, null, null, null, null, null,, null];
+    ? [
+        matchedItem.video,
+        matchedItem.header,
+        matchedItem.info,
+        matchedItem.teknik_kutu,
+        matchedItem.acik_kutu,
+        matchedItem.data_1,
+        matchedItem.data_2,
+        matchedItem.data_3,
+        matchedItem.data_4,
+        matchedItem.data_5,
+      ]
+    : [null, null, null, null, null, null, null, null, null, , null];
 
-// Destructure the matchedItemDetails array
-
+  // Destructure the matchedItemDetails array
 
   return (
     <>
-      <SubNavbar change_page={change_page} sectorLabel={sektor_item} SektorItems={SektorItems} />
+      <SubNavbar
+        change_page={change_page}
+        sectorLabel={sektor_item}
+        SektorItems={SektorItems}
+      />
       <Perakende_Video matchedItemDetails={matchedItemDetails} />
-      <Teknik_Ozellik matchedItemDetails={matchedItemDetails}/>
+      <Teknik_Ozellik matchedItemDetails={matchedItemDetails} />
       <Middle_Header MiddleLabel={"Mukavva Cinsleri"} />
       <Big_Slider
         pagerData={MukavvaData}
         background={Mukavva_cinsleri_background}
         name={"Mukavva"}
       />
-      <Urunler_Filmi />
+      <ResponsiveSlider3 />
+      <label style={{ fontSize: "10px" }}>
+        Görseller firmamızın daha önce ürettiği kutu çeşitlerine örnek olup,
+        resimlerde görünen marka ürünlerinin satışları, pazarlanması vb firmamız
+        tarafından yapılmamaktadır. Kutuların üzerinde yer alan markaların her
+        türlü hakları ilgili markalara aittir. Sitemizden ürün görsellerinin
+        haberimiz olmadan alınması ve kullanılmasına muvafakatimiz yoktur. Bu
+        şekilde kullanımlarda her türlü yasal sorumluluk kullanan şahsa aittir.
+      </label>
       <Middle_Header MiddleLabel={"Kağıt Cinsleri"} />
       <Big_Slider
         pagerData={KagitData}
@@ -64,8 +76,16 @@ const Sektorler_Page = ({ change_page, sektor_item }) => {
         name={"Kagit"}
       />
       <ResponsiveSlider2 />
+      <label style={{ fontSize: "10px" }}>
+        Görseller firmamızın daha önce ürettiği kutu çeşitlerine örnek olup,
+        resimlerde görünen marka ürünlerinin satışları, pazarlanması vb firmamız
+        tarafından yapılmamaktadır. Kutuların üzerinde yer alan markaların her
+        türlü hakları ilgili markalara aittir. Sitemizden ürün görsellerinin
+        haberimiz olmadan alınması ve kullanılmasına muvafakatimiz yoktur. Bu
+        şekilde kullanımlarda her türlü yasal sorumluluk kullanan şahsa aittir.
+      </label>
       <Diger_Sektorler Diger_Sektorler_Data={Diger_Sektorler_Data} />
-      <Footer change_page={change_page}/>
+      <Footer change_page={change_page} />
     </>
   );
 };
