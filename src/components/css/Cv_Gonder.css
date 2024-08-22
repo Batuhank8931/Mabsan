@@ -27,17 +27,20 @@
 
 }
 
-.work_button {
+.cv_work_button {
     width: 300px;
     height: 80px;
-    background-color: transparent;
-    border: 2px solid #FFB0B0;
+    border-radius: 15px;
+    color: white;
+    font-family: 'Anybody', sans-serif;
+    background: linear-gradient(317.85deg, #FA0000 -41.59%, rgba(250, 0, 0, 0) 143.46%);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Glowing effect */
     cursor: pointer;
     transition: all 0.3s ease; /* Add transition for smooth animation */
     }
 
 
-.work_button:hover {
+.cv_work_button:hover {
     width: 320px;
     height: 80px;
     }

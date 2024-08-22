@@ -14,10 +14,10 @@
 .red_background::before {
     content: "";
     position: absolute;
-    top: calc(50% - 250px); /* 50% of parent height minus half of the pseudo-element height */
+    top: calc(50% - 240px); /* 50% of parent height minus half of the pseudo-element height */
     left: calc(50% - 500px); /* 50% of parent width minus half of the pseudo-element width */
     width: 1000px; /* Cover the entire container */
-    height: 500px; /* Cover the entire container */
+    height: 580px; /* Cover the entire container */
     background: linear-gradient(179.96deg, rgba(203, 2, 2, 0.3) 0%, rgba(101, 1, 1, 0.153) 100%);
     border-radius: 70px 0px 70px 0px; /* Apply border-radius to pseudo-element */
     background-position: center; /* Center the background gradient horizontally and vertically */
@@ -28,7 +28,7 @@
 
 
 .full_scale{
-    height: 400px;
+    height: 580px;
     z-index: 1;
 }
 
@@ -93,7 +93,7 @@
     
 
   .Diger_Sektor_front{
-    height: 400px;
+    height: 600px;
     padding: 30px;
   }
 
@@ -121,7 +121,7 @@
 
   .Diger_Sektor_image {
     width: 100%;
-    height: 100%;
+    height: 240px;
     object-fit: cover;
   }
 
@@ -173,7 +173,7 @@
     
     .Diger_Sektor_front{
       width: 600px;
-      height: 330px;
+      height: 680px;
       padding-bottom: 0px;
     }
 
@@ -183,8 +183,14 @@
     
       }
 
+      .Diger_Sektor_image {
+        width: 100%;
+        height: 240px;
+
+      }
+
     .full_scale{
-        height: 480px;
+        height: 750px;
     }
 
     .red_background::before {

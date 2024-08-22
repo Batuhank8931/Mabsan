@@ -142,7 +142,7 @@
   .pager_card_header_2 {
     background-color: transparent; /* Transparent background */
     color: white;
-    font-size: 30px;
+    font-size: 28px;
     display: flex;
     justify-content: center; /* Align horizontally center */
     align-items: center; /* Align vertically center */
@@ -154,7 +154,7 @@
   }
   
   .pager_card_header_2:hover{
-    font-size: 55px;
+    font-size: 30px;
   }
 
   .image_container {

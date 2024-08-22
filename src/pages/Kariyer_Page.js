@@ -15,6 +15,7 @@ const value2 = Main_Data.Cards.value2;
 const value3 = Main_Data.Cards.value3;
 const value4 = Main_Data.Cards.value4;
 const value5 = Main_Data.Cards.value5;
+const value6 = Main_Data.Cards.value6;
 
 const SektorItems = Main_Data.SektorItems;
 
@@ -29,13 +30,11 @@ const Kariyer_Page = ({ change_page }) => {
         PARAMATER1={value1}
         PARAMATER2={value2}
         PARAMATER3={value3}
-        PARAMATER4={value4}
       />
       <Mabsan_Way_Form_Reverse
-        PARAMATER1={value1}
-        PARAMATER2={value2}
-        PARAMATER3={value3}
-        PARAMATER4={value5}
+        PARAMATER1={value4}
+        PARAMATER2={value5}
+        PARAMATER3={value6}
       />
       <Footer change_page={change_page}/>
     </>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import backgroundSVG from "../assets/HeaderBackground.svg";
-import MabsanLogo from "../assets/mabsan_logo_w.png";
+import MabsanLogo from "../assets/mabsan_logo_wr.png";
 import MenuButton from "../assets/MenuButton.svg";
 import bayrak from "../assets/bayrak.svg";
 import politika from "../assets/politika.svg";

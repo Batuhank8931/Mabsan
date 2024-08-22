@@ -146,9 +146,9 @@ const Sektorler = ({ SektorItems }) => {
                           width: "100%",
                         }}
                       >
-                        <div className=" card_headers vertical-text d-flex">
-                          <div className="">
-                            <div className="sektor_label mr-3">
+                        <div className=" card_headers vertical-text d-flex justify-content-start">
+                          <div className=" d-flex justify-content-start">
+                            <div className="sektor_label mr-3 d-flex justify-content-start ">
                               <img
                                 className="h-9 image  float-left"
                                 src={item.image}

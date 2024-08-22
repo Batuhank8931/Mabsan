@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 import "./css/Cv_Gonder.css";
 import Right_Arrow from "../assets/right_arrow.svg";
@@ -41,8 +41,8 @@ const Cv_Gonder = () => {
     <div className="baslik p-md-5 p-3 pt-md-1 pb-md-1 ">
       <div>
         <label className="basvuru_title pt-4 pb-4 pl-0 pr-0 p-3">
-          İş başvurusunda bulunmak için aşağıdaki formu doldurunuz. Sizinle en
-          kısa sürede iletişime geçilecektir.
+          Sen de bir Mabsanlı olmak istiyorsan, formu doldurarak bizimle
+          iletişime geçebilirsin.
         </label>
       </div>
       <div
@@ -58,17 +58,17 @@ const Cv_Gonder = () => {
           <input
             className="input_field"
             type="text"
-            placeholder="Adınız Soyadınız"
+            placeholder="Ad-Soyad"
           />
           <input
             className="input_field"
             type="tel"
-            placeholder="Telefon Numaranız"
+            placeholder="Telefon"
           />
           <input
             className="input_field"
             type="email"
-            placeholder="E-mail Adresiniz"
+            placeholder="E-mail"
           />
 
           <div
@@ -87,7 +87,7 @@ const Cv_Gonder = () => {
                   justifyContent: "center",
                 }}
               >
-                {selectedFile ? selectedFile.name : "CV'nizi yükleyiniz"}
+                {selectedFile ? selectedFile.name : "CV"}
               </label>
               <button
                 className="Cv_Button"
@@ -110,12 +110,15 @@ const Cv_Gonder = () => {
             />
           </div>
 
-          <textarea className="text-field" placeholder="Kısaca Hakkınızda" />
+          <textarea className="text-field" placeholder="Kendinden kısaca bahseder misin?" />
         </div>
 
         <div className="d-flex align-items-end justify-content-center justify-content-md-start pl-0 col-md-6 col-12 p-md-4 p-1">
           <div className="d-flex column p-3 pl-0">
-            <button className="work_button d-flex justify-content-between" onClick={handleSubmit}>
+            <button
+              className="cv_work_button d-flex justify-content-between"
+              onClick={handleSubmit}
+            >
               <label
                 className="p-3 ml-4"
                 style={{

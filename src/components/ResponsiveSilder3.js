@@ -13,7 +13,7 @@ function ResponsiveSlider2() {
   };
 
   return (
-    <div className="responsiveBodySlider">
+    <div className="responsiveBodySlider py-3">
       <div className="gridContainer">
         {[...Array(21)].map((_, index) => (
           <span

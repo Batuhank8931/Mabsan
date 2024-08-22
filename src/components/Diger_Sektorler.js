@@ -60,7 +60,7 @@ const Diger_Sektorler = ({ Diger_Sektorler_Data }) => {
         <label className="pt-5" style={{fontSize:"30px"}}>Diğer Sektörler</label>
       </div>
       <div className="d-flex row m-0 full_scale">
-        <div className=" col-6 col-md-1 d-flex align-items-center order-md-1 order-2 justify-content-end">
+        <div className=" col-6 col-md-1 d-flex align-items-end align-items-md-center order-md-1 order-2 justify-content-end">
           <button
             className="Diger_Sektor_previous_button"
             onClick={handlePrevious}
@@ -71,14 +71,14 @@ const Diger_Sektorler = ({ Diger_Sektorler_Data }) => {
           <div className="Diger_Sektor_card_wrapper">
             <div
               className="Diger_Sektor_container"
-              onMouseDown={handleMouseDown}
-              onMouseMove={handleMouseMove}
-              onMouseUp={handleMouseUp}
-              onMouseLeave={handleMouseUp}
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-              onTouchCancel={handleTouchEnd}
+              //onMouseDown={handleMouseDown}
+              //onMouseMove={handleMouseMove}
+              //onMouseUp={handleMouseUp}
+              //onMouseLeave={handleMouseUp}
+              //onTouchStart={handleTouchStart}
+              //onTouchMove={handleTouchMove}
+              //onTouchEnd={handleTouchEnd}
+              //onTouchCancel={handleTouchEnd}
               ref={containerRef}
             >
               <div
@@ -88,7 +88,7 @@ const Diger_Sektorler = ({ Diger_Sektorler_Data }) => {
                     ? {
                         transform: `translateX(${-450 * currentIndex}px)`,
                       }
-                    : { transform: `translateX(${-351 * currentIndex}px)` }
+                    : { transform: `translateX(${-350 * currentIndex}px)` }
                 }
               >
                 {Diger_Sektorler_Data.map((pagerItem, index) => (
@@ -118,7 +118,7 @@ const Diger_Sektorler = ({ Diger_Sektorler_Data }) => {
             </div>
           </div>
         </div>
-        <div className=" col-6 col-md-1 d-flex align-items-center order-3 justify-content-start">
+        <div className=" col-6 col-md-1 d-flex align-items-end align-items-md-center order-3 justify-content-start">
           <button
             className="Diger_Sektor_next_button"
             onClick={handleNext}

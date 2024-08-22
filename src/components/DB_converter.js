@@ -1,35 +1,44 @@
-
-
 import kart_1 from "../assets/kart_1.png";
 import kart_2 from "../assets/kart_2.png";
 import kart_3 from "../assets/kart_3.png";
 import kart_4 from "../assets/kart_4.png";
 
+import E_Ticaret from "../assets/sektorler_logo/e_ticaret.svg";
+import Edustriyel from "../assets/sektorler_logo/endustriyel.svg";
+import Perakende from "../assets/sektorler_logo/perakende.svg";
+import Kozmetik from "../assets/sektorler_logo/kozmetik.svg";
+import Otomotiv from "../assets/sektorler_logo/otomotiv.svg";
+import Yasmeyvesebze from "../assets/sektorler_logo/e_ticaret.svg";
+import FMCG from "../assets/sektorler_logo/ilac.svg";
+import Takeaway from "../assets/sektorler_logo/kozmetik.svg";
 
-import E_Ticaret from "../assets/e_ticaret.svg";
-import Edustriyel from "../assets/endustriyel.svg";
-import Perakende from "../assets/perakende.svg";
-import Kozmetik from "../assets/kozmetik.svg";
-import Otomotiv from "../assets/otomotiv.svg";
+
+import E_Ticaret_b from "../assets/sektorler_logo/e_ticaret_b.svg";
+import Edustriyel_b from "../assets/sektorler_logo/endustriyel_b.svg";
+import Perakende_b from "../assets/sektorler_logo/perakende_b.svg";
+import Kozmetik_b from "../assets/sektorler_logo/kozmetik_b.svg";
+import Yasmeyvesebze_b from "../assets/sektorler_logo/e_ticaret_b.svg";
+import FMCG_b from "../assets/sektorler_logo/ilac_b.svg";
+import Otomotiv_b from "../assets/sektorler_logo/otomotiv_b.svg";
+import Takeaway_b from "../assets/sektorler_logo/kozmetik_b.svg";
+
+
 import teknik_kutu from "../assets/teknik_kutu.png";
 import acik_kutu from "../assets/acik_kutu.png";
-import Yasmeyvesebze from "../assets/yasmeyvesebze.svg";
-import FMCG from "../assets/ilac.svg";
-import FMCG_b from "../assets/ilac_b.svg";
-import Takeaway from "../assets/takeaway.svg";
-
-import Yasmeyvesebze_b from "../assets/yasmeyvesebze_b.svg";
-import E_Ticaret_b from "../assets/e_ticaret_b.svg";
-import Edustriyel_b from "../assets/endustriyel_b.svg";
-import Takeaway_b from "../assets/takeaway_b.svg";
-import Perakende_b from "../assets/perakende_b.svg";
-import Kozmetik_b from "../assets/kozmetik_b.svg";
-import Otomotiv_b from "../assets/otomotiv_b.svg";
 
 import Yonetim_image from "../assets/yonetim.png";
 import Discover_1 from "../assets/Discover_1.svg";
 import Discover_2 from "../assets/Discover_2.svg";
-import Kutu_1 from "../assets/Urunler/kutu_1.png";
+
+import Kutu_1 from "../assets/Urunler/kutu_1.jpg";
+import Kutu_2 from "../assets/Urunler/kutu_2.jpg";
+import Kutu_3 from "../assets/Urunler/kutu_3.jpg";
+import Kutu_4 from "../assets/Urunler/kutu_4.jpg";
+import Kutu_5 from "../assets/Urunler/kutu_5.jpg";
+import Kutu_6 from "../assets/Urunler/kutu_6.jpg";
+import Kutu_7 from "../assets/Urunler/kutu_7.jpg";
+import Kutu_8 from "../assets/Urunler/kutu_8.jpg";
+
 import Makina_Data from "../assets/Makina_Data.png";
 import Mabsan_Way_image from "../assets/image_1.svg";
 import Mukavva_Data from "../assets/Mukavva_Data.png";
@@ -104,7 +113,7 @@ const SektorItems = [
     data_5: "30",
   },
   {
-    name: "Yaş Meyve-Sebze",
+    name: "Yaş Meyve Sebze",
     image: Yasmeyvesebze,
     image_b: Yasmeyvesebze_b,
     way: "yasmeyvesebze",
@@ -170,7 +179,7 @@ const SektorItems = [
     data_3: "30",
     data_4: "30",
     data_5: "30",
-  }
+  },
 ];
 
 const UretimData = [
@@ -205,69 +214,85 @@ const UretimData = [
       "Oluklu mukavva levhaları, hassas kesim, baskı ve özel yapıştırma işlemlerinden geçirerek son ürün olan koli ve kutulara dönüştürüyoruz.",
     header2: "Markaya Özel Çözümler",
     photoLink: kart_4,
-  }
+  },
 ];
 
 const YolculugumuzData = [
   {
     year1: "19",
-    year2: "82",
-    title: "Event 1",
-    text: "1988 yılında x tarafından İstanbul'da kuruldu.",
+    year2: "88",
+    title: "Kuruluş",
+    text: "Yolculuğumuz 1988 yılında İstanbul’da başladı.",
   },
   {
     year1: "19",
-    year2: "88",
-    title: "Event 2",
-    text: "1988 yılında x tarafından İstanbul'da kuruldu.",
+    year2: "91",
+    title: "İlk Otomasyon Yatırımı",
+    text:
+      "Otomatik kutu makinesi olan slotter makinelerine yatırım yaparak otomasyona ilk adımımızı attık.",
+  },
+  {
+    year1: "19",
+    year2: "94",
+    title: "Depolama Yatırımları",
+    text:
+      "Mevcut alanımıza sığmayarak 4 ayrı lokasyonda ek depolama alanları kurduk ve işlettik.",
+  },
+  {
+    year1: "19",
+    year2: "98",
+    title: "İhracat Adımlarımız",
+    text:
+      "Yeni lokasyonumuza geçerek üretim kapasitemizi artırdık; ilk kez Azerbaycan ve Türki Cumhuriyetlere ihracata başladık.",
+  },
+  {
+    year1: "19",
+    year2: "99",
+    title: "Oluklu Mukavva Üretimi",
+    text:
+      "İlk oluklu mukavva makinesi yatırımlarımızı yaparak Türkiye’de oluklu mukavva üretimi yapan sayılı şirket arasına girdik.",
   },
   {
     year1: "20",
-    year2: "00",
-    title: "Event 3",
-    text: "1988 yılında x tarafından İstanbul'da kuruldu.",
+    year2: "04",
+    title: "Kapasite Yatırımları",
+    text:
+      "Müşteri portföyümüzün genişlemesiyle birlikte yeni inline otomatik kutu makineleri satın alarak üretim kapasitemizi katladık.",
   },
   {
     year1: "20",
-    year2: "01",
-    title: "Event 4",
-    text: "1988 yılında x tarafından İstanbul'da kuruldu.",
+    year2: "07",
+    title: "Ürün Portfolyosu Genişliyor",
+    text:
+      "Değişen alışkanlıklara uyum sağlamak ve sektöre yön vermek için kesim makineleri yatırımlarımızla ürün çeşitliliğimizi artırdık.",
   },
   {
     year1: "20",
-    year2: "02",
-    title: "Event 5",
-    text: "1988 yılında x tarafından İstanbul'da kuruldu.",
+    year2: "11",
+    title: "Oluklu Mukavva Hattı Büyüyor",
+    text:
+      "Yeni hattımızla birlikte E dalga ve EB dalga üretimlerini gerçekleştirerek mukavva ve koli kutu olarak tüm ürün çeşitlerini kendi bünyesinde üreten bir tesis haline geldik.",
   },
   {
     year1: "20",
-    year2: "10",
-    title: "Event 6",
-    text: "1988 yılında x tarafından İstanbul'da kuruldu.",
+    year2: "16",
+    title: "Ofset Ürünler",
+    text:
+      "Ürün gamımızı ofset ürünlerle genişlettik ve matbaa alanına geçiş yaptık.",
   },
   {
     year1: "20",
-    year2: "12",
-    title: "Event 7",
-    text: "1988 yılında x tarafından İstanbul'da kuruldu.",
+    year2: "19",
+    title: "Yeni Fabrika Yatırımı",
+    text:
+      "Daha çok güven, tasarım ve inovasyon için yeni fabrikamıza geçiş yaptık.",
   },
   {
     year1: "20",
-    year2: "15",
-    title: "Event 8",
-    text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-  },
-  {
-    year1: "20",
-    year2: "18",
-    title: "Event 9",
-    text: "1988 yılında x tarafından İstanbul'da kuruldu.",
-  },
-  {
-    year1: "20",
-    year2: "23",
-    title: "Event 10",
-    text: "1988 yılında x tarafından İstanbul'da kuruldu.",
+    year2: "24",
+    title: "Yeni Bir Mabsan",
+    text:
+      "36 yıllık deneyimimizden aldığımız güç ve gelecek hayallerimizden aldığımız cesaretle yolculuğumuza yenilenen markamızla devam ediyoruz.",
   },
 ];
 
@@ -281,11 +306,16 @@ const Paragraflar = {
 };
 
 const Cards = {
-  value1: "Discover New Opportunities",
-  value2: `At Mabsan Way, we pride ourselves on our unique approach to cardboard production. Our way is defined by a steadfast commitment to sustainability, where every fold and crease in our cardboard products reflects our dedication to minimizing environmental impact.`,
-  value3: "Discover",
-  value4: Discover_1,
-  value5: Discover_2,
+  value1: "Mabsan’ın İçinde Gelişim Var",
+  value2: `Üretimden satışa, tasarımdan müşteri ilişkilerine her aşamada gelişimin önemine
+  inanıyoruz. Burada başlayacağın yolculuğunda yolun sabit kalmaz, sürekli yeni yollar
+  ve fırsatlarla karşılaşırsın.`,
+  value3: Discover_1,
+  value4: "Mabsan’ın İçinde Uzmanlık Var",
+  value5: `Mabsan’da işimizi özenle ve uzmanlıkla yaparız. Tüm departmanlarımızda işini en iyi
+  yapanlarla çalışır, ekiplerimize sonsuz güven duyarız. Burada profesyonel olduğun
+  alanda söz sahibi olabilirsin.`,
+  value6: Discover_2,
 };
 
 const YonetimData = [
@@ -624,14 +654,11 @@ const MakinaData = [
 ];
 
 const Mabsan_Way = {
-  value1: "The Mabsan Way",
+  value1: "Değerli Üretim",
   value2: `
-    "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-    "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-    "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+    "Mabsan’da üretim döngüsü öncelikle güvenle başlar. 30 yıllık birikimimizle önce sektörel ihtiyaçları analiz eder inovatif bakış açımızla en yenilikçi çözümleri geliştiririz. Yetkin çalışan kadromuzla ürünlerinizi güvende tutacak ve markanızı öne çıkaracak kutu ve koliler tasarlarız. Tüm bu süreçte kaliteden asla ödün vermeyiz. Çünkü değerli müşterilerimizin bu sayede 36 yıldır bize güvendiğini biliriz. "
     `,
-  value3: "Our Strategy",
-  value4: Mabsan_Way_image,
+  value3: Mabsan_Way_image,
 };
 
 const MukavvaData = [
@@ -649,28 +676,28 @@ const MukavvaData = [
     header1: "Oluklu Mukavva Cinsleri",
     detail:
       "Orta büyüklükteki dalga formuna sahip olan B-dalga, dayanıklılık gerektiren ürünler için sıklıkla kullanılır. Elektronik, beyaz eşya ve diğer sanayi ürünlerinin ambalajlanmasında tercih edilir.",
-      header2: "B Dalga",
-      header3: "Oluklu Mukavva",
-      photoLink: Mukavva_Data,
+    header2: "B Dalga",
+    header3: "Oluklu Mukavva",
+    photoLink: Mukavva_Data,
   },
   {
     id: "3",
     header1: "Oluklu Mukavva Cinsleri",
     detail:
       "Daha büyük dalga formuna sahip olan C-dalga, süpermarket ürünleri, endüstriyel ve tarımsal ürünlerin ambalajlanmasında kullanılır. Dayanıklılık ve koruma özellikleriyle ön plana çıkar.",
-      header2: "C Dalga",
-      header3: "Oluklu Mukavva",
-      photoLink: Mukavva_Data,
+    header2: "C Dalga",
+    header3: "Oluklu Mukavva",
+    photoLink: Mukavva_Data,
   },
   {
     id: "4",
     header1: "Oluklu Mukavva Cinsleri",
     detail:
       "En büyük dalga formuna sahip olan A-dalga, özellikle ağır ve hacimli ürünlerin ambalajlanmasında kullanılır. Yüksek dayanıklılık sunar.",
-      header2: "A Dalga",
-      header3: "Oluklu Mukavva",
-      photoLink: Mukavva_Data,
-  }
+    header2: "A Dalga",
+    header3: "Oluklu Mukavva",
+    photoLink: Mukavva_Data,
+  },
 ];
 
 const KagitData = [
@@ -709,79 +736,65 @@ const KagitData = [
     header2: "Özel Kaplı ",
     header3: "Kâğıt",
     photoLink: Mukavva_Data,
-  }
+  },
 ];
 
 const Diger_Sektorler_Data = [
   {
     id: "1",
-    Title: "Otomotiv",
+    Title: "E-Ticaret",
     Text:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+      "Koşullar ne olursa olsun satışın 7/24 devam etmesi gereken e-ticaret sektöründe hız ve güven kilit önem taşır. E-ticaret uzmanlığımızla, online işletmeniz ve müşterileriniz için güvenilir, yenilikçi ve sürdürülebilir çözümler sunacağımıza güvenebilirsiniz.",
     photoLink: Kutu_1,
   },
   {
     id: "2",
-    Title: "Elektronik",
+    Title: "Endüstriyel",
     Text:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    photoLink: Kutu_1,
+      "Endüstriyel pazarda ürünün güvenliği her şeyden önemlidir. Ağır ve hantal ürünlerden tehlikeli maddelere kadar, endüstriyel ürünlerin lojistik zorluklarına dayanabilecek esnek seçenekler sunmak kritik önem taşır. Bu nedenle oluklu mukavva çözümlerimiz, nakliye sırasında dayanıklılık ve güvenilirlik sağlamak için kapsamlı testlerden geçirilir.",
+    photoLink: Kutu_2,
   },
   {
     id: "3",
-    Title: "Otomotiv",
+    Title: "Perakende",
     Text:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    photoLink: Kutu_1,
+      "Günümüz tüketicilerinin satın alma kararlarında paketlemenin gücü tartışılmaz. Sadece tasarım değil güvenli ve kullanıcı davranışlarının hesaba katıldığı paketlemeler satışlarda büyük farklar yaratır. Ulusal ve uluslararası pek çok perakende markasıyla edindiğimiz deneyimimize güvenebilirsiniz.",
+    photoLink: Kutu_3,
   },
   {
     id: "4",
-    Title: "Elektronik",
+    Title: "Kozmetik",
     Text:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    photoLink: Kutu_1,
+      "Rekabetin yüksek olduğu kozmetik pazarında, markaların mevcut ve yeni tüketicilerin akıllarında kalması zorlaşıyor. Bu da görsel ve doku alanında sürekli inovasyona ihtiyaç duyulmasına neden oluyor. Güvenilir ve yaratıcı bir iş ortağı olarak, ürünlerinizin öne çıkmasına yardımcı olmak için yanınızdayız.",
+    photoLink: Kutu_4,
   },
   {
     id: "5",
-    Title: "Otomotiv",
+    Title: "Yaş Meyve-Sebze",
     Text:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    photoLink: Kutu_1,
+      "Tedarik zinciri boyunca bozulmaya karşı koruma gerektiren yüksek hacimli yaş meyve-sebze ürünlerinde, güçlü ve güvenilir paketleme çözümleri kullanmak çok önemlidir. Her ürün türü için özenle tasarlanmış kâğıt bazlı çözümlerimiz, sürdürülebilirlik vaadimizi yerine getirirken, gıda ürünlerini korumak için tasarlanmış, test edilmiş ve üretilmiştir.",
+    photoLink: Kutu_5,
   },
   {
     id: "6",
-    Title: "Elektronik",
+    Title: "FMCG",
     Text:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    photoLink: Kutu_1,
+      "Hızlı tüketim ürünlerinde ambalaj ve teşhirler, tüketicileri karar anlarında etkilemek için kritik araçlardır. Ürünlerinizin fark yaratması ve tedarik zincirinde verimliliği korumak için kapsamlı FMCG deneyimimizden yararlanıyoruz.",
+    photoLink: Kutu_6,
   },
   {
     id: "7",
     Title: "Otomotiv",
     Text:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    photoLink: Kutu_1,
+      "İster küçük ister büyük, ister hafif ister ağır bileşenleri paketliyor olalım, amaca uygun ve sürdürülebilir paketleme çözümleri sunmak için kanıtlanmış bilimsel yöntemler kullanıyoruz. Sürtünmeye ve korozyona dayanıklı paketler de dahil olmak üzere ürün yelpazemiz, tedarik zincirinizin fiziksel gereksinimlerini karşılamak için tasarlanmıştır.",
+    photoLink: Kutu_7,
   },
   {
     id: "8",
-    Title: "Elektronik",
+    Title: "Take-Away",
     Text:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    photoLink: Kutu_1,
-  },
-  {
-    id: "9",
-    Title: "Otomotiv",
-    Text:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    photoLink: Kutu_1,
-  },
-  {
-    id: "10",
-    Title: "Elektronik",
-    Text:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-    photoLink: Kutu_1,
+      "Fast-food zincirlerinden fine dining restoranlarına kadar günümüzün yeme-içme sektöründe hizmet verenlere çevresel etkilerini önemsiyor; plastik yerine kâğıt bazlı paketleri tercih ediyor. Take-away veya paket servislerinizde müşterilerinizin memnuniyetini garantiye almak için bize güvenebilirsiniz.",
+    photoLink: Kutu_8,
   },
 ];
 

@@ -124,7 +124,7 @@ const Yolculugumuz = ({ YolculugumuzData }) => {
                 <div className="year">
                   <label className="timeline_year">{pagerItem.year2}</label>
                 </div>
-                <div className="timer_button d-flex justify-content-start p-3 p-md-5">
+                <div className="timer_button d-flex justify-content-start px-3 px-md-4">
                   <div
                     className="d-flex align-items-center flex-column bd-highlight"
                     style={{ height: "100%", width: "100%" }}
@@ -157,10 +157,10 @@ const Yolculugumuz = ({ YolculugumuzData }) => {
                     </button>
                     <div className="p-2 bd-highlight" style={{ width: "100%" }}>
                       <div className="timer_headers d-flex flex-column align-items-start">
-                        <label className="timeline_header pt-4">
+                        <label className="timeline_header pt-5">
                           {pagerItem.title}
                         </label>
-                        <label className="timeline_text pt-4">
+                        <label className="timeline_text pt-1">
                           {pagerItem.text}
                         </label>
                       </div>
@@ -201,14 +201,14 @@ const Yolculugumuz = ({ YolculugumuzData }) => {
                 {YolculugumuzData[1].year2}
               </label>
             </div>
-            <button className="timer_button d-flex justify-content-start ml-5 p-5">
+            <button className="timer_button d-flex justify-content-start px-3 px-md-4">
               <div className="flex-column">
                 <div
-                  className="timeline_label p-2 order-md-2 order-1 m-2"
+                  className="timeline_label p-2 order-md-2 order-1"
                   style={{ width: "100%" }}
                 >
                   <div className="timer_headers d-flex flex-column align-items-start">
-                    <label className="timeline_header pt-4" id="Sub_2">
+                    <label className="timeline_header pt-1" id="Sub_2">
                       {YolculugumuzData[1].title}
                     </label>
                     <label className="timeline_text pt-4" id="Sub_3">

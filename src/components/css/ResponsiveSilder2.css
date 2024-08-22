@@ -9,8 +9,8 @@
 
 .gridContainer {
   position: relative;
-  width: 100px;
-  height: 150px;
+  width: 50px;
+  height: 100px;
   transform-style: preserve-3d;
   animation: gridContaineranimate 30s linear infinite;
 }
@@ -30,10 +30,10 @@
   top: 0;
   left: 0;
   width: 100px;
-  height: 150px;
+  height: 100px;
   transform-origin: center;
   transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 17.14deg)) translateZ(600px);
+  transform: rotateY(calc(var(--i) * 17.14deg)) translateZ(550px);
 }
 
 

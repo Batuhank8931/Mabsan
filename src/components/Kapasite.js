@@ -11,11 +11,11 @@ const Kapasite = () => {
         <div className="d-flex flex-row justify-content-center header_1">
             <div className="each_header d-flex flex-column justify-content-end ">
                 <label className="kapasite_label">Tesis Kapasitesi</label>
-                <label className="kapasite_band" style={{ zIndex: 1 }}>50.000 Ton</label>
+                <label className="kapasite_band" style={{ zIndex: 1 }}>36.000 Ton</label>
             </div>
             <div className="each_header d-flex flex-column  justify-content-end ">
                 <label className="kapasite_label">Fabrika Yüzölçümü</label>
-                <label className="kapasite_band" style={{ zIndex: 2 }}>10.000 m2</label>
+                <label className="kapasite_band" style={{ zIndex: 2 }}>7.000 m2</label>
             </div>
             <div className="each_header d-flex flex-column justify-content-end ">
                 <label className="kapasite_label">İhracat</label>
@@ -23,7 +23,7 @@ const Kapasite = () => {
             </div>
             <div className="each_header d-flex flex-column justify-content-end ">
                 <label className="kapasite_label">Çalışan Sayısı</label>
-                <label className="kapasite_band" style={{ zIndex: 4 }}>100</label>
+                <label className="kapasite_band" style={{ zIndex: 4 }}>110</label>
             </div>
         </div>
     </div>

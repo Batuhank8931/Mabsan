@@ -50,7 +50,7 @@ const Iletisim = () => {
   return (
     <div className="baslik pager_back p-md-5 p-3 pt-5">
       <div className="d-flex align-items-center justify-content-center pb-2">
-        <label className="iletisim_header">Lorem impsum dolor sit amet</label>
+        <label className="iletisim_header">İşbirliği ve sorularınız için bizimle iletişime geçin.</label>
       </div>
       <div className="row m-0 p-0">
         <div className="col-12 col-md-4 row m-0 p-0 p-md-3">
@@ -93,7 +93,7 @@ const Iletisim = () => {
                 <input
                   className="iletisim_input_field"
                   type="text"
-                  placeholder="Adınız Soyadınız"
+                  placeholder="Ad Soyad"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -105,7 +105,7 @@ const Iletisim = () => {
                 <input
                   className="iletisim_input_field"
                   type="tel"
-                  placeholder="Telefon Numaranız"
+                  placeholder="Telefon"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
@@ -129,7 +129,7 @@ const Iletisim = () => {
                 <input
                   className="iletisim_input_field"
                   type="email"
-                  placeholder="E-Mail Adresinis"
+                  placeholder="E-Mail"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -143,7 +143,7 @@ const Iletisim = () => {
                 <input
                   className="bilgi_input_field "
                   type="text"
-                  placeholder="Düşüncelerinizi Belirtebilirsiniz"
+                  placeholder="Mesaj"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -153,7 +153,7 @@ const Iletisim = () => {
             </div>
             <div className="d-flex justify-content-center d-md-none p-4">
               <button
-                className="work_button d-flex justify-content-between"
+                className="iletisim_work_button d-flex justify-content-between"
                 type="submit"
               >
                 <label

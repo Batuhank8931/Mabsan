@@ -35,9 +35,10 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
 
     return () => clearInterval(interval);
   }, []);
+
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 2.0; // Set playback rate to 2x
+      videoRef.current.playbackRate = 1.2; // Set playback rate to 2x
     }
   }, [shouldPlay]);
 
@@ -51,6 +52,30 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
 
     return () => clearTimeout(timer); // Clean up the timer on unmount
   }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      const handlePlay = () => {
+        if (shouldPlay && video.paused) {
+          video.play().catch((error) => {
+            console.error("Video play failed:", error);
+          });
+        }
+      };
+
+      video.addEventListener("canplaythrough", handlePlay);
+      video.addEventListener("error", (e) => {
+        console.error("Video error:", e);
+        // Handle error, perhaps retry or provide user feedback
+      });
+
+      return () => {
+        video.removeEventListener("canplaythrough", handlePlay);
+        video.removeEventListener("error", handlePlay);
+      };
+    }
+  }, [shouldPlay]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -206,6 +231,7 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
                 muted
                 controls={false} // This will hide the video controls
                 playsInline
+                preload="auto"
                 style={{
                   position: "absolute",
                   top: 0,

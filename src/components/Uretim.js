@@ -136,10 +136,10 @@ const Uretim = ({UretimData}) => {
                     }
                   >
                     <div className="title_window d-flex m-2 mb-auto bd-highlight pt-md-4">
-                      <label className="pager_card_header_1 pr-4 pl-4 pt-2">
+                      <label className="pager_card_header_1 pr-4 pl-4">
                         0{pagerItem.id}
                       </label>
-                      <label className="pager_card_header_2 pr-2 pl-4 ml-3">
+                      <label className="pager_card_header_2 pr-2 pl-2 ml-3">
                         {pagerItem.header2}
                       </label>
                     </div>

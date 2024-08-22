@@ -30,7 +30,7 @@ const Footer = ({ change_page }) => {
   };
 
   return (
-    <div className="baslik p-md-5 p-3 pt-5 pb-5">
+    <div className="baslik p-md-5 p-3 pt-5 pb-5 mt-5">
       <div className="d-flex align-items-center justify-content-center mb-0 mb-md-5 mt-0 m-0">
         <div className="video-container">
           <video

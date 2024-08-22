@@ -54,36 +54,46 @@ const Sektorler_Page = ({ change_page, sektor_item }) => {
       />
       <Perakende_Video matchedItemDetails={matchedItemDetails} />
       <Teknik_Ozellik matchedItemDetails={matchedItemDetails} />
+      <Urunler_Filmi/>
       <Middle_Header MiddleLabel={"Mukavva Cinsleri"} />
       <Big_Slider
         pagerData={MukavvaData}
         background={Mukavva_cinsleri_background}
         name={"Mukavva"}
       />
-      <ResponsiveSlider3 />
-      <label style={{ fontSize: "10px" }}>
-        Görseller firmamızın daha önce ürettiği kutu çeşitlerine örnek olup,
-        resimlerde görünen marka ürünlerinin satışları, pazarlanması vb firmamız
-        tarafından yapılmamaktadır. Kutuların üzerinde yer alan markaların her
-        türlü hakları ilgili markalara aittir. Sitemizden ürün görsellerinin
-        haberimiz olmadan alınması ve kullanılmasına muvafakatimiz yoktur. Bu
-        şekilde kullanımlarda her türlü yasal sorumluluk kullanan şahsa aittir.
-      </label>
+      <div className="my-5">
+        <ResponsiveSlider3 />
+        <label style={{ fontSize: "10px", color:"white"}}>
+          Görseller firmamızın daha önce ürettiği kutu çeşitlerine örnek olup,
+          resimlerde görünen marka ürünlerinin satışları, pazarlanması vb
+          firmamız tarafından yapılmamaktadır. Kutuların üzerinde yer alan
+          markaların her türlü hakları ilgili markalara aittir. Sitemizden ürün
+          görsellerinin haberimiz olmadan alınması ve kullanılmasına
+          muvafakatimiz yoktur. Bu şekilde kullanımlarda her türlü yasal
+          sorumluluk kullanan şahsa aittir.
+        </label>
+      </div>
+
       <Middle_Header MiddleLabel={"Kağıt Cinsleri"} />
       <Big_Slider
         pagerData={KagitData}
         background={Kagit_cinsleri_background}
         name={"Kagit"}
       />
-      <ResponsiveSlider2 />
-      <label style={{ fontSize: "10px" }}>
-        Görseller firmamızın daha önce ürettiği kutu çeşitlerine örnek olup,
-        resimlerde görünen marka ürünlerinin satışları, pazarlanması vb firmamız
-        tarafından yapılmamaktadır. Kutuların üzerinde yer alan markaların her
-        türlü hakları ilgili markalara aittir. Sitemizden ürün görsellerinin
-        haberimiz olmadan alınması ve kullanılmasına muvafakatimiz yoktur. Bu
-        şekilde kullanımlarda her türlü yasal sorumluluk kullanan şahsa aittir.
-      </label>
+      <div className="my-5">
+        {" "}
+        <ResponsiveSlider2 />
+        <label style={{ fontSize: "10px", color:"white" }}>
+          Görseller firmamızın daha önce ürettiği kutu çeşitlerine örnek olup,
+          resimlerde görünen marka ürünlerinin satışları, pazarlanması vb
+          firmamız tarafından yapılmamaktadır. Kutuların üzerinde yer alan
+          markaların her türlü hakları ilgili markalara aittir. Sitemizden ürün
+          görsellerinin haberimiz olmadan alınması ve kullanılmasına
+          muvafakatimiz yoktur. Bu şekilde kullanımlarda her türlü yasal
+          sorumluluk kullanan şahsa aittir.
+        </label>
+      </div>
+
       <Diger_Sektorler Diger_Sektorler_Data={Diger_Sektorler_Data} />
       <Footer change_page={change_page} />
     </>
