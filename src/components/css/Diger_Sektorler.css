@@ -2,7 +2,7 @@
     outline: none;
     transition: 0.3s;
     padding-bottom: 0px;
-    color: white;
+    color: #C12C06;
 }
 
 
@@ -18,7 +18,7 @@
     left: calc(50% - 500px); /* 50% of parent width minus half of the pseudo-element width */
     width: 1000px; /* Cover the entire container */
     height: 500px; /* Cover the entire container */
-    background: linear-gradient(179.96deg, rgba(203, 2, 2, 0.3) 0%, rgba(101, 1, 1, 0.153) 100%);
+    background: linear-gradient(179.96deg, rgba(13, 110, 253, 0.3) 0%, rgba(101, 1, 1, 0.153) 100%);
     border-radius: 70px 0px 70px 0px; /* Apply border-radius to pseudo-element */
     background-position: center; /* Center the background gradient horizontally and vertically */
     background-repeat: no-repeat; 
@@ -37,13 +37,13 @@
     width: 65px;
     height: 65px;
     font-size: 20px;
-    color: #fff;
+    color: #64647B;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease; /* Add transition for smooth animation */
-    border: 4px solid white; /* Specify the border style */
+    border: 4px solid #64647B; /* Specify the border style */
     border-radius: 80%;
 
   }
@@ -111,7 +111,7 @@
     width: 390px;
     overflow: hidden;
     transition: width 0.3s ease, height 0.3s ease; /* Add transition for smooth effect */
-    background-color: rgb(34, 34, 34);
+    background-color: #64647B;
     border-radius: 40px 0px 40px 0px; 
 
   }

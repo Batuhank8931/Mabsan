@@ -21,13 +21,14 @@
     transition: opacity 0.2s ease-in-out, font-size 0.2s; 
     opacity: 1;
     padding-bottom: 0px;
-    color: white;
+    color: #64647B;
     text-align: left;
 
 }
 
 .pager_label_1:hover {
   font-size: 95%;
+  
 }
 
 .pager_label_1.fade-out {
@@ -41,9 +42,9 @@
     outline: none;
     transition: opacity 0.2s ease-in-out, font-size 0.2s; 
     padding-bottom: 0px;
-    color: white;
+    color: #64647B;
     text-align: left;
-    font-family: 'Gotham', sans-serif; /* Use 
+    font-family: 'Gotham', sans-serif;  
 
 }
 
@@ -58,7 +59,7 @@
 .previous_button, .next_button {
     width: 65px;
     height: 65px;
-    background-color: #cccccc63;
+    background-color: #C12C06;
     border: none;
     border-radius: 50%;
     font-size: 20px;
@@ -111,7 +112,8 @@
     
 
   .card_front{
-    background-color: rgba(204, 204, 204, 0.4); /* Fully opaque light grey background */
+    background-color: rgba(100, 100, 123, 0.5);
+ /* Fully opaque light grey background */
     backdrop-filter: blur(3px); /* Blur effect with 10px radius */
     border-radius: 30px 0 30px 0 ; /* Top left and bottom right corners have border radius */
     margin-right: 60px;

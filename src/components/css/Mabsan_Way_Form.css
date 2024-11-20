@@ -2,7 +2,7 @@
     width: 300px;
     height: 80px;
     background-color: transparent;
-    border: 2px solid #FFB0B0;
+    border: 2px solid #C12C06;
     cursor: pointer;
     transition: all 0.3s ease; /* Add transition for smooth animation */
     }
@@ -13,9 +13,8 @@
 
 
 .image_container_way {
-    height: 600px;
     border-radius: 20px 0 20px 0; /* Adjust the value as needed */
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1); /* Adjust the shadow values as needed */
+    box-shadow: 0px 0px 70px 0px #C12C06; /* Adjust the shadow values as needed */
     padding: 0;
     margin: 0;
     }
@@ -28,7 +27,7 @@
     transition: opacity 0.2s ease-in-out, font-size 0.2s; 
     opacity: 1;
     padding-bottom: 0px;
-    color: white;
+    color:  #64647B;
     text-align: left;
     
 
@@ -47,7 +46,7 @@
     outline: none;
     transition: opacity 0.2s ease-in-out, font-size 0.2s; 
     padding-bottom: 0px;
-    color: white;
+    color:  #64647B;
     text-align: left;
     font-family: 'Gotham', sans-serif; /* Use Gotham font */
 

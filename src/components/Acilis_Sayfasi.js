@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
-import Mabsan from "../assets/mabsan.svg";
-import MenuButton from "../assets/MenuButton.svg";
+import Mabsan from "../assets/MERS LOGO PNG.png";
+import MenuButton from "../assets/MenuButton_blue.svg";
 import bayrak from "../assets/bayrak.svg";
 import Navbar from "./NavBar.js"; // Importing the NavBar component
 import "./css/Acilis_Sayfasi.css"; // Importing the CSS file
-import AcilisApples from "../assets/mabsan1080low.mp4";
+import AcilisApples from "../assets/apples.mp4";
 
 const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
   const videoId = "l1cBhOqSV4M"; // YouTube video ID
@@ -80,7 +80,6 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
       }`}
       style={{
         position: "relative",
-        backgroundColor: "black",
         width: "100%",
         height: window.innerWidth <= 600 ? "100vh" : "100%", // Conditionally set height
       }}
@@ -156,7 +155,6 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
           className="bg-cover bg-fixed d-flex justify-content-center"
           style={{
             position: "relative",
-            backgroundColor: "black",
             width: "100%",
           }}
         >
@@ -213,7 +211,7 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
                       <div className="col-2">
                         <button className="mx-2 buttontr d-flex align-items-center justify-content-center">
                           <img src={bayrak} alt="bayrak" className="bayrak" />
-                          TR
+                          <label style={{ color: "gray" }}>TR</label>
                         </button>
                       </div>
                     </div>
@@ -223,10 +221,10 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
                   className="d-flex align-items-left flex-column justify-content-center video_page_header"
                   style={{ width: "100%", minHeight: "0", flex: 1 }}
                 >
-                  <label>
-                    Kutuda <span style={{ color: "#FF0000" }}>Kalite</span>
+                  <label style={{ color: "gray" }}>
+                    Kutuda <span style={{ color: "#C12C06" }}>Kalite</span>
                   </label>
-                  <label>Bizde bir okyanus var</label>
+                  <label style={{ color: "gray" }}>Bizde bir okyanus var</label>
                 </div>
                 <div></div>
               </div>
@@ -250,10 +248,10 @@ const Acilis_Sayfasi = ({ change_page, SektorItems }) => {
                     style={{ height: "100%" }}
                   >
                     <div className="d-flex justify-content-end col-8  ">
-                      <label className="left_bottom_big">36</label>
+                      <label style={{ color: "gray" }} className="left_bottom_big">36</label>
                       <div className="d-flex flex-column justify-content-end col-4 p-3">
-                        <label className="left_bottom_small">YILLIK</label>
-                        <label className="left_bottom_small">TECRÜBE</label>
+                        <label style={{ color: "gray" }} className="left_bottom_small">YILLIK</label>
+                        <label style={{ color: "gray" }} className="left_bottom_small">TECRÜBE</label>
                       </div>
                     </div>
                   </div>

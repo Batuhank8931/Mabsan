@@ -2,7 +2,7 @@
 .baslik_subnavbar {
     font-size: 70px;
     outline: none;
-    color: white;
+    color: #C12C06;
     text-align: left;
     transition: opacity 0.3s ease-in-out; /* Apply the transition effect */
     
@@ -25,7 +25,7 @@
   .line {
     width: 100%;
     height: 1px;
-    background-color: white;
+    background-color: #C12C06;;
   }
 
 .subheader{
@@ -44,7 +44,7 @@
   .line {
     width: 100%;
     height: 5px;
-    background-color: white;
+    background-color: #C12C06;;
   }
   
   .line_header{

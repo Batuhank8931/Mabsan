@@ -1,15 +1,17 @@
 
 
 .right_box{
-    background-color: rgb(53, 52, 52) ;
+    background-color: rgb(53, 52, 52);
     height: 600px;
     border-radius: 50px 0px 50px 0px ;
     padding-left: 50px;
+    color: white;
 
     
 }
 
 .left_box {
+    background-color: #dadada  ;
     height: 600px;
     position: relative;
 }

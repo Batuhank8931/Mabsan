@@ -70,7 +70,7 @@
     width: 350px;
     border-radius: 50px 0 50px 0 ;
     transition: width 0.3s ease; /* Add transition property */
-    background-color: rgba(146, 43, 43, 0.263);
+    background-color: rgba(192, 44, 6, 0.263);
     backdrop-filter: blur(3px); /* Blur effect with 10px radius */
     /* Add any other styles you need for your button */
     transform: translateX(100px);
@@ -114,7 +114,7 @@
   }
 
   .timeline_year0 {
-    background: linear-gradient(317.85deg, #FA0000 -41.59%, rgba(250, 0, 0, 0) 143.46%);
+    background: linear-gradient(317.85deg, #C12C06 -41.59%, rgba(250, 0, 0, 0) 143.46%);
     -webkit-background-clip: text; /* For WebKit/Blink browsers */
     background-clip: text;
     color: transparent; /* Make the text transparent */
@@ -154,7 +154,7 @@
   }
   
   .times:hover > .year >.timeline_year {
-    background: linear-gradient(317.85deg, #FA0000 -41.59%, rgba(250, 0, 0, 0) 143.46%);
+    background: linear-gradient(317.85deg, #C12C06 -41.59%, rgba(250, 0, 0, 0) 143.46%);
     -webkit-background-clip: text; /* For WebKit/Blink browsers */
     background-clip: text;
     color: transparent; /* Make the text transparent */

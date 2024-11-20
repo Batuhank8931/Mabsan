@@ -1,7 +1,8 @@
 body {
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
-  background-color: black; /* Set background color */
+  background-color: #dadada !important;
+  background: transparent;
   font-family: 'Power Grotesk', sans-serif;
 }
 
@@ -11,17 +12,33 @@ body {
   width: "70%";
   margin: 0 auto; /* Center the container horizontally */
   text-align: center; /* Center the content inside the container */
+  background-color: #dadada;
 }
 
 .App {
   max-width: 100%; /* Set the maximum width for the App div */
   margin: 0 auto; /* Center the App div horizontally */
-  background-color: black; /* Set background color */
+  background-color: #dadada;
 }
 
 @media (max-width: 601px) {
   .App-container {
     width: "100%";
+  }
+}
+
+
+.slide-up {
+  animation: slideUpAnimation 0.5s ease forwards;
+  background-color: #dadada;
+}
+
+@keyframes slideUpAnimation {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 
@@ -55,63 +72,4 @@ body {
   }
 }
 
-.loading_bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 1);
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1; /* Initially visible */
-  transition: all .5s; /* Opacity transition effect */
-}
-
-.loading_bar.hidden {
-  opacity: 0;
-  transition: all .2s;
-  z-index: -99;
-}
-
-
-.progress-loader {
-  position: absolute;
-  transition: all .2s;
-}
-
-
-.spinner-container {
-  position: relative;
-  margin: 30px auto;
-  overflow: hidden;
-  opacity: 1; /* Ensure initial opacity is 1 */
-  transition: all .3s;
-}
-
-
-.spinner {
-  position: absolute;
-  width: calc(100% - 9.9px);
-  height: calc(100% - 9.9px);
-  border: 8px solid transparent;
-  border-radius: 50%;
-  border-top-color: grey;
-  animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.79) infinite;
-  
-  
-  
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
 

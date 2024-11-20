@@ -6,7 +6,8 @@
   font-size: 18px;
   color: black;
   background-color: white;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Glowing effect */
+  box-shadow: 0 0 10px rgba(192, 44, 5, 0.8); /* Glowing in #C12C06 */
+
 }
 
 .basvuru_title{
@@ -18,12 +19,13 @@
     height: 150px;
     margin: 2%;
     border-radius: 15px;
-    border: 1px solid red;
+    border: 1px solid #C12C06;
     padding-left: 30px;
     padding-top: 20px;
     font-size: 18px;
     color: black;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Glowing effect */
+    box-shadow: 0 0 10px rgba(192, 44, 5, 0.8); /* Glowing in #C12C06 */
+
 
 }
 
@@ -31,7 +33,7 @@
     width: 300px;
     height: 80px;
     background-color: transparent;
-    border: 2px solid #FFB0B0;
+    border: 2px solid #C12C06;
     cursor: pointer;
     transition: all 0.3s ease; /* Add transition for smooth animation */
     }
@@ -51,6 +53,6 @@
     
 .Cv_Button:hover {
     border-radius: 30%;
-    box-shadow: 0 0 10px 10px rgb(247, 138, 138); /* Red border shadow */
-    background-color: rgb(247, 138, 138);
+    box-shadow: 0 0 10px 10px #C12C06; /* Red border shadow */
+    background-color: #C12C06;
 }

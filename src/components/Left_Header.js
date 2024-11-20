@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./css/Header.css";
-import polygon from "../assets/polygon.svg";
+import polygon from "../assets/poligon_mavi.svg";
 
 const Left_Header = ({ sectorLabel }) => {
   const lineRef = useRef(null);

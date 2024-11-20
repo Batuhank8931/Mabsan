@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/Urunler_Filmi.css";
-import tanitim_filmi from "../assets/scene.mp4";
+import tanitim_filmi from "../assets/apples.mp4";
 
 const Tanitim_Filmi = () => {
   return (

@@ -16,7 +16,7 @@
 
 
   .belge_kart:hover {
-    box-shadow: 0 0 20px 5px red; /* Add a red shadow to the border on hover */
+    box-shadow: 0 0 20px 5px #C12C06;  /* Add a red shadow to the border on hover */
   }
 
 .belge_card {
@@ -122,7 +122,7 @@
 
 .surdurulebilirlik_download_button {
   width: 100%;
-  background-color: #3f2e2e;
+  background-color: #C12C06; 
   height: 80px;
   font-family: 'Power Grotesk', sans-serif;
 }

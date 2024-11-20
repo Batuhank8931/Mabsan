@@ -70,7 +70,6 @@ const Mukavva_Cinsleri = ({ pagerData, background, name }) => {
       style={{
         position: "relative",
         width: "100%",
-        backgroundImage: `url(${background})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundColor: "rgba(0, 0, 0, 0)",

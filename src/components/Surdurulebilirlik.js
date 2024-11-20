@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./css/Surdurulebilirlik.css";
 import yaprakSVG from "../assets/yaprak.svg";
-import red_hoverSVG from "../assets/red_hover.svg";
+import red_hoverSVG from "../assets/Rectangle.svg";
 import downloadSVG from "../assets/download.svg";
 
 

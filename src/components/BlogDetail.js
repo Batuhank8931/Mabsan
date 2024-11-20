@@ -80,7 +80,6 @@ const BlogDetail = ({ Blog_Detail}) => {
             <div className="share_button_container p-3">
               <div
                 className="all_buttons d-flex justify-content-between"
-                style={{ backgroundColor: "black"}}
               >
                 <FacebookShareButton url={shareUrl} quote={shareContent}>
                   <FacebookIcon size={"50px"} round />

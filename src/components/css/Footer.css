@@ -55,7 +55,7 @@
 .redline_footer_left {
     padding: 4%;
     border: 2px solid transparent; /* To make sure the outline doesn't push the content */
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.486); /* Glowing effect */
+    box-shadow: 0 0 20px rgba(193, 44, 6, 0.486); /* Glowing effect */
     border-radius: 30px 0 0 30px  ; /* Adjust the value as needed for the desired roundness */
 
   }
@@ -63,7 +63,7 @@
   .redline_footer_right {
     padding: 4%;
     border: 2px solid transparent; /* To make sure the outline doesn't push the content */
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.486); /* Glowing effect */
+    box-shadow: 0 0 20px rgba(193, 44, 6, 0.486);/* Glowing effect */
     border-radius: 0 30px 30px 0  ; /* Adjust the value as needed for the desired roundness */
 
   }
@@ -71,11 +71,12 @@
 
   .detay_button_footer {
     width: 100%;
-    background-color:  #3f2e2e;
+    background-color:  #C12C06;
     margin-bottom: 5px;
     height: 60px;
     font-size: 25px;
     font-family: 'Power Grotesk', sans-serif;
+    color: white;
   }
   
 
@@ -174,7 +175,6 @@
 
   }
 
-    /* WhatsAppButton.css */
   .whatsapp_button_container {
     position: absolute;
     bottom: 90px;
@@ -271,7 +271,7 @@
       .footer_title_middle{
         font-size: 18px;
       }
-
+      
       .whatsapp_button_container {
         position: absolute;
         bottom: 250px;
@@ -281,9 +281,26 @@
         height: 120px;
       }
 
+
   }
 
+  .logo_container{
+    overflow: hidden;
+  }
 
-
-
-
+  .grow-animation {
+    transform: scale(0); /* Start from a dot */
+    animation: growAndRotate 4s forwards; /* Grow to maximum size and rotate around y-axis */
+  }
+  
+  @keyframes growAndRotate {
+    0% {
+      transform: scale(0) rotateY(-360deg); /* Start from a dot with no rotation around y-axis */
+    }
+    100% {
+      transform: scale(1) rotateY(360deg); /* Grow to maximum size with a full rotation around y-axis */
+    }
+  }
+  
+  
+  

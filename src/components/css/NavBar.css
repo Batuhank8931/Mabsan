@@ -1,11 +1,17 @@
-  
+
+
+
+.navbar_all{
+  background-color:rgba(128, 128, 128, .7);
+}
+
 .mabsan-logo {
   width: 100%;
   transition: background-color 0.3s, color 0.3s, width 0.3s;
 }
 
 .mabsan-logo:hover {
-  background-color: rgba(128, 128, 128, 0.212);
+  background-color: rgba(128, 128, 128, 1);
   border-radius: 10px;
   width: 105%;
 }
@@ -68,13 +74,13 @@
 
   .dropdown_item::before {
     content: '\2022'; /* Unicode character for bullet point */
-    color: red; /* Color of the bullet point */
+    color: #C12C06; /* Color of the bullet point */
     position: absolute;
     left: 1px; /* Adjust the positioning of the bullet point */
   }
 
   .dropdown_item:hover {
-    background-color: gray;
+    background-color: #C12C06;
     border-radius: 10%;
   }
 
@@ -82,7 +88,7 @@
 
 .buttons:before {
     content: '';
-    border-bottom: 3px solid #ED1C24;
+    border-bottom: 3px solid #C12C06;
     padding: 0 25px;
     position: absolute;
     bottom: 0;
@@ -96,7 +102,7 @@
 
 .buttons:hover:before {
     width: 100%;
-    border-bottom: 5px solid #ED1C24;
+    border-bottom: 5px solid #C12C06;
 
 }
 

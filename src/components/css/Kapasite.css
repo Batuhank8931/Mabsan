@@ -22,8 +22,9 @@
     border-radius: 40px 0px 40px 0px; 
     text-align: center;
     line-height: 75px; /* Vertically center the text */
-    background: rgb(81, 2, 2);
-    border-color: black;
+    background: #C12C06;
+    border-color: #C12C06;
+    color: white;
     border-width: 2px;
     transition: all .3s;
     
@@ -66,8 +67,7 @@
         border-radius: 40px 0px 40px 0px; 
         text-align: center;
         line-height: 75px; /* Vertically center the text */
-        background: rgb(81, 2, 2);
-        border-color: black;
+        background: #C12C06;
         border-width: 2px;
         
     

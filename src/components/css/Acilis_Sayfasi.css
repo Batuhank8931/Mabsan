@@ -3,10 +3,13 @@
     outline: none;
     transition: 0.3s;
     padding-bottom: 0px;
-    color: white;
+    color: #C12C06;
     text-align: left;
 }
 
+.video-1-container{
+  background-color: #dadada !important;
+}
 
 .video_page_header {
   transition: font-size 0.3s;
@@ -28,7 +31,7 @@
   position: relative;
   transition: 0.3s;
   padding-bottom: 0px;
-  color: white;
+  color: #C12C06;
 }
 
 .menu_button {
@@ -41,36 +44,6 @@
   border-radius: 10px;
 }
 
-/* Define animation classes for sliding up and down */
-.slideUp {
-  animation: slideUpAnimation .3s ease-in forwards;
-}
-
-.slideDown {
-  animation: slideDownAnimation .3s ease-out forwards;
-}
-
-/* Define keyframes for slide up animation */
-@keyframes slideUpAnimation {
-  from {
-    transform: translateY(50%);
-  }
-  to {
-    transform: translateY(0%);
-  }
-}
-
-/* Define keyframes for slide down animation */
-@keyframes slideDownAnimation {
-  from {
-    transform: translateY(-50%);
-  }
-  to {
-    transform: translateY(0%);
-  }
-}
-
-
 
 .buttontr:hover {
   background-color: rgba(128, 128, 128, 0.212);
@@ -80,14 +53,14 @@
 }
 
 .buttontr:active {
-  background: black;
-  color: white;
+  background: rgb(33, 37, 41);
+  color: #C12C06;
   transition: none;
 }
 
 
 .video_frame {
-  border: 70px solid black;
+  border: 70px solid transparent;
   border-radius: 5px;
 }
 
@@ -169,7 +142,7 @@
 
 .button:active {
     background: black;
-    color: white;
+    color: #C12C06;
     transition: none;
 }
 
@@ -179,7 +152,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-color: transparent; /* Semi-transparent black overlay */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease; /* Smooth transition */
   }
@@ -191,6 +164,42 @@
 
 
 
+/* Define animation classes for sliding up and down */
+.slideUp {
+  animation: slideUpAnimation 0.3s ease-in forwards;
+}
+
+.slideDown {
+  animation: slideDownAnimation 0.3s ease-out forwards;
+}
+
+/* Define keyframes for slide up animation */
+@keyframes slideUpAnimation {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* Define keyframes for slide down animation */
+@keyframes slideDownAnimation {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+
+
+
+
+
+
+
 /* Apply row layout for larger screens */
 @media (max-width: 601px) {
 
@@ -199,5 +208,21 @@
   }
 
 
+}
+
+
+.label-animation {
+  animation: label-animation 0.5s ease-in-out;
+}
+
+@keyframes label-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 

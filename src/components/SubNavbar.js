@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
-import Mabsan from "../assets/mabsan.svg";
-import MenuButton from "../assets/MenuButton.svg";
+import Mabsan from "../assets/MERS LOGO PNG.png";
+import MenuButton from "../assets/MenuButton_blue.svg";
 import backgroundSVG from "../assets/HeaderBackground.svg";
-import polygon from "../assets/polygon.svg";
+import polygon from "../assets/poligon_mavi.svg";
 
 import Navbar from "./NavBar.js"; // Importing the NavBar component
 import "./css/SubNavbar.css"; // Importing the CSS file
@@ -81,7 +81,6 @@ const SubNavbar = ({ change_page, sectorLabel, SektorItems }) => {
           : ""
       }`}
       style={{
-        backgroundImage: `url(${backgroundSVG})`,
         width: "100%",
       }}
     >

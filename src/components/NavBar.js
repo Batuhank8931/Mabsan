@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import backgroundSVG from "../assets/HeaderBackground.svg";
-import MabsanLogo from "../assets/mabsan-logo-menu.svg";
+import MabsanLogo from "../assets/MERS LOGO PNG.png";
 import MenuButton from "../assets/MenuButton.svg";
 import bayrak from "../assets/bayrak.svg";
 import politika from "../assets/politika.svg";
@@ -19,11 +19,10 @@ const NavBar = ({ showButtonsAgain, change_page, SektorItems }) => {
     <div>
       {showNavbar && (
         <div
-          className="bg-cover bg-fixed p-md-5 p-3 pt-5 pb-5"
-          style={{ backgroundImage: `url(${backgroundSVG})` }}
+          className="bg-cover bg-fixed p-md-5 p-3 pt-5 pb-5 navbar_all"
         >
           <div className="d-flex">
-            <div className="col-3 col-md-1 ">
+            <div className="col-3 col-md-1" style={{ height: "200px" }}>
               <button
                 className="mabsan-logo"
                 onClick={() => {

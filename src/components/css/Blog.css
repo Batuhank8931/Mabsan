@@ -18,6 +18,7 @@
   
 
 .blog_front{
+  
   border-radius: 30px 0 30px 0 ; /* Top left and bottom right corners have border radius */
   height: 100% ;
   width: 1110px;
@@ -25,11 +26,13 @@
 }
 
 .blog_card_title{
+  color: white;
   font-family: 'Power Grotesk', sans-serif;
   font-size: 26px;
 }
 
 .blog_card_text{
+  color: white;
   font-family: 'Gotham', sans-serif; /* Use Gotham font */
   font-size: 13px;
   height: 400px;

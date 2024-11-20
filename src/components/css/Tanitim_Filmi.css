@@ -1,15 +1,12 @@
 
 
-.black_band{
-  height: 50px;
-}
   .video-iframe {
     position: relative;
     padding-bottom: 56.25%; /* Aspect ratio (16:9) */
     height: 0;
     overflow: hidden;
     animation: slideIn .5s ease forwards;
-    background-color: black;
+    background-color: transparent;
   }
   .video-iframe iframe {
     position: absolute;
@@ -17,7 +14,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: transparent;
   }
   
 
@@ -46,7 +43,6 @@
   .video-element {
     width: 100%;
     height: 100%;
-    border-radius: 50px 0px 50px 0px;
   }
   
   .play-button-container {

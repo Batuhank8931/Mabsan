@@ -7,14 +7,14 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import iletisimSVG from "../assets/iletisim.svg";
 import yaprakSVG from "../assets/yaprak.svg";
 import adresSVG from "../assets/adres.svg";
-import red_hoverSVG from "../assets/red_hover.svg";
+import red_hoverSVG from "../assets/Rectangle.svg";
 import faceSVG from "../assets/face.svg";
 import instaSVG from "../assets/insta.svg";
 import twitterSVG from "../assets/twitter.svg";
 import linkedinSVG from "../assets/linkedin.svg";
 import youtubeSVG from "../assets/youtube.svg";
 import WhatsAppSVG from "../assets/whatsap.svg";
-import Turning_logo from "../assets/logo_1.mp4";
+import Turning_logo from "../assets/sektorler/MERSturuncu/apples.mp4";//Sürdürülebilirlik kısmının üstü
 
 import { Link } from "react-router-dom";
 

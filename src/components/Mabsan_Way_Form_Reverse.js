@@ -12,8 +12,7 @@ const Mabsan_Way_Form = ({
     <div
       className="baslik p-md-5 p-3 pb-4 pb-md-0"
       style={{
-        width: "100%",
-        backgroundColor: "black",
+        width: "100%"
       }}
     >
       <div className="row">
